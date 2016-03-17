@@ -10,7 +10,6 @@ html {
 body {
   color: #444;
   font-family: "Slabo 27px", sans-serif;
-  font-size: 4em;
   font-weight: 500;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -22,17 +21,30 @@ body {
   width: 100%;
   text-align: center;
 }
+h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+  padding-bottom: .25em;
+}
 .social {
-  font-size: .6em;
-  padding-top: .5em;
+  font-size: 2.5em;
   text-align: center;
 }
-.social a {
+a {
   color: inherit;
 }
-.social a:hover {
+a:hover {
   color: #999;
 }
-.social i {
+i {
   padding: 0 .15em;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 6em;
+  }
+  .social {
+    font-size: 3.75em
+  }
 }
