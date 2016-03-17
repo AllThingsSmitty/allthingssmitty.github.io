@@ -1,1 +1,1 @@
-# allthingssmitty.github.io
+# [AllThingsSmitty.github.io](http://allthingssmitty.github.com)

@@ -1,0 +1,36 @@
+body,
+html {
+  height: 100%
+}
+html {
+  background: #f1f2f3;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  color: #444;
+  font-family: "Slabo 27px", sans-serif;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.container {
+  padding-top: 4em;
+}
+.content {
+  text-align: center;
+}
+.social {
+  font-size: .6em;
+  padding-top: .5em;
+  text-align: center;
+}
+.social a {
+  color: inherit;
+}
+.social a:hover {
+  color: #999;
+}
+.social i {
+  padding: 0 .15em;
+}
