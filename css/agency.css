@@ -278,16 +278,16 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-      padding: 150px 0
+    padding: 150px 0;
   }
 }
 .service-heading {
   margin: 15px 0;
-  text-transform: none
+  text-transform: none;
 }
 #portfolio .portfolio-item {
   margin: 0 0 15px;
-  right: 0
+  right: 0;
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
@@ -301,8 +301,6 @@ section h3.section-subheading {
   opacity: 0;
   position: absolute;
   transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s
   width: 100%;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -448,73 +446,73 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   .timeline:before {
-      left: 50%;
+    left: 50%;
   }
   .timeline>li {
-      margin-bottom: 100px;
-      min-height: 100px;
+    margin-bottom: 100px;
+    min-height: 100px;
   }
   .timeline>li .timeline-panel {
-      float: left;
-      padding: 0 20px 20px 30px;
-      text-align: right;
-      width: 41%;
+    float: left;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+    width: 41%;
   }
   .timeline>li .timeline-image {
-      height: 100px;
-      left: 50%;
-      margin-left: -50px;
-      width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
   }
   .timeline>li .timeline-image h4 {
-      font-size: 13px;
-      line-height: 18px;
-      margin-top: 16px;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 16px;
   }
   .timeline>li.timeline-inverted>.timeline-panel {
-      float: right;
-      padding: 0 30px 20px 20px;
-      text-align: left;
+    float: right;
+    padding: 0 30px 20px 20px;
+    text-align: left;
   }
 }
 @media (min-width: 992px) {
   .timeline>li {
-      min-height: 150px;
+    min-height: 150px;
   }
   .timeline>li .timeline-panel {
-      padding: 0 20px 20px;
+    padding: 0 20px 20px;
   }
   .timeline>li .timeline-image {
-      width: 150px;
-      height: 150px;
-      margin-left: -75px;
+    height: 150px;
+    margin-left: -75px;
+    width: 150px;
   }
   .timeline>li .timeline-image h4 {
-      font-size: 18px;
-      line-height: 26px;
-      margin-top: 30px;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 30px;
   }
   .timeline>li.timeline-inverted>.timeline-panel {
-      padding: 0 20px 20px;
+    padding: 0 20px 20px;
   }
 }
 @media (min-width: 1200px) {
   .timeline>li {
-      min-height: 170px;
+    min-height: 170px;
   }
   .timeline>li .timeline-panel {
-      padding: 0 20px 20px 100px;
+    padding: 0 20px 20px 100px;
   }
   .timeline>li .timeline-image {
-      height: 170px;
-      margin-left: -85px;
-      width: 170px;
+    height: 170px;
+    margin-left: -85px;
+    width: 170px;
   }
   .timeline>li .timeline-image h4 {
-      margin-top: 40px;
+    margin-top: 40px;
   }
   .timeline>li.timeline-inverted>.timeline-panel {
-      padding: 0 100px 20px 20px;
+    padding: 0 100px 20px 20px;
   }
 }
 .team-member {
@@ -579,32 +577,32 @@ footer {
   text-align: center;
 }
 footer span.copyright {
-  line-height: 40px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 40px;
   text-transform: uppercase;
   text-transform: none;
 }
 footer ul.quicklinks {
-  margin-bottom: 0;
-  line-height: 40px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 40px;
+  margin-bottom: 0;
   text-transform: uppercase;
-  text-transform: none
+  text-transform: none;
 }
 ul.social-buttons {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 ul.social-buttons li a {
-  display: block;
   background: #222;
-  height: 40px;
-  width: 40px;
   border-radius: 100%;
-  font-size: 20px;
-  line-height: 40px;
   color: #fff;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
   outline: 0;
-  transition: all .3s
+  transition: all .3s;
+  width: 40px;
 }
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
@@ -627,24 +625,24 @@ ul.social-buttons li a:active {
   text-align: center;
 }
 .portfolio-modal .modal-content h2 {
+  font-size: 3em;
   margin-bottom: 15px;
-  font-size: 3em
 }
 .portfolio-modal .modal-content p {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 .portfolio-modal .modal-content p.item-intro {
-  margin: 20px 0 30px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-style: italic;
-  font-size: 16px
+  margin: 20px 0 30px;
 }
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 30px;
-  margin-top: 0
+  margin-top: 0;
 }
 .portfolio-modal .modal-content img {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 .portfolio-modal .close-modal {
   background: transparent;
@@ -656,24 +654,22 @@ ul.social-buttons li a:active {
   width: 75px;
 }
 .portfolio-modal .close-modal:hover {
-  opacity: .3
+  opacity: .3;
 }
 .portfolio-modal .close-modal .lr {
   background: #222;
   height: 75px;
   margin-left: 35px;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 1px;
   z-index: 1051;
 }
 .portfolio-modal .close-modal .lr .rl {
   background: #222;
   height: 75px;
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   width: 1px;
   z-index: 1052;
 }
@@ -681,21 +677,22 @@ ul.social-buttons li a:active {
   display: none;
   opacity: 0;
 }
+::-moz-selection,
 ::-moz-selection {
   background: #fed136;
   text-shadow: none;
 }
+::-moz-selection,
 ::selection {
   background: #fed136;
   text-shadow: none;
 }
+img::-moz-selection,
 img::-moz-selection {
   background: 0 0
 }
+img::-moz-selection,
 img::selection {
-  background: 0 0
-}
-img::-moz-selection {
   background: 0 0
 }
 body {
