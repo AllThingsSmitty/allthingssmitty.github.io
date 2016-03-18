@@ -21,10 +21,10 @@ body {
   text-align: center;
   width: 100%;
 }
-h1 {
+.name {
   font-size: 4em;
   margin: 0;
-  padding: 0 0 .25em;
+  padding-bottom: .25em;
 }
 .social-icons {
   font-size: 2.5em;
