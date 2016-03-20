@@ -8,14 +8,14 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 body {
-  color: #444;
-  font-family: "Slabo 27px", sans-serif;
-  font-weight: 500;
   -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
+  color: #444;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-align: center;
+  font-family: "Slabo 27px", sans-serif;
+  font-weight: 500;
 }
 .container {
   margin: 0 auto;
@@ -24,6 +24,7 @@ body {
 .name {
   border-bottom: 1px solid #ccc;
   font-size: 4em;
+  font-weight: 700;
   margin: 0 0 .2em;
 }
 .social-icons {
