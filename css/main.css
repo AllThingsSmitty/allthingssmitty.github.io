@@ -15,7 +15,6 @@ body {
   display: flex;
   -ms-flex-align: center;
   font-family: "Slabo 27px", sans-serif;
-  font-weight: 500;
 }
 .container {
   margin: 0 auto;
@@ -37,8 +36,15 @@ a {
 a:hover {
   color: #2196f3;
 }
-i {
+a span {
   margin: 0 .25em;
+}
+a span[class="screen-reader-text"] {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 @media only screen and (max-width: 700px) {
   .name {
