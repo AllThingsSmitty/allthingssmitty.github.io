@@ -22,9 +22,12 @@ body {
 }
 .name {
   border-bottom: 1px solid #ccc;
+  margin: 0 0 .75em;
+}
+h1 {
   font-size: 4em;
   font-weight: 500;
-  margin: 0 0 .2em;
+  margin: 0;
 }
 .social-icons {
   font-size: 2.5em;
@@ -47,7 +50,7 @@ a span[class="screen-reader-text"] {
   width: 1px;
 }
 @media only screen and (max-width: 700px) {
-  .name {
+  h1 {
     font-size: 3.5em;
   }
   .social-icons {
@@ -55,7 +58,7 @@ a span[class="screen-reader-text"] {
   }
 }
 @media only screen and (max-width: 500px) {
-  .name {
+  h1 {
     font-size: 3em;
   }
   .social-icons {
