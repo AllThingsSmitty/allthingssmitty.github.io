@@ -28,16 +28,7 @@
     // local fallback
     (window.jQuery || document.write('<script src="js/jquery-1.12.2.min.js"><\/script>'));
   </script>
-  <script>
-    (function ($) {
-      var $span = $('<span class="fa" style="display: none;"></span>').appendTo('body');
-      if ($span.css('fontFamily') !== 'FontAwesome') {
-        // local fallback
-        $('head').append('<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">');
-      }
-      $span.remove();
-    }(jQuery));
-  </script>
+  <script src="js/main.min.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
