@@ -10,7 +10,7 @@
 <script id="loadcss">
   (function(u,s){!function(e){'use strict';var n=function(n,t,o){var l,r=e.document,i=r.createElement('link');if(t)l=t;else{var a=(r.body||r.getElementsByTagName('head')[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel='stylesheet',i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};'undefined'!=typeof module?module.exports=n:e.loadCSS=n}('undefined'!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['css/main.min.css'],document.getElementById('loadcss')));
 </script>
-<noscript>&lt;link rel="stylesheet" href="css/main.min.css"&gt;</noscript>
+<noscript><link rel=stylesheet href=css/main.min.css></noscript>
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>
   // local fallback
@@ -18,21 +18,21 @@
 </script>
 <script src="js/main.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<noscript>&lt;link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"&gt;</noscript>
+<noscript><link rel=stylesheet href=font-awesome/css/font-awesome.min.css></noscript>
 </head>
 <body>
-  <div class="container">
-    <div class="name">
+  <main role="main" tabindex="0">
+    <div>
       <h1>Matt Smith</h1>
     </div>
-    <div class="social-icons">
-      <a href="https://twitter.com/AllThingsSmitty"><span class="fa fa-twitter"></span><span class="screen-reader-text">Follow me on Twitter</span></a>
-      <a href="https://github.com/AllThingsSmitty"><span class="fa fa-github"></span><span class="screen-reader-text">Follow me on GitHub</span></a>
-      <a href="https://linkedin.com/in/AllThingsSmitty"><span class="fa fa-linkedin"></span><span class="screen-reader-text">Follow me on LinkedIn</span></a>
-      <a href="http://codepen.io/AllThingsSmitty"><span class="fa fa-codepen"></span><span class="screen-reader-text">Follow me on CodePen</span></a>
-      <a href="http://AllThingsSmitty.tumblr.com"><span class="fa fa-tumblr"></span><span class="screen-reader-text">Follow me on Tumblr</span></a>
+    <div>
+      <a href="https://twitter.com/AllThingsSmitty" rel="external"><span class="fa fa-twitter"></span><span>Follow me on Twitter</span></a>
+      <a href="https://github.com/AllThingsSmitty" rel="external"><span class="fa fa-github"></span><span>Follow me on GitHub</span></a>
+      <a href="https://linkedin.com/in/AllThingsSmitty" rel="external"><span class="fa fa-linkedin"></span><span>Follow me on LinkedIn</span></a>
+      <a href="http://codepen.io/AllThingsSmitty" rel="external"><span class="fa fa-codepen"></span><span>Follow me on CodePen</span></a>
+      <a href="http://AllThingsSmitty.tumblr.com" rel="external"><span class="fa fa-tumblr"></span><span>Follow me on Tumblr</span></a>
     </div>
-  </div>
+  </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
   <script>
     WebFont.load({
