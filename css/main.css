@@ -15,12 +15,13 @@ body {
   display: flex;
   -ms-flex-align: center;
   font-family: "Slabo 27px", sans-serif;
+  min-height: 100%;
 }
-.container {
+main {
   margin: 0 auto;
   text-align: center;
 }
-.name {
+div:first-child {
   border-bottom: 1px solid #ccc;
   margin: 0 0 .75em;
 }
@@ -29,12 +30,15 @@ h1 {
   font-weight: 500;
   margin: 0;
 }
-.social-icons {
+div:last-child {
   font-size: 2.5em;
 }
 a {
   color: inherit;
   transition: ease .2s
+}
+a:focus {
+  outline: thin dotted;
 }
 a:hover {
   color: #2196f3;
@@ -42,7 +46,7 @@ a:hover {
 a span {
   margin: 0 .25em;
 }
-a span[class="screen-reader-text"] {
+a span:last-child {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -53,7 +57,7 @@ a span[class="screen-reader-text"] {
   h1 {
     font-size: 3.5em;
   }
-  .social-icons {
+  div:last-child {
     font-size: 2.1em;
   }
 }
@@ -61,7 +65,7 @@ a span[class="screen-reader-text"] {
   h1 {
     font-size: 3em;
   }
-  .social-icons {
+  div:last-child {
     font-size: 1.8em;
   }
 }
