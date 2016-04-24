@@ -12,8 +12,6 @@ window.onload = function () {
   if ((css(span, 'font-family')) !== 'FontAwesome') {
     headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
     document.head.innerHTML = headHTML;
-  } else {
-    return;
   }
   document.body.removeChild(span);
   return;
