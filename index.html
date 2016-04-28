@@ -5,7 +5,7 @@
 <title>Matt Smith - web developer, mobile strategist, and front-end astronaut</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Matt Smith is a forward-thinking web developer based in Portland, Maine who builds web applications to deliver engaging user experiences. He recognizes that users have diverse backgrounds and non-desktop expectations, and applies mobile-first principles to craft sophisticated user interfaces to accommodate different needs. As a usability expert, Matt is also able to analyze, strategize, and come up with conversion-driven tactics that meet business objectives with effective technical solutions. Matt believes in giving back to the web community and is an active contributor to several open-source projects. His most popular projects on GitHub, 'CSS Protips' and 'jQuery Tips Everyone Should Know', have been favorited by thousands of web professionals. As a developer advocate, Matt provides professional and technical guidance and strongly promotes emerging technologies with a holistic view.">
-<meta name="keywords" content="front-end development, web development, mobile web, responsive web design, user interface, user experience, UI, UX, accessibility">
+<meta name="keywords" content="web development, front-end development, mobile web, responsive web design, user interface, user experience, UI, UX, web accessibility">
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
@@ -23,6 +23,21 @@
 <meta name="msapplication-TileColor" content="#2196f3">
 <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
 <meta name="theme-color" content="#f1f2f3">
+<script>
+  WebFontConfig = {
+    google: {
+      families: ['Slabo+27px::latin']
+    }
+  };
+  (function () {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
 <!-- inline critical path CSS -->
 <style>
   *,:after,:before{box-sizing:border-box}body,html{height:100%;margin:0}html{background:#f1f2f3;-webkit-font-smoothing:antialiased}body{-webkit-align-items:center;align-items:center;color:#444;display:-webkit-flex;display:flex;-ms-flex-align:center;font-family:"Slabo 27px",sans-serif;font-size:16px;min-height:100%}main{margin:0 auto;text-align:center}div:first-child{border-bottom:1px solid #ccc;margin:0 0 .75em}h1{font-size:4em;font-weight:500;margin:0}div:last-child{font-size:2.5em}a{color:inherit}a span{margin:0 .25em}a span:last-child{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px}@media only screen and (max-width:700px){h1{font-size:3.5em}div:last-child{font-size:2.1em}}@media only screen and (max-width:500px){h1{font-size:3em}div:last-child{font-size:1.8em}}
@@ -48,14 +63,6 @@
       <a href="http://AllThingsSmitty.tumblr.com" rel="external"><span class="fa fa-tumblr"></span><span>Follow me on Tumblr</span></a>
     </div>
   </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Slabo 27px: 400']
-      }
-    });
-  </script>
   <script>    
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
