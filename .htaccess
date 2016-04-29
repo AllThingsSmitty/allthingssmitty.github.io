@@ -1,6 +1,0 @@
-<IfModule mod_headers.c>
-  # 3 HOURS
-  <FilesMatch "\.(gif|jpg|png|ico|css|js|pdf|txt)$">
-    Header set Cache-Control "max-age=10800"
-  </FilesMatch>
-</IfModule>
