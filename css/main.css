@@ -21,7 +21,7 @@ body {
   -ms-flex-align: center;
   font-family: "Slabo 27px", sans-serif;
   font-size: 16px;
-  min-height: 100%;
+  overflow: hidden;
 }
 main {
   margin: 0 auto;
