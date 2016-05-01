@@ -37,12 +37,19 @@ h1 {
   margin: 0;
 }
 div:last-child {
+  display: inline-table;
   font-size: 2.5em;
 }
 a {
   color: inherit;
-  margin: 0 .25em;
-  transition: ease .2s
+  margin: 0 .3em;
+  transition: ease .2s;
+}
+a:first-child {
+  margin-left: 0;
+}
+a:last-child {
+  margin-right: 0;
 }
 a:focus {
   outline: thin dotted;
@@ -51,15 +58,13 @@ a:hover {
   color: #2196f3;
 }
 a span {
-  min-height: 48px;
-  min-width: 48px;
+  min-height: 1.2em;
+  min-width: 1.2em;
 }
 a span:last-child {
   clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
   overflow: hidden;
   position: absolute;
-  width: 1px;
 }
 @media only screen and (max-width: 700px) {
   h1 {
