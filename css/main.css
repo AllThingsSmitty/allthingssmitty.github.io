@@ -41,6 +41,7 @@ div:last-child {
 }
 a {
   color: inherit;
+  margin: 0 .25em;
   transition: ease .2s
 }
 a:focus {
@@ -50,7 +51,8 @@ a:hover {
   color: #2196f3;
 }
 a span {
-  margin: 0 .25em;
+  min-height: 48px;
+  min-width: 48px;
 }
 a span:last-child {
   clip: rect(1px, 1px, 1px, 1px);
@@ -61,17 +63,17 @@ a span:last-child {
 }
 @media only screen and (max-width: 700px) {
   h1 {
-    font-size: 3.5em;
+    font-size: 3.75em;
   }
   div:last-child {
-    font-size: 2.1em;
+    font-size: 2.35em;
   }
 }
 @media only screen and (max-width: 500px) {
   h1 {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   div:last-child {
-    font-size: 1.8em;
+    font-size: 2.175em;
   }
 }
