@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="en" class="fonts-loaded">
+<!--#else -->
 <html lang="en">
+<!--#endif -->
 <head>
 <meta charset="UTF-8">
 <title>Matt Smith - web developer, mobile strategist, and front-end astronaut</title>
@@ -25,46 +29,51 @@
 <meta name="theme-color" content="#f1f2f3">
 <!-- inline critical path CSS -->
 <style>
-  @font-face{font-family:Slabo27px;src:url(css/fonts/Slabo27px-Regular.woff2) format("woff2"),url(css/fonts/Slabo27px-Regular.woff) format("woff"),url(css/fonts/Slabo27px-Regular.svg) format('svg'),url(css/fonts/Slabo27px-Regular.ttf) format('truetype'),url(css/fonts/Slabo27px-Regular.eot?) format("embedded-opentype")}*,:after,:before{box-sizing:border-box}:root{font-size:calc(1vw + 1vh + .25vmin)}body,html{height:100%;margin:0}html{background:#f1f2f3;-webkit-font-smoothing:antialiased}body{-webkit-align-items:center;align-items:center;color:#444;display:-webkit-flex;display:flex;-ms-flex-align:center;font:1em/1.25rem Slabo27px,sans-serif}main{margin:0 auto;text-align:center}div:first-child{border-bottom:1px solid #ccc}h1{font-size:4em;font-weight:500;margin:0 0 .5em}div:last-child{display:inline-table;font-size:2.5em;padding-top:.5em}a{color:inherit;margin:0 .5em;transition:ease .2s}a:first-child{margin-left:0}a:last-child{margin-right:0}a:focus{outline:dotted thin}a:hover{color:#2196f3}a span:last-child{clip:rect(1px,1px,1px,1px);max-height:1px;max-width:1px;overflow:hidden;position:absolute}@media only screen and (max-width:800px){body{font-size:1.3em;line-height:1.6rem}}@media only screen and (max-width:500px){body{font-size:1.15em;line-height:1.4rem}}@font-face{font-family:FontAwesome;src:url(third-party/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0);src:url(third-party/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(third-party/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url(third-party/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'),url(third-party/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),url(third-party/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-twitter:before{content:"\f099"}.fa-github:before{content:"\f09b"}.fa-linkedin:before{content:"\f0e1"}.fa-tumblr:before{content:"\f173"}.fa-codepen:before{content:"\f1cb"}
+  @font-face{font-family:Slabo27px;src:url(fonts/Slabo27px-Regular.woff2) format("woff2"),url(fonts/Slabo27px-Regular.woff) format("woff"),url(fonts/Slabo27px-Regular.ttf) format('truetype'),url(fonts/Slabo27px-Regular.eot?) format("embedded-opentype")}*,:after,:before{box-sizing:border-box}:root{font-size:calc(1vw + 1vh + .25vmin)}body,html{height:100%;margin:0}html{background:#f1f2f3;-webkit-font-smoothing:antialiased}body{color:#444;font:1em/1.25rem sans-serif}.fonts-loaded body{font-family:Slabo27px,sans-serif}.container{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;height:100vh;-webkit-justify-content:center;justify-content:center}main{margin:0 auto;text-align:center}div:first-child{border-bottom:1px solid #ccc}h1{font-size:4em;font-weight:500;line-height:1;margin:0 0 .2em}div:last-child{display:inline-table;font-size:2.5em;padding-top:.5em}a{color:inherit;margin:0 .5em;transition:ease .2s}a:first-child{margin-left:0}a:last-child{margin-right:0}a:focus{outline:dotted thin}a:hover{color:#2196f3}a span:last-child{clip:rect(1px,1px,1px,1px);max-height:1px;max-width:1px;overflow:hidden;position:absolute}@media only screen and (max-width:800px){body{font-size:1.3em;line-height:1.6rem}}@media only screen and (max-width:500px){body{font-size:1.15em;line-height:1.4rem}}@font-face{font-family:FontAwesome;src:url(third-party/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0);src:url(third-party/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(third-party/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url(third-party/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0) format('woff'),url(third-party/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),url(third-party/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-twitter:before{content:"\f099"}.fa-github:before{content:"\f09b"}.fa-linkedin:before{content:"\f0e1"}.fa-tumblr:before{content:"\f173"}.fa-codepen:before{content:"\f1cb"}
 </style>
 <script id="loadcss">
   (function(u,s){!function(e){'use strict';var n=function(n,t,o){var l,r=e.document,i=r.createElement('link');if(t)l=t;else{var a=(r.body||r.getElementsByTagName('head')[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel='stylesheet',i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};'undefined'!=typeof module?module.exports=n:e.loadCSS=n}('undefined'!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['css/main.min.css'],document.getElementById('loadcss')));
 </script>
+<noscript>
+  <link rel="stylesheet" href=css/main.min.css>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Slabo+27px">
+  <link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">
+</noscript>
 </head>
 <body>
-  <main role="main" tabindex="0">
-    <div>
-      <h1>Matt Smith</h1>
-    </div>
-    <div>
-      <a href="https://twitter.com/AllThingsSmitty" rel="external"><span class="fa fa-twitter"></span><span>Follow me on Twitter</span></a>
-      <a href="https://github.com/AllThingsSmitty" rel="external"><span class="fa fa-github"></span><span>Follow me on GitHub</span></a>
-      <a href="https://linkedin.com/in/AllThingsSmitty" rel="external"><span class="fa fa-linkedin"></span><span>Follow me on LinkedIn</span></a>
-      <a href="http://codepen.io/AllThingsSmitty" rel="external"><span class="fa fa-codepen"></span><span>Follow me on CodePen</span></a>
-      <a href="http://AllThingsSmitty.tumblr.com" rel="external"><span class="fa fa-tumblr"></span><span>Follow me on Tumblr</span></a>
-    </div>
-  </main>
-  <script type="text/javascript">
-    WebFontConfig = {
-      google: {
-        families: [ 'Slabo+27px::latin' ]
-      }
-    };
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  </script>
-  <noscript>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Slabo+27px">
-  </noscript>
+  <div class="container">
+    <main role="main" tabindex="0">
+        <div>
+          <h1>Matt Smith</h1>
+        </div>
+        <div>
+          <a href="https://twitter.com/AllThingsSmitty" rel="external"><span class="fa fa-twitter"></span><span>Follow me on Twitter</span></a>
+          <a href="https://github.com/AllThingsSmitty" rel="external"><span class="fa fa-github"></span><span>Follow me on GitHub</span></a>
+          <a href="https://linkedin.com/in/AllThingsSmitty" rel="external"><span class="fa fa-linkedin"></span><span>Follow me on LinkedIn</span></a>
+          <a href="http://codepen.io/AllThingsSmitty" rel="external"><span class="fa fa-codepen"></span><span>Follow me on CodePen</span></a>
+          <a href="http://AllThingsSmitty.tumblr.com" rel="external"><span class="fa fa-tumblr"></span><span>Follow me on Tumblr</span></a>
+        </div>
+    </main>
+  </div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <script src="js/main.min.js"></script>
-  <noscript><link rel=stylesheet href=css/main.min.css></noscript>
+  <script>
+    (function (w) {
+      if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
+        return;
+      }
+      var slabo = new w.FontFaceObserver('Slabo27px', {
+        weight: 500
+      });
+
+      w.Promise
+        .all([slabo.check()])
+        .then(function () {
+          w.document.documentElement.className += ' fonts-loaded';
+        });
+    }(this));
+  </script>
+  <script src="js/fontfaceobserver.min.js"></script>
   <script>    
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
