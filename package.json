@@ -1,0 +1,16 @@
+{
+  "name": "allthingssmitty.com",
+  "version": "0.0.9",
+  "description": "Personal website",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allthingssmitty/site.git"
+  },
+  "author": "Matt Smith",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/allthingssmitty/allthingssmitty.github.io/issues"
+  },
+  "homepage": "http://allthingssmitty.com"
+}
