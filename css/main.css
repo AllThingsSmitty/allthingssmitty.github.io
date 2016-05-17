@@ -36,18 +36,21 @@ main {
   margin: 0 auto;
   text-align: center;
 }
-div:first-child {
-  border-bottom: 1px solid #ccc;
-}
 h1 {
   font-size: 4em;
   font-weight: 500;
-  margin: 0 0 .5em;
+  line-height: 1em;
+  margin: 0;
+}
+hr {
+  background: #ccc;
+  border: none;
+  height: 1px;
 }
 div:last-child {
   display: inline-table;
   font-size: 2.5em;
-  padding-top: .5em;
+  padding: .3em 0;
 }
 a {
   color: inherit;
@@ -72,6 +75,36 @@ a span:last-child {
   max-width: 1px;
   overflow: hidden;
   position: absolute;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
 }
 @media only screen and (max-width: 800px) {
   body {
