@@ -1,3 +1,47 @@
+/* let's start with a mini CSS reset */
+html { 
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body,
+div,
+fieldset,
+form,
+label,
+legend {
+  margin: 0;
+  padding: 0;	
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+caption {
+  font-weight: normal;
+}
+img {
+  border: 0;
+}
+
+/* now let the fun begin */
 @font-face {
   font-family: "Slabo27px";
   src: url("fonts/Slabo27px-Regular.woff2") format("woff2"),
@@ -35,7 +79,6 @@ main {
 }
 h1 {
   font-size: 4em;
-  font-weight: 500;
   line-height: 1em;
   margin: 0;
 }
@@ -45,29 +88,39 @@ hr {
   border: none;
   height: 1px;
 }
-div:last-child {
+.icons {
   display: inline-table;
   font-size: 2.5em;
-  padding: .3em 0;
+  padding: .25em 0;
 }
-a {
-  color: inherit;
-  margin: 0 .5em;
-  transition: ease .2s;
+.icons ul {
+  margin: 0;
+  padding: 0;
 }
-a:first-child {
+.icons li {
+  display: inline-block;
+  height: 1.15em;
+  list-style: none;
+  margin: 0 .25em;
+  width: 1.15em;
+}
+.icons li:first-child {
   margin-left: 0;
 }
-a:last-child {
+.icons li:last-child {
   margin-right: 0;
 }
-a:focus {
+.icons a {
+  color: inherit;
+  transition: ease .2s;
+}
+.icons a:focus {
   outline: thin dotted;
 }
-a:hover {
+.icons a:hover {
   color: #2196f3;
 }
-a span:last-child {
+.icons a span:last-child {
   clip: rect(1px, 1px, 1px, 1px);
   max-height: 1px;
   max-width: 1px;
