@@ -1,10 +1,7 @@
 @font-face {
   font-family: "Slabo27px";
   src: url("fonts/Slabo27px-Regular.woff2") format("woff2"),
-    url("fonts/Slabo27px-Regular.woff") format("woff"),
-    url("fonts/Slabo27px-Regular.svg") format("svg"),
-    url("fonts/Slabo27px-Regular.ttf") format("truetype"),
-    url("fonts/Slabo27px-Regular.eot?") format("embedded-opentype");
+    url("fonts/Slabo27px-Regular.woff") format("woff");
 }
 *,
 *:before,
@@ -43,6 +40,7 @@ h1 {
   margin: 0;
 }
 hr {
+  animation: expand .5s ease-out;
   background: #ccc;
   border: none;
   height: 1px;
@@ -79,6 +77,14 @@ a span:last-child {
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 @keyframes fadeInUp {
   0% {
