@@ -165,49 +165,7 @@ hr {
 .fadeInDown {
   animation-name: fadeInDown;
 }
-/* tooltip */
-[class^="tooltip"] {
-  position: relative;
-}
-[class^="tooltip"]:after {
-  background: #2196f3;
-  border-radius: 2px;
-  color: #fff;
-  content: attr(data-tooltip);
-  font-size: 1rem;
-  left: 50%;
-  opacity: 0;
-  padding: 5px 10px;
-  position: absolute;
-  top: 3em;
-  transform: translateX(-50%) translateY(-2px);
-  transition: all .2s ease-in-out;
-  white-space: nowrap;
-  z-index: 2;
-}
-[class^="tooltip"]:hover:after {
-  display: block;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  visibility: visible;
-}
-.tooltip:before {
-  content: "";
-  height: 0;
-  left: 50%;
-  opacity: 0;
-  position: absolute;
-  top: 24px;
-  transform: translateX(-50%) translateY(-2px);
-  width: 0;
-  z-index: 3;
-}
-.tooltip:hover:before {
-  display: block;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  visibility: visible;
-}
+
 @media only screen and (max-width: 800px) {
   body {
     font-size: 1.3em;
@@ -218,6 +176,51 @@ hr {
   body {
     font-size: 1.15em;
     line-height: 1.4rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* tooltip */
+  [class^="tooltip"] {
+    position: relative;
+  }
+  [class^="tooltip"]:after {
+    background: #2196f3;
+    border-radius: 2px;
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 1rem;
+    left: 50%;
+    opacity: 0;
+    padding: 5px 10px;
+    position: absolute;
+    top: 3em;
+    transform: translateX(-50%) translateY(-2px);
+    transition: all .2s ease-in-out;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  [class^="tooltip"]:hover:after {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
+  }
+  .tooltip:before {
+    content: "";
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 24px;
+    transform: translateX(-50%) translateY(-2px);
+    width: 5em;
+    z-index: 3;
+  }
+  .tooltip:hover:before {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
   }
 }
 
