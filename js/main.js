@@ -15,24 +15,24 @@
 }(this));
 
 
-// get the computed style property and value of an element
-function css(element, property) {
-  return window.getComputedStyle(element, null).getPropertyValue(property);
-}
-
-
-// add a <span> to the start of the body and check if `FontAwesome` is the font-family
-window.onload = function () {
-  var span = document.createElement('span'),
-    headHTML = document.head.innerHTML;
-
-  span.className = 'fa';
-  span.style.display = 'none';
-  document.body.insertBefore(span, document.body.firstChild);
-  if ((css(span, 'font-family')) !== 'FontAwesome') {
-    headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
-    document.head.innerHTML = headHTML;
-  }
-  document.body.removeChild(span);
-  return;
-};
+//// get the computed style property and value of an element
+//function css(element, property) {
+//  return window.getComputedStyle(element, null).getPropertyValue(property);
+//}
+//
+//
+//// add a <span> to the start of the body and check if `FontAwesome` is the font-family
+//window.onload = function () {
+//  var span = document.createElement('span'),
+//    headHTML = document.head.innerHTML;
+//
+//  span.className = 'fa';
+//  span.style.display = 'none';
+//  document.body.insertBefore(span, document.body.firstChild);
+//  if ((css(span, 'font-family')) !== 'FontAwesome') {
+//    headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
+//    document.head.innerHTML = headHTML;
+//  }
+//  document.body.removeChild(span);
+//  return;
+//};
