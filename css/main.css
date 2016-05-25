@@ -188,16 +188,16 @@ hr {
   }
   [class^="tooltip"]:after {
     background: #2196f3;
-    border-radius: 2px;
+    border-radius: 3px;
     color: #fff;
     content: attr(data-tooltip);
     font-size: 1rem;
     left: 50%;
     opacity: 0;
-    padding: 5px 10px;
+    padding: .25em .5em;
     position: absolute;
     top: 3em;
-    transform: translateX(-50%) translateY(-2px);
+    transform: translateX(-50%) translateY(-.25em);
     transition: all .2s ease-in-out;
     white-space: nowrap;
     z-index: 2;
@@ -214,7 +214,6 @@ hr {
     left: 50%;
     opacity: 0;
     position: absolute;
-    top: 24px;
     transform: translateX(-50%) translateY(-2px);
     width: 5em;
     z-index: 3;
