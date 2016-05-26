@@ -251,9 +251,9 @@ hr {
 .fa-linkedin:before {
   content: "\f0e1";
 }
-.fa-tumblr:before {
-  content: "\f173";
-}
 .fa-codepen:before {
   content: "\f1cb";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
 }
