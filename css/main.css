@@ -71,7 +71,7 @@ body {
   display: -webkit-flex;
   display: flex;
   -ms-flex-align: center;
-  font: 1em/1.25rem sans-serif;
+  font: 1em/1.25 sans-serif;
 }
 .fonts-loaded body {
   font-family: "Slabo27px", sans-serif;
