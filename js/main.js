@@ -15,7 +15,7 @@
 }(this));
 
 
-(function () {
+/*(function () {
   'use strict';
 
   // get the computed style property and value of an element
@@ -39,4 +39,4 @@
     return;
   };
   
-}());
+}());*/
