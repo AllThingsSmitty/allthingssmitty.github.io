@@ -123,7 +123,7 @@ hr {
 .icons a:hover {
   color: #2196f3;
 }
-.icons a span:last-child {
+.icons a span.screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   max-height: 1px;
   max-width: 1px;
