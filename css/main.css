@@ -225,35 +225,3 @@ hr {
     visibility: visible;
   }
 }
-
-/* adding Font Awesome CSS as a performance optimization */
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../third-party/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),
-    url("../third-party/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: auto;
-}
-.fa-twitter:before {
-  content: "\f099";
-}
-.fa-github:before {
-  content: "\f09b";
-}
-.fa-linkedin:before {
-  content: "\f0e1";
-}
-.fa-codepen:before {
-  content: "\f1cb";
-}
-.fa-google-plus:before {
-  content: "\f0d5";
-}
