@@ -35,4 +35,4 @@
   }
   document.body.removeChild(span);
   return;
-})();
+}());
