@@ -1,79 +1,50 @@
-<!DOCTYPE html>
-<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
-<html lang="en" class="fonts-loaded">
-<!--#else -->
-<html lang="en">
-<!--#endif -->
-<head>
-<meta charset="UTF-8">
-<title>Matt Smith - web developer, mobile strategist, and front-end astronaut</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Matt Smith is a forward-thinking web developer based in Portland, Maine who builds web applications to deliver engaging user experiences.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:description" content="Matt Smith is a web developer based in Portland, Maine who builds web applications to deliver engaging user experiences.">
-<meta property="og:image" content="http://allthingssmitty.com/images/avatar@2x.png">
-<meta name="twitter:image" content="http://allthingssmitty.com/images/avatar@2x.png">
-<meta name="twitter:creator" content="@AllThingsSmitty">
-<meta name="twitter:url" content="http://allthingssmitty.com">
-<meta name="twitter:title" content="Matt Smith">
-<!-- inline critical path CSS
-<style>
-  *,:after,:before,html{box-sizing:border-box}html{background:#f1f2f3;-webkit-font-smoothing:antialiased}body,div,html{margin:0;padding:0}h1{font-weight:400}@font-face{font-family:Slabo27px;src:url(fonts/Slabo27px-Regular.woff2) format("woff2"),url(fonts/Slabo27px-Regular.woff) format("woff")}:root{font-size:calc(1vw + 1vh + .25vmin)}body,html{height:100%;margin:0}body{-webkit-align-items:center;align-items:center;color:#444;display:-webkit-flex;display:flex;-ms-flex-align:center;font:1em/1.25 sans-serif}.fonts-loaded body{font-family:Slabo27px,sans-serif}main{margin:0 auto;text-align:center}h1{font-size:4em;line-height:1em;margin:0}hr{animation:expand .5s ease-out;background:#ccc;border:none;height:1px}.icons{display:inline-table;font-size:2.5em;padding:.25em 0}.icons ul{margin:0;padding:0}.icons li{display:inline-block;height:1.15em;list-style:none;margin:0 .25em;width:1.15em}.icons li:first-child{margin-left:0}.icons li:last-child{margin-right:0}.icons a{color:inherit;transition:ease .2s}.icons a:focus{outline:dotted thin}.icons a:hover{color:#2196f3}.icons a span.screen-reader-text{clip:rect(1px,1px,1px,1px);max-height:1px;max-width:1px;overflow:hidden;position:absolute}.animated{animation-duration:1s;animation-fill-mode:both}@keyframes expand{0%{width:0}100%{width:100%}}@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}.fadeInUp{animation-name:fadeInUp}@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.fadeInDown{animation-name:fadeInDown}@media only screen and (max-width:800px){body{font-size:1.3em;line-height:1.6rem}}@media only screen and (max-width:500px){body{font-size:1.15em;line-height:1.4rem}}@media only screen and (min-width:800px){[class^=tooltip]{position:relative}[class^=tooltip]:after{background:#2196f3;border-radius:3px;color:#fff;content:attr(data-tooltip);font-size:1rem;left:50%;opacity:0;padding:.25em .5em;position:absolute;top:3em;transform:translateX(-50%) translateY(-.25em);transition:all .2s ease-in-out;white-space:nowrap;z-index:2}[class^=tooltip]:hover:after{display:block;opacity:1;transform:translateX(-50%) translateY(0);visibility:visible}.tooltip:before{content:"";height:0;left:50%;opacity:0;position:absolute;transform:translateX(-50%) translateY(-2px);width:5em;z-index:3}.tooltip:hover:before{display:block;opacity:1;transform:translateX(-50%) translateY(0);visibility:visible}}
-</style>-->
-<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
-<link rel="manifest" href="manifest.json">
-<meta name="msapplication-TileColor" content="#2196f3">
-<meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
-<meta name="theme-color" content="#f1f2f3">
-<script id="loadcss">
-  (function(u,s){!function(e){'use strict';var n=function(n,t,o){var l,r=e.document,i=r.createElement('link');if(t)l=t;else{var a=(r.body||r.getElementsByTagName('head')[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel='stylesheet',i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};'undefined'!=typeof module?module.exports=n:e.loadCSS=n}('undefined'!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['css/main.min.css'],document.getElementById('loadcss')));
-</script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
-  <link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-</noscript>
+---
+layout: default
+title: Home
+---
 
-</head>
-<body>
-  <main role="main" tabindex="0">
-    <div class="animated fadeInDown">
-      <h1>Matt Smith</h1>
-    </div>
-    <hr>
-    <div class="icons animated fadeInUp">
-      <ul>
-        <li><a href="https://twitter.com/AllThingsSmitty" rel="external" class="tooltip" data-tooltip="Twitter"><span class="fa fa-twitter"></span><span class="screen-reader-text">Follow me on Twitter</span></a></li>
-        <li><a href="https://github.com/AllThingsSmitty" rel="external" class="tooltip" data-tooltip="GitHub"><span class="fa fa-github"></span><span class="screen-reader-text">Follow me on GitHub</span></a></li>
-        <li><a href="https://linkedin.com/in/AllThingsSmitty" rel="external" class="tooltip" data-tooltip="LinkedIn"><span class="fa fa-linkedin"></span><span class="screen-reader-text">Follow me on LinkedIn</span></a></li>
-        <li><a href="http://codepen.io/AllThingsSmitty" rel="external" class="tooltip" data-tooltip="CodePen"><span class="fa fa-codepen"></span><span class="screen-reader-text">Follow me on CodePen</span></a></li>
-        <li><a href="https://plus.google.com/+MattSmithYo/posts" rel="external" class="tooltip" data-tooltip="Google+"><span class="fa fa-google-plus"></span><span class="screen-reader-text">Follow me on Google Plus</span></a></li>
-      </ul>
-    </div>
-  </main>
-  <script src="js/fontfaceobserver.min.js"></script>
-  <script src="js/main.min.js"></script>
-  <script>    
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-    ga('create', 'UA-55352436-3', 'auto');
-    ga('send', 'pageview');
-  </script>
-</body>
-</html>
+<p class="message">
+  In the time of chimpanzees he was a monkey<sup id="fnref:fn-footnote"><a href="#fn:fn-footnote" class="footnote">1</a></sup>. And maybe some other <a href="{{ site.baseurl }}/about">cool stuff</a>, too.
+</p>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+    {{ post.content | truncatewords:50 }}
+  </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:fn-footnote">
+      <p>Quoting the great philosopher <a href="https://en.wikipedia.org/wiki/Beck" rel="external">Beck</a>. <a href="#fnref:fn-footnote" class="reversefootnote">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<script id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js" async></script>

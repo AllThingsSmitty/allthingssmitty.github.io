@@ -1,0 +1,81 @@
+// Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+
+.page,
+.post {
+  margin-bottom: 4em;
+
+  li + li {
+    margin-top: .25rem;
+  }
+}
+
+// Blog post or page title
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+
+.post-title a {
+  
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+// Meta data line below post title
+.post-date {
+  color: #9a9a9a;
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: -.5rem;
+}
+
+// Recent posts
+.recent {
+  border-top: 1px solid #eee;
+  //padding-bottom: 1.5rem;
+}
+
+// Related posts
+.related {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.recent-posts,
+.related-posts {
+  list-style: none;
+  padding-left: 0;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      color: #999;
+      font-size: 75%;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+// Body resets
+//
+// Update the foundational and global aspects of the page.
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
+
+  @media (min-width: $large-breakpoint) {
+    font-size: $large-font-size;
+  }
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+// No `:visited` state is required by default (browsers will use `a`)
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color ease .2s;
+
+  // `:focus` is linked to `:hover` for basic accessibility
+  //&:hover,
+  //&:focus {
+  //  text-decoration: underline;
+  //}
+
+  code,
+  strong {
+    color: inherit;
+  }
+}
+
+img {
+  border-radius: 5px;
+  display: block;
+  margin: 0 0 1rem;
+  max-width: 100%;
+}
+
+table {
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+  font-size: 85%;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #e5e5e5;
+  padding: .25rem .5rem;
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background: #f9f9f9;
+}

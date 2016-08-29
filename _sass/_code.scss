@@ -1,0 +1,79 @@
+// Code
+//
+// Inline and block-level code snippets. Includes tweaks to syntax highlighted
+// snippets from Pygments/Rouge and Gist embeds.
+
+code,
+pre {
+  font-family: $code-font-family;
+}
+
+code {
+  background: #f9f9f9;
+  border-radius: 3px;
+  color: $code-color;
+  font-size: 85%;
+  padding: .25em .5em;
+}
+
+pre {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  font-size: 100%;
+  padding: 0;
+}
+
+// Pygments via Jekyll
+.highlight {
+  background: #f9f9f9;
+  border-radius: .25rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  pre {
+    margin-bottom: 0;
+    overflow-x: auto;
+  }
+
+  .lineno {
+    color: #999;
+    display: inline-block; // Ensures the null space also isn't selectable
+    padding-left: .25rem;
+    padding-right: .75rem;
+    // Make sure numbers aren't selectable
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+
+// Gist via GitHub Pages
+// .gist .gist-file {
+//   font-family: Menlo, Monaco, "Courier New", monospace !important;
+// }
+// .gist .markdown-body {
+//   padding: 15px;
+// }
+// .gist pre {
+//   padding: 0;
+//   background: transparent;
+// }
+// .gist .gist-file .gist-data {
+//   font-size: .8rem !important;
+//   line-height: 1.4;
+// }
+// .gist code {
+//   padding: 0;
+//   color: inherit;
+//   background: transparent;
+//   border-radius: 0;
+// }

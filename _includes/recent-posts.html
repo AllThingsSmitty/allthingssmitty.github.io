@@ -1,0 +1,13 @@
+<aside class="recent">
+  <h3>Recent posts</h3>
+  <ul class="recent-posts">
+    {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

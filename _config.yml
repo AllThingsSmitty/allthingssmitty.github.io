@@ -1,0 +1,41 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Matt Smith
+tagline:             Web Dev, Mobile Strategist, Front-End Astronaut
+url:                 http://allthingssmitty.com
+paginate:            2
+baseurl:             ""
+
+# Google analytics
+analytics_id:        UA-55352436-3
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Matt Smith
+  url:               http:allthingssmitty.com
+  email:             matt@allthingssmitty.com
+  codepen:           http://codepen.io/allthingssmitty
+  github:            https://github.com/allthingssmitty
+  google_plus:       https://plus.google.com/+MattSmithYo/posts
+  linkedin:          https://linkedin.com/in/allthingssmitty
+  twitter:           https://twitter.com/allthingssmitty
+  follow:            Follow me on
+
+# Custom vars
+version:              1.0.0
+github:
+  repo:               https://github.com/allthingssmitty/allthingssmitty.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist

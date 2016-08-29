@@ -1,0 +1,94 @@
+// Masthead
+//
+// Super small header above the content for site name and short description.
+
+.masthead {
+  margin-bottom: 3rem;
+  padding-bottom: .5rem;
+  padding-top: 1rem;
+  
+  ul {
+    margin: .5em 0 0;
+    padding: 0;
+  
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 .5em;
+    }
+    
+    li:first-child {
+      margin-left: 0;
+    }
+    
+    li:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: inherit;
+    }
+    
+    a span:last-child {
+      clip: rect(1px, 1px, 1px, 1px);
+      max-height: 1px;
+      max-width: 1px;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
+  
+  a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  .fa {
+    display: inline-block;
+    font: 1.25em/1 FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: auto;
+  }
+  
+  .fa-twitter:before {
+    content: "\f099";
+  }
+  
+  .fa-github:before {
+    content: "\f09b";
+  }
+  
+  .fa-linkedin:before {
+    content: "\f0e1";
+  }
+  
+  .fa-codepen:before {
+    content: "\f1cb";
+  }
+  
+  .fa-google-plus:before {
+    content: "\f0d5";
+  }
+}
+
+.masthead-title {
+  color: $gray-4;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  a {
+    color: inherit;
+  }
+
+  small {
+    font-size: 75%;
+    font-weight: 400;
+    opacity: .5;
+    margin-left: .5em;
+    
+    @media (max-width: 44em) {
+      display: block;
+      margin: .25em 0 0;
+    }
+  }
+}
