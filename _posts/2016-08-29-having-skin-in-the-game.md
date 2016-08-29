@@ -16,7 +16,7 @@ And what I specifically meant by this question was why wasn't I writing anything
 
 🤔
 
-Not a very original, Self.
+Not a very original answer, Self.
 
 "Because...everyone else is already doing that."
 
@@ -28,7 +28,7 @@ Interesting.
 
 "Because someone else has already said it better than I can say it."
 
-Over the course of this private conversation I started realizing that my excuses were all based on the idea that my words weren't good enough. Translation: *my skill as a developer wasn't good enough*. It was okay to share someone else's ideas and words because there was no risk; those belonged someone else. But if they were mine, the risk seemed too high.
+Over the course of this private conversation I started realizing that my excuses were all based on the idea that my words weren't good enough. Translation: *my skill as a developer wasn't good enough*. It was okay to share someone else's ideas and words because there was no risk; those belonged to someone else. But if they were mine, the risk seemed too high.
 
 For a number of years I sat amazed at all the developers who seemed to not have any care about putting themselves out there, who wrote about any number of topics and then shared it with the world. And anytime I ever said to myself, "I can do that," this little voice in my head was quick to respond, "But it won't be as good as what someone else has already done."
 
