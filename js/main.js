@@ -3,12 +3,16 @@
   if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
     return;
   }
-  var slabo = new w.FontFaceObserver('Slabo27px', {
-    weight: 500
-  });
-
+  var bitter = new w.FontFaceObserver('Bitter', {
+    weight: 400
+  }),
+    opensans = new w.FontFaceObserver('Open Sans', {
+      weight: 700
+    });
+  
   w.Promise
-    .all([slabo.check()])
+    .all([bitter.check()])
+    .all([opensans.check()])
     .then(function () {
       w.document.documentElement.className += ' fonts-loaded';
     });

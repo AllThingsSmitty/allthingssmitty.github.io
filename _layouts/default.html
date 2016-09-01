@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="en" class="fonts-loaded">
+<!--#else -->
 <html lang="en">
+<!--#endif -->
 
   {% include head.html %}
 
@@ -32,6 +36,9 @@
         </small>
       </footer>
     </div>
+    
+    <script src="{{ site.baseurl }}/js/fontfaceobserver.min.js"></script>
+    <script src="{{ site.baseurl }}/js/main.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
