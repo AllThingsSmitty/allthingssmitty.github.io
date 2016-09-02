@@ -25,7 +25,7 @@
   {% else %}
     <meta property="og:title" content="{{ site.title }} &middot; {{ site.tagline }}">
   {% endif %}
-  <meta property="og:image" content="/public/avatar@2x.png">
+  <meta property="og:image" content="{{ site.url }}/public/avatar@2x.png">
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% else %}
@@ -56,7 +56,7 @@
   {% else %}
     <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}    
-  <meta name="twitter:image" content="/public/avatar@2x.png">
+  <meta name="twitter:image" content="{{ site.url }}/public/avatar@2x.png">
 
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/public/apple-icon-57x57.png">
