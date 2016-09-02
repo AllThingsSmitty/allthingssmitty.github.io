@@ -27,47 +27,11 @@
     a {
       color: inherit;
     }
-    
-    a span:last-child {
-      clip: rect(1px, 1px, 1px, 1px);
-      max-height: 1px;
-      max-width: 1px;
-      overflow: hidden;
-      position: absolute;
-    }
   }
   
   a:hover {
     color: $link-color;
     text-decoration: none;
-  }
-
-  .fa {
-    display: inline-block;
-    font: 1.25em/1 FontAwesome;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: auto;
-  }
-  
-  .fa-twitter:before {
-    content: "\f099";
-  }
-  
-  .fa-github:before {
-    content: "\f09b";
-  }
-  
-  .fa-linkedin:before {
-    content: "\f0e1";
-  }
-  
-  .fa-codepen:before {
-    content: "\f1cb";
-  }
-  
-  .fa-google-plus:before {
-    content: "\f0d5";
   }
 }
 
