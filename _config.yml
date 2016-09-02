@@ -5,6 +5,7 @@ permalink:           pretty
 title:               Matt Smith
 tagline:             Web Dev, Mobile Strategist, Front-End Astronaut
 url:                 http://allthingssmitty.com
+brand:               allthingssmitty
 paginate:            2
 baseurl:             ""
 
