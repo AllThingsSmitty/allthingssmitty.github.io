@@ -10,40 +10,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Matt Smith is a web developer who builds web applications to deliver engaging user experiences.">
   
-  {% if page.title %}
-    <meta property="og:title" content="{{ page.title }} &middot; {{ site.title }}">
+  {% if page.url %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   {% else %}
-    <meta property="og:title" content="{{ site.title }} &middot; {{ site.tagline }}">
+    <meta property="og:url" content="{{ site.url }}">
   {% endif %}
   {% if page.title %}
     <meta property="og:type" content="article">
   {% else %}
     <meta property="og:type" content="website">
   {% endif %}
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }} &middot; {{ site.title }}">
+  {% else %}
+    <meta property="og:title" content="{{ site.title }} &middot; {{ site.tagline }}">
+  {% endif %}
+  <meta property="og:image" content="{{ site.url }}/public/avatar@2x.png">
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% else %}
     <meta property="og:description" content="{{ site.description }}">
   {% endif %}
-  {% if page.url %}
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  {% else %}
-    <meta property="og:url" content="{{ site.url }}">
-  {% endif %}
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
     <meta property="article:author" content="{{ site.url }}/about/">
-  {% endif %}
-  {% if page.image %}
-    <meta property="og:image" content="/img/posts/{{ page.image }}">
-  {% else %}
-    <meta property="og:image" content="/public/avatar@2x.png">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
     <meta property="article:section" content="{{ category }}">
     {% endfor %}
-  {% endif %}
+  {% endif %}  
   {% if page.tags %}
     {% for tag in page.tags %}
     <meta property="article:tag" content="{{ tag }}">
@@ -51,11 +47,16 @@
   {% endif %}
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Matt Smith is a web developer who builds web applications to deliver engaging user experiences.">
-  <meta name="twitter:image" content="{{ site.default }}/public/avatar@2x.png">
-  <meta name="twitter:creator" content="@AllThingsSmitty">
+  <meta name="twitter:site" content="@allthingssmitty">
+  <meta name="twitter:creator" content="@allthingssmitty">
   <meta name="twitter:url" content="{{ site.url }}">
-  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:title" content="{{ page.title }} &middot; {{ site.title }}">
+  {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+  {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+  {% endif %}    
+  <meta name="twitter:image" content="{{ site.url }}/public/avatar@2x.png">
 
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/public/apple-icon-57x57.png">

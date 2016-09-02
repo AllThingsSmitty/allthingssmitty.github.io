@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Having skin in the game
-description: A few thoughts about managing self-doubt
+description: A few thoughts about managing self-doubt.
 comments: true
 ---
 
