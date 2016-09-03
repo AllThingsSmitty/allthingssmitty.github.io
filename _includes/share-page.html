@@ -4,11 +4,15 @@
   <section class="share">
     <h4>Share this post</h4>
     
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.author.twitter_username }}&related={{ site.author.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a> | 
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter share', 'height=235,width=550');return false;">
+      <span class="fa fa-twitter"></span><span>Share on Twitter</span>
+    </a>
+        
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href,'facebook-share', 'height=296,width=580');return false;"><span class="fa fa-facebook-square"></span><span>Share on Facebook</span></a>
     
-    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a> | 
-    
-    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+" onclick="window.open(this.href,'google-plus-share', 'height=490,width=530');return false;">
+      <span class="fa fa-google-plus"></span><span>Share on Google+</span>
+    </a>
 
   </section>
 
