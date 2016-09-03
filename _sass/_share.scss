@@ -1,0 +1,28 @@
+// Share
+//
+// Styles for social share buttons.
+
+.share a {
+  color: $gray-3;
+  margin-right: 1rem;
+
+  &:hover {
+    color: $blue;
+  }    
+
+}
+.fa {
+  display: inline-block;
+  font: 1.25em/1 FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: auto;
+
+  + span:last-child {
+    clip: rect(1px, 1px, 1px, 1px);
+    max-height: 1px;
+    max-width: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+}
