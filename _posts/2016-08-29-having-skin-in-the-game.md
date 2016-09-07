@@ -2,6 +2,7 @@
 layout: post
 title: Having skin in the game
 description: A few thoughts about confronting self-doubt.
+image: img/public/post-thumb.jpg
 comments: true
 ---
 
