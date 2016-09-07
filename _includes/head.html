@@ -25,7 +25,11 @@
   {% else %}
     <meta property="og:title" content="{{ site.title }} &middot; {{ site.tagline }}">
   {% endif %}
-  <meta property="og:image" content="{{ site.url }}/img/public/avatar@2x.png">
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/img/public/post-thumb.jpg">
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}/img/public/avatar@2x.png">
+  {% endif %}
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% else %}
@@ -55,8 +59,13 @@
     <meta name="twitter:description" content="{{ page.description }}">
   {% else %}
     <meta name="twitter:description" content="{{ site.description }}">
-  {% endif %}    
-  <meta name="twitter:image" content="{{ site.url }}/img/public/avatar@2x.png">
+  {% endif %}
+  
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/img/public/post-thumb.jpg">
+  {% else %}
+    <meta name="twitter:image" content="{{ site.url }}/img/public/avatar@2x.png">
+  {% endif %}
 
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/img/public/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/img/public/apple-icon-57x57.png">
