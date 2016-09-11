@@ -3,8 +3,22 @@ layout: default
 ---
 
 <article class="post">
+ 
   <h1 class="post-title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+  <div class="post-date">
+    <span class="fa fa-clock-o"></span>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d %Y" }}</time>
+  </div>
+  {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <span class="fa fa-tags"></span>
+      <ul>
+        {% for tag in page.tags %}
+          <li><a href="/tags#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
   {{ content }}  
 </article>
 
