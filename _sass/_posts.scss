@@ -32,23 +32,53 @@
 }
 
 // Meta data line below post title
-.post-date {
+.post-date,
+.post-tags {
   color: $gray-3;
-  display: block;
-  margin-bottom: 1rem;
-  margin-top: -.5rem;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  
+  time {
+    margin-left: .25em;
+  }
+}
+
+.archive-date {
+  float: right;
+  
+  @media (max-width: 44em) {
+    display: block;
+    float: none;
+    margin: 0;
+  }
+}
+
+// Tags
+.post-tags {
+
+  ul {
+    display: inline-block;
+    margin: 0;
+    margin-left: .25em;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+  }
 }
 
 // Recent posts
 .recent {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $white-sand;
   //padding-bottom: 1.5rem;
 }
 
 // Related posts
 .related {
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
+  border-bottom: 1px solid $white-sand;
+  border-top: 1px solid $white-sand;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
