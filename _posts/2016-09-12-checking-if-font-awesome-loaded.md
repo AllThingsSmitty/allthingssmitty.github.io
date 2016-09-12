@@ -2,6 +2,7 @@
 layout: post
 title: Checking if Font Awesome loaded
 description: Icon fonts are a very popular visual asset on the web today. Unlike JavaScript libraries it.
+image: img/posts/sunset-home-office-min.jpg
 tags: [icons fonts, JavaScript]
 comments: true
 ---
