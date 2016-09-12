@@ -16,7 +16,7 @@ So let's take a crack at it.
 
 Icon font libraries, unlike JavaScript libraries, typically consist of only CSS and fonts files. [Font Awesome](http://fontawesome.io/) is among the most popular of these resources, so we'll use that for this example.
 
-If we were getting the jQuery library we'd be able to check if the jQuery object loaded via the CDN using `window.jQuery`. If it didn't load, we'd fallback to use a local copy. With Font Awesome there's no JavaScript to detect. One way we can detect Font Awesome is by creating an element and checking if it has the correct CSS is applied to it.
+If we were getting the jQuery library we'd be able to check if the jQuery object loaded via the CDN using `window.jQuery`. If it didn't load, we'd fallback to use a local copy. With Font Awesome there's no JavaScript to detect. One way we can detect Font Awesome is by creating an element and checking if the correct CSS is applied to it.
 
 We'll start by adding Font Awesome to the web page:
 
