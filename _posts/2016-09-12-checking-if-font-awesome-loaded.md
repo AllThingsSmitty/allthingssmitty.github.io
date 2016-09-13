@@ -118,4 +118,4 @@ If the `font-family` isn't `FontAwesome` we'll add a local copy of the library t
 
 ### Wrapping up
 
-Whether or not you use icon fonts is up to you. If you are and opt to serve your reseource via a CDN, you'll want to know that the resource loaded. Now you have a way tell and can similarly apply this technique to other icon font libraries.s
+Whether or not you use icon fonts is up to you. If you are and opt to serve your resource via a CDN, you'll want to know that the resource loaded. Now you have a way tell and can similarly apply this technique to other icon font libraries.
