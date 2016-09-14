@@ -19,6 +19,8 @@ sass:
   sass_dir:         _sass
   style:            :compressed
 
+timezone:           America/New_York
+
 # About/contact
 author:
   name:             Matt Smith
