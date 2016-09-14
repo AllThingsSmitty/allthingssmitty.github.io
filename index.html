@@ -14,7 +14,7 @@ title: Home
    
     <div class="post-date">
       <span class="fa fa-clock-o"></span>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d %Y" }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
     </div>
     {% if post.tags.size > 0 %}
       <div class="post-tags">
