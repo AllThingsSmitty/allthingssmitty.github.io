@@ -11,8 +11,11 @@
 }
 
 footer {
+  font-family: $secondary-font-family;
+  font-weight: 600;
   margin-bottom: 2rem;
-   
+  text-align: center;
+  
   a:hover {
     color: $link-color;
     text-decoration: none;

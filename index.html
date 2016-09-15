@@ -28,8 +28,10 @@ title: Home
     {% endif %}    
     
     <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-
-    <p><a href="{{ post.url }}">Read more</a></p>
+    
+    <div class="more">
+      <a href="{{ post.url }}">Read more</a>
+    </div>
     
     {% if forloop.last == false %}<hr>{% endif %}
   </article>
