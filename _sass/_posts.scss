@@ -79,6 +79,19 @@
   }
 }
 
+// Tags page
+.tags {
+  
+  h2 {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+  
+  .row {
+    margin-bottom: 1rem;
+  } 
+}
+
 // Recent posts
 .recent {
   border-top: 1px solid $white-sand;
