@@ -19,17 +19,22 @@
   
   nav {
     color: $gray-3;
-    float: right;
     
     ul {
       margin: 0;
       padding: 0;
+      text-align: right;
     
       li {
         display: inline-block;
         font-weight: 700; 
         list-style: none;
-        margin: 0 .5em;
+        margin: 0 .5rem .25rem;
+      }
+      
+      .title {
+        float: left;
+        margin-left: 0;
       }
     }
   }
