@@ -3,16 +3,28 @@
   if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
     return;
   }
-  var bitter = new w.FontFaceObserver('Bitter', {
+  var bitter400 = new w.FontFaceObserver('Bitter', {
     weight: 400
   }),
-    opensans = new w.FontFaceObserver('Open Sans', {
+    bitter400italic = new w.FontFaceObserver('Bitter', {
+      weight: 400,
+      style: 'italic'
+    }),
+    bitter700 = new w.FontFaceObserver('Bitter', {
+      weight: 700
+    }),
+    opensans400 = new w.FontFaceObserver('Open Sans', {
+      weight: 400
+    }),
+    opensans600 = new w.FontFaceObserver('Open Sans', {
+      weight: 600
+    }),
+    opensans700 = new w.FontFaceObserver('Open Sans', {
       weight: 700
     });
   
   w.Promise
-    .all([bitter.check()])
-    .all([opensans.check()])
+    .all([bitter400.check(), bitter400italic.check(), bitter700.check(), opensans400.check(), opensans600.check(), opensans700.check()])
     .then(function () {
       w.document.documentElement.className += ' fonts-loaded';
     });
