@@ -63,3 +63,36 @@
     color: inherit;
   }
 }
+
+.skip-nav {
+  float: left;
+  font-family: $secondary-font-family;
+  font-weight: 600;
+  padding: .75rem;
+
+  &:focus {
+    visibility: visible;
+  }
+
+  a {
+    color: #454545;
+    left: -500px;
+    overflow: hidden;
+    position: absolute;
+  
+    &:active,
+    &:focus {
+      left: 0;
+      overflow: visible;
+      position: static;
+    }
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  max-height: 1px;
+  max-width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
