@@ -8,7 +8,10 @@
   {% include head.html %}
 
   <body>
-
+    <div class="skip-nav">
+      <a href="#content">Skip to main content</a>
+    </div>
+   
     <div class="container">
       <header class="masthead" role="banner">
         <nav class="row" role="navigation">
@@ -26,12 +29,11 @@
         <small>Web Dev, Mobile Strategist, Front-End Astronaut</small>
       </header>
 
-      <main>
+      <main id="content" role="main" tabindex="0">
         {{ content }}
       </main>
 
-      <footer>
-       
+      <footer role="contentinfo">
         <small>
           &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> Matt Smith. All rights reserved.
         </small>
