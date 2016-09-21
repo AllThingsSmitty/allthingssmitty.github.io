@@ -3,7 +3,7 @@ layout: post
 title: Checking if Font Awesome loaded
 description: Icon fonts are a very popular visual web asset today. Unlike JavaScript libraries there's no straightforward way to detect if an icon fonts library has loaded. Here's a clever way to do just that.
 image: img/posts/sunset-home-office-min.jpg
-tags: [icons fonts, JavaScript]
+tags: [icons fonts, javascript]
 comments: true
 ---
 
