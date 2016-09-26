@@ -14,7 +14,7 @@ So let's take a crack at it.
 
 ### Not a JavaScript library
 
-Icon font libraries, unlike JavaScript libraries, typically consist of only CSS and fonts files. [Font Awesome](http://fontawesome.io/) is among the most popular of these resources, so we'll use that for this example.
+Icon font libraries, unlike JavaScript libraries, typically consist of only CSS and fonts files. [Font Awesome](http://fontawesome.io/){:rel="external"} is among the most popular of these resources, so we'll use that for this example.
 
 If we were getting the jQuery library we'd be able to check if the jQuery object loaded via the CDN using `window.jQuery`. If it didn't load, we'd fallback to use a local copy. With Font Awesome there's no JavaScript to detect. One way we can detect Font Awesome is by creating an element and checking if the correct CSS is applied to it.
 
@@ -62,7 +62,7 @@ The `.fa` class has a `font-family` value of `FontAwesome`. This will be what we
 
 ### Reading the computed style
 
-In order to be able to read the `font-family` property we need a way to get the values of the `<span>`. The [`getComputedStyle()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle) method will return all CSS values of an element, which is perfect for what we're doing.
+In order to be able to read the `font-family` property we need a way to get the values of the `<span>`. The [`getComputedStyle()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle){:rel="external"} method will return all CSS values of an element, which is perfect for what we're doing.
 
 So let's go ahead and create a function to get the computed style:
 
