@@ -66,9 +66,7 @@
 
 .skip-nav {
   float: left;
-  font-family: $secondary-font-family;
   font-weight: 600;
-  padding: .75rem;
 
   &:focus {
     visibility: visible;
@@ -82,9 +80,12 @@
   
     &:active,
     &:focus {
-      left: 0;
+      background: #f1f2f3;
+      left: .5rem;
       overflow: visible;
-      position: static;
+      padding: .5rem;
+      position: absolute;
+      top: .5rem;
     }
   }
 }
