@@ -39,6 +39,9 @@ version:            1.0.0
 github:
   repo:             https://github.com/allthingssmitty/allthingssmitty.github.io
 
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+
 # Gems
 gems:
   - jekyll-paginate
