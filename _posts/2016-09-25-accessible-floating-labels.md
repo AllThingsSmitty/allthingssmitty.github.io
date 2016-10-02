@@ -7,7 +7,7 @@ tags: [accessibility, css, jquery]
 comments: true
 ---
 
-There's been plenty of [discussion](https://adactio.com/journal/10910){:rel="external"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility a fundamental part of development and not an afterthought.
+There's been plenty of [discussion](https://adactio.com/journal/10910){:rel="external"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility as a fundamental part of development and not an afterthought.
 
 Still, I see plenty of implementations where labels are ignored for more eye-catching solutions, which in turn creates [accessibility problems](https://medium.com/simple-human/always-use-a-label-a39ceab554e6){:rel="external"}. Interestingly enough, there are plenty of existing, design-friendly patterns using labels. One that's been around for a few years now is floating labels:
 
