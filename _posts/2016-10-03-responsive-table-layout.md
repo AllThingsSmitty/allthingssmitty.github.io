@@ -72,7 +72,7 @@ This might look like many other HTML tables you've worked with. And probably abo
 
 ### Gettin' responsive!
 
-First, we'll add a `aria-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout. Using `aria-label` will also provide accessibility support for screen readers.
+First, we'll add an `aria-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout. Using `aria-label` also provides accessibility support for screen readers.
 
 ```html
   <td scope="row" aria-label="Account">Visa - 3412</td>
