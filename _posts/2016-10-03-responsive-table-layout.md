@@ -67,7 +67,7 @@ table td {
 }
 ```
 
-This might look like many other HTML tables you've worked with. And probably about now you're asking, "But how do I get this responsive?", amirite.
+This might look like many other HTML tables you've worked with. And probably about now you're asking, "But how do I get this responsive?"
 
 
 ### Gettin' responsive!
