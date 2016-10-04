@@ -45,7 +45,7 @@
     return window.getComputedStyle(element, null).getPropertyValue(property);
   }
 
-  if ((css(span, 'font-family')) !== 'FontAwesome') {
+  if (css(span, 'font-family') !== 'FontAwesome') {
     headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
     document.head.innerHTML = headHTML;
   }
