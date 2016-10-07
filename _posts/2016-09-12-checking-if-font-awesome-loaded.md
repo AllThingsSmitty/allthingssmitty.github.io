@@ -102,7 +102,7 @@ Let's run our check for Font Awesome in an `if` statement:
     return window.getComputedStyle(element, null).getPropertyValue(property);
   }
   
-  if ((css(span, 'font-family')) !== 'FontAwesome') {
+  if (css(span, 'font-family') !== 'FontAwesome') {
     var headHTML = document.head.innerHTML;
     headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
     document.head.innerHTML = headHTML;
