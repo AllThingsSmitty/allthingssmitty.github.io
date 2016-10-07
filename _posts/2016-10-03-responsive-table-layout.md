@@ -16,7 +16,7 @@ It's an issue that exists broadly across the web, even though there are several 
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-So what's the roadblock for using this or another pattern? Time? Effort? How about quick run-through so we can see for ourselves?
+So what's the roadblock for using this or another pattern? Time? Effort? How about a quick run-through so we can see for ourselves?
 
 ### Where to start?
 
