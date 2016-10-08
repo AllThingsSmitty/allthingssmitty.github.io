@@ -39,6 +39,10 @@ version:            1.0.0
 github:
   repo:             https://github.com/allthingssmitty/allthingssmitty.github.io
 
+autoprefixer:
+  browsers:
+  - last 2 versions
+
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
 
@@ -46,3 +50,4 @@ kramdown:
 gems:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-autoprefixer
