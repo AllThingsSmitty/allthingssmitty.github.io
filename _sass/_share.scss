@@ -14,13 +14,6 @@
   }
 }
 
-.fa {
-  display: inline-block;
-  font: 1.5rem/1.5 FontAwesome;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: auto;
-}
 
 .social {
   display: table;
@@ -43,6 +36,14 @@
     a:hover {
       color: $link-color;
       text-decoration: none;
+    }
+    
+    .fa {
+      display: inline-block;
+      font: 1.5rem/1.5 FontAwesome;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: auto;
     }
   }
 }
