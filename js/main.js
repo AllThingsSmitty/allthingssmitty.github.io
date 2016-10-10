@@ -46,7 +46,7 @@
   }
 
   if (css(span, 'font-family') !== 'FontAwesome') {
-    headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
+    headHTML += '<link rel="stylesheet" href="/third-party/font-awesome/css/font-awesome.min.css">';
     document.head.innerHTML = headHTML;
   }
   document.body.removeChild(span);
