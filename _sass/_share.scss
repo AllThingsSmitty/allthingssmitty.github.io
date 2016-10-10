@@ -10,7 +10,11 @@
 
     &:hover {
       color: $blue;
-    }    
+    }
+  }
+  
+  .fa {
+    font: 1.5rem/1.5 FontAwesome;
   }
 }
 
@@ -30,11 +34,11 @@
 
     a {
       color: inherit;
-    }
-
-    a:hover {
-      color: $link-color;
-      text-decoration: none;
+    
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+      }
     }
     
     .fa {
