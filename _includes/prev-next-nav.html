@@ -1,0 +1,87 @@
+
+<div class="pagination">
+  {% if page.previous.url %}
+   <a class="pagination-item older" href="{{ page.previous.url }}"><span class="fa fa-chevron-left"></span> {{ page.previous.title }}</a>
+  {% else %}
+  <span class="pagination-item older"><span class="fa fa-chevron-left fa2"></span> Previous</span>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="pagination-item newer" href="{{ page.next.ur l}}">{{ page.next.title }} <span class="fa fa-chevron-right"></span></a>
+  {% else %}
+    <span class="pagination-item newer">Next <span class="fa fa-chevron-right fa2"></span></span> 
+  {% endif %}
+</div>
+ 
+
+<!--
+<div class="post-nav">
+{% if page.previous.url %}
+  <div class="left">
+    <div class="prev_post">
+      <h4 class="prev-post-title"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h4>
+      <div class="icon-container"></div>
+    </div>
+  </div>
+  {% endif %}
+  {% if page.next.url %}
+  <div class="right">
+    <div class="next_post">
+      <h4 class="next-post-title"><a href="{{ page.next.ur l}}">{{ page.next.title }}</a></h4>
+      <div class="icon-container"></div>
+    </div>
+  </div>
+{% endif %}  
+</div>
+-->
+<style>
+.post-nav {
+  font-family: "Open Sans", sans-serif;
+  margin: 1rem 0 2rem;
+}
+.post-nav .left,
+.post-nav .right {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 49%;
+}
+.post-nav .right {
+  float: right;
+}
+.post-nav .left .prev-post-title {
+  padding: 0 5% 0 25%;
+}
+.post-nav .right .next-post-title {
+  padding: 0 25% 0 5%;
+  text-align: right;
+}
+.post-nav .left .icon-container,
+.post-nav .right .icon-container {
+  background: #ccc;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 20%;
+}
+.post-nav .left .icon-container {
+  left: 0;
+}
+.post-nav .right .icon-container {
+  right: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .post-nav .left,
+  .post-nav .right {
+    display: block;
+    width: 100%;
+  }
+  .post-nav .left,
+  .post-nav .right {
+    float: none;
+    margin: 0 0 1rem;
+  }
+} 
+</style>
