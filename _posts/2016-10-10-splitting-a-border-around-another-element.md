@@ -120,4 +120,4 @@ And _voila_...
 
 ### There you have it
 
-This is a trick I'd never done before until another developer asked how I might go about implementing that kind of design. There may be traditional methods (`<table>`) or even more creative solutions (`text-shadow`, maybe?) that will also work for your needs, too. But it's still a fun exercise. Feel free to play around with it and see what ideas you come up with.
+This is a trick I'd never done before until another developer asked how I might go about implementing that kind of design. There may be traditional methods (`<table>`) or even more creative solutions (`text-shadow`, maybe?) that will also work for your needs. But it's still a fun exercise. Feel free to play around with it and see what ideas you come up with.
