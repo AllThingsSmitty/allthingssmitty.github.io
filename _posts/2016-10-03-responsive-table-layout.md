@@ -35,7 +35,7 @@ We'll create the same table above with some generic HTML:
   </thead>
   <tbody>
     <tr>
-      <td scope="row">Visa - 3412</td>
+      <td>Visa - 3412</td>
       <td>04/01/2016</td>
       <td>$1,190</td>
       <td>03/01/2016 - 03/31/2016</td>
@@ -75,7 +75,7 @@ This might look like many other HTML tables you've worked with. And probably abo
 First, we'll add an `aria-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout. Using `aria-label` also provides accessibility support for screen readers.
 
 ```html
-  <td scope="row" aria-label="Account">Visa - 3412</td>
+  <td aria-label="Account">Visa - 3412</td>
   <td aria-label="Due Date">04/01/2016</td>
   <td aria-label="Amount">$1,190</td>
   <td aria-label="Period">03/01/2016 - 03/31/2016</td>
