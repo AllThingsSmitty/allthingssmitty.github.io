@@ -9,11 +9,12 @@ pre {
 }
 
 code {
-  background: #f9f9f9;
+  background: $code-background-color;
   border-radius: 3px;
   color: $code-color;
   font-size: 85%;
   padding: .25em .5em;
+  text-shadow: 0 1px white;
 }
 
 pre {
@@ -30,7 +31,7 @@ pre code {
 
 // Pygments via Jekyll
 .highlight {
-  background: #f9f9f9;
+  background: $code-background-color;
   border-radius: .25rem;
   font-size: .8rem;
   line-height: 1.4;
@@ -51,6 +52,7 @@ pre code {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
   }
 }
