@@ -7,7 +7,7 @@ tags: [css, responsive, tables]
 comments: true
 ---
 
-One of my pet peeves in web design is how tables are often not optimized for non-desktop experiences. Let's say I'm viewing Wikipedia on my iPhone, I'm looking through the episode list for _Star Trek: The Next Generation_ (I grew up in the late 80's --- deal), and the table has a lot of columns and data. There ends up being a lot of back-and-forth side scrolling, device flipping, and general annoyance as I muddle through that user experience.
+One of my pet peeves in web design is how tables are often not optimized for non-desktop experiences. Let's say I'm viewing Wikipedia on my iPhone, I'm looking through the episode list for _Star Trek: The Next Generation_ (I grew up in the late 80's --- deal), and the table has a lot of columns and data. There ends up being a lot of back-and-forth side swiping, device flipping, and general annoyance as I muddle through that user experience.
 
 It's an issue that exists broadly across the web, even though there are several [responsive table solutions](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:rel="external"} available, including this simple, CSS-only pattern:
 
