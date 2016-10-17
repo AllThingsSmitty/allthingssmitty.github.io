@@ -9,7 +9,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   background: none;
   color: black;
-  font-family: $code-font-family !important;
+  font-family: $code-font-family;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
@@ -17,23 +17,17 @@ pre[class*="language-"] {
   -moz-tab-size: 4;
   tab-size: 4;
   text-align: left;
-  text-shadow: 0 1px white;
+  text-shadow: 0 1px #fff;
   white-space: pre;
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-}
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+  &::-moz-selection,
+  & ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
 }
 
 @media print {
