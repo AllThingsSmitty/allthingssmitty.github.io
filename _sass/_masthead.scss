@@ -27,9 +27,10 @@
     
       li {
         display: inline-block;
-        font-weight: 700; 
+        font-weight: 700;
+        line-height: 1.75;
         list-style: none;
-        margin: 0 .5rem .25rem;
+        margin: 0 .5rem;
       }
       
       .title {
