@@ -72,13 +72,13 @@ This might look like many other HTML tables you've worked with. And probably abo
 
 ### Gettin' responsive!
 
-First, we'll add an `aria-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout. Using `aria-label` also provides accessibility support for screen readers.
+First, we'll add a `data-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout.
 
 ```html
-  <td aria-label="Account">Visa - 3412</td>
-  <td aria-label="Due Date">04/01/2016</td>
-  <td aria-label="Amount">$1,190</td>
-  <td aria-label="Period">03/01/2016 - 03/31/2016</td>
+  <td data-label="Account">Visa - 3412</td>
+  <td data-label="Due Date">04/01/2016</td>
+  <td data-label="Amount">$1,190</td>
+  <td data-label="Period">03/01/2016 - 03/31/2016</td>
 ```
 
 Now we can begin writing a CSS media query:
@@ -86,7 +86,14 @@ Now we can begin writing a CSS media query:
 ```css
 @media screen and (max-width: 600px) {
   table thead {
-    display: none;
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
   table tr {
     border-bottom: 3px solid #ddd;
@@ -98,7 +105,7 @@ Now we can begin writing a CSS media query:
     text-align: right;
   }
   table td:before {
-    content: attr(aria-label);
+    content: attr(data-label);
     float: left;
   }
 }
