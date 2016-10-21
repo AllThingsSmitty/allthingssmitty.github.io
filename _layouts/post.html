@@ -14,7 +14,7 @@ layout: default
       <span class="fa fa-tags"></span>
       <ul>
         {% for tag in page.tags %}
-          <li><a href="/tags#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}</li>
+          <li><a href="/tags#{{ tag | url_encode }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}</li>
         {% endfor %}
       </ul>
     </div>
