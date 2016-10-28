@@ -1,35 +1,3 @@
-// check for when the fonts are finished loading and add the `fonts-loaded` class to the HTML tag
-(function (w) {
-  if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
-    return;
-  }
-  var bitter400 = new w.FontFaceObserver('Bitter', {
-    weight: 400
-  }),
-    bitter400italic = new w.FontFaceObserver('Bitter', {
-      weight: 400,
-      style: 'italic'
-    }),
-    bitter700 = new w.FontFaceObserver('Bitter', {
-      weight: 700
-    }),
-    opensans400 = new w.FontFaceObserver('Open Sans', {
-      weight: 400
-    }),
-    opensans600 = new w.FontFaceObserver('Open Sans', {
-      weight: 600
-    }),
-    opensans700 = new w.FontFaceObserver('Open Sans', {
-      weight: 700
-    });
-  
-  w.Promise
-    .all([bitter400.check(), bitter400italic.check(), bitter700.check(), opensans400.check(), opensans600.check(), opensans700.check()])
-    .then(function () {
-      w.document.documentElement.className += ' fonts-loaded';
-    });
-}(this));
-
 
 // check if Font Awesome CDN loaded
 (function () {
