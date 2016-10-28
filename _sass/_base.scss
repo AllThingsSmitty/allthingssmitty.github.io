@@ -9,7 +9,7 @@ body {
 }
 
 html {
-  font-family: $root-font-family;
+  font-family: $root-font-family-regular;
   font-size: $root-font-size;
   line-height: $root-line-height;
 
@@ -27,7 +27,7 @@ body {
 }
 
 .fonts-loaded body {
-  font-family: $root-font-family;
+  font-family: $root-font-family-regular;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
@@ -78,16 +78,31 @@ tbody tr:nth-child(odd) th {
   background: #f9f9f9;
 }
 
-/*b,
+b,
 strong {
- font-family: "Bitter-Bold-700-Latin-Ext", "Bitter-Bold-700-Latin", serif;
+ font-family: $root-font-family-bold;
  font-style: normal;
  font-weight: normal;
 }
 
 i,
 em {
- font-family: "Bitter-Italic-400-Latin-Ext", "Bitter-Italic-400-Latin", serif;
+ font-family: $root-font-family-italic;
  font-style: normal;
  font-weight: normal;
-}*/
+}
+
+
+b i,
+strong em {
+ font-family: $root-font-family-bolditalic;
+ font-style: normal;
+ font-weight: normal;
+}
+
+sup {
+  
+  a {
+    font-family: $root-font-family-bold;
+  }
+}

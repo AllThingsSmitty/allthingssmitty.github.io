@@ -3,7 +3,7 @@
 // Super small header above the content for site name and short description.
 
 .masthead {
-  font-family: $secondary-font-family;    
+  font-family: $secondary-font-family-bold;    
   margin-bottom: 5rem;
   padding-bottom: .5rem;
   padding-top: 1rem;
@@ -43,6 +43,7 @@
   small {
     color: $gray-3;
     display: block;
+    font-family: $secondary-font-family-semibold;
     font-size: 75%;
     font-weight: 600;
     margin-top: .5rem;

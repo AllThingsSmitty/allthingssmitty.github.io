@@ -36,7 +36,7 @@
 .post-tags {
   color: $gray-3;
   display: inline-block;
-  font-family: $secondary-font-family;
+  font-family: $secondary-font-family-semibold;
   font-weight: 600;
   margin: 0 1rem 1rem 0;
   
@@ -48,7 +48,7 @@
 .more {
   
   a {
-    font-family: $secondary-font-family;
+    font-family: $secondary-font-family-semibold;
     font-weight: 600;
   }
 }

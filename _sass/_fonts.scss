@@ -1,7 +1,55 @@
 @font-face {
   font-family: "Inconsolata";
-  src: url(fonts/inconsolata.woff2) format("woff2"),
-    url(fonts/inconsolata.woff) format("woff");
+  src: url(fonts/Inconsolata/Inconsolata.woff2) format("woff2"),
+    url(fonts/Inconsolata/Inconsolata.woff) format("woff");
+}
+
+@font-face {
+  font-family: "BitterRegular";
+  src: url(fonts/Bitter/Bitter-Regular.woff2) format("woff2"),
+    url(fonts/Bitter/Bitter-Regular.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "BitterItalic";
+  src: url(fonts/Bitter/Bitter-Italic.woff2) format("woff2"),
+    url(fonts/Bitter/Bitter-Italic.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "BitterBold";
+  src: url(fonts/Bitter/Bitter-Bold.woff2) format("woff2"),
+    url(fonts/Bitter/Bitter-Bold.woff) format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "BitterBoldItalic";
+  src: url(fonts/Bitter/Bitter-BoldItalic.woff2) format("woff2"),
+    url(fonts/Bitter/Bitter-BoldItalic.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url(fonts/Open-Sans/OpenSans-Bold.woff2) format("woff2"),
+    url(fonts/Open-Sans/OpenSans-Bold.woff) format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url(fonts/Open-Sans/OpenSans-Semibold.woff2) format("woff2"),
+    url(fonts/Open-Sans/OpenSans-Semibold.woff) format("woff");
+  font-style: normal;
+  font-weight: 600;
 }
 
 /*

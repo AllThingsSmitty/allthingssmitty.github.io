@@ -14,13 +14,17 @@ $blue: #268bd2;
 $brown: #8f5536;
 $white-sand: #eee;
 
-$root-font-family: "Bitter", serif;
+$root-font-family-regular: "BitterRegular", serif;
+$root-font-family-bold: "BitterBold", serif;
+$root-font-family-italic: "BitterItalic", serif;
+$root-font-family-bolditalic: "BitterBoldItalic", serif;
 $root-font-size: 16px;
 $root-line-height: 1.5;
 
 $body-color: #515151;
 $body-bg: #fff;
-$secondary-font-family: "Open Sans", sans-serif;
+$secondary-font-family-bold: "OpenSansBold", sans-serif;
+$secondary-font-family-semibold: "OpenSansSemibold", sans-serif;
 $link-color: $blue;
 
 $border-color: #e5e5e5;
