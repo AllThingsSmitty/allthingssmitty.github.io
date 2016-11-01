@@ -80,24 +80,21 @@ tbody tr:nth-child(odd) th {
 
 b,
 strong {
- font-family: $root-font-family-bold;
- font-style: normal;
- font-weight: normal;
+  font-family: $root-font-family-bold;
+  font-style: normal;
 }
 
 i,
 em {
- font-family: $root-font-family-italic;
- font-style: normal;
- font-weight: normal;
+  font-family: $root-font-family-italic;
+  font-style: normal;
 }
 
 
 b i,
 strong em {
- font-family: $root-font-family-bolditalic;
- font-style: normal;
- font-weight: normal;
+  font-family: $root-font-family-bolditalic;
+  font-style: normal;
 }
 
 sup {
