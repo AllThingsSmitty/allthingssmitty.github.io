@@ -9,6 +9,7 @@
   src: url(fonts/Bitter/Bitter-Regular.woff2) format("woff2"),
     url(fonts/Bitter/Bitter-Regular.woff) format("woff");
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
   src: url(fonts/Bitter/Bitter-Italic.woff2) format("woff2"),
     url(fonts/Bitter/Bitter-Italic.woff) format("woff");
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -23,6 +25,7 @@
   src: url(fonts/Bitter/Bitter-Bold.woff2) format("woff2"),
     url(fonts/Bitter/Bitter-Bold.woff) format("woff");
   font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
@@ -30,6 +33,7 @@
   src: url(fonts/Bitter/Bitter-BoldItalic.woff2) format("woff2"),
     url(fonts/Bitter/Bitter-BoldItalic.woff) format("woff");
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -37,6 +41,7 @@
   src: url(fonts/Open-Sans/OpenSans-Bold.woff2) format("woff2"),
     url(fonts/Open-Sans/OpenSans-Bold.woff) format("woff");
   font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
@@ -44,6 +49,7 @@
   src: url(fonts/Open-Sans/OpenSans-Semibold.woff2) format("woff2"),
     url(fonts/Open-Sans/OpenSans-Semibold.woff) format("woff");
   font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
@@ -51,4 +57,5 @@
   src: url(fonts/Open-Sans/OpenSans-Regular.woff2) format("woff2"),
     url(fonts/Open-Sans/OpenSans-Regular.woff) format("woff");
   font-style: normal;
+  font-weight: 400;
 }
