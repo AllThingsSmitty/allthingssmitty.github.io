@@ -3,14 +3,6 @@
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
 
-.page,
-.post {
-
-  li + li {
-    margin-top: .25rem;
-  }
-}
-
 // Blog post or page title
 .page-title,
 .post-title,
@@ -39,6 +31,16 @@
   font-weight: 600;
   line-height: 1;
   margin: 0 1rem 1rem 0;
+  
+  svg {
+    fill: $gray-3;
+    vertical-align: top;
+  
+    @media (max-width: 44em) {
+      height: calc(20px * .85); 
+    }
+  }
+  
   
   time {
     margin-left: .25em;
