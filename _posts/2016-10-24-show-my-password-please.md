@@ -42,8 +42,7 @@ So, given:
 We can create a basic function that changes the input type of the password field:
 
 ```javascript
-function togglePassword(e) {
-  e.preventDefault();
+function togglePassword() {
   let passwordInput = document.getElementById('txtPassword'),
     toggle = document.getElementById('btnToggle');
   
