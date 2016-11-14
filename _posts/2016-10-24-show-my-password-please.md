@@ -42,10 +42,10 @@ So, given:
 We can create a basic function that changes the input type of the password field:
 
 ```javascript
-function togglePassword() {
-  let passwordInput = document.getElementById('txtPassword'),
-    toggle = document.getElementById('btnToggle');
-  
+let passwordInput = document.getElementById('txtPassword'),
+  toggle = document.getElementById('btnToggle');
+
+function togglePassword() {  
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
     toggle.innerHTML = 'Hide Password';
@@ -59,8 +59,9 @@ function togglePassword() {
 Now we'll call the toggle function when the "show/hide" button is clicked:
 
 ```javascript
-let toggle = document.getElementById('btnToggle');
-toggle.addEventListener('click', togglePassword, false);
+(function () {
+  toggle.addEventListener('click', togglePassword, false);
+})();
 ```
 
 <div class="embed">
