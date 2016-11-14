@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Math.floor, Math.random, and Jurassic Park
-description: If you're new math methods in JavaScript here are a few words about Math.floor and Math.random and a fun way to use them to build a custom text generator.
+description: If you're new to math methods in JavaScript here are a few words about Math.floor and Math.random and a fun way to use them to build a custom text generator.
 image: img/posts/sunset-home-office-min.jpg
 tags: [javascript]
 comments: true
