@@ -30,12 +30,15 @@
         font-weight: 700;
         line-height: 1.75;
         list-style: none;
-        margin: 0 .5rem;
+        margin: 0;
       }
       
-      .title {
+      li:last-child {
+        margin-left: 1rem;
+      }
+      
+      li:first-child {
         float: left;
-        margin-left: 0;
       }
     }
   }
