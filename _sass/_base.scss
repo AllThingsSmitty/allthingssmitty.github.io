@@ -9,7 +9,6 @@ body {
 }
 
 html {
-  font-family: $root-font-family-regular;
   font-size: $root-font-size;
   line-height: $root-line-height;
 
@@ -21,6 +20,7 @@ html {
 body {
   background: $body-bg;
   color: $body-color;
+  font-family: serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
