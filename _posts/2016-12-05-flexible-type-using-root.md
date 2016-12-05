@@ -63,4 +63,4 @@ If we apply this to the viewport dimensions of the iPhone 7, which is 375x667, t
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-There will also be different approaches to responsive typography, and we should measure each by what we're trying to solve for, beyond just a responsive state. I've found using `:root` this way provides the most flexible solution.
+There will always be different approaches to responsive typography, and we should measure each by what we're trying to solve for, beyond just a responsive state. I've found using `:root` this way provides the most flexible solution.
