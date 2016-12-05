@@ -54,7 +54,7 @@ If we apply this to the viewport dimensions of the iPhone 7, which is 375x667, t
 
 ```css
 :root {
-  font-size: calc(3.75px + 6.67px + 1.875px);
+  font-size: calc(3.75px + 6.67px + 1.875px); /* 1vw + 1vh + .5min */
 }
 ```
 
