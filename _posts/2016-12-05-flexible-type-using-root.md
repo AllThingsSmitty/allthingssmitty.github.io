@@ -3,7 +3,7 @@ layout: post
 title: Flexible type with :root
 description: There are a few different ways to manage responsive type on the web. My personal approach is to use the :root selector for maximum flexibility.
 image: img/posts/sunset-home-office-min.jpg
-tags: [CSS, responsive, type]
+tags: [css, responsive, type]
 comments: true
 ---
 
