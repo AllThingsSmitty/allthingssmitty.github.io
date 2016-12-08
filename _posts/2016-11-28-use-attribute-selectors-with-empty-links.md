@@ -3,7 +3,7 @@ layout: post
 title: Use attribute selectors with empty links
 description: If a hyperlink doesn't have a text value, use CSS attribute selectors to insert the href value in its place.
 image: img/posts/sunset-home-office-min.jpg
-tags: [css]
+tags: [CSS]
 comments: true
 ---
 
