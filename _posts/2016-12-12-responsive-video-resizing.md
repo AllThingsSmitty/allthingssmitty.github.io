@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive &lt;video&gt; resizing
-description: There are many different solution for responsive images, but video is a media element that's often ignored in fluid layouts. Let's change that by looking at how we can keep video responsive across viewports.
+description: There are many different solutions for responsive images, but video is a media element that's often ignored in fluid layouts. Let's change that by looking at how we can keep video responsive across viewports.
 image: img/posts/sunset-home-office-min.jpg
 tags: [css, responsive, video]
 comments: true
