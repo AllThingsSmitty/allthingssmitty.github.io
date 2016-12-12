@@ -40,20 +40,18 @@ Now let's try a solution similar to `background-size: cover`. This will still pr
 
 ```css
 video {
-  height: auto;
   left: 50%;
   min-height: 100%;
   min-width: 100%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
 }
 ```
 
 <div class="embed">
-  <p data-height="500" data-theme-id="0" data-slug-hash="KNzmKQ" data-default-tab="result" data-user="amdouglas" data-embed-version="2" data-pen-title="Actually Responsive 'Background-Cover' Video" class="codepen">See the Pen <a href="http://codepen.io/amdouglas/pen/KNzmKQ/">Actually Responsive "Background-Cover" Video</a> by A. M. Douglas (<a href="http://codepen.io/amdouglas">@amdouglas</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>  
+  <p data-height="265" data-theme-id="0" data-slug-hash="NbLLjb" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Responsive 'background-size: cover' Video" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/NbLLjb/">Responsive "background-size: cover" Video  </a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
 
