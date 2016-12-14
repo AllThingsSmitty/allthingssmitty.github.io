@@ -3,7 +3,7 @@ layout: post
 title: Responsive table layout
 description: Data tables on the web are used to communicate important information to a user. Yet so many of these aren't mobile-optimized. Here's one easy way to do just that.
 image: img/posts/sunset-home-office-min.jpg
-tags: [css, responsive, tables]
+tags: [CSS, responsive, tables]
 comments: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Splitting a border around another element
 description: Here's an effect that you may have seen but not realized that can be done with some straightforward CSS.
 image: img/posts/sunset-home-office-min.jpg
-tags: [css]
+tags: [CSS]
 comments: true
 ---
 
