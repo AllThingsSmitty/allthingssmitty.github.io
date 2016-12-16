@@ -90,7 +90,8 @@ strong {
 }
 
 i,
-em {
+em,
+cite {
   font-family: $root-font-family-italic;
   font-style: normal;
 }
@@ -100,6 +101,10 @@ b i,
 strong em {
   font-family: $root-font-family-bolditalic;
   font-style: normal;
+}
+
+del {
+  color: $gray-3;
 }
 
 sup {
