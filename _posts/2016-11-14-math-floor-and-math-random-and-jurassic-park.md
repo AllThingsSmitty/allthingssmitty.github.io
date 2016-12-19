@@ -30,7 +30,7 @@ Math.floor(Math.random() * 10 + 1);
 Now that we have a general idea about how these two methods work in producing random numbers, let's take it a step further.
 
 
-### Did someone say dinosaurs?
+## Did someone say dinosaurs?
 
 [Lorem Ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum){:rel="external"}-style generators produce randomized blocks of text with varieties ranging from [cupcakes](http://cupcakeipsum.com){:rel="external"}, to [bacon](http://baconipsum.com){:rel="external"}, even [Hodor](hodoripsum.com){:rel="external"}. So let's create one of our own based on quotes from the movie "Jurassic Park", because who doesn't like dinosaurs?
 

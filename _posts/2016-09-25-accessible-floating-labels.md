@@ -19,7 +19,7 @@ Still, I see plenty of implementations where labels are ignored for more eye-cat
 And it's pretty easy to implement with just a small amount of CSS and jQuery.
 
 
-### The markup
+## The markup
 
 Let's assume we need to build a registration form like the one above. We'll start with the first input and label:
 
@@ -33,7 +33,7 @@ Let's assume we need to build a registration form like the one above. We'll star
 Here we're using `placeholder` inside the input to specify a short hint to aid the user, but _not as an alternative_ to a label[^fn-footnote_1].
 
 
-### The CSS
+## The CSS
 
 The input and label are wrapped inside a container class so the label's interaction will be relatively positioned to the input:
 
@@ -66,7 +66,7 @@ label.show {
 ```
 
 
-### The jQuery
+## The jQuery
 
 First, let's create a function and add a variable for the `.show` class:
 
@@ -122,7 +122,7 @@ There you have it.
 </div>
 
 
-### Accessibility FTW!
+## Accessibility FTW!
 
 The point here isn't to ignore accessibility in favor of design. The challenge is to craft an experience that's not only functional for _some_ users, but to fully engage _all_ users by making accessibility an integral part of development.
 

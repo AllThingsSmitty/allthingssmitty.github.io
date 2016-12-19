@@ -18,7 +18,7 @@ It's an issue that exists broadly across the web, even though there are several 
 
 So what's the roadblock for using this or another pattern? Time? Effort? How about a quick run-through so we can see for ourselves?
 
-### Where to start?
+## Where to start?
 
 We'll create the same table above with some generic HTML:
 
@@ -70,7 +70,7 @@ table td {
 This might look like many other HTML tables you've worked with. And probably about now you're asking, "But how do I get this responsive?"
 
 
-### Gettin' responsive!
+## Gettin' responsive!
 
 First, we'll add a `data-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout.
 
@@ -121,6 +121,6 @@ Here's our table (flip your device screen between portrait and landscape view):
 </div>
 
 
-### That's it? 😳
+## That's it? 😳
 
 Yep, pretty much. At least for this example. Keep in mind that this is just one responsive table layout with relatively simple data content. You may have different use cases and more complex data to manage, so YMMV. But always [consider the options](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:rel="external"} for a better user experience.

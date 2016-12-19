@@ -23,7 +23,7 @@ p {
 Here the font size doesn't change until the breakpoint is reached.
 
 
-### Using :root
+## Using :root
 
 My preferred approach for more flexible type is to calculate the font size based on the viewport height and width using the `:root` selector:
 
@@ -41,7 +41,7 @@ body {
 }
 ```
 
-### Viewport units
+## Viewport units
 
 You'll notice the `calc()` function has been passed values in viewport units. Let's quickly review those to understand how the root font size is being calculated.
 

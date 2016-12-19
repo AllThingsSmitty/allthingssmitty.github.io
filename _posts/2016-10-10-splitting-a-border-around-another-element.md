@@ -24,7 +24,7 @@ Nope, a single `<span>`.
 
 Let me show you.
 
-### The HTML
+## The HTML
 
 ```html
 <div class="heading" role="banner">
@@ -39,7 +39,7 @@ Let me show you.
 **Full disclosure:** I don't have "official" permission to use the Salesforce logo in this demo. So anything you don't like here reflects on my crappy coding and not on Salesforce.
 
 
-### The CSS
+## The CSS
 
 Let's review the styles that help define that border layout:
 
@@ -118,6 +118,6 @@ And _voila_...
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-### There you have it
+## There you have it
 
 This is a trick I'd never done before until another developer asked how I might go about implementing that kind of design. There may be traditional methods (`<table>`) or even more creative solutions (`text-shadow`, maybe?) that will also work for your needs. But it's still a fun exercise. Feel free to play around with it and see what ideas you come up with.

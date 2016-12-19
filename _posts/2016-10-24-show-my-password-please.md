@@ -21,14 +21,14 @@ Here's what I mean:
 </div>
 
 
-### Why do we need this?
+## Why do we need this?
 
 For a number of years we've seen [mobile trends](http://www.lukew.com/ff/entry.asp?1653){:rel="external"} that suggest users are okay with the idea of [removing password masking](http://passwordmasking.com/){:rel="external"}, at least to be able to see if the input is correct. Incorrectly entering lengthy, mixed-case, alphanumeric passwords on tiny virtual keypads can become a source of user frustration. That frustration can result in abandon rates going up.
 
 Sites like Amazon, Reddit, LinkedIn, et al., have implemented some form of "show password" option (usually for just mobile users). Yet it still feels like an overlooked and optional part of user experience design. So let's fix that by building our own.
 
 
-### "Unmasking" the password
+## "Unmasking" the password
 
 In the context of a web page, the input type of the password field is changed from `type="password"` to `type="text"`. A toggle function would allow a user to remove masking to see if the password was entered correctly, as well as turn masking back on.
 

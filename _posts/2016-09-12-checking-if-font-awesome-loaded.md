@@ -12,7 +12,7 @@ Icon fonts have become a widely-adopted visual asset on the web today and contin
 So let's take a crack at it.
 
 
-### Not a JavaScript library
+## Not a JavaScript library
 
 Icon font libraries, unlike JavaScript libraries, typically consist of only CSS and fonts files. [Font Awesome](http://fontawesome.io/){:rel="external"} is among the most popular of these resources, so we'll use that for this example.
 
@@ -60,7 +60,7 @@ Let's add the `<span>` as the first element of the `<body>`:
 The `.fa` class has a `font-family` value of `FontAwesome`. This will be what we check to validate if the Font Awesome library loaded.
 
 
-### Reading the computed style
+## Reading the computed style
 
 In order to be able to read the `font-family` property we need a way to get the values of the `<span>`. The [`getComputedStyle()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle){:rel="external"} method will return all CSS values of an element, which is perfect for what we're doing.
 
@@ -118,6 +118,6 @@ If the `font-family` isn't `FontAwesome` we'll add a local copy of the library t
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-### Wrapping up
+## Wrapping up
 
 Whether or not you use icon fonts is up to you. If you are and opt to serve your resource via a CDN, you'll want to know that the resource loaded. Now you have a way tell and can similarly apply this technique to other icon font libraries.

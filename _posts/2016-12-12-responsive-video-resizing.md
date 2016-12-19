@@ -55,6 +55,6 @@ video {
 </div>
 
 
-### Good idea?
+## Good idea?
 
 Remember what I said before about data use? This could become expensive for users if you start serving video over mobile networks. Also, I'm not sure displaying video in smaller viewports is any more effective than well-cropped images. Nevertheless, it's an interesting concept to consider. Happy coding.
