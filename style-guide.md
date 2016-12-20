@@ -60,21 +60,6 @@ adder(2, 6);
 // > 8
 ```
 
-You may also optionally show code snippets with line numbers. Add `linenos` to the Prism tags.
-
-```javascript
-<!--{% highlight javascript linenos %}-->
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
-<!--{% endhighlight %}-->
-```
-
 That is one big pile of shit. Don't get cheap on me, Dodgson. Ian, freeze! Because we're being hunted. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. 
 
 ### Tweets
@@ -99,7 +84,7 @@ I thought you were one of your big brothers. Well, at least you're out of the tr
 
 I told you, how many times, we needed locking mechanisms on the vehicle doors! Check the vending machines. T-Rex doesn't want to be fed. 
 
-{% gist 13f94b734a4ddb132735 gist.md %}
+{% gist baa63ae500c54018ae76b1c7e9e700e9 gist.md %}
 
 We spared no expense. I'm gonna run you over when I come back down! Don't you see the danger, John, inherent in what you're doing here? Dinosaurs eat man; woman inherits the earth. Why didn't I build it in Orlando? It's...it's a dinosaur... Well, at least you're out of the tree.
 
