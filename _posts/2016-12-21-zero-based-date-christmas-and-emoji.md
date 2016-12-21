@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zero-based date, Christmas, and emoji
-description: Not every method in JavaScript's Date object returns a zero-based number. This tip will help uou...
+description: Not every method in JavaScript's Date object returns a zero-based number. Here's a tip will help you understand that a little better.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
