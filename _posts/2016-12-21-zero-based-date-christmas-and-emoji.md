@@ -21,7 +21,7 @@ If you answered `11,25`, have some egg nog and an extra piece of ribbon candy, y
 
 JavaScript counters start at 0. But it's important to know that not every method in the `Date` object returns a zero-based number. Specifically, `getMonth()` counts from 0, whereas `getDate()` counts from 1.
 
-Months can also be represented as string name, so using zero-based counting for `getMonth()` makes it possible to index months into an array, e.g.:
+Months can also be represented as a string name, so using zero-based counting for `getMonth()` makes it possible to index months into an array, e.g.:
 
 ```javascript
 let months = new ['Jan', 'Feb', 'Mar', 'Apr'...];
