@@ -24,8 +24,8 @@ JavaScript counters start at 0. But it's important to know that not every method
 Months can also be represented as a string name, so using zero-based counting for `getMonth()` makes it possible to index months into an array, e.g.:
 
 ```javascript
-let months = new ['Jan', 'Feb', 'Mar', 'Apr'...];
-months[new Date().getMonth()];
+let months = ['Jan', 'Feb', 'Mar', 'Apr'...];
+months[Date().getMonth()];
 ```
 
 But if you're starting to wonder, "Why does this method count from 0, and this method count from 1?", the answer is a matter of practicality: it's because the `Date` class in Java does it this way.
