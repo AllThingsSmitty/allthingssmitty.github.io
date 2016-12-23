@@ -25,7 +25,7 @@ Months can also be represented as a string name, so using zero-based counting fo
 
 ```javascript
 let months = ['Jan', 'Feb', 'Mar', 'Apr'...];
-months[Date().getMonth()];
+months[new Date().getMonth()];
 ```
 
 But if you're starting to wonder, "Why does this method count from 0, and this method count from 1?", the answer is a matter of practicality: it's because the `Date` class in Java does it this way.
