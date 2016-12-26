@@ -17,7 +17,7 @@ And what I specifically meant by this question was why wasn't I writing anything
 
 "Because," I said back.
 
-🤔
+<span aria-label="thinking face">&#x1F914;</span>
 
 Not a very original answer, Self.
 
