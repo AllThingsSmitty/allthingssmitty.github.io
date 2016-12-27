@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 ---
 
-If you've been adding line height to each textual element separately, e.g., `<h*>`, `<p>`, etc., this is a help tip that you might want to try: add `line-height` to the `body` selector instead.
+If you've been adding line height to each textual element separately, e.g., `<h*>`, `<p>`, etc., this is a help tip that you might want to try: add line height to the `body` selector instead.
 
 ```css
 body {
