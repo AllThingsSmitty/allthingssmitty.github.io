@@ -1,5 +1,5 @@
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<nav class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
   {% else %}
@@ -10,5 +10,5 @@
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</nav>
 {% endif %}
