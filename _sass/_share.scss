@@ -68,7 +68,7 @@
       transition: ease .2s;
       vertical-align: middle;
     
-      @media (max-width: 44em) {
+      @media (max-width: $large-breakpoint) {
         height: calc(30px * .85); 
       }
     }

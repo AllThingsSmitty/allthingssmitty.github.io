@@ -36,7 +36,7 @@
     fill: $gray-3;
     vertical-align: top;
   
-    @media (max-width: 44em) {
+    @media (max-width: $large-breakpoint) {
       height: calc(20px * .85); 
     }
   }
@@ -58,7 +58,7 @@
 .archive-date {
   float: right;
   
-  @media (max-width: 44em) {
+  @media (max-width: $large-breakpoint) {
     display: block;
     float: none;
     margin: 0;

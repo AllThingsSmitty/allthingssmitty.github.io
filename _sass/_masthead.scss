@@ -52,7 +52,7 @@
     margin-top: .5rem;
     text-transform: uppercase;
     
-    @media (max-width: 44em) {
+    @media (max-width: $large-breakpoint) {
       display: block;
       margin: .25em 0 0;
     }
