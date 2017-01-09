@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 ---
 
-CSS resets help enforce style consistency across different browsers by providing a clean slate for styling elements. Resources like Normalize, et al., do an excellent job managing this. For a couple of years now, I've opted to go with a minimalist approach to resets and found it to be just as useful:
+CSS resets help enforce style consistency across different browsers by providing a clean slate for styling elements. Resources like Normalize, et al., do an excellent job at managing this. For a couple of years now, I've opted to go with a minimalist approach to resets and found it to be just as useful:
 
 ```css
 * {
@@ -19,7 +19,7 @@ CSS resets help enforce style consistency across different browsers by providing
 
 Now elements will be stripped of margins and padding, and `box-sizing` lets you manage layouts using the [CSS box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model){:rel="external"}.
 
-Another minimalist alternative is to let `box-sizing` be inherited from `html`:
+Another minimalist alternative is to let `box-sizing` be inherited from the `html` selector:
 
 ```css
 html {
