@@ -7,7 +7,7 @@ tags: [CSS, responsive, video]
 comments: true
 ---
 
-There are a number of options for implementing responsive images, e.g., the `<picture>` element, client-side polyfills, [automatic cropping](http://cloudinary.com/blog/automatically_art_directed_responsive_images){:rel="external"}, et al. But what about _video_?
+There are a number of options for implementing responsive images, e.g., the `<picture>` element, client-side polyfills, [automatic cropping](http://cloudinary.com/blog/automatically_art_directed_responsive_images){:rel="external"}, <nobr>et al.</nobr> But what about _video_?
 
 Many of the examples I see in responsive layouts replace video with a static image in smaller viewports. That may be because of concerns regarding data use across mobile networks. But let's say for the moment we wanted to make video fully responsive on the web.
 
