@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Say hi
+title: Say hi!
 ---
 
-Y'know, people don't say hi as much as they used to. Nowadays everyone seems adverse to it. So let's try it out.
+Feel free to drop me a line. You can find me on [Twitter](https://twitter.com/allthingssmitty){:rel="external"} and [LinkedIn](https://linkedin.com/in/allthingssmitty){:rel="external"}, head over to [GitHub](https://github.com/AllThingsSmitty/){:rel="external"} to see some recent open-source work, or maybe [CodePen](http://codepen.io/AllThingsSmitty/){:rel="external"} for some fun demos.
 
-Let's recapture that it's-a-good-day feeling we had when we'd pass a buddy in the hall, "Hey, Bob", by the water cooler, "Good to see you, Deb", or standing next to the faker-than-fake silk plant, "'Sup, Jim! Jimbo! Jimmy crack corn!"
-
-Also, you can email cuz that works well, too: [matt@allthingssmitty.com](mailto:matt@allthingssmitty.com).
+Or, go really old-school and send me an email (everyone <span aria-label="heavy black heart">&#x2764;'s</span> retro): [matt@allthingssmitty.com](mailto:matt@allthingssmitty.com).
