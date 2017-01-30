@@ -7,7 +7,9 @@ tags: [CSS]
 comments: true
 ---
 
-Here's a bit of CSS trivia that, at least on the surface, seems straightforward but that I see misused repeatedly. Let's start with an oldie-but-goodie CSS interview question: you want the text on your website to be double-spaced by default. Which of the following `line-height` values is the best way to do this?
+Here's a bit of CSS trivia that, at least on the surface, seems straightforward but that I see misused repeatedly. Let's start with an oldie-but-goodie CSS interview question:
+
+You want the text on your website to be double-spaced by default. Which of the following `line-height` values is the best way to do this?
 
 ```
 200%
