@@ -33,6 +33,6 @@ Okay, that may have confused you a bit, especially since browsers will accept le
 
 You should always specify `line-height` as a [unitless number](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values){:rel="external"} (say this into the mirror five times). That way descendent elements that specify a different font size will inherit _that_ number instead of a fixed line height.
 
-By making the line height unitless, the browser preserves the `font-size`/`line-height` ratio even if the font size changes. For example, the line height for the body will be `32px` (for the browser's default `16px` font size), but the line height for the heading's `32px` font will increase to `64px`.
+By making the line height unitless, the browser preserves the `font-size`/`line-height` ratio even if the font size changes. For example, the line height for the browser's default `16px` font size will be `32px`, but the line height for the heading's `32px` font will increase to `64px`.
 
 Hopefully this helped explain the proper way to use `line-height`. If you're still using a length or percentage value, strongly consider switching to a unitless number. This will give you greater control over your website's text.
