@@ -45,4 +45,4 @@ We work in an industry that thrives on competition. The web community has many t
 
 In my private conversation with myself I had to challenge my own way of thinking. Yes, doubts and fear are normal, but can also be paralyzing. No, I don't have all the answers. Yes, I can continue to learn.
 
-So, Self, it's time to put yourself out there.
+So, Self, it's time to put ourselves out there.
