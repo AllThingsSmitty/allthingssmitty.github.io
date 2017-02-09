@@ -1,46 +1,12 @@
-<nav class="prev-and-next">
+<nav class="pagination">
   {% if page.previous.url %}
-    <a href="{{page.previous.url}}">← Previous post</a>
+    <a class="pagination-item" href="{{page.previous.url}}">Previous post</a>
+  {% else %}
+    <span class="pagination-item">Previous post</span>
   {% endif %}
   {% if page.next.url %}
-    <a href="{{page.next.url}}">Next post →</a>
+    <a class="pagination-item" href="{{page.next.url}}">Next post</a>
+  {% else %}
+    <span class="pagination-item">Next post</span>
   {% endif %}
 </nav>
-<style>
-.prev-and-next {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 1.5rem 0;
-}
-.prev-and-next a {
-  border: 1px solid #eee;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 50%;
-  padding: 1rem;
-  text-decoration: none;
-  vertical-align: middle;
-  
-  font-family: "OpenSansSemibold",sans-serif;
-}
-  
-  
-.prev-and-next a:hover {
-  background: #f5f5f5;
-}
-
-  
-.prev-and-next a:first-child {
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-  margin-bottom: 0;
-}
-.prev-and-next a:last-child {
-  text-align: right;
-  border-left: 0;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
-}  
-</style>
