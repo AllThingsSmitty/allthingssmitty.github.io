@@ -11,4 +11,17 @@
     <span class="pagination-item">Newer</span>
   {% endif %}
 </nav>
+{% else %}
+<nav class="pagination">
+  {% if page.previous.url %}
+    <a class="pagination-item" href="{{page.previous.url}}">Previous post</a>
+  {% else %}
+    <span class="pagination-item">Previous post</span>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="pagination-item" href="{{page.next.url}}">Next post</a>
+  {% else %}
+    <span class="pagination-item">Next post</span>
+  {% endif %}
+</nav>
 {% endif %}
