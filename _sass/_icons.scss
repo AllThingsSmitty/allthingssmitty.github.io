@@ -5,6 +5,16 @@
     width: 20px;
   }
   
+  &.codepen, &.facebook, &.github, &.linkedin, &.twitter {
+    height: 30px;
+    width: 30px;
+  }
+
+  &.google-plus {
+    height: 30px;
+    width: 39px;
+  }
+  
   &.tags {
     height: 20px;
     width: 22px;
