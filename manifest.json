@@ -1,16 +1,10 @@
 {
   "name": "Matt Smith",
   "short_name": "Matt Smith",
-  "background_color": "#f1f2f3",
+  "background_color": "#111111",
   "display": "standalone",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "img/public/android-chrome-144x144.png",
-      "sizes": "144x144",
-      "type": "image\/png",
-      "density": "3.0"
-    },
     {
       "src": "img/public/android-icon-192x192.png",
       "sizes": "192x192",
