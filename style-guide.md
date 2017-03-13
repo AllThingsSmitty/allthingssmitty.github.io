@@ -60,11 +60,28 @@ adder(2, 6);
 // > 8
 ```
 
+You may also optionally show code snippets with line numbers. Add `linenos` to the Prism tags.
+
+```javascript
+<!--{% highlight javascript linenos %}-->
+// Example can be run directly in your JavaScript console
+
+// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function("a", "b", "return a + b");
+
+// Call the function
+adder(2, 6);
+// > 8
+<!--{% endhighlight %}-->
+```
+
 That is one big pile of shit. Don't get cheap on me, Dodgson. Ian, freeze! Because we're being hunted. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. 
 
 ### Tweets
 
-It's a Unix system, I know this! Look at all the blood. Check the vending machines.
+Wrap the embedded tweet markup in `<div class="embed"></div>` for proper spacing.
+
+Also, use CSS class `tw-align-center` on the blockquote:
 
 <div class="embed">
   <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">A simple <a href="https://twitter.com/hashtag/responsive?src=hash">#responsive</a> table in <a href="https://twitter.com/hashtag/CSS?src=hash">#CSS</a>, in case you forgot we can do this. <a href="https://t.co/U7QOetqzOr">https://t.co/U7QOetqzOr</a> <a href="https://twitter.com/hashtag/RWD?src=hash">#RWD</a> <a href="https://twitter.com/CodePen">@CodePen</a> <a href="https://t.co/M2gkg0Gq4k">pic.twitter.com/M2gkg0Gq4k</a></p>&mdash; Matt Smith (@AllThingsSmitty) <a href="https://twitter.com/AllThingsSmitty/status/753943893834473472">July 15, 2016</a></blockquote>
@@ -115,7 +132,7 @@ Remind me to thank John for the wonderful weekend. He's gonna eat the goat?
   <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
 
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+The only one I've got on my side is the blood-sucking lawyer. I'm gonna run you over when I come back down! He's gonna eat the goat? Must go faster! I really hate that man.
 
 ### Images
 
@@ -164,6 +181,10 @@ You bred raptors? I told you, how many times, we needed locking mechanisms on th
 </table>
 
 I can afford more glasses! Amphibian DNA. Are these characters...auto...erotica? Amphibian DNA. Check the vending machines. It's...it's a dinosaur...
+
+### Emoji
+
+<span aria-label="grinning face">&#x1F600;</span>
 
 -----
 
