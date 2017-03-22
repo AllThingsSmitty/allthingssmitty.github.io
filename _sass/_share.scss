@@ -12,6 +12,10 @@
       color: $blue;
     }
   }
+  
+  @media (max-width: $large-breakpoint) {
+    display: none;
+  }
 }
 
 .social {
