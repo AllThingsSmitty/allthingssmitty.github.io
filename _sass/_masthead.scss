@@ -54,7 +54,6 @@
     
     @media (max-width: $large-breakpoint) {
       display: block;
-      margin: .25em 0 0;
     }
   }
 }
@@ -85,7 +84,7 @@
   
     &:active,
     &:focus {
-      background: #f1f2f3;
+      background-color: #f1f2f3;
       left: .5rem;
       overflow: visible;
       padding: .5rem;

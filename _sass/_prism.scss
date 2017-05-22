@@ -7,7 +7,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  background: none;
+  background-color: none;
   color: black;
   font-family: $code-font-family;
   -webkit-hyphens: none;
@@ -25,7 +25,7 @@ pre[class*="language-"] {
 
   &::-moz-selection,
   & ::selection {
-    background: #b3d4fc;
+    background-color: #b3d4fc;
     text-shadow: none;
   }
 }
@@ -46,7 +46,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: $code-background-color;
+  background-color: $code-background-color;
 }
 
 /* Inline code */
@@ -96,7 +96,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #a67f59;
-  background: hsla(0, 0%, 100%, .5);
+  background-color: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
@@ -131,7 +131,7 @@ div.prism-show-language {
   position: relative;
  
   .prism-show-language-label {
-    background: #cfcfcf;
+    background-color: #cfcfcf;
     border-radius: 0 0 0 5px;
     bottom: auto;
     box-shadow: none;
