@@ -30,3 +30,15 @@
   </div>
 
 {% endif %}
+
+<div class="post-comments">
+ 
+  {% include icons/comments.svg %}
+ 
+  {% if page.path contains '_posts' %}
+    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread">comments</a>
+  {% endif %}
+  {% if post.path contains '_posts' %}
+    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">comments</a>
+  {% endif %}
+</div>

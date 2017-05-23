@@ -23,6 +23,7 @@
 }
 
 // Meta data line below post title
+.post-comments,
 .post-date,
 .post-tags {
   color: $gray-3;
@@ -40,10 +41,22 @@
       height: calc(20px * .85); 
     }
   }
-  
-  
+}
+
+.post-date {
   time {
     margin-left: .25em;
+  }
+}
+
+.post-comments {
+  
+  a {
+    margin-left: .25em;
+  }
+
+  @media (max-width: $large-breakpoint) {
+    display: none;
   }
 }
 
