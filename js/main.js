@@ -3,14 +3,31 @@
   if (document.documentElement.className.indexOf('fonts-loaded') > -1) {
     return;
   }
-  var BitterRegular = new FontFaceObserver('BitterRegular'),
-    BitterItalic = new FontFaceObserver('BitterItalic'),
-    BitterBold = new FontFaceObserver('BitterBold'),
-    BitterBoldItalic = new FontFaceObserver('BitterBoldItalic'),
-    OpenSansRegular = new FontFaceObserver('OpenSansRegular'),
-    OpenSansSemibold = new FontFaceObserver('OpenSansSemibold'),
-    OpenSansBold = new FontFaceObserver('OpenSansBold'),
-    Inconsolata = new FontFaceObserver('Inconsolata');
+  var BitterRegular = new FontFaceObserver('BitterRegular', {
+    weight: 400
+  }),
+    BitterItalic = new FontFaceObserver('BitterItalic', {
+      weight: 400
+    }),
+    BitterBold = new FontFaceObserver('BitterBold', {
+      weight: 700
+    }),
+    BitterBoldItalic = new FontFaceObserver('BitterBoldItalic', {
+      weight: 700
+    }),
+    OpenSansRegular = new FontFaceObserver('OpenSansRegular', {
+      weight: 400
+    }),
+    OpenSansSemibold = new FontFaceObserver('OpenSansSemibold', {
+      weight: 600
+    }),
+    OpenSansBold = new FontFaceObserver('OpenSansBold', {
+      weight: 700
+    }),
+    Inconsolata = new FontFaceObserver('Inconsolata', {
+      weight: 400
+    });
+  
   Promise.all([
     BitterRegular.load(),
     BitterItalic.load(),
