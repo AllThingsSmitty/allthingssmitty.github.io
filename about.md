@@ -2,9 +2,6 @@
 layout: page
 title: Helping to build a better web
 ---
-<!--
-Matt Smith is a Portland, Maine-based web developer who builds applications to deliver engaging user interactions and experiences.
--->
 
 Matt Smith is a web developer who builds applications to deliver engaging user experiences. His background in UI design, accessibility, and web standards highlights his desire to create meaningful interactions, support the developer community, and move the web forward.
 
