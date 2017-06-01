@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   'use strict';
   if (document.documentElement.className.indexOf('fonts-loaded') > -1) {
     return;
