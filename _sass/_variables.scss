@@ -1,7 +1,7 @@
 $gray-1: #f9f9f9;
 $gray-2: #ccc;
 $gray-3: #919191;
-$gray-4: #767676;
+$gray-4: #717171;
 $gray-5: #515151;
 $gray-6: #303030;
 
@@ -25,8 +25,10 @@ $body-color: $gray-5;
 $body-bg: #fff;
 $secondary-font-family-bold: "OpenSansBold", sans-serif;
 $secondary-font-family-semibold: "OpenSansSemibold", sans-serif;
-$link-color: $blue;
 
+$all-font-families: $root-font-family-regular, $root-font-family-bold, $root-font-family-italic, $root-font-family-bolditalic, $secondary-font-family-bold, $secondary-font-family-semibold;
+
+$link-color: $blue;
 $border-color: #e5e5e5;
 
 $large-breakpoint: 38em;
