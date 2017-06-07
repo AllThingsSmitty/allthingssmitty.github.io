@@ -1,9 +1,12 @@
-var script = document.createElement('script');
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
 
-script.async = true;
-script.src = '/js/fontfaceobserver.min.js';
-script.onload = function () {
-  document.addEventListener('DOMContentLoaded', function () {
+  var script = document.createElement('script');
+
+  script.async = true;
+  script.src = '/js/fontfaceobserver.min.js';
+  script.onload = function () {
+
     if (document.documentElement.className.indexOf('fonts-loaded') > -1) {
       return;
     }
@@ -46,7 +49,8 @@ script.onload = function () {
       document.documentElement.className += 'fonts-loaded';
       console.log('All fonts loaded');
     });
-  }());
+  };
 
-};
-document.head.appendChild(script);
+  document.head.appendChild(script);
+
+}());
