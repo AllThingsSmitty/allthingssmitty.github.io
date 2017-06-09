@@ -27,7 +27,7 @@ body {
 }
 
 .fonts-loaded body {
-  font-family: $all-font-families;
+  font-family: $root-font-family-regular;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
