@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
       BitterBoldItalic = new FontFaceObserver('BitterBoldItalic', {
         weight: 700
       }),
-      OpenSansRegular = new FontFaceObserver('OpenSansRegular', {
-        weight: 400
-      }),
+      //OpenSansRegular = new FontFaceObserver('OpenSansRegular', {
+      //  weight: 400
+      //}),
       OpenSansSemibold = new FontFaceObserver('OpenSansSemibold', {
         weight: 600
       }),
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       BitterItalic.load(),
       BitterBold.load(),
       BitterBoldItalic.load(),
-      OpenSansRegular.load(),
+      //OpenSansRegular.load(),
       OpenSansSemibold.load(),
       OpenSansBold.load(),
       Inconsolata.load()
