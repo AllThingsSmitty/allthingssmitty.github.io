@@ -3,7 +3,7 @@
 // Headings, body text, lists, and other misc typographic elements.
 
 h1, h2, h3, h4, h5, h6 {
-  color: #313131;
+  color: $gray-6;
   font-family: $secondary-font-family-bold;
   line-height: 1.25;
   margin-bottom: 1rem;
@@ -60,7 +60,7 @@ hr {
 }
 
 abbr {
-  color: #555;
+  color: $gray-5;
   font-size: 85%;
   font-weight: bold;
   text-transform: uppercase;
@@ -73,7 +73,7 @@ abbr {
 
 blockquote {
   border-left: .25rem solid #e5e5e5;
-  color: #7a7a7a;
+  color: $gray-4;
   margin: .8rem 0;
   padding: .5rem 1rem;
 

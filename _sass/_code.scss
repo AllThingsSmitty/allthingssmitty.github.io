@@ -45,7 +45,7 @@ pre code {
   }
 
   .lineno {
-    color: #999;
+    color: $gray-3;
     display: inline-block; // Ensures the null space also isn't selectable
     padding-left: .25rem;
     padding-right: .75rem;
