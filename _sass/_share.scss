@@ -60,6 +60,10 @@
   svg {
     fill: $gray-5;
   }
+  
+  @media (max-width: $large-breakpoint) {
+    display: none;
+  }
 }
 
 section.social {
