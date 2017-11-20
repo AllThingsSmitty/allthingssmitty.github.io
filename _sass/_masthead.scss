@@ -10,11 +10,11 @@
       
   a {
     color: inherit;
-  }
   
-  a:hover {
-    color: $link-color;
-    text-decoration: none;
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
   }
   
   nav {
@@ -84,7 +84,6 @@
   
     &:active,
     &:focus {
-      background-color: #f1f2f3;
       left: .5rem;
       overflow: visible;
       padding: .5rem;
