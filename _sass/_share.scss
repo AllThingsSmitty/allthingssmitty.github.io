@@ -1,23 +1,6 @@
 // Share
 //
 // Styles for social share buttons.
-.share {
-  display: inline-block;
-  
-  a {
-    color: inherit;
-    margin-right: 1rem;
-
-    &:hover {
-      color: $blue;
-    }
-  }
-  
-  @media (max-width: $large-breakpoint) {
-    display: none;
-  }
-}
-
 .social {
   margin: 0 auto;
   
@@ -41,10 +24,7 @@
       }
     }
   }
-}
 
-.share,
-.social {
   a {
     color: inherit;
 
@@ -79,5 +59,12 @@
 
   svg {
     fill: $gray-5;
+  }
+}
+
+section.social {
+  li {
+    margin: 0;
+    margin-right: 1rem;
   }
 }
