@@ -53,6 +53,12 @@ a {
   }
 }
 
+:focus,
+a:focus {
+  outline: 2px solid;
+  outline-offset: .1em;
+}
+
 img {
   border-radius: 5px;
   display: block;
