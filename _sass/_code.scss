@@ -12,7 +12,6 @@ code {
   background-color: $code-background-color;
   border-radius: 3px;
   color: $code-color;
-  font-size: 100%;
   font-style: normal;
   padding: .25rem .5rem;
   text-shadow: 0 1px #fff;
@@ -26,7 +25,6 @@ pre {
 pre code {
   background-color: transparent;
   color: inherit;
-  font-size: 100%;
   padding: 0;
 }
 
