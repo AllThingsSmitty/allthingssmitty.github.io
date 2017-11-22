@@ -77,6 +77,7 @@
   }
 
   a {
+    background-color: #fff;
     color: #454545;
     left: -500px;
     overflow: hidden;
@@ -84,11 +85,10 @@
   
     &:active,
     &:focus {
-      left: .5rem;
+      left: 1rem;
       overflow: visible;
-      padding: .5rem;
       position: absolute;
-      top: .5rem;
+      top: 1rem;
     }
   }
 }

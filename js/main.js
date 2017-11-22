@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  var script = document.createElement('script');
+  let script = document.createElement('script');
 
   script.async = true;
   script.src = '/js/fontfaceobserver.min.js';
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     
-    var BitterRegular = new FontFaceObserver('BitterRegular', {
+    let BitterRegular = new FontFaceObserver('BitterRegular', {
       weight: 400
     }),
       BitterItalic = new FontFaceObserver('BitterItalic', {
