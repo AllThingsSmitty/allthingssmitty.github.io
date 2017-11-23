@@ -60,15 +60,15 @@
   svg {
     fill: $gray-5;
   }
-  
-  @media (max-width: $large-breakpoint) {
-    display: none;
-  }
 }
 
 section.social {
   li {
     margin: 0;
     margin-right: 1rem;
+  }
+  
+  @media (max-width: $large-breakpoint) {
+    display: none;
   }
 }
