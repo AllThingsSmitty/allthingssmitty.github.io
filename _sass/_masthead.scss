@@ -3,6 +3,7 @@
 // Super small header above the content for site name and short description.
 
 .masthead {
+  color: $gray-3;
   font-family: $secondary-font-family-bold;    
   margin-bottom: 5rem;
   padding-bottom: .5rem;
@@ -17,9 +18,7 @@
     }
   }
   
-  nav {
-    color: $gray-3;
-    
+  nav {    
     ul {
       margin: 0;
       padding: 0;
@@ -44,7 +43,6 @@
   }
   
   small {
-    color: $gray-3;
     display: block;
     font-family: $secondary-font-family-semibold;
     font-size: 85%;
