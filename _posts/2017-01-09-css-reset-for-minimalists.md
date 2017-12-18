@@ -10,7 +10,9 @@ comments: true
 CSS resets help enforce style consistency across different browsers by providing a clean slate for styling elements. Resources like Normalize, <nobr>et al.</nobr>, do an excellent job at managing this. For a couple of years now, I've opted to go with a minimalist approach to resets and found it to be just as useful:
 
 ```css
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,7 +28,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```
