@@ -14,8 +14,8 @@ Boy, do I **hate being right** all the time. T-Rex doesn't want to be fed. I'm g
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-- **To bold text**, use `<b>`.
-- *To italicize text*, use `<i>`.
+- **To bold text**, use `<strong>` over `<b>`.
+- *To italicize text*, use `<em>` over `<i>`.
 - Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
 - Citations, like <cite>&mdash; Matt Smith</cite>, should use `<cite>`.
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
