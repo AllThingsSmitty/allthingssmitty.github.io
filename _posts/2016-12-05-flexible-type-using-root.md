@@ -13,6 +13,7 @@ One element of responsive web design that can be tricky to solve for is typograp
 p {
   font-size: 1em;
 }
+
 @media screen and (max-width: 45em) {
   p {
     font-size: 1.25em;

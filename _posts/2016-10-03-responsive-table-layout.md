@@ -55,11 +55,13 @@ table {
   table-layout: fixed;
   width: 100%;
 }
+
 table tr {
   background: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
 }
+
 table th,
 table td {
   padding: .625em;
@@ -95,15 +97,18 @@ Now we can begin writing a CSS media query:
     position: absolute;
     width: 1px;
   }
+  
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
   }
+  
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
     text-align: right;
   }
+  
   table td:before {
     content: attr(data-label);
     float: left;
