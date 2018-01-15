@@ -184,7 +184,19 @@ I can afford more glasses! Amphibian DNA. Are these characters...auto...erotica?
 
 ### Emoji
 
-<span aria-label="grinning face">&#x1F600;</span>
+Emoji will be depicted using the hexadecimal representation of the [Unicode character](https://unicode.org/emoji/charts/full-emoji-list.html):
+
+```
+<span>&#x1F600;</span>
+```
+
+For accessibility purposes, emoji will be give the ARIA landmark role `img` and `aria-label` with the [CLDR short name](https://unicode.org/emoji/format.html#col-name) value. Screen readers will understand the emoji is an image and can read it's value:
+
+```
+<span role="img" aria-label="grinning face">&#x1F600;</span>
+```
+
+<span role="img" aria-label="grinning face">&#x1F600;</span>
 
 -----
 
