@@ -75,7 +75,7 @@ img {
 }
 
 table {
-  border: 1px solid #e5e5e5;
+  border: 1px solid $border-color;
   border-collapse: collapse;
   font-size: 85%;
   margin-bottom: 1rem;
@@ -84,7 +84,7 @@ table {
 
 td,
 th {
-  border: 1px solid #e5e5e5;
+  border: 1px solid $border-color;
   padding: .25rem .5rem;
 }
 

@@ -66,13 +66,13 @@ abbr {
   text-transform: uppercase;
 
   &[title] {
-    border-bottom: 1px dotted #e5e5e5;
+    border-bottom: 1px dotted $border-color;
     cursor: help;
   }
 }
 
 blockquote {
-  border-left: .25rem solid #e5e5e5;
+  border-left: .25rem solid $border-color;
   color: $gray-4;
   margin: .8rem 0;
   padding: .5rem 1rem;
