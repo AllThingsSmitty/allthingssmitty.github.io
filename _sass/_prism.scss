@@ -8,7 +8,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   background-color: transparent;
-  color: black;
+  color: #000;
   font-family: $code-font-family;
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -135,7 +135,7 @@ div.prism-show-language {
     border-radius: 0 .25rem;
     bottom: auto;
     box-shadow: none;
-    color: black;
+    color: #000;
     display: inline-block;
     font-family: $secondary-font-family-semibold;
     font-size: 0.75em;
