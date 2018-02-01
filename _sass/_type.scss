@@ -72,18 +72,18 @@ abbr {
 }
 
 blockquote {
-  border-left: .25rem solid $border-color;
+  border-left: .5rem solid $border-color-blue;
   color: $gray-4;
   margin: .8rem 0;
-  padding: .5rem 1rem;
+  padding: 1rem;
 
   p:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: 30em) {
-    padding-left: 1.25rem;
-    padding-right: 5rem;
+    margin: 1.5rem -1.75rem
+    padding: 1rem 1.25rem;
   }
 }
 
