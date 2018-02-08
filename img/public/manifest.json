@@ -1,5 +1,6 @@
 {
     "name": "Matt Smith",
+	"short_name": "Matt Smith",
     "icons": [
         {
             "src": "/img/public/android-chrome-192x192.png",
