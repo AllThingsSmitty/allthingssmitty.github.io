@@ -7,6 +7,7 @@ tags: [accessibility, 'user experience']
 comments: true
 ---
 
+
 One design challenge that used to stump me was making phone numbers accessible in the browser while still being functional. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
 
 > Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).
@@ -53,6 +54,8 @@ if ($(window).width() <= 700) {
   });
 }
 ```
+
+<p class="message"><strong>Note:</strong> much of the feedback I've received points out that this could reduce overall accessibility when interacting with VoIP technology. So, YMMV.</p>
 
 Here's a demo showing this technique when the phone number's container is a specific size.
 
