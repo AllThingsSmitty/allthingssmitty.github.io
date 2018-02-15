@@ -3,9 +3,11 @@ layout: post
 title: Accessible floating labels
 description: Accessibility is a key piece to building the web, but for some reason using labels is considered unattractive. However, there's a design-friendly way to make accessible labels.
 image: img/posts/sunset-home-office-min.jpg
-tags: [accessibility, CSS, jQuery]
+tags: [accessibility, CSS]
 comments: true
 ---
+
+<p class="message">This demo has since been updated to reflect a CSS-only approach that removes the use of the <code>:placeholder</code> pseudo-class. View the <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">updated demo</a>.</p>
 
 There's been plenty of [discussion](https://adactio.com/journal/10910){:rel="external"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility as a fundamental part of development and not an afterthought.
 
