@@ -7,7 +7,7 @@ tags: [accessibility, CSS]
 comments: true
 ---
 
-<p class="message">This demo has since been updated to reflect a CSS-only approach that removes the use of the <code>:placeholder</code> pseudo-class. View the <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">updated demo</a>.</p>
+<p class="message">This demo has <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">since been updated</a> to reflect a CSS-only approach, removing the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>
 
 There's been plenty of [discussion](https://adactio.com/journal/10910){:rel="external"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility as a fundamental part of development and not an afterthought.
 
@@ -18,7 +18,7 @@ Still, I see plenty of implementations where labels are ignored for more eye-cat
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
   
-And it's pretty easy to implement with just a small amount of CSS and jQuery.
+And it's pretty easy to implement with a small amount of CSS and jQuery.
 
 
 ## The markup
@@ -27,12 +27,12 @@ Let's assume we need to build a registration form like the one above. We'll star
 
 ```html
 <div class="field">
+  <input type="text" id="firstName">
   <label for="firstName">First Name</label>
-  <input type="text" id="firstName" placeholder="First Name">
 </div>
 ```
 
-Here we're using `placeholder` inside the input to specify a short hint to aid the user, but _not as an alternative_ to a label[^fn-footnote_1].
+<del>Here we're using `placeholder` inside the input to specify a short hint to aid the user, but _not as an alternative_ to a label.</del>
 
 
 ## The CSS
@@ -49,23 +49,28 @@ The `label` selector will be defined with this basic ruleset:
 
 ```css
 label {
-  opacity: 0;
+  left: .5em;
+  opacity: 1;
   position: absolute;
-  top: 2em;
+  top: .25em;
   transition: all 0.1s linear;
-  z-index: -1;
 }
 ```
 
-Now we'll add a class for this selector that will be dynamically added on user input:
+The label's initial position will be "inside" the input element (it's actually just resting on top of it). <del>Now we'll add a class for this selector that will be dynamically added on user input:</del> We want to transition the label's position when the input has focus so it moves above the input:
 
 ```css
-label.show {
+input:focus + label,
+input + label.show {
+  color: #2ea8c5;
+  font-size: 1.15em;
+  left: .75em;
   opacity: 1;
   top: -1em;
-  z-index: 1;
 }
 ```
+
+The `.show` class will be used by our jQuery code, so let's get started on that.
 
 
 ## The jQuery
@@ -74,7 +79,7 @@ First, let's create a function and add a variable for the `.show` class:
 
 ```javascript
 $(function () {
-  var showClass = 'show';
+  let showClass = 'show';
 });
 ```
 
@@ -82,10 +87,10 @@ Next, we'll add an inner function that checks if `<input>` is empty:
 
 ```javascript
 $(function () {
-  var showClass = 'show';
+  let showClass = 'show';
   
   $('input').on('checkval', function () {
-    var label = $(this).prev('label');
+    let label = $(this).next('label');
     if(this.value !== '') {
       label.addClass(showClass);
     } else {
@@ -95,16 +100,16 @@ $(function () {
 });
 ```
 
-If the input has a value then the `.show` class will be added to the label, triggering the "floating" transition effect.
+If the input has a value then the `.show` class will be added to the label to keep it positioned above the input.
 
 Lastly, we'll include an event listener for when the user enters a character, which checks the value of `<input>`:
 
 ```javascript
 $(function () {
-  var showClass = 'show';
+  let showClass = 'show';
   
   $('input').on('checkval', function () {
-    var label = $(this).prev('label');
+    let label = $(this).next('label');
     if(this.value !== '') {
       label.addClass(showClass);
     } else {
@@ -126,8 +131,4 @@ There you have it.
 
 ## Accessibility FTW!
 
-The point here isn't to ignore accessibility in favor of design. The challenge is to craft an experience that's not only functional for _some_ users, but to fully engage _all_ users by making accessibility an integral part of development.
-
------
-
-[^fn-footnote_1]: [HTML5 W3C Recommendation 28 October 2014: The Placeholder Attribute](https://www.w3.org/TR/html5/forms.html#the-placeholder-attribute)
+The point here isn't to ignore accessibility in favor of design. The challenge is to craft an experience that's not only functional for _some_ users, but to fully engage _all_ users by making accessibility an integral part of development!
