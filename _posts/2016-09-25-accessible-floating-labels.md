@@ -7,7 +7,7 @@ tags: [accessibility, CSS]
 comments: true
 ---
 
-<p class="message">This demo has <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">since been updated</a> to reflect a CSS-only approach, removing the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>
+<p class="message">This post has been updated to reflect a <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">CSS-only approach</a> without the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>
 
 There's been plenty of [discussion](https://adactio.com/journal/10910){:rel="external"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility as a fundamental part of development and not an afterthought.
 
