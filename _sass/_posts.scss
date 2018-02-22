@@ -20,7 +20,11 @@
   a {
     color: $gray-6;
     text-decoration: none;
-  } 
+  }
+  
+  &:visited {
+    color: $gray-3;
+  }
 }
 
 .post-title a {
@@ -116,7 +120,11 @@
   
   .row {
     margin-bottom: 1rem;
-  } 
+  }
+  
+  a {
+    text-decoration: underline;
+  }
 }
 
 // Recent posts

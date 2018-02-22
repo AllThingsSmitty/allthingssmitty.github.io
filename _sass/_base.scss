@@ -62,12 +62,11 @@ a {
   code {
     padding: 0 .15rem;
   }
-}
 
-:focus,
-a:focus {
-  outline: 2px solid;
-  outline-offset: .15rem;
+  &:focus {
+    outline: 2px solid;
+    outline-offset: .15rem;
+  }
 }
 
 img {
