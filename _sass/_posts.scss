@@ -20,17 +20,14 @@
   a {
     color: $gray-6;
     text-decoration: none;
-  }
-  
-  &:visited {
-    color: $gray-3;
-  }
-}
-
-.post-title a {
-  
-  &:hover {
-    color: $link-color;
+    
+    &:hover {
+      color: $link-color;
+    }
+    
+    &:visited {
+      color: $gray-3;
+    }
   }
 }
 

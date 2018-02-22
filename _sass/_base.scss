@@ -64,8 +64,7 @@ a {
   }
 }
 
-:focus,
-a:focus {
+:focus {
   outline: 2px solid;
   outline-offset: .15rem;
 }
