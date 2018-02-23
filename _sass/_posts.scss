@@ -20,13 +20,13 @@
   a {
     color: $gray-6;
     text-decoration: none;
+        
+    &:visited {
+      color: $gray-3;
+    }
     
     &:hover {
       color: $link-color;
-    }
-    
-    &:visited {
-      color: $gray-3;
     }
   }
 }
