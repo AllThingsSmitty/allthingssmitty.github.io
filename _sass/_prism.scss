@@ -63,7 +63,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: $gray-3;
+  color: $gray-4;
 }
 
 .namespace {
@@ -130,7 +130,7 @@ div.prism-show-language {
   position: relative;
  
   .prism-show-language-label {
-    background-color: #cfcfcf;
+    background-color: $gray-2;
     border-radius: 0 .25rem;
     bottom: auto;
     box-shadow: none;
