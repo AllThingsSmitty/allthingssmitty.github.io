@@ -17,7 +17,8 @@ $white-sand: #eee;
 $sky-blue: #f9fbff;
 $white: #fff;
 
-$root-font-family-regular: "BitterRegular", serif;
+$root-font-family-fallback: Georgia, serif;
+$root-font-family-regular: "BitterRegular", $root-font-family-fallback;
 $root-font-family-bold: "BitterBold", serif;
 $root-font-family-italic: "BitterItalic", serif;
 $root-font-family-bolditalic: "BitterBoldItalic", serif;
