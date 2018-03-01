@@ -15,10 +15,8 @@ title: Home
     {% include post-metadata.html %}
     
     <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-    
-    <div class="more">
-      <a href="{{ post.url }}" aria-label="Read '{{ post.title }}'">Read the full post</a>
-    </div>
+  
+    <a href="{{ post.url }}" class="more" aria-label="Read '{{ post.title }}'">Read the full post</a>
     
     {% if forloop.last == false %}<hr>{% endif %}
   </article>

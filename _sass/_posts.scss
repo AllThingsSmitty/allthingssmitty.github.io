@@ -7,6 +7,10 @@
 .post {
   a {
     text-decoration: underline;  
+  
+    &.more {
+      font-family: $secondary-font-family-semibold;
+    }
   }
 }
 
@@ -66,14 +70,6 @@
   //@media (max-width: $large-breakpoint) {
   //  display: none;
   //}
-}
-
-.more {
-  
-  a {
-    font-family: $secondary-font-family-semibold;
-    font-weight: 600;
-  }
 }
 
 .archive-date {
