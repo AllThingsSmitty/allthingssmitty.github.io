@@ -29,7 +29,7 @@ html {
 
 body {
   color: $body-color;
-  font-family: serif;
+  font-family: $root-font-family-fallback;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
