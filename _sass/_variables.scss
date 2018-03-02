@@ -19,9 +19,9 @@ $white: #fff;
 
 $root-font-family-fallback: Georgia, serif;
 $root-font-family-regular: "BitterRegular", $root-font-family-fallback;
-$root-font-family-bold: "BitterBold", serif;
-$root-font-family-italic: "BitterItalic", serif;
-$root-font-family-bolditalic: "BitterBoldItalic", serif;
+$root-font-family-bold: "BitterBold", $root-font-family-fallback;
+$root-font-family-italic: "BitterItalic", $root-font-family-fallback;
+$root-font-family-bolditalic: "BitterBoldItalic", $root-font-family-fallback;
 $root-font-size: 16px;
 $root-line-height: 1.5;
 
