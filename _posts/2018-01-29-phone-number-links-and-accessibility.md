@@ -55,7 +55,7 @@ if ($(window).width() <= 700) {
 }
 ```
 
-<p class="message"><strong>Note:</strong> much of the feedback I've received points out that this could reduce overall accessibility when interacting with VoIP technology. So, YMMV.</p>
+<p class="message">Note: much of the feedback I've received points out that this could reduce overall accessibility when interacting with VoIP technology. So, YMMV.</p>
 
 Here's a demo showing this technique when the phone number's container is a specific size.
 
