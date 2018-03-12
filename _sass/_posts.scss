@@ -107,7 +107,7 @@
 .tags {
   
   h3 {
-    border-top: 1px solid $white-sand;
+    border-top: 1px solid $border-color;
     padding-top: 1.5rem;
   }
   
@@ -122,14 +122,14 @@
 
 // Recent posts
 .recent {
-  border-top: 1px solid $white-sand;
+  border-top: 1px solid $border-color;
   //padding-bottom: 1.5rem;
 }
 
 // Related posts
 .related {
-  border-bottom: 1px solid $white-sand;
-  border-top: 1px solid $white-sand;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   padding-top: 2rem;

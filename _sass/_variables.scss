@@ -6,16 +6,14 @@ $gray-4: #717171;
 $gray-5: #515151;
 $gray-6: #303030;
 
-$red: #ac4142;
-$orange: #d28445;
-$yellow: #f4bf75;
-$green: #90a959;
-$cyan: #75b5aa;
 $blue: #0074d9;
-$brown: #8f5536;
-$white-sand: #eee;
+$flat-black: #0b0c0c;
+$pale-blue: #b3d4fc;
+$plum: #905;
 $sky-blue: #f9fbff;
 $white: #fff;
+$white-gray: #fcfcfc;
+$white-sand: #e5e5e5;
 
 $root-font-family-fallback: Georgia, serif;
 $root-font-family-regular: "BitterRegular", $root-font-family-fallback;
@@ -30,12 +28,11 @@ $secondary-font-family-bold: "OpenSansBold", sans-serif;
 $secondary-font-family-semibold: "OpenSansSemibold", sans-serif;
 
 $link-color: $blue;
-$border-color: #e5e5e5;
+$border-color: $white-sand;
 $border-color-blue: $link-color;
 
 $large-breakpoint: 38em;
 $large-font-size: 20px;
 
-$code-font-family: "Inconsolata", monospace;
-$code-color: #905;
-$code-background-color: $gray-1;
+$code-font-family: "Inconsolata", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+$code-background-color: $white-gray;
