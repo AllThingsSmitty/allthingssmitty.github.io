@@ -56,20 +56,20 @@ Let's review the styles that help define that border layout:
   position: relative;  
 }
 
-.split-border span:before,
-.split-border span:after {
+.split-border span::before,
+.split-border span::after {
   border-top: 1px solid #fff;
   content: "";
   position: absolute;
   width: 5.625em;
 }
 
-.split-border span:before {
+.split-border span::before {
   margin-right: 3.75em;
   right: 100%;
 }
 
-.split-border span:after {
+.split-border span::after {
   margin-left: 3.75em;
 }
 ```
@@ -95,8 +95,8 @@ Now for the fun part...
 The `<span>` element's pseudo-classes each have a top border and a specified width:
 
 ```css
-.split-border span:before,
-.split-border span:after {
+.split-border span::before,
+.split-border span::after {
   border-top: 1px solid #fff;
   content: "";
   position: absolute;
@@ -107,12 +107,12 @@ The `<span>` element's pseudo-classes each have a top border and a specified wid
 That width value corresponds to the overall width of the container element, minus the width of the logo image. When we apply a margin to each pseudo-class (either `margin-left` or `margin-right`, respectively), the "split" effect is created:
 
 ```css
-.split-border span:before {
+.split-border span::before {
   margin-right: 3.75em;
   right: 100%;
 }
 
-.split-border span:after {
+.split-border span::after {
   margin-left: 3.75em;
 }
 ```

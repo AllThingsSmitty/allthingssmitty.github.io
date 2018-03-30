@@ -57,7 +57,7 @@ table {
 }
 
 table tr {
-  background: #f8f8f8;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
 }
@@ -109,7 +109,7 @@ Now we can begin writing a CSS media query:
     text-align: right;
   }
   
-  table td:before {
+  table td::before {
     content: attr(data-label);
     float: left;
   }
