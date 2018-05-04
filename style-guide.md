@@ -4,7 +4,7 @@ title: Style guide
 tags: [code, markdown, 'style guide']
 ---
 
-I can't get <a href="http://codepen.io/AllThingsSmitty/pen/bpmZpK" rel="external">Jurassic Park</a> back online without Dennis Nedry. Now eventually you do plan to have *dinosaurs* on your dinosaur tour? I thought you were one of your big brothers. There's no unauthorized breeding in Jurassic Park.
+I can't get <a href="https://codepen.io/AllThingsSmitty/pen/bpmZpK" rel="external">Jurassic Park</a> back online without Dennis Nedry. Now eventually you do plan to have *dinosaurs* on your dinosaur tour? I thought you were one of your big brothers. There's no unauthorized breeding in Jurassic Park.
 
 > Amphibian DNA. When you gotta go, you gotta go. I bring scientists, you bring a rockstar. Uh uh uh!...You didn't say the magic word! That is one big pile of shit.
 

@@ -3,4 +3,4 @@ layout: page
 title: Say hi!
 ---
 
-Feel free to drop me a line. You can find me on [Twitter](https://twitter.com/allthingssmitty){:rel="external"} and [LinkedIn](https://linkedin.com/in/allthingssmitty){:rel="external"} talking all things web, head over to [GitHub](https://github.com/AllThingsSmitty/){:rel="external"} to see some recent open-source work, or browse [CodePen](http://codepen.io/AllThingsSmitty/){:rel="external"} for some fun demos.
+Feel free to drop me a line. You can find me on <a href="{{ site.author.twitter }}" rel="external">Twitter</a> and <a href="{{ site.author.linkedin }}" rel="external">LinkedIn</a> talking all things web, head over to <a href="{{ site.author.github }}" rel="external">GitHub</a> to see some recent open-source work, or browse <a href="{{ site.author.codepen }}" rel="external">CodePen</a> for some fun demos.

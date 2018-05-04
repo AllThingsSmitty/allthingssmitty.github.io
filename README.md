@@ -1,1 +1,1 @@
-# [AllThingsSmitty.com](http://allthingssmitty.com)
+# [AllThingsSmitty.com](https://allthingssmitty.com)
