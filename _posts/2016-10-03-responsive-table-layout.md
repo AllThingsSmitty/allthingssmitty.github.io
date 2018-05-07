@@ -116,7 +116,7 @@ Now we can begin writing a CSS media query:
 }
 ```
 
-In smaller viewports the `<tr>` and `<td>` elements will display as block-level and not as table rows and cells. And the `:before` pseudo-class now serves as a label.
+In smaller viewports the `<tr>` and `<td>` elements will display as block-level and not as table rows and cells. And the `::before` pseudo-class now serves as a label.
 
 Here's our table (flip your device screen between portrait and landscape view):
 
