@@ -190,13 +190,13 @@ Emoji will be depicted using the hexadecimal representation of the [Unicode char
 <span>&#x1F600;</span>
 ```
 
-For accessibility purposes, emoji will be give the ARIA landmark role `img` and `aria-label` with the [CLDR short name](https://unicode.org/emoji/format.html#col-name) value. Screen readers will understand the emoji is an image and can read it's value:
+For accessibility purposes, emoji will be give the ARIA landmark role `img` and `aria-label` with the [CLDR short name](https://unicode.org/emoji/format.html#col-name) value. Screen readers will understand the emoji is an image and can read it's value. Additionally, the `.emoji` class will be added.
 
 ```
-<span role="img" aria-label="grinning face">&#x1F600;</span>
+<span class="emoji" role="img" aria-label="grinning face">&#x1F600;</span>
 ```
 
-<span role="img" aria-label="grinning face">&#x1F600;</span>
+<span class="emoji" role="img" aria-label="grinning face">&#x1F600;</span>
 
 -----
 
