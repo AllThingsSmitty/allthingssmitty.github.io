@@ -7,8 +7,6 @@ tags: [front-end]
 comments: true
 ---
 
-<p class="message">Originally posted on <a href="https://medium.com/swlh/the-front-end-is-da4f34ae5e27" rel="external">Medium</a>; reposted and expanded further here.</p>
-
 It's been my experience that most front-end developers know the feeling of being mislabeled for their skills: "The front-end? Oh, that's just wireframes and fonts and..."
 
 <span role="img" aria-label="unamused face">&#x1F612;</span>
