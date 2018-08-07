@@ -36,7 +36,7 @@ So, given:
 
 ```html
 <input type="password" id="txtPassword" />
-<button id="btnToggle">Show Password</button>
+<button id="btnToggle">show</button>
 ```
 
 We can create a basic function that changes the input type of the password field:
@@ -48,10 +48,10 @@ let passwordInput = document.getElementById('txtPassword'),
 function togglePassword() {  
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    toggle.innerHTML = 'Hide Password';
+    toggle.innerHTML = 'hide';
   } else {
     passwordInput.type = 'password';
-    toggle.innerHTML = 'Show Password';
+    toggle.innerHTML = 'show';
   }
 }
 ```
