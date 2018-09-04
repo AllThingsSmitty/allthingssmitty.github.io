@@ -9,6 +9,9 @@ brand:              allthingssmitty
 paginate:           3
 baseurl:            ""
 
+# Site
+description:        Matt Smith is a Maine-based web developer who builds applications to deliver engaging user interactions and experiences.
+
 # Google analytics
 analytics_id:       UA-55352436-3
 
@@ -25,7 +28,6 @@ timezone:           America/New_York
 author:
   name:             Matt Smith
   url:              https://allthingssmitty.com
-  email:            matt@allthingssmitty.com
   codepen:          https://codepen.io/allthingssmitty
   github:           https://github.com/allthingssmitty
   google_plus:      https://plus.google.com/+MattSmithYo/posts
