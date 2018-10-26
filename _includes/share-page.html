@@ -2,15 +2,21 @@
   <h4>Share this post</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank" onclick="window.open(this.href, 'twitter share', 'height=235,width=550');return false;">
-      {% include icons/twitter.svg %}    
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank" onclick="window.open(this.href, 'twitter share', 'height=250,width=550');return false;">
+      {% include icons/twitter.svg %}
         <span>Share on Twitter</span>
       </a>
     </li>
     <li>
-      <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" onclick="window.open(this.href,'facebook-share', 'height=296,width=580');return false;">
+      <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank">
         {% include icons/facebook-official.svg %}
         <span>Share on Facebook</span>
+      </a>      
+    </li>
+    <li>
+      <a href="https://reddit.com/submit?title={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank">
+        {% include icons/reddit.svg %}
+        <span>Share on Reddit</span>
       </a>      
     </li>
   </ul>
