@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
-<html lang="en">
-<!--#else -->
-<html lang="en">
-<!--#endif -->
+
+  {% if 'expr="$HTTP_COOKIE=/fonts\-loaded\=true/"' %}
+  <html lang="en">
+  {% else %}
+  <html lang="en">
+  {% endif %}
 
   {% include head.html %}
 
