@@ -18,9 +18,17 @@ analytics_id:       UA-55352436-3
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:         _sass
-  style:            :compressed
+assets:
+  compress:
+    css:            sass
+    js:             uglifier
+  autoprefixer:
+    browsers: ["l> 1%"]
+  plugins:
+    css: { autoprefixer: {} }
+  sass:
+    sass_dir:       _sass
+    style:          :compressed
 
 timezone:           America/New_York
 
@@ -39,10 +47,6 @@ author:
 version:            1.0.0
 github:
   repo:             https://github.com/allthingssmitty/allthingssmitty.github.io
-
-autoprefixer:
-  browsers:
-  - last 2 versions
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"

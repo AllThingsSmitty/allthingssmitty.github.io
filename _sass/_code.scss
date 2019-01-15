@@ -46,9 +46,6 @@ pre code {
     padding-left: .25rem;
     padding-right: .75rem;
     // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 }

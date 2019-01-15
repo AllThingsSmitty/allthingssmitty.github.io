@@ -17,9 +17,6 @@ body {
 html {
   font-size: $root-font-size;
   line-height: $root-line-height;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   
   @media (min-width: $large-breakpoint) {
@@ -119,4 +116,9 @@ sup {
   a {
     font-family: $root-font-family-bold;
   }
+}
+
+::selection {
+  background-color: $link-color;
+  color: #fff;
 }
