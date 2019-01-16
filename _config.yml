@@ -23,7 +23,7 @@ assets:
     css:            sass
     js:             uglifier
   autoprefixer:
-    browsers: ["l> 1%"]
+    browsers:       ["> 1%"]
   plugins:
     css: { autoprefixer: {} }
   sass:
