@@ -21,15 +21,15 @@
   &:first-child {
     margin-bottom: -1px;
   }
-  
-  &:hover {
-    transition: background-color: ease .2s;
-  }
 }
 
 // Only provide a hover state for linked pagination items
-a.pagination-item:hover {
-  background-color: $gray-1;
+a.pagination-item {
+  &:focus
+  &:hover {
+    background-color: $gray-1;
+    transition: background-color: ease .2s;
+  }
 }
 
 @media (min-width: 30em) {
