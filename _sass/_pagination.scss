@@ -21,6 +21,10 @@
   &:first-child {
     margin-bottom: -1px;
   }
+  
+  &:hover {
+    transition: background-color: ease .2s;
+  }
 }
 
 // Only provide a hover state for linked pagination items
