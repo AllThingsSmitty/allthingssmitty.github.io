@@ -10,13 +10,6 @@ layout: page
     document.head.appendChild(link);
 })();
 </script>
-<style>
-.masthead,
-.page-title ,
-footer {
-    display: none !important;
-}
-</style>
 <div id="story">
     <div did="text-soap-opera" class="s-story false">
         <div class="s-header">
