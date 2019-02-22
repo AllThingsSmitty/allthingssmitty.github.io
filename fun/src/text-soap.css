@@ -118,10 +118,8 @@
 	color: #333;
 	font-size: 15px;
 	line-height: 18px;
-	border: 1px solid #e7e7e7;
-	border-bottom: none;
-	border-top: none;
-	border-radius: 5px 5px 0 0
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
 }
 
 .s-story a {
