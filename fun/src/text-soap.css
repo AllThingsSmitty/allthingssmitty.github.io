@@ -409,10 +409,14 @@ body {
 
 @media screen and (max-width: 800px) {
 	body {
-		margin: 0;
-		padding: 0;
 		width: 100%;
 	}
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	img {
 		height: auto;
 		max-width: 100%;
