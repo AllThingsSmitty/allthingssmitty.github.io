@@ -17,16 +17,22 @@ footer {
     display: none !important;
 }
 </style>
-
 <div id="story">
     <div did="text-soap-opera" class="s-story false">
         <div class="s-header">
             <div class="s-header-top" style="background-color: rgb(255, 255, 255);">
                 <div class="s-info">
-                    <div class="s-author"><span>Storify</span> by  
+                    <div class="s-author"><span>Story</span> by  
                         <a href="../../"><span class="s-author-name" style="color: #222;">Matt Smith</span></a>
                     </div>
-                    <div class="s-published">2 years ago</div>
+                    <div class="s-published">
+                        <span id="diff"></span> years ago</div>
+                        <script>
+                            var date = new Date(),
+                            past = new Date('2016'),
+                            epoch = document.getElementById('diff');
+                            epoch.innerText = date.getFullYear() - 2016;
+                        </script>
                     <div class="s-clear"></div>
                 </div>
             </div>
