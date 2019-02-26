@@ -10,22 +10,6 @@ layout: page
     document.head.appendChild(link);
 })();
 </script>
-<style>
-/* override global */
-.masthead,
-.page-title,
-footer .social {
-    display: none !important;
-}
-
-footer {
-    border-left: 1px solid #e7e7e7;
-    border-right: 1px solid #e7e7e7;
-    font-family: "Museo Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 2rem 0;
-}
-</style>
 <div id="story">
     <div did="text-soap-opera" class="s-story false">
         <div class="s-header">
