@@ -97,14 +97,6 @@ I thought you were one of your big brothers. Well, at least you're out of the tr
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-### GitHub gists
-
-I told you, how many times, we needed locking mechanisms on the vehicle doors! Check the vending machines. T-Rex doesn't want to be fed. 
-
-{% gist baa63ae500c54018ae76b1c7e9e700e9 gist.md %}
-
-We spared no expense. I'm gonna run you over when I come back down! Don't you see the danger, John, inherent in what you're doing here? Dinosaurs eat man; woman inherits the earth. Why didn't I build it in Orlando? It's...it's a dinosaur... Well, at least you're out of the tree.
-
 ### Lists
 
 I can't get Jurassic Park back online without Dennis Nedry. I really hate that man. It's a Unix system, I know this! When you gotta go, you gotta go. Boy, do I hate being right all the time. Don't get cheap on me, Dodgson. Now eventually you do plan to have dinosaurs on your dinosaur tour?

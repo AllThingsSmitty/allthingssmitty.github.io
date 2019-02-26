@@ -44,15 +44,14 @@ author:
   share_on:         Share on
 
 # Custom vars
-version:            1.0.0
+version:            2.0.0
 github:
   repo:             https://github.com/allthingssmitty/allthingssmitty.github.io
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
 
-# Gems
-gems:
+# Plguins
+plugins:
   - jekyll-paginate
-  - jekyll-gist
   - jekyll-autoprefixer
