@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: "Inconsolata";
   src: url(fonts/Inconsolata/Inconsolata.woff2) format("woff2"),
     url(fonts/Inconsolata/Inconsolata.woff) format("woff");
@@ -7,6 +8,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "BitterRegular";
   src: url(fonts/Bitter/Bitter-Regular.woff2) format("woff2"),
     url(fonts/Bitter/Bitter-Regular.woff) format("woff");
