@@ -51,7 +51,7 @@ github:
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
 
-# Plguins
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-autoprefixer
