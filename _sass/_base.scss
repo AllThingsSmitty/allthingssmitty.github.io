@@ -19,7 +19,7 @@ html {
   line-height: $root-line-height;
   text-size-adjust: 100%;
   
-  @media (min-width: $large-breakpoint) {
+  @media only screen and (min-width: $large-breakpoint) {
     font-size: $large-font-size;
   }
 }
@@ -62,7 +62,7 @@ a {
 }
 
 img {
-  border-radius: 5px;
+  border-radius: .3125rem;
   display: block;
   margin-bottom: 1rem;
   max-width: 100%;

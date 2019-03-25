@@ -10,11 +10,14 @@ pre {
 
 code {
   background-color: $code-background-color;
-  border-radius: 3px;
-  color: $plum;
-  font-style: normal;
-  padding: .25rem;
+  border-radius: .3125rem;
+  padding: .1875rem;
   text-shadow: 0 1px $white;
+  
+  &.highlighter-rouge {
+    border: 1px solid $white-sand;
+    white-space: nowrap;
+  }
 }
 
 pre {
@@ -36,11 +39,12 @@ pre code {
   margin-bottom: 1rem;
 
   pre {
+    border: 1px solid $white-sand;
     margin-bottom: 0;
     overflow-x: auto;
   }
 
-  .lineno {
+  .linenos {
     color: $gray-3;
     display: inline-block; // Ensures the null space also isn't selectable
     padding-left: .25rem;

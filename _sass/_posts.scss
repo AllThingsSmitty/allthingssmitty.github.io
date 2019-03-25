@@ -49,8 +49,8 @@
     fill: $gray-3;
     vertical-align: top;
   
-    @media (max-width: $large-breakpoint) {
-      height: calc(20px * .85); 
+    @media only screen and (max-width: $large-breakpoint) {
+      height: calc(1.25rem * .85); 
     }
   }
 }
@@ -62,7 +62,6 @@
 }
 
 .post-comments {
-  
   a {
     margin-left: .25rem;
   }
@@ -139,18 +138,14 @@
   }
 
   li {
-    small {
-      color: $gray-3;
-      font-size: 75%;
-      white-space: nowrap;
+    a {
+      text-decoration: underline;
     }
 
-    a:hover {
-      text-decoration: none;
-
-      small {
-        color: inherit;
-      }
+    small {
+      color: $gray-3;
+      font-size: .875rem;
+      white-space: nowrap;
     }
   }
 }

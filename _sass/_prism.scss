@@ -22,7 +22,7 @@ pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
-  background-color: $pale-blue;
+  background-color: $blue;
   text-shadow: none;
 }
 
@@ -47,7 +47,7 @@ pre[class*="language-"] {
 .token.doctype,
 .token.prolog,
 .token.punctuation {
-  color: #6a7276;
+	color: #747474;
 }
 
 .namespace {
@@ -57,21 +57,20 @@ pre[class*="language-"] {
 .token.boolean,
 .token.constant,
 .token.deleted,
-.token.keyword,
 .token.number,
-.token.tag,
-.token.selector,
-.token.symbol {
-  color: $plum;
+.token.property,
+.token.symbol,
+.token.tag {
+	color: $plum
 }
 
 .token.attr-name,
 .token.builtin,
 .token.char,
-.token.function,
 .token.inserted,
-.token.property {
-  color: #1e8400;
+.token.selector,
+.token.string {
+	color: $forest-green;
 }
 
 .language-scss .token.keyword,
@@ -79,17 +78,31 @@ pre[class*="language-"] {
 .style .token.string,
 .token.atrule,
 .token.entity,
-.token.important,
 .token.operator,
-.token.regex,
-.token.url {
-  color: #de272b;
+.token.url,
+.token.class-name,
+.token.function {
+  color: #d83052;
 }
 
+.language-css .token.string,
+.language-scss .token.string,
+.style .token.string,
+.token.entity,.token.operator,
+.token.url {
+  color: #bd422d;
+}
+
+.token.atrule,
 .token.attr-value,
-.token.string,
+.token.keyword {
+	color: #07a;
+}
+
+.token.important,
+.token.regex,
 .token.variable {
-  color: #005ea5;
+	color: #e90;
 }
 
 .language-css .token.number,
@@ -121,7 +134,7 @@ div.prism-show-language {
     color: $flat-black;
     display: inline-block;
     font-family: $secondary-font-family-semibold;
-    font-size: .75rem;
+    font-size: .725rem;
     height: auto;
     left: auto;
     padding: 0 0.5rem;

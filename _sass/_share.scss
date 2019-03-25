@@ -51,7 +51,7 @@
       transition: ease .2s;
       vertical-align: middle;
     
-      @media (max-width: $large-breakpoint) {
+      @media only screen and (max-width: $large-breakpoint) {
         height: calc(30px * .85); 
       }
     }
@@ -68,7 +68,7 @@ section.social {
     margin-right: 1rem;
   }
   
-  @media (max-width: $large-breakpoint) {
+  @media only screen and (max-width: $large-breakpoint) {
     display: none;
   }
 }
