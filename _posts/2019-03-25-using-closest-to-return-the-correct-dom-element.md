@@ -96,4 +96,4 @@ Now clicking anywhere in the menu item link fires the JavaScript to toggle the s
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-Hopefully this tip will help you if you need to target specific elements in the DOM. If you're looking for more in-depth reading on the `closest()` method, I'd recommend [Zell Liew's post](https://zellwk.com/blog/dom-traversals/){:rel="external"} on traversing the DOM. He covers the this method and a few other tricks that you may want to check out.
+Hopefully this tip will help you if you need to target specific elements in the DOM. If you're looking for more in-depth reading on the `closest()` method, I'd recommend [Zell Liew's post](https://zellwk.com/blog/dom-traversals/){:rel="external"} on traversing the DOM. He covers this method and a few other tricks that you may want to check out.
