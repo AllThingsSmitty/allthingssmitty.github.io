@@ -1,8 +1,20 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
+  
+  <!-- preloadin’ -->
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Inconsolata/Inconsolata.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Bitter/Bitter-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Bitter/Bitter-Italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Bitter/Bitter-BoldItalic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Open-Sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Open-Sans/OpenSans-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/fonts/Open-Sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="{{ site.baseurl }}/css/main.css" as="style"> 
+  
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}"> 
 
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -86,9 +98,14 @@
   <link rel="manifest" href="{{ site.baseurl }}/img/public/manifest.json">
   <link rel="mask-icon" href="{{ site.baseurl }}/img/public/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="{{ site.baseurl }}/img/public/favicon.ico?v={{ site.time | date: '%s' }}">
-  
+
   <meta name="msapplication-config" content="{{ site.baseurl }}/img/public/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}"> 
+
+  <link rel="me" href="{{ site.author:codepen }}">
+  <link rel="me" href="{{ site.author:github }}">
+  <link rel="me" href="{{ site.author:linkedin }}">
+  <link rel="me" href="{{ site.author:twitter }}">
+
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
 </head>
