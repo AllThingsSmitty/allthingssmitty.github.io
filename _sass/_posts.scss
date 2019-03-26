@@ -25,7 +25,10 @@
     color: $gray-6;
     text-decoration: none;
         
-    &:visited,
+    &:visited {
+      color: $gray-3;
+    }
+    
     &:hover {
       color: $link-color;
     }
