@@ -96,6 +96,6 @@ Now clicking anywhere in the menu item link fires the JavaScript to toggle the s
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-Hopefully this tip will help you if you need to target specific elements in the DOM. The `closest()` method is supported in [most major browsers](https://caniuse.com/#search=closest) but requires a [polyfill with IE11](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill).
+Hopefully this tip will help you if you need to target specific elements in the DOM. The `closest()` method is supported in [most major browsers](https://caniuse.com/#search=closest){:rel="external"} but requires a [polyfill with IE11](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill){:rel="external"}.
 
 If you're looking for more in-depth reading on this, I'd recommend [Zell Liew's post](https://zellwk.com/blog/dom-traversals/){:rel="external"} on traversing the DOM. He covers this method and a few other tricks that are worth checking out.
