@@ -4,11 +4,9 @@ title: Style guide
 tags: [code, markdown, 'style guide']
 ---
 
-Test
-<div id="captcha" class="g-recaptcha" data-sitekey="6LcgwqIUAAAAAHv0ePuxwbCig6XdLgOi4u6BD7c-" data-callback="enableBtn"></div>
+<!--<div id="captcha" class="g-recaptcha" data-sitekey="6LcgwqIUAAAAAHv0ePuxwbCig6XdLgOi4u6BD7c-" data-callback="enableBtn"></div>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 
 I can't get <a href="https://codepen.io/AllThingsSmitty/pen/bpmZpK" rel="external">Jurassic Park</a> back online without Dennis Nedry. Now eventually you do plan to have *dinosaurs* on your dinosaur tour? I thought you were one of your big brothers. There's no unauthorized breeding in Jurassic Park.
 
