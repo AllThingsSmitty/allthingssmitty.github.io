@@ -4,21 +4,12 @@
 	text-align: center
 }
 
-.s-element:hover .s-element-content {
-	border-color: #ccc
-}
-
 .s-element-container {
-	position: relative
-}
-
-.s-element-container {
+	position: relative;
 	max-width: 500px;
 	margin: 0 auto;
-	border-radius: 5px;
 	border: 1px solid #e7e7e7;
 	box-shadow: 0 0 2px #e7e7e7;
-	background: #fff
 }
 
 .s-element-content {
@@ -37,18 +28,10 @@
 }
 
 .s-elements .s-text {
-	border: 0!important;
-	border-radius: 0!important;
-	box-shadow: none!important;
 	padding: .75rem .75rem 1rem;
 	font-size: 1.15rem;
 	line-height: 1.6em;
 	color: #333;
-	background: #fff;
-	border-color: transparent;
-	max-width: none;
-	font-family: "Museo Sans", "Helvetica Neue", sans-serif;
-	overflow: visible
 }
 
 .s-element.s-element-image:not([data-source="twitter"]):not(.embedFb):not([data-source="getty"]) .s-element-container {
@@ -74,18 +57,19 @@
 	min-width: 200px;
 	min-height: 100px;
 	border-radius: 5px;
-	box-shadow: 0 0 4px #ccc
+	box-shadow: 0 0 3px #ccc
 }
 
 .s-element.s-element-image:not([data-source="twitter"]):not(.embedFb):not([data-source="getty"]) .s-element-container .s-image .s-image-content>img {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
-	border-radius: 5px
 }
 
 .s-info {
-	margin-left: -3px
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin-bottom: 20px;
+	margin-left: -3px;
 }
 
 .s-info .s-author {
@@ -93,8 +77,8 @@
 	line-height: 30px;
 	float: left;
 	margin: 0 10px 0 0;
-	color: #888;
-	background: #eee;
+	color: #666;
+	background: #f2f2f2;
 	padding: 0 10px 0 15px;
 	height: 30px;
 	display: inline-block;
@@ -107,28 +91,14 @@
 	line-height: 30px
 }
 
-#story {
-	position: relative
-}
-
 .s-story {
 	margin: 0 auto;
 	padding: 0;
-	background: #fff;
 	color: #333;
 	font-size: 15px;
 	line-height: 18px;
 	border-left: 1px solid #e7e7e7;
 	border-right: 1px solid #e7e7e7;
-}
-
-.s-story a {
-	text-decoration: none;
-	color: #333
-}
-
-.s-story a:hover {
-	text-decoration: underline
 }
 
 .s-clear {
@@ -139,21 +109,10 @@
 
 .s-header {
 	padding: 16px 0 0;
-	border-bottom: 1px dotted #ddd
-}
-
-.s-header-top {
-	margin-bottom: 20px;
-	position: relative;
-	top: 0
+	border-bottom: 1px dotted #ddd;
 }
 
 .s-elements {
-	position: relative;
-	min-height: 200px;
-	font-size: 12px;
-	line-height: 18px;
-	color: #333;
 	list-style: none;
 	padding: 0;
 	margin: 0
@@ -161,7 +120,7 @@
 
 .s-title {
 	display: block;
-	font-family: "Georgia", serif;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 400;
@@ -169,51 +128,6 @@
 	color: #000;
 	padding: 0 20px;
 	margin: 0
-}
-
-.s-section {
-	zoom: 1;
-	margin: 0
-}
-
-.s-section:before,
-.s-section:after {
-	content: "";
-	display: table
-}
-
-.s-section:after {
-	clear: both
-}
-
-.s-section a.name,
-.s-section a.edit {
-	float: left;
-	display: inline-block
-}
-
-.s-section a.name {
-	font-family: "Helvetica", sans-serif;
-	color: #b30c00;
-	font-style: normal;
-	padding-left: 20px;
-	font-size: 1rem;
-	line-height: 18px;
-	text-transform: uppercase
-}
-
-.s-section a.name:hover {
-	text-decoration: none;
-	color: #000
-}
-
-.s-section a.edit {
-	margin-left: 5px;
-	width: 16px;
-	height: 16px;
-	background: #000;
-	text-indent: -9999px;
-	background: url("//storify.com/public/img/web.png") -128px 0
 }
 
 .s-description {
@@ -225,90 +139,9 @@
 	color: #666
 }
 
-#s-title:hover:not(:focus),
-#s-description:hover:not(:focus) {
-	background: #fffbe3;
-	border-color: #ccc
-}
-
-::-webkit-input-placeholder {
-	color: #aaa
-}
-
-:-moz-placeholder {
-	color: #aaa
-}
-
-button:hover:not(:disabled),
-a.button:hover:not(:disabled) {
-	cursor: pointer
-}
-
-button:hover:not(:disabled) span,
-a.button:hover:not(:disabled) span {
-	background: #d8d8d8;
-	text-decoration: none
-}
-
-button:active:not(:disabled),
-a.button:active:not(:disabled) {
-	background: 0
-}
-
-button:active:not(:disabled) span,
-a.button:active:not(:disabled) span {
-	background: #ececec
-}
-
-button.submit:hover:not(:disabled) span,
-a.button.submit:hover:not(:disabled) span {
-	background: #257cb7
-}
-
-button.submit:active:not(:disabled),
-a.button.submit:active:not(:disabled) {
-	background: 0
-}
-
-button.submit:active:not(:disabled) span,
-a.button.submit:active:not(:disabled) span {
-	background: #2f87cf
-}
-
-button.accept:hover:not(:disabled) span,
-a.button.accept:hover:not(:disabled) span {
-	background: #519216
-}
-
-button.accept:active:not(:disabled),
-a.button.accept:active:not(:disabled) {
-	background: 0
-}
-
-button.accept:active:not(:disabled) span,
-a.button.accept:active:not(:disabled) span {
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .5) inset;
-	background: #5ea724
-}
-
-button.decline:hover:not(:disabled) span,
-a.button.decline:hover:not(:disabled) span {
-	background: #a51627
-}
-
-button.decline:active:not(:disabled),
-a.button.decline:active:not(:disabled) {
-	background: 0
-}
-
-button.decline:active:not(:disabled) span,
-a.button.decline:active:not(:disabled) span {
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .5) inset;
-	background: #b71e29
-}
-
 :focus {
-	outline: 0
+  outline: 1px solid;
+	outline-offset: .15rem;
 }
 
 @media screen and (max-width: 659px) {
@@ -318,91 +151,8 @@ a.button.decline:active:not(:disabled) span {
 	}
 }
 
-@media screen and (max-width: 399px) {
-	#story {
-		margin-top: 10px
-	}
-}
-
-html,
-body {
-	background: transparent;
-	font-family: "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	padding: 0
-}
-
-body {
-	margin: 0 auto;
-	width: 800px
-}
-
 .s-story {
 	min-width: 260px
-}
-
-.hidden {
-	display: none!important
-}
-
-@media print {
-	.s-header-top .s-info {
-		white-space: nowrap
-	}
-	.s-story {
-		border: 0
-	}
-	.s-element {
-		page-break-inside: avoid
-	}
-	* {
-		border-radius: 0!important;
-		box-shadow: none!important
-	}
-	.s-element-container {
-		max-width: 6in
-	}
-	.s-element-text {
-		page-break-inside: auto
-	}
-	h1,
-	h2 {
-		page-break-after: avoid
-	}
-	h1.s-title {
-		font-size: 22pt;
-		font-family: Georgia!important;
-		color: #333!important
-	}
-	h2 {
-		font-size: 13.5pt!important
-	}
-	.s-text,
-	.s-description {
-		font-size: 10pt!important
-	}
-	.s-description,
-	.s-text {
-		font-family: 'Museo Sans'!important;
-		color: #333!important
-	}
-	.s-description {
-		color: #666!important
-	}
-	.s-header .s-info {
-		font-size: 8pt!important
-	}
-	.s-element-content,
-	.s-element-container {
-		border-radius: 5px
-	}
-	.s-element-image {
-		-webkit-print-color-adjust: exact
-	}
-	.s-element-image img {
-		max-height: 4in!important
-	}
 }
 
 @media screen and (max-width: 800px) {
@@ -426,13 +176,32 @@ body {
 .masthead,
 .page-title,
 footer .social {
-    display: none !important;
+  display: none !important;
 }
 
 footer {
-    border-left: 1px solid #e7e7e7;
-    border-right: 1px solid #e7e7e7;
-    font-family: "Museo Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 2rem 0;
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	margin: 0;
+	padding: 2rem 0;
+}
+
+.s-description,
+.s-text,
+.s-elements .s-text,
+footer,
+i {
+	font-family: -apple-system, 
+	BlinkMacSystemFont, 
+	"Segoe UI", 
+	Roboto, 
+	Oxygen-Sans, 
+	Ubuntu, 
+	Cantarell, 
+	"Helvetica Neue", 
+	sans-serif;
+}
+
+em {
+	font-style: italic;
 }
