@@ -18,30 +18,29 @@
     }
   }
   
-  nav {    
-    ul {
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  
+    li {
+      display: inline-block;
+      line-height: 1.75;
+      list-style: none;
       margin: 0;
-      padding: 0;
-      text-align: right;
-    
-      li {
-        display: inline-block;
-        line-height: 1.75;
-        list-style: none;
-        margin: 0;
-      }
-      
-      li:last-child {
-        margin-left: 1rem;
-      }
-      
-      li:first-child {
-        float: left;
-      }
     }
+    
+    li:last-child {
+      margin-left: 1rem;
+    }
+    
+    li:first-child {
+      float: left;
+    }
+  
   }
   
-  small {
+  span {
     display: block;
     font-family: $secondary-font-family-semibold;
     font-size: .85rem;

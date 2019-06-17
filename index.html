@@ -5,7 +5,7 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post" tabindex="0">
+  <div class="post" tabindex="0">
     <h2 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
@@ -19,7 +19,7 @@ title: Home
     <a href="{{ post.url }}" class="more" aria-label="Read '{{ post.title }}'">Read the full post</a>
     
     {% if forloop.last == false %}<hr>{% endif %}
-  </article>
+  </div>
   
   {% endfor %}
 </div>

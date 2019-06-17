@@ -44,9 +44,10 @@
   font-family: $secondary-font-family-semibold;
   line-height: 1;
   margin: 0 1rem 1rem 0;
-  
-  svg {
-    fill: $gray-3;
+
+  img {
+    display: inline-block;
+    margin: 0;
     vertical-align: top;
   
     @media only screen and (max-width: $large-breakpoint) {
@@ -142,7 +143,7 @@
       text-decoration: underline;
     }
 
-    small {
+    span {
       color: $gray-3;
       font-size: .875rem;
       white-space: nowrap;

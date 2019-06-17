@@ -14,7 +14,7 @@
         <div class="skip-nav">
           <a href="#content">Skip to main content</a>
         </div>
-        <nav class="row">
+        <div class="row" role="navigation" aria-label="main navigation">
           <ul>
             <li>
               <h1 class="masthead-title">
@@ -24,19 +24,19 @@
             <li><a href="{{ site.baseurl }}/about">About</a></li>
             <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
           </ul>
-        </nav>
-        <small>{{ site.tagline }}</small>
+        </div>
+        <span>{{ site.tagline }}</span>
       </header>
 
-      <main id="content" role="main">
+      <div id="content" role="main" aria-label="Content">
         {{ content }}
-      </main>
+      </div>
 
-      <footer role="contentinfo">
+      <footer>
         {% include social-channels.html %}
-        <small>
+        <span>
           &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> Matt Smith. All rights reserved.
-        </small>
+        </span>
       </footer>
     </div>
     

@@ -22,6 +22,10 @@
       &:last-child {
         margin-right: 0;
       }
+
+      img {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -36,18 +40,8 @@
         fill: $blue;
       }
     }
-         
-    span {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
 
-    svg {
+    img {
       transition: ease .2s;
       vertical-align: middle;
     
@@ -55,10 +49,6 @@
         height: calc(30px * .85); 
       }
     }
-  }
-
-  svg {
-    fill: $gray-5;
   }
 }
 

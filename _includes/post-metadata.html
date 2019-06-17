@@ -1,6 +1,6 @@
 <div class="post-date">
 
-  {% include icons/clock.svg %}
+  <img src="/../img/icons/clock.svg" height="20" width="20" alt="Published date">
 
   {% if page.path contains '_posts' %}
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
@@ -15,8 +15,8 @@
   <div class="post-tags">
     {% if page.tags.size > 0 or post.tags.size > 0 %}
   
-      {% include icons/tags.svg %}
-    
+      <img src="/../img/icons/tags.svg" height="20" width="22" alt="Post category">
+
       <ul>
         {% for tag in page.tags %}
           <li><a href="/tags/{{ tag | downcase | url_encode }}">{{ tag }}</a></li>
@@ -33,12 +33,12 @@
 
 <div class="post-comments">
  
-  {% include icons/comments.svg %}
- 
+  <img src="/../img/icons/comments.svg" height="20" width="20" alt="Number of comments about this post">
+
   {% if page.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread">Comments</a>
+    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about '{{ page.title }}'">Comments</a>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a>
   {% endif %}
 </div>

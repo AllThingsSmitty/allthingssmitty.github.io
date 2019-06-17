@@ -1,4 +1,4 @@
-<nav class="pagination" role="navigation">
+<div class="pagination" role="navigation" aria-label="Go to the next or previous page">
 {% if paginator.total_pages > 1 %}
   {% if paginator.next_page %}
     <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
@@ -22,4 +22,4 @@
     <span class="pagination-item">Next post</span>
   {% endif %}
 {% endif %}
-</nav>
+</div>
