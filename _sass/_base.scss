@@ -17,7 +17,7 @@ body {
 html {
   font-size: $root-font-size;
   line-height: $root-line-height;
-  text-size-adjust: 100%;
+  text-size-adjust: $root-font-size;
   
   @media only screen and (min-width: $large-breakpoint) {
     font-size: $large-font-size;
