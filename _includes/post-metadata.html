@@ -1,12 +1,12 @@
 <div class="post-date">
 
-  <img src="/../img/icons/clock.svg" height="20" width="20" alt="Published date">
+  <img src="/../img/icons/clock.svg" height="20" width="20" alt="">
 
   {% if page.path contains '_posts' %}
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}" aria-label="Published date: {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" aria-label="Published date: {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
   {% endif %}
 
 </div>
@@ -15,15 +15,15 @@
   <div class="post-tags">
     {% if page.tags.size > 0 or post.tags.size > 0 %}
   
-      <img src="/../img/icons/tags.svg" height="20" width="22" alt="Post category">
+      <img src="/../img/icons/tags.svg" height="20" width="22" alt="">
 
       <ul>
         {% for tag in page.tags %}
-          <li><a href="/tags/{{ tag | downcase | url_encode }}">{{ tag }}</a></li>
+          <li><a href="/tags/{{ tag | downcase | url_encode }}" aria-label="Post category: {{ tag }}">{{ tag }}</a></li>
         {% endfor %}
         
         {% for tag in post.tags %}
-          <li><a href="/tags/{{ tag | downcase | url_encode }}">{{ tag }}</a></li>
+          <li><a href="/tags/{{ tag | downcase | url_encode }}" aria-label="Post category: {{ tag }}">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
@@ -33,7 +33,7 @@
 
 <div class="post-comments">
  
-  <img src="/../img/icons/comments.svg" height="20" width="20" alt="Number of comments about this post">
+  <img src="/../img/icons/comments.svg" height="20" width="20" alt="">
 
   {% if page.path contains '_posts' %}
     <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about '{{ page.title }}'">Comments</a>
