@@ -59,7 +59,13 @@
   {% if page.image %}
     <meta property="og:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
   {% else %}
-    <meta property="og:image" content="{{ site.url }}/img/public/avatar@2x.png">
+    <meta property="og:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+  {% endif %}
+
+  {% if page.image %}
+    <meta property="twitter:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+  {% else %}
+    <meta property="twitter:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
   {% endif %}
 
   <meta name="twitter:card" content="summary">
@@ -82,12 +88,6 @@
     <meta property="twitter:description" content="{{ page.description }}">
   {% else %}
     <meta property="twitter:description" content="{{ site.description }}">
-  {% endif %}
-
-  {% if page.image %}
-    <meta property="twitter:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
-  {% else %}
-    <meta property="twitter:image" content="{{ site.url }}/img/public/avatar@2x.png">
   {% endif %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/img/public/apple-touch-icon.png?v={{ site.time | date: '%s' }}">
