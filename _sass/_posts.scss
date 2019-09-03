@@ -46,7 +46,11 @@
   margin: 0 1rem 1rem 0;
 
   svg {
-    vertical-align: middle;
+    vertical-align: bottom;
+
+    @media only screen and (max-width: $large-breakpoint) {
+      vertical-align: text-top;
+    } 
   }
 
   img {
