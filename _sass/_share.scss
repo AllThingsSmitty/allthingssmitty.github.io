@@ -6,7 +6,7 @@
   
   ul {
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     padding: 0;
 
     li {
@@ -21,10 +21,6 @@
       
       &:last-child {
         margin-right: 0;
-      }
-
-      img {
-        margin-bottom: 0;
       }
     }
   }

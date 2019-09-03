@@ -3,17 +3,17 @@
   <ul>
     <li>
       <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank" onclick="window.open(this.href, 'twitter share', 'height=250,width=550');return false;">
-        <img src="/../img/icons/twitter.svg" height="30" width="30" alt="Share on Twitter">
+        {% include icons/twitter.svg %}
       </a>
     </li>
     <li>
       <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank">
-        <img src="/../img/icons/facebook-official.svg" height="30" width="30" alt="Share on Facebook">
+        {% include icons/facebook-official.svg %}
       </a>      
     </li>
     <li>
       <a href="https://reddit.com/submit?title={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.brand }}&related={{ site.brand }}" rel="nofollow" target="_blank">
-        <img src="/../img/icons/reddit.svg" height="32" width="30" alt="Share on Reddit">
+        {% include icons/reddit.svg %}
       </a>      
     </li>
   </ul>

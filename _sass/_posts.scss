@@ -45,10 +45,15 @@
   line-height: 1;
   margin: 0 1rem 1rem 0;
 
+  svg {
+    vertical-align: middle;
+  }
+
   img {
     display: inline-block;
     margin: 0;
     vertical-align: top;
+
   
     @media only screen and (max-width: $large-breakpoint) {
       height: calc(1.25rem * .85); 
