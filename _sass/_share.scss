@@ -6,7 +6,7 @@
   
   ul {
     display: inline-block;
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
     padding: 0;
 
     li {
@@ -38,15 +38,6 @@
 
       svg {
         fill: $blue;
-      }
-    }
-
-    img {
-      transition: ease .2s;
-      vertical-align: middle;
-    
-      @media only screen and (max-width: $large-breakpoint) {
-        height: calc(30px * .85); 
       }
     }
   }
