@@ -32,6 +32,7 @@
 }
 
 // Meta data line below post title
+
 .post-comments,
 .post-date,
 .post-tags {
@@ -63,6 +64,7 @@
 
 .post-date {
   time {
+    display: inline-block;
     margin-left: .25rem;
   }
 }
