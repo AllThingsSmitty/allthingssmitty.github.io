@@ -38,7 +38,7 @@ document.addEventListener('click', function (event) {
   event.preventDefault();
 
   // Get the content
-  var content = document.querySelector(event.target.hash);
+  let content = document.querySelector(event.target.hash);
   if (!content) {
     return;
   }
@@ -52,7 +52,7 @@ document.addEventListener('click', function (event) {
 The `toggle()` method executes a function to check if the submenu has the `.is-visible` CSS class. If the element has that class, the submenu will be hidden; otherwise, the submenu is displayed:
 
 ```javascript
-var toggle = function (elem, timing) {
+let toggle = function (elem, timing) {
 
   // If the element is visible, hide it
   if (elem.classList.contains('is-visible')) {
@@ -82,7 +82,7 @@ if (!event.target.closest('a').classList.contains('toggle')) {
   return;
 }
 
-var content = document.querySelector(event.target.closest('a').hash);
+let content = document.querySelector(event.target.closest('a').hash);
 ```
 
 Now clicking anywhere in the menu item link fires the JavaScript to toggle the submenu.

@@ -57,7 +57,7 @@ Inline code is available with the `<code>` element. Snippets of multiple lines o
 // Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function('a', 'b', 'return a + b');
+let adder = new Function('a', 'b', 'return a + b');
 
 // Call the function
 adder(2, 6);
@@ -71,7 +71,7 @@ You may also optionally show code snippets with line numbers. Add `linenos` to t
 // Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
+let adder = new Function("a", "b", "return a + b");
 
 // Call the function
 adder(2, 6);

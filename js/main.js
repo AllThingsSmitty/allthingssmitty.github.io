@@ -36,19 +36,19 @@ document.addEventListener('DOMContentLoaded', function () {
         weight: 400
       });
 
-    Promise.all([
-      BitterRegular.load(),
-      BitterItalic.load(),
-      BitterBold.load(),
-      BitterBoldItalic.load(),
-      //OpenSansRegular.load(),
-      OpenSansSemibold.load(),
-      OpenSansBold.load(),
-      Inconsolata.load()
-    ]).then(function () {
-      document.documentElement.className += 'fonts-loaded';
-      console.log('All fonts loaded');
-    });
+      Promise.all([
+        BitterRegular.load(),
+        BitterItalic.load(),
+        BitterBold.load(),
+        BitterBoldItalic.load(),
+        //OpenSansRegular.load(),
+        OpenSansSemibold.load(),
+        OpenSansBold.load(),
+        Inconsolata.load()
+      ]).then(function () {
+        document.documentElement.className += 'fonts-loaded';
+        console.log('All fonts loaded');
+      });
   };
 
   document.head.appendChild(script);

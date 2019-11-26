@@ -28,7 +28,7 @@ Now let's write a function to create a `<span>` element:
 
 ```javascript
 (function () {
-  var span = document.createElement('span');
+  let span = document.createElement('span');
 })();
 ```
 
@@ -36,7 +36,7 @@ Note that this function will be immediately-invoked. Next we'll add a CSS class 
 
 ```javascript
 (function () {
-  var span = document.createElement('span');
+  let span = document.createElement('span');
   
   span.className = 'fa';
   span.style.display = 'none';
@@ -49,7 +49,7 @@ Let's add the `<span>` as the first element of the `<body>`:
 
 ```javascript
 (function () {
-  var span = document.createElement('span');
+  let span = document.createElement('span');
   
   span.className = 'fa';
   span.style.display = 'none';
@@ -76,7 +76,7 @@ The function will be passed the element and CSS property. We'll add this as an i
 
 ```javascript
 (function () {
-  var span = document.createElement('span');
+  let span = document.createElement('span');
   
   span.className = 'fa';
   span.style.display = 'none';
@@ -92,7 +92,7 @@ Let's run our check for Font Awesome in an `if` statement:
 
 ```javascript
 (function () {
-  var span = document.createElement('span');
+  let span = document.createElement('span');
   
   span.className = 'fa';
   span.style.display = 'none';
@@ -103,7 +103,7 @@ Let's run our check for Font Awesome in an `if` statement:
   }
   
   if (css(span, 'font-family') !== 'FontAwesome') {
-    var headHTML = document.head.innerHTML;
+    let headHTML = document.head.innerHTML;
     headHTML += '<link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.min.css">';
     document.head.innerHTML = headHTML;
   }

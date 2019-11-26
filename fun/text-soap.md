@@ -5,7 +5,7 @@ title: Text Soap
 
 <script>
 (function () {
-    var link = document.createElement('link');
+    let link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = '../src/text-soap.css';
     document.head.appendChild(link);
@@ -22,7 +22,7 @@ title: Text Soap
                     <div class="s-published">
                         <span id="diff"></span> years ago</div>
                         <script>
-                            var date = new Date(),
+                            let date = new Date(),
                             past = '2016';
                             document.getElementById('diff').innerText = date.getFullYear() - past;
                         </script>
