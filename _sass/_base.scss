@@ -51,6 +51,7 @@ a {
 
   b,
   code,
+  code[class*="language-"],
   strong {
     color: inherit;
   }
