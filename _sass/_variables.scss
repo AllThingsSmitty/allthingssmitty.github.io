@@ -24,8 +24,9 @@ $root-font-size: 100%;
 $root-line-height: 1.5;
 
 $body-color: $gray-5;
-$secondary-font-family-bold: "OpenSansBold", sans-serif;
-$secondary-font-family-semibold: "OpenSansSemibold", sans-serif;
+$secondary-font-family-fallback: sans-serif;
+$secondary-font-family-bold: "OpenSansBold", $secondary-font-family-fallback;
+$secondary-font-family-semibold: "OpenSansSemibold", $secondary-font-family-fallback;
 
 $link-color: $blue;
 $border-color: $white-sand;

@@ -92,27 +92,33 @@ tbody tr:nth-child(odd) th {
 }
 
 b,
+b i,
+cite
+em,
+i,
+strong,
+strong em {
+  font-style: normal;
+}
+
+b,
 strong {
   font-family: $root-font-family-bold;
-  font-style: normal;
 }
 
 i,
 em,
 cite {
   font-family: $root-font-family-italic;
-  font-style: normal;
 }
 
 
 b i,
 strong em {
   font-family: $root-font-family-bolditalic;
-  font-style: normal;
 }
 
 sup {
-  
   a {
     font-family: $root-font-family-bold;
   }
