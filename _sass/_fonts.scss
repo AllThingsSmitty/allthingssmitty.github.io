@@ -1,7 +1,9 @@
 @font-face {
   font-display: swap;
   font-family: "BitterRegular";
-  src: url(/css/fonts/Bitter/Bitter-Regular.woff2) format("woff2"),
+  src:
+    local(Bitter-Regular),
+    url(/css/fonts/Bitter/Bitter-Regular.woff2) format("woff2"),
     url(/css/fonts/Bitter/Bitter-Regular.woff) format("woff");
   font-style: normal;
   font-weight: 400;
@@ -10,7 +12,9 @@
 @font-face {
   font-display: swap;
   font-family: "BitterItalic";
-  src: url(/css/fonts/Bitter/Bitter-Italic.woff2) format("woff2"),
+  src:
+    local(Bitter-Italic),
+    url(/css/fonts/Bitter/Bitter-Italic.woff2) format("woff2"),
     url(/css/fonts/Bitter/Bitter-Italic.woff) format("woff");
   font-style: normal;
   font-weight: 400;
@@ -19,7 +23,9 @@
 @font-face {
   font-display: swap;
   font-family: "BitterBold";
-  src: url(/css/fonts/Bitter/Bitter-Bold.woff2) format("woff2"),
+  src:
+    local(Bitter-Bold),
+    url(/css/fonts/Bitter/Bitter-Bold.woff2) format("woff2"),
     url(/css/fonts/Bitter/Bitter-Bold.woff) format("woff");
   font-style: normal;
   font-weight: 700;
@@ -28,7 +34,9 @@
 @font-face {
   font-display: swap;
   font-family: "BitterBoldItalic";
-  src: url(/css/fonts/Bitter/Bitter-BoldItalic.woff2) format("woff2"),
+  src:
+    local(Bitter-BoldItalic),
+    url(/css/fonts/Bitter/Bitter-BoldItalic.woff2) format("woff2"),
     url(/css/fonts/Bitter/Bitter-BoldItalic.woff) format("woff");
   font-style: normal;
   font-weight: 700;
@@ -37,7 +45,9 @@
 @font-face {
   font-display: swap;
   font-family: "OpenSansBold";
-  src: url(/css/fonts/Open-Sans/OpenSans-Bold.woff2) format("woff2"),
+  src:
+    local(OpenSans-Bold),
+    url(/css/fonts/Open-Sans/OpenSans-Bold.woff2) format("woff2"),
     url(/css/fonts/Open-Sans/OpenSans-Bold.woff) format("woff");
   font-style: normal;
   font-weight: 700;
@@ -46,7 +56,9 @@
 @font-face {
   font-display: swap;
   font-family: "OpenSansSemibold";
-  src: url(/css/fonts/Open-Sans/OpenSans-Semibold.woff2) format("woff2"),
+  src:
+    local(OpenSans-Semibold),
+    url(/css/fonts/Open-Sans/OpenSans-Semibold.woff2) format("woff2"),
     url(/css/fonts/Open-Sans/OpenSans-Semibold.woff) format("woff");
   font-style: normal;
   font-weight: 600;
@@ -55,16 +67,10 @@
 @font-face {
   font-display: swap;
   font-family: "Inconsolata";
-  src: url(/css/fonts/Inconsolata/Inconsolata.woff2) format("woff2"),
+  src:
+    local(Inconsolata),
+    url(/css/fonts/Inconsolata/Inconsolata.woff2) format("woff2"),
     url(/css/fonts/Inconsolata/Inconsolata.woff) format("woff");
   font-style: normal;
-  font-weight: 400;  
+  font-weight: 400;
 }
-
-//@font-face {
-//  font-family: "OpenSansRegular";
-//  src: url(fonts/Open-Sans/OpenSans-Regular.woff2) format("woff2"),
-//    url(fonts/Open-Sans/OpenSans-Regular.woff) format("woff");
-//  font-style: normal;
-//  font-weight: 400;
-//}

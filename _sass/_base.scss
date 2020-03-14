@@ -40,7 +40,6 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  text-decoration-skip: ink;
   transition: color ease .2s;
 
   // `:focus` is linked to `:hover` for basic accessibility
