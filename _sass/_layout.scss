@@ -3,9 +3,14 @@
 // Styles for managing the structural hierarchy of the site.
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin-left:  auto;
   margin-right: auto;
   max-width: $large-breakpoint;
+  min-height: 100vh;
+  // mobile viewport bug fix
+  min-height: -webkit-fill-available;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
 
@@ -15,9 +20,13 @@
   }
 }
 
+div[role="main"] {
+  flex: 1;
+}
+
 footer {
   font-family: $secondary-font-family-semibold;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   text-align: center;
   
   a:hover {
