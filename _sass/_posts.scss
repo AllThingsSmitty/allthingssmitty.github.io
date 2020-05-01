@@ -43,40 +43,19 @@
   margin: 0 1rem 1rem 0;
 
   svg {
-    vertical-align: bottom;
+    margin-right: .15rem;
+    vertical-align: top;
 
     @media only screen and (max-width: $large-breakpoint) {
       vertical-align: text-top;
     } 
-  }
-
-  img {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-
-  
-    @media only screen and (max-width: $large-breakpoint) {
-      height: calc(1.25rem * .85); 
-    }
   }
 }
 
 .post-date {
   time {
     display: inline-block;
-    margin-left: .25rem;
   }
-}
-
-.post-comments {
-  a {
-    margin-left: .25rem;
-  }
-
-  //@media (max-width: $large-breakpoint) {
-  //  display: none;
-  //}
 }
 
 .archive-date {
@@ -95,13 +74,12 @@
   ul {
     display: inline-block;
     margin: 0;
-    margin-left: .25rem;
     padding: 0;
 
     li {
       display: inline-block;
       list-style: none;
-      margin-right: .35rem;
+      margin-right: .25rem;
     }
   }
 }
