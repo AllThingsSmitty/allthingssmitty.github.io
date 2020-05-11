@@ -9,7 +9,7 @@ comments: true
 
 It's been my experience that most front-end developers know the feeling of being mislabeled for their skills: "The front-end? Oh, that's just wireframes and fonts and..."
 
-<span role="img" aria-label="unamused face">&#x1F612;</span>
+<span role="img" aria-label="emoji unamused face">&#x1F612;</span>
 
 Yeeeeeah nope! The front-end is also:
 

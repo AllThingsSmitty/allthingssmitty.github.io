@@ -126,6 +126,6 @@ Here's our table (flip your device screen between portrait and landscape view):
 </div>
 
 
-## That's it? <span role="img" aria-label="flushed face">&#x1F633;</span>
+## That's it? <span role="img" aria-label="emoji flushed face">&#x1F633;</span>
 
 Yep, pretty much. At least for this example. Keep in mind that this is just one responsive table layout with relatively simple data content. You may have different use cases and more complex data to manage, so YMMV. But always [consider the options](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:rel="external"} for a better user experience.
