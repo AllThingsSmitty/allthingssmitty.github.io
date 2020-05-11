@@ -12,6 +12,16 @@
       font-family: $secondary-font-family-semibold;
     }
   }
+
+  img.center {
+    border: 1px solid #d5d5d5;
+    margin: 0 auto;
+    width: 65%;
+  
+    @media only screen and (max-width: $large-breakpoint) {
+      width: 85%;
+    }
+  }
 }
 
 
@@ -45,10 +55,6 @@
   svg {
     margin-right: .15rem;
     vertical-align: top;
-
-    @media only screen and (max-width: $large-breakpoint) {
-      vertical-align: text-top;
-    } 
   }
 }
 
@@ -79,7 +85,6 @@
     li {
       display: inline-block;
       list-style: none;
-      margin-right: .25rem;
     }
   }
 }
