@@ -18,10 +18,8 @@
   }
 
   // WebKit mobile viewport bug fix
-  @media not all and (min-resolution: .001dpcm) {
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-      min-height: -webkit-fill-available; 
-    }
+  @supports (background: -webkit-named-image(i)) {
+    min-height: -webkit-fill-available; 
   }
 }
 
