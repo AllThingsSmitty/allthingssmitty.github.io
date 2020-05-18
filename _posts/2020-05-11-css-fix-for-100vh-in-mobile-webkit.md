@@ -50,6 +50,10 @@ However, the above problem is specifically in WebKit, which _does_ support `-web
 ```css
 body {
   min-height: 100vh;
+}
+
+html,
+body {
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
 }
