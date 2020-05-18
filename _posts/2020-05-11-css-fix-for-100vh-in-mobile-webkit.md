@@ -50,6 +50,7 @@ However, the above problem is specifically in WebKit, which _does_ support `-web
 ```css
 body {
   min-height: 100vh;
+  /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
 }
 
@@ -58,7 +59,7 @@ html {
 }
 ```
 
-In this example, `-webkit-fill-available` needs to also be added to the `html` ruleset for the `body` element to know what the available space is.
+<p class="message"><strong>Note:</strong> the above snippet was updated to add <code class="highlighter-rouge">-webkit-fill-available</code> to the <code class="highlighter-rouge">html</code> element, as <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="external">I was told</a> Chrome is updating the behavior to match Firefox’s implementation.</p>
 
 And now the sticky footer is right where I want it to be in mobile Safari!
 

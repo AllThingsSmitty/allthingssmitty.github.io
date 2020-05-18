@@ -5,9 +5,15 @@
 
 .message {
   background-color: $gray-1;
+  border-left: .125rem solid $border-color-blue;
   color: $gray-4;
   font-family: $secondary-font-family-semibold;
   font-size: .9rem;
   margin-bottom: 1rem;
   padding: 1rem;
+
+  strong {
+    color: $gray-4;
+    font-family: $secondary-font-family-bold;
+  }
 }
