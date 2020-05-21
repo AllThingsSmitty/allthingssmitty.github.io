@@ -13,9 +13,13 @@
     }
   }
 
+  img {
+    margin-bottom: 1.5rem;
+  }
+
   img.center {
     border: 1px solid #d5d5d5;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
     width: 65%;
   
     @media only screen and (max-width: $large-breakpoint) {
