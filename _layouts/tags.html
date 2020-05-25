@@ -3,10 +3,8 @@ layout: default
 title: Tags
 ---
 
-<h2 class="page-title">Tags</h2>
-
 <section class="tags">
-  <h3>{{ page.tag }}</h3>
+  <h3>Posts in category: {{ page.tag }}</h2>
   {% for post in site.tags[page.tag] %}
   <div class="row">
     <span>
