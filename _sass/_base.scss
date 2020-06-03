@@ -68,6 +68,23 @@ img {
   max-width: 100%;
 }
 
+figure {
+  margin: 0;
+  padding: 1rem 0 2rem;
+
+  picture {
+    img {
+      margin-bottom: .5rem !important;
+    }
+  }
+
+  figcaption {
+    font-family: $root-font-family-regular;
+    font-size: .85rem;
+    color: $gray-3;
+  }
+}
+
 table {
   border: 1px solid $border-color;
   border-collapse: collapse;
@@ -89,39 +106,6 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: $gray-1;
-}
-
-b,
-b i,
-cite,
-em,
-i,
-strong,
-strong em {
-  font-style: normal;
-}
-
-b,
-strong {
-  font-family: $root-font-family-bold;
-}
-
-i,
-em,
-cite {
-  font-family: $root-font-family-italic;
-}
-
-
-b i,
-strong em {
-  font-family: $root-font-family-bolditalic;
-}
-
-sup {
-  a {
-    font-family: $root-font-family-bold;
-  }
 }
 
 ::selection {

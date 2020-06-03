@@ -45,7 +45,6 @@ p {
   }
 }
 
-b,
 strong {
   color: $gray-6;
 }
@@ -73,7 +72,7 @@ hr {
 
 abbr {
   color: $gray-5;
-  font-size: 0.85rem;
+  font-size: .85rem;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -105,9 +104,30 @@ blockquote {
   }
 }
 
+cite,
+em,
+strong {
+  font-style: normal;
+}
+
+strong {
+  font-family: $root-font-family-bold;
+}
+
+em,
+cite {
+  font-family: $root-font-family-italic;
+}
+
+strong {
+  em {
+    font-family: $root-font-family-bolditalic;
+  }
+}
+
 sub,
 sup {
-  font-size: 0.75rem;
+  font-size: .75rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -119,6 +139,10 @@ sub {
 
 sup {
   top: -.5rem;
+  
+  a {
+    font-family: $root-font-family-bold;
+  }
 }
 
 
