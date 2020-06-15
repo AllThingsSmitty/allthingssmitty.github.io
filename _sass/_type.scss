@@ -110,21 +110,19 @@ strong {
   font-style: normal;
 }
 
-strong {
-  font-family: $root-font-family-bold;
-}
-
-em,
-cite {
+cite,
+em {
   font-family: $root-font-family-italic;
 }
 
 strong {
+  font-family: $root-font-family-bold;
+
   em {
     font-family: $root-font-family-bolditalic;
   }
 }
-
+ 
 sub,
 sup {
   font-size: .75rem;
