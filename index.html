@@ -16,7 +16,7 @@ title: Home
     
     <p>{{ post.content | strip_html | truncatewords:50 }}</p>
   
-    <a href="{{ post.url }}" class="more" aria-label="Read '{{ post.title }}'">Read the full post</a>
+    <a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a>
     
     {% if forloop.last == false %}<hr>{% endif %}
   </div>
