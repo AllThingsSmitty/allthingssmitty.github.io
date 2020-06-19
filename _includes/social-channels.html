@@ -1,23 +1,31 @@
 <div class="social">
    <ul>
     <li>
-      <a href="{{ site.author.twitter }}" rel="external" aria-label="{{ site.author.follow_me_on }} Twitter">
-        {% include icons/twitter.svg %}
+      <a href="{{ site.author.twitter }}" rel="external">
+        <div class="icon-social icon-twitter">
+          <div class="sr-hidden">{{ site.author.follow_me_on}} Twitter</div>
+        </div>
       </a>
     </li>
     <li>
-      <a href="{{ site.author.linkedin }}" rel="external" aria-label="{{ site.author.follow_me_on }} LinkedIn">
-        {% include icons/linkedin.svg %}
+      <a href="{{ site.author.linkedin }}" rel="external">
+        <div class="icon-social icon-linkedin">
+          <div class="sr-hidden">{{ site.author.follow_me_on}} LinkedIn</div>
+        </div>
       </a>
     </li>
     <li>
-      <a href="{{ site.author.github }}" rel="external" aria-label="{{ site.author.follow_me_on }} GitHub">
-        {% include icons/github.svg %}
+      <a href="{{ site.author.github }}" rel="external">
+        <div class="icon-social icon-github">
+          <div class="sr-hidden">{{ site.author.follow_me_on}} GitHub</div>
+        </div>
       </a>
     </li>
     <li>
-      <a href="{{ site.author.codepen }}" rel="external" aria-label="{{ site.author.follow_me_on }} CodePen">
-        {% include icons/codepen.svg %}
+      <a href="{{ site.author.codepen }}" rel="external">
+        <div class="icon-social icon-codepen">
+          <div class="sr-hidden">{{ site.author.follow_me_on}} CodePen</div>
+        </div>
       </a>
     </li>
   </ul>
