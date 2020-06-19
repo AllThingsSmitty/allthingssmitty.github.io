@@ -14,33 +14,24 @@
       list-style: none;
       margin: 0 1rem;
       vertical-align: middle;
-      
-      &:first-child {
-        margin-left: 0;
-      }
-      
-      &:last-child {
-        margin-right: 0;
-      }
+    }
 
-      svg {
-        transition: ease .2s;
-        vertical-align: middle;
-      }
+    @media only screen and (max-width: $large-breakpoint) {
+      margin-bottom: 1rem;
     }
   }
 
   a {
-    color: inherit;
+     color: inherit;
+  }
 
-    &:hover {
-      color: $link-color;
-      text-decoration: none;
-
-      svg {
-        fill: $blue;
-      }
-    }
+  .sr-hidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
   }
 }
 
