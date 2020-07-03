@@ -1,6 +1,6 @@
 <div class="post-date">
 
-  <div class="icon icon-clock_filled"></div>
+  <div class="icon icon-clock"></div>
   
   {% if page.path contains '_posts' %}
     <time datetime="{{ page.date | date_to_xmlschema }}" aria-label="Published date: {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
@@ -15,7 +15,7 @@
   <div class="post-tags">
     {% if page.tags.size > 0 or post.tags.size > 0 %}
   
-      <div class="icon icon-tags_filled"></div>
+      <div class="icon icon-tags"></div>
 
       <ul>
         {% for tag in page.tags %}
@@ -32,7 +32,7 @@
 {% endif %}
 
 <div class="post-comments">
-  <div class="icon icon-comments_filled"></div>
+  <div class="icon icon-comments"></div>
   {% if page.path contains '_posts' %}
     <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about '{{ page.title }}'">Comments</a>
   {% endif %}
