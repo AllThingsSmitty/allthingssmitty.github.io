@@ -23,11 +23,11 @@
   }
 
   &:hover {
-    background-color: $gray-1;
-    transition: background-color ease .2s;
+    border-color: $border-color-blue;
+    transition: border-color ease .2s;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
-
-//@media only screen and (min-width: 30rem) {
-//
-//}
