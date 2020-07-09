@@ -5,51 +5,29 @@
 
 .pagination {
   color: $gray-3;
-  margin: 1.5rem -1.5rem;
-  overflow: hidden; // clearfix
-  text-align: center;
+  display: flex;
+  margin: 3rem 0 1rem;  
 }
 
 // Pagination items can be `span`s or `a`s
 .pagination-item {
-  border: 1px solid $border-color;
-  border-width: 1px 0;
-  display: block;
+  border: 2px solid $border-color;
+  border-radius: .25rem;
   font-family: $secondary-font-family-semibold;
   padding: 1rem;
+  text-align: center;
+  width: 50%;
 
-  &:first-child {
-    margin-bottom: -1px;
+  &:first-child:not(:last-child) {
+    margin-right: .5rem;
   }
-}
 
-// Only provide a hover state for linked pagination items
-a.pagination-item {
   &:hover {
     background-color: $gray-1;
     transition: background-color ease .2s;
   }
 }
 
-@media only screen and (min-width: 30rem) {
-  .pagination {
-    margin: 3rem 0 1rem;
-  }
-
-  .pagination-item {
-    border-width: 1px;
-    float: left;
-    width: 50%;
-
-    &:first-child {
-      border-bottom-left-radius: .25rem;
-      border-top-left-radius: .25rem;
-      margin-bottom: 0;
-    }
-    &:last-child {
-      border-bottom-right-radius: .25rem;
-      border-top-right-radius: .25rem;
-      margin-left: -1px;
-    }
-  }
-}
+//@media only screen and (min-width: 30rem) {
+//
+//}
