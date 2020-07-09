@@ -7,11 +7,11 @@
     <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older posts</a>
   {% endif %}
 {% else %}
-  {% if page.previous.url %}
-    <a class="pagination-item" href="{{page.previous.url}}">Previous post</a>
-  {% endif %}
   {% if page.next.url %}
     <a class="pagination-item" href="{{page.next.url}}">Next post</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a class="pagination-item" href="{{page.previous.url}}">Previous post</a>
   {% endif %}
 {% endif %}
 </section>
