@@ -1,5 +1,8 @@
-<div class="pagination" role="navigation" aria-label="Go to the next or previous page">
+<section class="pagination" role="navigation" aria-label="Go to the next or previous page">
 {% if paginator.total_pages > 1 %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer posts</a>
+  {% endif %}
   {% if paginator.next_page %}
     <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older posts</a>
   {% endif %}
