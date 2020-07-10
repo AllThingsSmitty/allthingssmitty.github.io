@@ -1,10 +1,13 @@
 {% if site.related_posts != empty %}
-<aside class="related" role="complementary">
-  <h4>Related posts</h4>
+<aside class="related" role="complementary" aria-label="Related posts"> 
 
   {% assign maxRelated = 3 %}
   {% assign minCommonTags =  1 %}
   {% assign maxRelatedCounter = 0 %}
+
+  <h4>Related posts</h4>
+
+  <ul class="related-posts">
 
   {% for post in site.posts %}
    
@@ -21,7 +24,6 @@
       {% endif %}
     {% endfor %}
 
-    <ul class="related-posts">
     {% if sameTagCount >= minCommonTags %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">
@@ -34,7 +36,9 @@
         {% break %}
       {% endif %}
     {% endif %}
-    </ul>
   {% endfor %}
+  </ul>
+
+
 </aside>
 {% endif %}
