@@ -102,9 +102,9 @@
 
 // Tags page
 .tags {
-  
+  font-family: $secondary-font-family-semibold;
+
   h3 {
-    margin-bottom: 1.5rem;
     margin-top: 0;
   }
   
@@ -126,29 +126,31 @@
 // Related posts
 .related {
   border-top: 1px solid $border-color;
-  margin-bottom: 2rem;
-  padding-top: .5rem;
-}
-
-.recent-posts,
-.related-posts {
   font-family: $secondary-font-family-semibold;
-  list-style: none;
-  padding-left: 0;
+  margin-bottom: 2rem;
 
-  h3 {
-    margin-top: 0;
-  }
+  .recent-posts,
+  .related-posts {
+    list-style: none;
+    padding-left: 0;
 
-  li {
-    a {
-      text-decoration: underline;
+    h3 {
+      border-top: 1px solid $white-sand;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
     }
 
-    span {
-      color: $gray-3;
-      font-size: .875rem;
-      white-space: nowrap;
+    li {
+      a {
+        text-decoration: underline;
+      }
+
+      span {
+        color: $gray-3;
+        font-size: .875rem;
+        white-space: nowrap;
+      }
     }
   }
 }

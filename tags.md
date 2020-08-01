@@ -12,7 +12,7 @@ title: Tags
 [//]: # (Build the Page)
 
 [//]: # (List of all tags)
-<section>
+<section class="tags">
   <ul>
     {% for item in (0..site.tags.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
