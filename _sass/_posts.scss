@@ -117,19 +117,12 @@
   }
 }
 
-// Recent posts
-.recent {
-  border-top: 1px solid $border-color;
-  //padding-bottom: 1.5rem;
-}
-
 // Related posts
 .related {
   border-top: 1px solid $border-color;
   font-family: $secondary-font-family-semibold;
   margin-bottom: 2rem;
 
-  .recent-posts,
   .related-posts {
     list-style: none;
     padding-left: 0;
