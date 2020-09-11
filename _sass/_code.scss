@@ -11,7 +11,7 @@ pre {
 code {
   background-color: $code-background-color;
   border-radius: .3125rem;
-  padding: .15rem;
+  padding: .15rem .25rem;
   text-shadow: 0 1px $white;
   
   &.highlighter-rouge {
