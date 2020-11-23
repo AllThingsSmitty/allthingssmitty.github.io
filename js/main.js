@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
         Inconsolata.load()
       ]).then(function () {
         document.documentElement.className += 'fonts-loaded';
-        console.log('All fonts loaded');
       });
   };
 
