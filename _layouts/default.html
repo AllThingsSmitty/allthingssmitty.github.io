@@ -34,9 +34,7 @@
 
       <footer>
         {% include social-channels.html %}
-        <span>
-          &copy; <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. All rights reserved.
-        </span>
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> {{ site.author.name }}. All rights reserved.</span>
       </footer>
     </div>
     
