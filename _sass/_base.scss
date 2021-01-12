@@ -118,11 +118,6 @@ tbody tr:nth-child(odd) th {
   background-color: $gray-1;
 }
 
-::selection {
-  background-color: $link-color;
-  color: $white;
-}
-
 .icon {
   background-repeat: no-repeat;
   display: inline-block;
