@@ -1,57 +1,44 @@
 # Permalinks
-permalink:          pretty
+permalink: pretty
 
 # Setup
-title:              Matt Smith
-tagline:            Web Dev, Front-End Engineer, UX Designer
-url:                https://allthingssmitty.com
-brand:              allthingssmitty
-paginate:           3
-baseurl:            ""
-
-# Site
-description:        Matt Smith is a Maine-based application developer who builds solutions to deliver engaging user experiences.
-
-# Google analytics
-analytics_id:       UA-55352436-3
+title: Matt Smith
+tagline: "Web Dev, Front-End Engineer, UX Designer"
+url: "https://allthingssmitty.com"
+brand: &brand_name
+  allthingssmitty
+paginate: 3
+baseurl: ""
+description: "Matt Smith is a Maine-based application developer who builds solutions to deliver engaging user experiences."
+analytics_id: UA-55352436-3
+timezone: America/New_York
 
 # Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
 assets:
   compress:
-    css:            sass
-    js:             uglifier
+    css: sass
+    js: uglifier
   autoprefixer:
-    browsers:       ["> 1%"]
+    browsers: ["> 1%"]
   plugins:
-    css: { autoprefixer: {} }
+    css:
+      autoprefixer: {}
   sass:
-    sass_dir:       _sass
-    style:          :compressed
-
-timezone:           America/New_York
+    sass_dir: _sass
+    style: ":compressed"
 
 # About/contact
 author:
-  name:             Matt Smith
-  url:              https://allthingssmitty.com
-  codepen:          https://codepen.io/allthingssmitty
-  github:           https://github.com/allthingssmitty
-  linkedin:         https://linkedin.com/in/allthingssmitty
-  twitter:          https://twitter.com/allthingssmitty
-  follow_me_on:     Follow me on
-  share_on:         Share this post on
+  name: Matt Smith
+  codepen: ["https://codepen.io/", *brand_name]
+  github: ["https://github.com/", *brand_name]
+  linkedin: ["https://linkedin.com/in/", *brand_name]
+  twitter: ["https://twitter.com/", *brand_name]
 
-# Custom vars
-version:            2.0.0
+# Custom vars and plugins
+version: 2.0.0
 github:
-  repo:             https://github.com/allthingssmitty/allthingssmitty.github.io
-
-kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
-
-# Plugins
+  repo: 'https://github.com/allthingssmitty/allthingssmitty.github.io'
 plugins:
   - jekyll-paginate
   - jekyll-autoprefixer
