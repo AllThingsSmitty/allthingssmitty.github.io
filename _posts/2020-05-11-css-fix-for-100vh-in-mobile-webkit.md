@@ -62,7 +62,7 @@ html {
 ```
 
 {:.message}
-This code was updated to include the `html` element after [I was told](https://twitter.com/bfgeek/status/1262459015155441664){:rel="external"} that Chrome is updating the behavior to match Firefox’s implementation.
+This code was updated to include the `html` element after I was told that [Chrome is updating the behavior](https://twitter.com/bfgeek/status/1262459015155441664){:rel="external"} to match Firefox’s implementation.
 
 And now the sticky footer is right where I want it to be in mobile Safari!
 
