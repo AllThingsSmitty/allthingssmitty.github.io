@@ -39,11 +39,11 @@
 
 }
 
-
 // Blog post or page title
 .page-title,
 .post-title {
   font-size: 2rem;
+  margin-bottom: .5rem;
   margin-top: 0;
 
   a {
@@ -57,48 +57,44 @@
 }
 
 // Meta data line below post title
+.post-metadata {
 
-.post-comments,
-.post-date,
-.post-tags {
-  color: $gray-3;
-  display: inline-block;
-  font-family: $secondary-font-family-semibold;
-  line-height: 1;
-  margin: 0 1rem 1rem 0;
-}
-
-.post-date {
-  time {
+  div {
+    color: $gray-3;
     display: inline-block;
+    font-family: $secondary-font-family-semibold;
+    line-height: 1;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+    // Publish date
+    time {
+      display: inline-block;
+    }
+
+    // Tags
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+      }
+    }
   }
 }
 
 .archive-date {
+  color: $gray-3;
   display: block;
   font-size: .875rem;
-  margin-top: .25rem;
 }
 
 .embed {
   margin: 1.5rem 0 2rem;
 }
-
-// Tags
-.post-tags {
-
-  ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      list-style: none;
-    }
-  }
-}
-
 
 // Tags page
 .tags {
@@ -135,6 +131,9 @@
     }
 
     li {
+
+      margin-bottom: .5rem;
+
       a {
         text-decoration: underline;
       }

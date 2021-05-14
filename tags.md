@@ -35,7 +35,7 @@ title: Tags
         <span>
           <a href="{{ post.url }}">{{ post.title }}</a>
         </span>
-        <span class="post-date archive-date">
+        <span class="archive-date">
           {{ post.date | date: "%b %-d, %Y" }}
         </span>
       </div>

@@ -118,10 +118,23 @@ tbody tr:nth-child(odd) th {
 }
 
 .icon {
-  background-repeat: no-repeat;
   display: inline-block;
   margin-right: .15rem;
-  vertical-align: bottom;
+  vertical-align: bottom;   
+}
+
+.icon,
+.icon-social {
+  background-repeat: no-repeat;
+
+  .sr-hidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+  }
 }
 
 .icon-clock {

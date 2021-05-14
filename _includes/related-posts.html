@@ -29,7 +29,7 @@
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
-        <span class="post-date archive-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="archive-date">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
       {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
       {% if maxRelatedCounter >= maxRelated %}
