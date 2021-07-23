@@ -18,8 +18,8 @@
   }
 
   // WebKit mobile viewport bug fix
-  @supports (background: -webkit-named-image(i)) {
-    min-height: -webkit-fill-available; 
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
   }
 }
 
