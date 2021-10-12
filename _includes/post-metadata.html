@@ -2,10 +2,10 @@
   <div>
     <span class="icon icon-clock"></span>
     {% if page.path contains '_posts' %}
-      <time datetime="{{ page.date | date_to_xmlschema }}" aria-label="Published date: {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
     {% endif %}
     {% if post.path contains '_posts' %}
-      <time datetime="{{ post.date | date_to_xmlschema }}" aria-label="Published date: {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
     {% endif %}
   </div>
 
