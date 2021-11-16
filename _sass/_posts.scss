@@ -57,13 +57,13 @@
 
 // Meta data line below post title
 .post-metadata {
+  margin-bottom: 1rem;
 
   div {
     color: $gray-3;
     display: inline-block;
     font-family: $secondary-font-family-semibold;
     line-height: 1;
-    margin-bottom: 1rem;
     margin-right: 1rem;
 
     // Publish date
