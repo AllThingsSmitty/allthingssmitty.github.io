@@ -3,7 +3,7 @@ layout: post
 title: Show my password, please
 description: Allowing users to view the password they've entered helps avoid frustration and improve engagement. This is a quick JavaScript example.
 image: img/posts/sunset-home-office-min.jpg
-tags: [JavaScript, 'user experience']
+tags: [JavaScript, 'UX']
 comments: true
 ---
 
