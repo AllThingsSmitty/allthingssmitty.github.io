@@ -92,6 +92,14 @@
   }
 }
 
+.post-footer {
+  text-align: inherit;
+
+  ul {
+    margin-left: inherit;
+  }
+}
+
 .archive-date {
   color: $gray-3;
   display: block;

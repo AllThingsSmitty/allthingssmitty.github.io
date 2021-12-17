@@ -32,6 +32,10 @@ p {
   margin-bottom: 1rem;
   margin-top: 0;
   
+  &:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+
   .emoji-md {
     font-size: 1.5rem;
   }

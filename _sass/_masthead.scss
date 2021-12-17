@@ -40,10 +40,10 @@ header {
         display: inline-block;
         line-height: 1.75;
         margin: 0;
-      }
-      
-      li:last-child {
-        margin-left: 1rem;
+        
+        &:last-child {
+          margin-left: 1rem;
+        }
       }
     }
   }

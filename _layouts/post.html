@@ -7,12 +7,14 @@ layout: default
     <h2 class="post-title">{{ page.title }}</h2>
     {% include post-metadata.html %}
   </header>
-  {{ content }}  
+  {{ content }}
+
+  <footer class="post-footer">
+    {% include share-page.html %}
+    
+    {% include related-posts.html %}
+  </footer>
 </div>
-
-{% include share-page.html %}
-
-{% include related-posts.html %}
 
 {% include pagination.html %}
 
