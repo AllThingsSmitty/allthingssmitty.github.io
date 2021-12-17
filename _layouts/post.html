@@ -3,11 +3,10 @@ layout: default
 ---
 
 <div class="post" tabindex="0">
- 
-  <h2 class="post-title">{{ page.title }}</h2>
-  
-  {% include post-metadata.html %}
-
+  <header class="post-header">
+    <h2 class="post-title">{{ page.title }}</h2>
+    {% include post-metadata.html %}
+  </header>
   {{ content }}  
 </div>
 

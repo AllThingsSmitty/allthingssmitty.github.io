@@ -6,14 +6,14 @@ title: Home
 <article>
   {% for post in paginator.posts %}
   <div class="post" tabindex="0">
-    <h2 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-        
-    {% include post-metadata.html %}
-    
+    <header class="post-header">
+      <h2 class="post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+      {% include post-metadata.html %}
+    </header>
     <p>{{ post.content | strip_html | truncatewords:50 }}</p>
   
     <p><a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a></p>

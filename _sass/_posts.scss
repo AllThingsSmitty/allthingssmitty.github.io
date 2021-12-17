@@ -5,6 +5,13 @@
 
 .page,
 .post {
+
+  .post-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
   a {
     text-decoration: underline;  
   
@@ -56,7 +63,7 @@
 }
 
 // Meta data line below post title
-.post-metadata {
+.post-meta {
   margin-bottom: 1rem;
 
   div {
