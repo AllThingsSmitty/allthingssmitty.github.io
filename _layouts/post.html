@@ -9,7 +9,9 @@ layout: default
   </header>
   {{ content }}
 
-  <footer class="post-footer">    
+  <footer class="post-footer">
+    {% include share-page.html %}
+
     {% include related-posts.html %}
   </footer>
 </div>
