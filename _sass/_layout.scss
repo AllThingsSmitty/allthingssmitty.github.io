@@ -25,6 +25,11 @@
 
 main {
   flex: 1 0 auto;
+
+  .break {
+    border-top: 2px solid $border-color;
+    margin: 1.5rem 0;
+  }
 }
 
 footer {

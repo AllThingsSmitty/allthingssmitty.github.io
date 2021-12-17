@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<article>
   {% for post in paginator.posts %}
   <div class="post" tabindex="0">
     <h2 class="post-title">
@@ -18,10 +18,10 @@ title: Home
   
     <p><a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a></p>
     
-    {% if forloop.last == false %}<hr>{% endif %}
+    {% if forloop.last == false %}<div class="break"></div>{% endif %}
   </div>
   
   {% endfor %}
-</div>
+</article>
 
 {% include pagination.html %}

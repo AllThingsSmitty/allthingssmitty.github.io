@@ -2,7 +2,7 @@
 //
 // Super small header above the content for site name and short description.
 
-.masthead {
+header {
   color: $gray-m;
   font-family: $secondary-font-family-bold;    
   margin-bottom: 5rem;
@@ -17,31 +17,38 @@
       text-decoration: none;
     }
   }
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-  
-    li {
-      display: inline-block;
-      line-height: 1.75;
-      list-style: none;
+
+  nav {
+    display: flex;
+
+    h1 {
+      color: $gray-6;
+      font-size: 1.25rem;
       margin: 0;
-    }
-    
-    li:last-child {
-      margin-left: 1rem;
-    }
-    
-    li:first-child {
-      float: left;
-    }
   
+      a {
+        color: inherit;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 0 auto;
+      padding: 0;
+    
+      li {
+        display: inline-block;
+        line-height: 1.75;
+        margin: 0;
+      }
+      
+      li:last-child {
+        margin-left: 1rem;
+      }
+    }
   }
   
-  span {
-    display: block;
+  .tagline {
     font-family: $secondary-font-family-semibold;
     font-size: .85rem;
     margin-top: .5rem;
@@ -50,17 +57,6 @@
     @media only screen and (max-width: $large-breakpoint) {
       display: block;
     }
-  }
-}
-
-.masthead-title {
-  color: $gray-6;
-  display: inline-block;
-  font-size: 1.25rem;
-  margin: 0;
-
-  a {
-    color: inherit;
   }
 }
 

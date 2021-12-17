@@ -10,22 +10,18 @@
 
   <body>
     <div class="container">
-      <header class="masthead" role="banner">
+      <header role="banner">
         <div class="skip-nav">
           <a href="#content">Skip to main content</a>
         </div>
-        <div class="row" role="navigation" aria-label="Main navigation">
+        <nav role="navigation" aria-label="Main navigation">
+          <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
           <ul>
-            <li>
-              <h1 class="masthead-title">
-                <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-              </h1>
-            </li>
             <li><a href="{{ site.baseurl }}/about">About</a></li>
             <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
           </ul>
-        </div>
-        <span>{{ site.tagline }}</span>
+        </nav>
+        <div class="tagline">{{ site.tagline }}</div>
       </header>
 
       <main id="content">
