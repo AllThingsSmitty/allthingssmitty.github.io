@@ -3,8 +3,8 @@
 // Super small header above the content for site name and short description.
 
 header {
-  color: $gray-m;
-  font-family: $secondary-font-family-bold;    
+  color: var(--gray-m);
+  font-family: var(--secondary-font-family-bold);    
   margin-bottom: 5rem;
   padding-bottom: .5rem;
   padding-top: 1rem;
@@ -13,7 +13,7 @@ header {
     color: inherit;
   
     &:hover {
-      color: $link-color;
+      color: var(--link-color);
       text-decoration: none;
     }
   }
@@ -22,13 +22,9 @@ header {
     display: flex;
 
     h1 {
-      color: $gray-6;
+      color: var(--gray-6);
       font-size: 1.25rem;
       margin: 0;
-  
-      a {
-        color: inherit;
-      }
     }
 
     ul {
@@ -49,7 +45,7 @@ header {
   }
   
   .tagline {
-    font-family: $secondary-font-family-semibold;
+    font-family: var(--secondary-font-family-semibold);
     font-size: .85rem;
     margin-top: .5rem;
     text-transform: uppercase;
@@ -68,8 +64,8 @@ header {
   }
 
   a {
-    background-color: $white;
-    color: $gray-5;
+    background-color: var(--white);
+    color: var(--gray-5);
     left: -500px;
     overflow: hidden;
     position: absolute;

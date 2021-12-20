@@ -7,13 +7,13 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: $flat-black;
-  font-family: $code-font-family;
+  color: var(--flat-black);
+  font-family: var(--code-font-family);
   hyphens: none;
   line-height: 1.5;
   tab-size: 4;
   text-align: left;
-  text-shadow: 0 1px $white;
+  text-shadow: 0 1px var(--white);
   word-spacing: normal;
   word-wrap: normal;
 }
@@ -34,7 +34,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background-color: $code-background-color;
+  background-color: var(--code-background-color);
 }
 
 :not(pre) > code[class*="language-"] {
@@ -61,7 +61,7 @@ pre[class*="language-"] {
 .token.property,
 .token.symbol,
 .token.tag {
-	color: $plum
+	color: var(--plum);
 }
 
 .token.attr-name,
@@ -70,7 +70,7 @@ pre[class*="language-"] {
 .token.inserted,
 .token.selector,
 .token.string {
-	color: $forest-green;
+	color: var(--forest-green);
 }
 
 .language-scss .token.keyword,
@@ -107,7 +107,7 @@ pre[class*="language-"] {
 
 .language-css .token.number,
 .language-scss .token.number {
-  color: $flat-black;
+  color: var(--flat-black);
 }
 
 .token.bold,
@@ -127,13 +127,13 @@ div.prism-show-language {
   position: relative;
  
   .prism-show-language-label {
-    background-color: $gray-2;
+    background-color: var(--gray-2);
     border-radius: 0 .25rem;
     bottom: auto;
     box-shadow: none;
-    color: $flat-black;
+    color: var(--flat-black);
     display: inline-block;
-    font-family: $secondary-font-family-semibold;
+    font-family: var(--secondary-font-family-semibold);
     font-size: .725rem;
     height: auto;
     left: auto;

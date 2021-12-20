@@ -1,39 +1,43 @@
-$gray-1: #f9f9f9;
-$gray-2: #cfcfcf;
-$gray-3: #68778d;
-$gray-m: #767676;
-$gray-4: #717171;
-$gray-5: #444; //#515151;
-$gray-6: #303030;
-
-$blue: #0074d9;
-$flat-black: #0b0c0c;
-$forest-green: #1e8400;
-$plum: #905;
-$sky-blue: #f9fbff;
-$white: #fff;
-$white-gray: #fcfcfc;
-$white-sand: #e5e5e5;
-
-$root-font-family-fallback: Georgia, serif;
-$root-font-family-regular: "BitterRegular", $root-font-family-fallback;
-$root-font-family-bold: "BitterBold", $root-font-family-fallback;
-$root-font-family-italic: "BitterItalic", $root-font-family-fallback;
-$root-font-family-bolditalic: "BitterBoldItalic", $root-font-family-fallback;
-$root-font-size: 1.125rem;
-$root-line-height: 1.5;
-
-$body-color: $gray-6;
-$secondary-font-family-fallback: sans-serif;
-$secondary-font-family-bold: "OpenSansBold", $secondary-font-family-fallback;
-$secondary-font-family-semibold: "OpenSansSemibold", $secondary-font-family-fallback;
-
-$link-color: $blue;
-$border-color: $white-sand;
-$border-color-blue: $blue;
-
+// used for media queries (media queries don't accept CSS variables)
 $large-breakpoint: 38rem;
-$large-font-size: 1.25rem;
 
-$code-font-family: "Inconsolata", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-$code-background-color: $white-gray;
+:root {
+  --root-font-family-fallback: Georgia, serif;
+  --root-font-family-regular: "BitterRegular", var(--root-font-family-fallback);
+  --root-font-family-bold: "BitterBold", var(--root-font-family-fallback);
+  --root-font-family-italic: "BitterItalic", var(--root-font-family-fallback);
+  --root-font-family-bolditalic: "BitterBoldItalic", var(--root-font-family-fallback);
+
+  --secondary-font-family-fallback: sans-serif;
+  --secondary-font-family-bold: "OpenSansBold", var(--secondary-font-family-fallback);
+  --secondary-font-family-semibold: "OpenSansSemibold", var(--secondary-font-family-fallback);
+  
+  --root-font-size: 1.125rem;
+  --root-line-height: 1.5;
+  --large-font-size: 1.25rem;
+  --large-breakpoint: #{$large-breakpoint};
+
+  --gray-m: #767676;
+  --gray-1: #f9f9f9;
+  --gray-2: #cfcfcf;
+  --gray-3: #68778d;
+  --gray-4: #717171;
+  --gray-5: #444;
+  --gray-6: #292930;
+
+  --code-font-family: "Inconsolata", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;  
+  --code-background-color: var(--white-gray);
+  --blue: #0074d9;
+  --flat-black: #0b0c0c;
+  --forest-green: #1e8400;
+  --plum: #905;
+  --sky-blue: #f9fbff;
+  --white: #fff;
+  --white-gray: #fcfcfc;
+  --white-sand: #e5e5e5;
+
+  --body-color: var(--gray-6);
+  --link-color: var(--blue);
+  --border-color: var(--white-sand);
+  --border-color-blue: var(--blue);
+}

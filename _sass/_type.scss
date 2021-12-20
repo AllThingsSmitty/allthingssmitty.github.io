@@ -2,30 +2,16 @@
 //
 // Headings, body text, lists, and other misc typographic elements.
 
-h1, h2, h3, h4, h5, h6 {
-  color: $gray-6;
-  font-family: $secondary-font-family-bold;
+h1, h2, h3 {
+  color: var(--gray-6);
+  font-family: var(--secondary-font-family-bold);
   line-height: 1.25;
   margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
 }
 
 h3 {
   font-size: 1.25rem;
   margin-top: 1.5rem;
-}
-
-h4, h5, h6 {
-  font-size: 1rem;
-  margin-top: 1rem;
 }
 
 p {
@@ -50,7 +36,7 @@ p {
 }
 
 strong {
-  color: $gray-6;
+  color: var(--gray-6);
 }
 
 ul, ol, dl {
@@ -67,22 +53,22 @@ dd {
 }
 
 abbr {
-  color: $gray-5;
+  color: var(--gray-5);
   font-size: .85rem;
   font-weight: bold;
   text-transform: uppercase;
 
   &[title] {
-    border-bottom: 1px dotted $border-color;
+    border-bottom: 1px dotted var(--border-color);
     cursor: help;
   }
 }
 
 blockquote {
-  background-color: $sky-blue;
-  border-left: .5rem solid $border-color-blue;
-  color: $gray-4;
-  font-family: $secondary-font-family-semibold;
+  background-color: var(--sky-blue);
+  border-left: .5rem solid var(--border-color-blue);
+  color: var(--gray-4);
+  font-family: var(--secondary-font-family-semibold);
   font-size: .9rem;
   margin: .8rem 0;
   padding: 1rem;
@@ -108,14 +94,14 @@ strong {
 
 cite,
 em {
-  font-family: $root-font-family-italic;
+  font-family: var(--root-font-family-italic);
 }
 
 strong {
-  font-family: $root-font-family-bold;
+  font-family: var(--root-font-family-bold);
 
   em {
-    font-family: $root-font-family-bolditalic;
+    font-family: var(--root-font-family-bolditalic);
   }
 }
  
@@ -135,7 +121,7 @@ sup {
   top: -.5rem;
   
   a {
-    font-family: $root-font-family-bold;
+    font-family: var(--root-font-family-bold);
   }
 }
 
@@ -165,16 +151,16 @@ a[href^="#fnref:"] {
 // or to a parent if there are multiple elements to show.
 
 .message {
-  background-color: $sky-blue;
-  border-left: .5rem solid $border-color-blue;
-  color: $gray-4;
-  font-family: $secondary-font-family-semibold;
+  background-color: var(--sky-blue);
+  border-left: .5rem solid var(--border-color-blue);
+  color: var(--gray-4);
+  font-family: var(--secondary-font-family-semibold);
   font-size: .9rem;
   margin-bottom: 1rem;
   padding: 1rem;
 
   strong {
-    color: $gray-4;
-    font-family: $secondary-font-family-bold;
+    color: var(--gray-4);
+    font-family: var(--secondary-font-family-bold);
   }
 }

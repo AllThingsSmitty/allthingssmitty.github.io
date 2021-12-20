@@ -5,17 +5,17 @@
 
 code,
 pre {
-  font-family: $code-font-family;
+  font-family: var(--code-font-family);
 }
 
 code {
-  background-color: $code-background-color;
+  background-color: var(--code-background-color);
   border-radius: .3125rem;
   padding: .15rem .25rem;
-  text-shadow: 0 1px $white;
+  text-shadow: 0 1px var(--white);
   
   &.highlighter-rouge {
-    border: 1px solid $white-sand;
+    border: 1px solid var(--white-sand);
     white-space: nowrap;
   }
 }
@@ -32,20 +32,20 @@ pre code {
 
 // Pygments via Jekyll
 .highlight {
-  background-color: $code-background-color;
+  background-color: var(--code-background-color);
   border-radius: .25rem;
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 1rem;
 
   pre {
-    border: 1px solid $white-sand;
+    border: 1px solid var(--white-sand);
     margin-bottom: 0;
     overflow-x: auto;
   }
 
   .linenos {
-    color: $gray-3;
+    color: var(--gray-3);
     display: inline-block; // Ensures the null space also isn't selectable
     padding-left: .25rem;
     padding-right: .75rem;

@@ -15,14 +15,14 @@
       margin-bottom: 1rem;
 
       a {
-        color: $link-color;
+        color: var(--link-color);
         text-decoration: underline;
       }
 
       div {
-        color: $gray-3;
+        color: var(--gray-3);
         display: inline-block;
-        font-family: $secondary-font-family-semibold;
+        font-family: var(--secondary-font-family-semibold);
         line-height: 1;
         margin-right: 1rem;
 
@@ -50,7 +50,7 @@
     text-decoration: underline;  
   
     &.more {
-      font-family: $secondary-font-family-semibold;
+      font-family: var(--secondary-font-family-semibold);
     }
   }
 
@@ -87,11 +87,11 @@
   margin-top: 0;
 
   a {
-    color: $gray-6;
+    color: var(--gray-6);
     text-decoration: none;
     
     &:hover {
-      color: $link-color;
+      color: var(--link-color);
     }
   }
 }
@@ -105,7 +105,7 @@
 }
 
 .archive-date {
-  color: $gray-3;
+  color: var(--gray-3);
   display: block;
   font-size: .875rem;
 }
@@ -116,7 +116,7 @@
 
 // Tags page
 .tags {
-  font-family: $secondary-font-family-semibold;
+  font-family: var(--secondary-font-family-semibold);
 
   h3 {
     margin-top: 0;
@@ -133,8 +133,8 @@
 
 // Related posts
 .related {
-  border-top: 2px solid $border-color;
-  font-family: $secondary-font-family-semibold;
+  border-top: 2px solid var(--border-color);
+  font-family: var(--secondary-font-family-semibold);
   margin-bottom: 2rem;
 
   .related-posts {
@@ -142,7 +142,7 @@
     padding-left: 0;
 
     h3 {
-      border-top: 1px solid $white-sand;
+      border-top: 1px solid var(--white-sand);
       margin-bottom: 1rem;
       margin-top: 1.5rem;
       padding-top: 1rem;
@@ -157,7 +157,7 @@
       }
 
       span {
-        color: $gray-3;
+        color: var(--gray-3);
         font-size: .875rem;
         white-space: nowrap;
       }

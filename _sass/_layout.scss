@@ -7,7 +7,7 @@
   flex-direction: column;
   margin-left:  auto;
   margin-right: auto;
-  max-width: $large-breakpoint;
+  max-width: var(--large-breakpoint);
   min-height: 100vh;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
@@ -27,18 +27,18 @@ main {
   flex: 1 0 auto;
 
   .break {
-    border-top: 2px solid $border-color;
+    border-top: 2px solid var(--border-color);
     margin: 1.5rem 0;
   }
 }
 
 footer {
-  font-family: $secondary-font-family-semibold;
+  font-family: var(--secondary-font-family-semibold);
   margin-bottom: 2rem;
   text-align: center;
   
   a:hover {
-    color: $link-color;
+    color: var(--link-color);
     text-decoration: none;
   }
   
