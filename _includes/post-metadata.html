@@ -30,10 +30,10 @@
   <div>
     <span class="icon icon-comments"></span>
     {% if page.path contains '_posts' %}
-      <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about '{{ page.title }}'">Comments</a>
+      <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a>
     {% endif %}
     {% if post.path contains '_posts' %}
-      <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a>
+      <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about '{{ post.title }}'">Comments</a>
     {% endif %}
   </div>
 </div>

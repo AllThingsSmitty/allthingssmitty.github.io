@@ -1,20 +1,20 @@
 ---
 layout: default
 ---
-
-<div class="post" tabindex="0">
-  <header class="post-header">
-    <h2 class="post-title">{{ page.title }}</h2>
-    {% include post-metadata.html %}
-  </header>
-  {{ content }}
-
-  <footer class="post-footer">
-    {% include share-page.html %}
-
-    {% include related-posts.html %}
-  </footer>
-</div>
+<article>
+  <div class="post" tabindex="0">
+    <header class="post-header">
+      <h2 class="post-title">{{ page.title }}</h2>
+      {% include post-metadata.html %}
+    </header>
+    <div>
+      {{ content }}
+    </div>
+    <footer class="post-footer">
+      {% include related-posts.html %}
+    </footer>
+  </div>
+</article>
 
 {% include pagination.html %}
 
