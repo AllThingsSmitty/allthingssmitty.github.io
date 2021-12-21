@@ -26,6 +26,10 @@
         line-height: 1;
         margin-right: 1rem;
 
+        &:first-child {
+          margin-bottom: .75rem;
+        }
+
         // Publish date
         time {
           display: inline-block;
