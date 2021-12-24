@@ -2,7 +2,7 @@
 .highlight .c { color: var(--gray-3); } /* Comment */
 .highlight .err { background-color: #faa; color: #a00; } /* Error */
 .highlight .k { color: #069; } /* Keyword */
-.highlight .o { color: $gray-5 } /* Operator */
+.highlight .o { color: var(--gray-5); } /* Operator */
 .highlight .cm { color: #09f; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #099 } /* Comment.Preproc */
 .highlight .c1 { color: var(--gray-3); } /* Comment.Single */
