@@ -49,10 +49,6 @@ header {
     font-size: .85rem;
     margin-top: .5rem;
     text-transform: uppercase;
-    
-    @media only screen and (max-width: $large-breakpoint) {
-      display: block;
-    }
   }
 }
 
