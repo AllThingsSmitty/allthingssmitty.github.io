@@ -37,6 +37,12 @@ p {
 
 strong {
   color: var(--gray-6);
+  font-family: var(--root-font-family-bold);
+  font-style: normal;
+
+  em {
+    font-family: var(--root-font-family-bolditalic);
+  }
 }
 
 ul, ol, dl {
@@ -87,24 +93,11 @@ blockquote {
 }
 
 cite,
-em,
-strong {
+em {
+  font-family: var(--root-font-family-italic);
   font-style: normal;
 }
 
-cite,
-em {
-  font-family: var(--root-font-family-italic);
-}
-
-strong {
-  font-family: var(--root-font-family-bold);
-
-  em {
-    font-family: var(--root-font-family-bolditalic);
-  }
-}
- 
 sub,
 sup {
   font-size: .75rem;

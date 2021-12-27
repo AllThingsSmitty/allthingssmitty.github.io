@@ -10,7 +10,7 @@ pre {
 
 code {
   background-color: var(--code-background-color);
-  border-radius: .3125rem;
+  border-radius: .25rem;
   padding: .15rem .25rem;
   text-shadow: 0 1px var(--white);
   
@@ -23,11 +23,11 @@ code {
 pre {
   margin-bottom: 1rem;
   margin-top: 0;
-}
-
-pre code {
-  color: inherit;
-  padding: 0;
+  
+  code {
+    color: inherit;
+    padding: 0;
+  }
 }
 
 // Pygments via Jekyll
