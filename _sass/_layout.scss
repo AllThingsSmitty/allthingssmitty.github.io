@@ -34,13 +34,16 @@ main {
 
 footer {
   font-family: var(--secondary-font-family-semibold);
-  font-size: .8rem;
   margin-bottom: 2rem;
   text-align: center;
   
   a:hover {
     color: var(--link-color);
     text-decoration: none;
+  }
+
+  span {
+    font-size: .8rem;
   }
 
   @media only screen and (max-width: $large-breakpoint) {
