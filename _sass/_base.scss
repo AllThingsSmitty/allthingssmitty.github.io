@@ -89,29 +89,29 @@ figure {
   }
 }
 
-table {
-  border: 1px solid var(--border-color);
-  border-collapse: collapse;
-  font-size: .85rem;
-  margin-bottom: 1rem;
-  width: 100%;
-}
+// table {
+//   border: 1px solid var(--border-color);
+//   border-collapse: collapse;
+//   font-size: .85rem;
+//   margin-bottom: 1rem;
+//   width: 100%;
 
-td,
-th {
-  border: 1px solid var(--border-color);
-  padding: .25rem .5rem;
-}
+//   td,
+//   th {
+//     border: 1px solid var(--border-color);
+//     padding: .25rem .5rem;
+//   }
 
-th {
-  font-family: var(--secondary-font-family-bold);
-  text-align: left;
-}
+//   th {
+//     font-family: var(--secondary-font-family-bold);
+//     text-align: left;
+//   }
 
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: var(--gray-1);
-}
+//   tbody tr:nth-child(odd) td,
+//   tbody tr:nth-child(odd) th {
+//     background-color: var(--gray-1);
+//   }
+// }
 
 .icon {
   display: inline-block;

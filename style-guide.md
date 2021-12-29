@@ -15,7 +15,7 @@ tags: [code, markdown, 'style guide']
   * [Images](#images)
   * [Images with captions](#images-with-captions)
 * [Emoji](#emoji)
-* [Tables](#tables)
+<!-- * [Tables](#tables) -->
 
 -----
 
@@ -242,7 +242,7 @@ For accessibility purposes, emoji will be give the ARIA landmark role `img` and 
 
 
 -----
-
+<!-- 
 ## Tables
 
 You bred raptors? I told you, how many times, we needed locking mechanisms on the vehicle doors!
@@ -255,13 +255,6 @@ You bred raptors? I told you, how many times, we needed locking mechanisms on th
       <th>Downvotes</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>25</td>
-      <td>11</td>
-    </tr>
-  </tfoot>
   <tbody>
     <tr>
       <td>Alan Grant</td>
@@ -279,7 +272,14 @@ You bred raptors? I told you, how many times, we needed locking mechanisms on th
       <td>4</td>
     </tr>
   </tbody>
-</table>
+  <tfoot>
+    <tr>
+      <td>Totals</td>
+      <td>25</td>
+      <td>11</td>
+    </tr>
+  </tfoot>
+</table> -->
 
 I can afford more glasses! Amphibian DNA. Are these characters...auto...erotica? Amphibian DNA. Check the vending machines. It's...it's a dinosaur.
 

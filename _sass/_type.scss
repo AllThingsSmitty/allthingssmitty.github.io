@@ -98,45 +98,47 @@ em {
   font-style: normal;
 }
 
-sub,
-sup {
-  font-size: .75rem;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
 
-sub {
-  bottom: -.25rem;
-}
+// sub,
+// sup {
+//   font-size: .75rem;
+//   line-height: 0;
+//   position: relative;
+//   vertical-align: baseline;
+// }
 
-sup {
-  top: -.5rem;
+// sub {
+//   bottom: -.25rem;
+// }
+
+// sup {
+//   top: -.5rem;
   
-  a {
-    font-family: var(--root-font-family-bold);
-  }
-}
+//   a {
+//     font-family: var(--root-font-family-bold);
+//   }
+// }
 
 
-// Markdown footnotes
-//
-// See the example content post for an example.
 
-// Footnote number within body text
-a[href^="#fn:"],
-// Back to footnote link
-a[href^="#fnref:"] {
-  font-weight: bold;
-  display: inline-block;
-  margin-left: .1rem;
-}
+// // Markdown footnotes
+// //
+// // See the example content post for an example.
 
-// List of footnotes
-.footnotes {
-  font-size: .9rem;
-  margin-top: 2rem;
-}
+// // Footnote number within body text
+// a[href^="#fn:"],
+// // Back to footnote link
+// a[href^="#fnref:"] {
+//   font-weight: bold;
+//   display: inline-block;
+//   margin-left: .1rem;
+// }
+
+// // List of footnotes
+// .footnotes {
+//   font-size: .9rem;
+//   margin-top: 2rem;
+// }
 
 // Messages
 //
