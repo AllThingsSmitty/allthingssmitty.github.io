@@ -7,7 +7,7 @@
 
   <h3>Related posts</h3>
 
-  <ul class="related-posts">
+  <ul>
 
   {% for post in site.posts %}
    
@@ -29,7 +29,7 @@
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
-        <span class="archive-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="archive-date">{{ post.date | date: "%b %-d, %Y" }}</div>
       </li>
       {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
       {% if maxRelatedCounter >= maxRelated %}
