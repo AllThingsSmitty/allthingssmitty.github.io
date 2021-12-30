@@ -6,52 +6,6 @@
 .page,
 .post {
 
-  .post-header {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 0;
-
-    .post-meta {
-      margin-bottom: 1rem;
-
-      a {
-        color: var(--link-color);
-        text-decoration: underline;
-      }
-
-      div {
-        color: var(--gray-3);
-        display: inline-block;
-        font-family: var(--secondary-font-family-semibold);
-        line-height: 1;
-        margin-right: 1rem;
-
-        // Publish date
-        time {
-          display: inline-block;
-        }
-
-        // Tags
-        ul {
-          display: inline-block;
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: inline-block;
-            list-style: none;
-          }
-        }
-
-        &:not(:last-child) {
-          @media only screen and (max-width: $large-breakpoint) {
-            margin-bottom: .75rem;          
-          }
-        }
-      }
-    }
-  }
-
   a {
     text-decoration: underline;  
   
@@ -86,6 +40,52 @@
 
 }
 
+.post-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  .post-meta {
+    margin-bottom: 1rem;
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+
+    div {
+      color: var(--gray-3);
+      display: inline-block;
+      font-family: var(--secondary-font-family-semibold);
+      line-height: 1;
+      margin-right: 1rem;
+    }
+
+    // Publish date
+    time {
+      display: inline-block;
+    }
+
+    &:not(:last-child) {
+      @media only screen and (max-width: $large-breakpoint) {
+        margin-bottom: .75rem;          
+      }
+    }
+
+    // Tags
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+  }
+}
+
 // Blog post or page title
 .page-title,
 .post-title {
@@ -112,7 +112,6 @@
 
 .archive-date {
   color: var(--gray-3);
-  display: block;
   font-size: .875rem;
 }
 
@@ -143,30 +142,13 @@
   font-family: var(--secondary-font-family-semibold);
   margin-bottom: 2rem;
 
-  .related-posts {
+  ul {
     list-style: none;
     padding-left: 0;
-
-    h3 {
-      border-top: 1px solid var(--white-sand);
-      margin-bottom: 1rem;
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-    }
 
     li {
 
       margin-bottom: .5rem;
-
-      a {
-        text-decoration: underline;
-      }
-
-      span {
-        color: var(--gray-3);
-        font-size: .875rem;
-        white-space: nowrap;
-      }
     }
   }
 }
