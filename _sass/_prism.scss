@@ -10,7 +10,7 @@ pre[class*="language-"] {
   color: var(--flat-black);
   font-family: var(--code-font-family);
   hyphens: none;
-  line-height: 1.5;
+  line-height: var(--root-line-height) ;
   tab-size: 4;
   text-align: left;
   text-shadow: 0 1px var(--white);

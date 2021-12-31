@@ -10,7 +10,7 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: var(--large-font-size);
   margin-top: 1.5rem;
 }
 
@@ -28,7 +28,7 @@ p {
 }
 
 .emoji-sm {
-  font-size: 1.25rem;
+  font-size: var(--large-font-size);
 }
 
 .emoji-x-sm {
@@ -60,7 +60,7 @@ dd {
 
 abbr {
   color: var(--gray-5);
-  font-size: .85rem;
+  font-size: var(--small-font-size);
   font-weight: bold;
   text-transform: uppercase;
 

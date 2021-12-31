@@ -84,7 +84,7 @@ figure {
 
   figcaption {
     font-family: var(--root-font-family-regular);
-    font-size: .85rem;
+    font-size: var(--small-font-size);
     color: var(--gray-3);
   }
 }
@@ -92,7 +92,7 @@ figure {
 // table {
 //   border: 1px solid var(--border-color);
 //   border-collapse: collapse;
-//   font-size: .85rem;
+//   font-size: var(--small-font-size);
 //   margin-bottom: 1rem;
 //   width: 100%;
 
