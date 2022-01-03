@@ -22,14 +22,10 @@ html {
 
 body {
   color: var(--body-color);
-  font-family: var(--root-font-family-fallback);
+  font-family: var(--root-font-family-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-
-.fonts-loaded body {
-  font-family: var(--root-font-family-regular);
 }
 
 // No `:visited` state is required by default (browsers will use `a`)

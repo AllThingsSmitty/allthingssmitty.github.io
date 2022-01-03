@@ -2,15 +2,24 @@
 $large-breakpoint: 38rem;
 
 :root {
-  --root-font-family-fallback: Georgia, serif;
-  --root-font-family-regular: "BitterRegular", var(--root-font-family-fallback);
-  --root-font-family-bold: "BitterBold", var(--root-font-family-fallback);
-  --root-font-family-italic: "BitterItalic", var(--root-font-family-fallback);
-  --root-font-family-bolditalic: "BitterBoldItalic", var(--root-font-family-fallback);
+  --font-family-fallback: 
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
 
-  --secondary-font-family-fallback: sans-serif;
-  --secondary-font-family-bold: "OpenSansBold", var(--secondary-font-family-fallback);
-  --secondary-font-family-semibold: "OpenSansSemibold", var(--secondary-font-family-fallback);
+  --root-font-family-regular: "BitterRegular", var(--font-family-fallback);
+  --root-font-family-bold: "BitterBold", var(--font-family-fallback);
+  --root-font-family-italic: "BitterItalic", var(--font-family-fallback);
+  --root-font-family-bolditalic: "BitterBoldItalic", var(--font-family-fallback);
+
+  --secondary-font-family-bold: "OpenSansBold", var(--font-family-fallback);
+  --secondary-font-family-semibold: "OpenSansSemibold", var(--font-family-fallback);
   
   --root-font-size: 1.125rem;
   --root-line-height: 1.5;
