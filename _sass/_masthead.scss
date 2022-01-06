@@ -18,7 +18,15 @@ header {
     }
   }
 
-  nav {
+  .tagline {
+    font-family: var(--secondary-font-family-semibold);
+    font-size: .85rem;
+    margin-top: .5rem;
+    text-transform: uppercase;
+  }
+}
+
+nav {
     display: flex;
 
     h1 {
@@ -26,7 +34,7 @@ header {
       font-size: var(--large-font-size);
       margin: 0;
     }
-  }
+  
 
   ul {
     list-style: none;
@@ -42,13 +50,6 @@ header {
         margin-left: 1rem;
       }
     }
-  }
-
-  .tagline {
-    font-family: var(--secondary-font-family-semibold);
-    font-size: .85rem;
-    margin-top: .5rem;
-    text-transform: uppercase;
   }
 }
 

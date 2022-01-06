@@ -121,15 +121,15 @@ figure {
   background-size: 30px;
   height: 30px;
   width: 30px;
+}
 
-  .sr-hidden {
-    height: 1px;
-    left: -10000px;
-    overflow: hidden;
-    position: absolute;
-    top: auto;
-    width: 1px;
-  }
+.sr-hidden {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
 }
 
 .icon-calendar {
