@@ -36,7 +36,6 @@ p {
 }
 
 strong {
-  color: var(--gray-6);
   font-family: var(--root-font-family-bold);
   font-style: normal;
 
@@ -148,14 +147,13 @@ em {
 .message {
   background-color: var(--sky-blue);
   border-left: .5rem solid var(--border-color-blue);
-  color: var(--gray-4);
+  color: var(--gray-5);
   font-family: var(--secondary-font-family-semibold);
   font-size: .9rem;
   margin-bottom: 1rem;
   padding: 1rem;
 
   strong {
-    color: var(--gray-4);
     font-family: var(--secondary-font-family-bold);
   }
 }
