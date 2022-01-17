@@ -6,12 +6,8 @@
 .page,
 .post {
 
-  a {
-    text-decoration: underline;  
-  
-    &.more {
-      font-family: var(--secondary-font-family-semibold);
-    }
+  .more {
+    font-family: var(--secondary-font-family-semibold);
   }
 
   ul {
@@ -130,10 +126,6 @@
   
   .row {
     margin-bottom: 1rem;
-  }
-  
-  a {
-    text-decoration: underline;
   }
 }
 
