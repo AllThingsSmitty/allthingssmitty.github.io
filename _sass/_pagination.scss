@@ -20,20 +20,17 @@
   text-decoration: none;
   width: 50%;
 
-  //&:only-child {
-  //  width: 100%;
-  //}
-
   &:first-child:not(:last-child) {
     margin-right: .5rem;
   }
 
+  &:focus,
   &:hover {
     border-color: var(--border-color-blue);
     transition: border-color ease .2s;
+  }
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
   }
 }
