@@ -18,8 +18,8 @@ title: Home
         <p>{{ post.content | strip_html | truncatewords:50 }}</p>
         <p><a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a></p>
       </div>
-      {% if forloop.last == false %}<div class="break"></div>{% endif %}
     </div>
+    {% if forloop.last == false %}<div class="break"></div>{% endif %}
   </article>
 {% endfor %}
 
