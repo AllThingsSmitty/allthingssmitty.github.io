@@ -58,11 +58,6 @@ nav {
 }
 
 .skip-nav {
-  float: left;
-
-  &:focus {
-    visibility: visible;
-  }
 
   a {
     background-color: var(--white);
@@ -78,5 +73,9 @@ nav {
       position: absolute;
       top: 1rem;
     }
+  }
+
+  &:focus {
+    visibility: visible;
   }
 }
