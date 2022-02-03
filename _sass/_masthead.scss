@@ -15,13 +15,14 @@ header {
 
   .tagline {
     font-family: var(--secondary-font-family-semibold);
-    font-size: .85rem;
+    font-size: .8rem;
     margin-top: .5rem;
     text-transform: uppercase;
   }
 }
 
 nav {
+  align-items: center;
   display: flex;
 
   h1 {
