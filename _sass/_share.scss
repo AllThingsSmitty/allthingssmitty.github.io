@@ -2,7 +2,7 @@
 //
 // Styles for social share buttons.
 .social {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
   
   .chan {
@@ -12,9 +12,5 @@
   
   a {
     color: inherit;
-  }
-
-  @media only screen and (max-width: $large-breakpoint) {
-    margin-bottom: 1rem;
   }
 }
