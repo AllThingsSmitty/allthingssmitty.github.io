@@ -4,7 +4,7 @@ title: Tags
 ---
 
 <section class="tags">
-  <h3>Posts in category: {{ page.tag }}</h2>
+  <h3>Posts about {{ page.tag }}</h2>
   {% for post in site.tags[page.tag] %}
   <div class="row">
     <a href="{{ post.url }}">{{ post.title }}</a>
