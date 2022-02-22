@@ -37,9 +37,12 @@ footer {
   margin-bottom: 2rem;
   text-align: center;
   
-  a:hover {
-    color: var(--link-color);
-    text-decoration: none;
+  a {
+    
+    &:hover {
+      color: var(--link-color);
+      text-decoration: none;
+    }
   }
 
   span {
