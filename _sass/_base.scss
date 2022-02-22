@@ -13,7 +13,8 @@ body {
 html {
   font-size: var(--root-font-size);
   line-height: var(--root-line-height);
-  text-size-adjust: var(--root-font-size);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   
   @media only screen and (min-width: $large-breakpoint) {
     font-size: var(--large-font-size);
