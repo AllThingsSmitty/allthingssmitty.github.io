@@ -12,9 +12,11 @@ Not long ago there was some buzz around how WebKit handles `100vh` in CSS, essen
 The other day I was doing some work with a basic flexbox layout -- header, main, sticky footer -- the kind we've all seen and used many times before:
 
 ```html
-<header>HEADER GOES HERE</header>
-<main>MAIN GOES HERE</main>
-<footer>FOOTER GOES HERE</footer>
+<body>
+  <header>HEADER GOES HERE</header>
+  <main>MAIN GOES HERE</main>
+  <footer>FOOTER GOES HERE</footer>
+</body>
 ```
 
 ```css
@@ -61,8 +63,9 @@ html {
 }
 ```
 
-{:.message}
-This code was updated to include the `html` element after I was told that [Chrome is updating the behavior](https://twitter.com/bfgeek/status/1262459015155441664){:rel="external"} to match Firefox’s implementation.
+<aside class="message">
+This code was updated to include the <code class=" highlighter-rouge language-plaintext">html</code> element after I was told that <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="external">Chrome is updating the behavior</a> to match Firefox’s implementation.
+</aside>
 
 And now the sticky footer is right where I want it to be in mobile Safari!
 

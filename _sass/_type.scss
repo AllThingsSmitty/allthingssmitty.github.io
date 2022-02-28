@@ -15,7 +15,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   margin-top: 0;
   
   &:last-of-type {
@@ -69,25 +69,43 @@ abbr {
   }
 }
 
+aside,
 blockquote {
-  background-color: var(--sky-blue);
-  border-left: .5rem solid var(--border-color-blue);
-  color: var(--gray-5);
-  font-family: var(--secondary-font-family-semibold);
-  font-size: .9rem;
-  margin: .8rem 0;
-  padding: 1rem;
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+  &.message {
+    background-color: var(--sky-blue);
+    border-left: .5rem solid var(--border-color-blue);
+    color: var(--gray-5);
+    font-family: var(--secondary-font-family-semibold);
+    font-size: .9rem;
+    margin: 1.5rem 0;
+    //padding: 1rem;
+    padding: clamp(1.25rem, 1.5rem, 2rem);
+    
+    //a {
+    //  //color: #046dc9;
+    //}
 
-  @media only screen and (min-width: 53.125rem) {
-    margin: 1.5rem -1.75rem;
+    strong {
+      font-family: var(--secondary-font-family-bold);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 53.125rem) {
+      margin: 1.5rem -1.75rem;
+    }
   }
-  
-  @media only screen and (min-width: 30rem) {
-    padding: 1rem 1.25rem;
+}
+
+aside {
+  &.message.notification {
+    background: var(--color-state-warn-bright);
+    border-left: none;
+    color: var(--color-state-warn-text);
+    margin: 1.5rem 0;
   }
 }
 
@@ -138,21 +156,3 @@ em {
 //   font-size: .9rem;
 //   margin-top: 2rem;
 // }
-
-// Messages
-//
-// Show alert messages to users. You may add it to single elements like a `<p>`,
-// or to a parent if there are multiple elements to show.
-
-.message {
-  background-color: var(--sky-blue);
-  border-left: .5rem solid var(--border-color-blue);
-  color: var(--gray-5);
-  font-family: var(--secondary-font-family-semibold);
-  font-size: .9rem;
-  padding: 1rem;
-
-  strong {
-    font-family: var(--secondary-font-family-bold);
-  }
-}
