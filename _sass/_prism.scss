@@ -5,10 +5,12 @@
 * @author Lea Verou
 */
 
+/*
 code[class*="language-"],
 pre[class*="language-"] {
   color: var(--flat-black);
   font-family: var(--code-font-family);
+  font-size: .9rem;
   hyphens: none;
   line-height: var(--root-line-height) ;
   tab-size: 4;
@@ -17,30 +19,7 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-wrap: normal;
 }
-
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  background-color: #b3d4fc;
-  text-shadow: none;
-}
-
-pre[class*="language-"] {
-  margin-bottom: 1rem;
-  overflow: auto;
-  padding: 1rem;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background-color: var(--code-background-color);
-}
-
-:not(pre) > code[class*="language-"] {
-  border-radius: .25rem;
-  padding: .125rem .25rem;
-}
+*/
 
 .token.cdata,
 .token.comment,
@@ -54,80 +33,79 @@ pre[class*="language-"] {
   opacity: .7;
 }
 
-.token.boolean,
-.token.constant,
-.token.deleted,
-.token.number,
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-mid-text);
+}
+
+.token.punctuation,
+.token.string,
+.token.atrule,
+.token.attr-value {
+  color: var(--color-syntax-primary);
+}
+
 .token.property,
-.token.symbol,
 .token.tag {
-	color: var(--plum);
+  color: var(--color-syntax-quaternary);
 }
 
-.token.attr-name,
-.token.builtin,
-.token.char,
-.token.inserted,
+.token.boolean,
+.token.number {
+  color: var(--color-syntax-primary-glare)
+}
+
 .token.selector,
-.token.string {
-	color: var(--forest-green);
-}
-
-.language-scss .token.keyword,
-.language-css .token.string,
-.style .token.string,
-.token.atrule,
-.token.entity,
-.token.operator,
-.token.url,
-.token.class-name,
-.token.function {
-  color: #d83052;
-}
-
-.language-css .token.string,
-.language-scss .token.string,
-.style .token.string,
-.token.entity,.token.operator,
-.token.url {
-  color: #bd422d;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	color: #07a;
-}
-
-.token.important,
+.token.attr-name,
+.token.attr-value .punctuation:first-child,
+.token.keyword,
 .token.regex,
-.token.variable {
-	color: #e90;
-}
-
-.language-css .token.number,
-.language-scss .token.number {
-  color: var(--flat-black);
-}
-
-.token.bold,
 .token.important {
-  font-weight: bold;
+  color: var(--color-code-tertiary);
 }
 
-.token.italic {
-  font-style: italic;
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string {
+  color: var(--color-syntax-secondary)
 }
 
 .token.entity {
-  cursor: help;
+  cursor: help
+}
+
+.namespace {
+  opacity: .7;
+}
+
+code {
+  font-size: .85em;
+  hyphens: none;
+  padding: .125em .25em;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  //font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
+}
+
+pre > code {
+  display: block;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: clamp(1rem, 1.0625rem, 1.125rem);
+  -webkit-overflow-scrolling: touch;
 }
 
 div.prism-show-language {
   position: relative;
  
   .prism-show-language-label {
-    background-color: var(--gray-2);
+    background-color: var(--color-stroke);
     border-radius: 0 .25rem;
     bottom: auto;
     box-shadow: none;

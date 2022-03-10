@@ -9,13 +9,13 @@ pre {
 }
 
 code {
-  background-color: var(--code-background-color);
+  background-color: var(--color-mid-bg);
   border-radius: .25rem;
   padding: .15rem .25rem;
   text-shadow: 0 1px var(--white);
   
   &.highlighter-rouge {
-    border: 1px solid var(--white-sand);
+    border: 1px solid var(--color-stroke);
     white-space: nowrap;
   }
 }
@@ -24,7 +24,9 @@ pre {
   margin-bottom: 1rem;
   margin-top: 0;
   
-  code {
+  > code {
+    background-color: var(--color-mid-bg);
+    border: 1px solid var(--color-stroke);
     color: inherit;
     padding: 0;
   }
@@ -32,26 +34,24 @@ pre {
 
 // Pygments via Jekyll
 .highlight {
-  background-color: var(--code-background-color);
-  border-radius: .25rem;
-  font-size: 1rem;
-  line-height: 1.4;
+  // border-radius: .25rem;
+  // font-size: 1rem;
+  line-height: 1.7;
   margin-bottom: 1rem;
 
-  pre {
-    border: 1px solid var(--white-sand);
-    margin-bottom: 0;
-    overflow-x: auto;
-  }
+  //pre {
+  //   margin-bottom: 0;
+  //   overflow-x: auto;
+  // }
 
-  .linenos {
-    color: var(--gray-3);
-    display: inline-block; // Ensures the null space also isn't selectable
-    padding-left: .25rem;
-    padding-right: .75rem;
-    // Make sure numbers aren't selectable
-    user-select: none;
-  }
+  // .linenos {
+  //   color: var(--gray-3);
+  //   display: inline-block; // Ensures the null space also isn't selectable
+  //   padding-left: .25rem;
+  //   padding-right: .75rem;
+  //   // Make sure numbers aren't selectable
+  //   user-select: none;
+  // }
 }
 
 

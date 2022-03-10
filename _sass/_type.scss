@@ -14,6 +14,17 @@ h3 {
   margin-top: 1.5rem;
 }
 
+// .flow {
+//   --flow-space: 1.25rem;
+// }
+// .flow > * {
+//   margin-bottom: var(--flow-space);
+
+//   &:last-of-type {
+//     margin-bottom: 1.5rem;
+//   }
+// }
+
 p {
   margin-bottom: 1.25rem;
   margin-top: 0;
@@ -75,16 +86,16 @@ blockquote {
   &.message {
     background-color: var(--sky-blue);
     border-left: .5rem solid var(--border-color-blue);
-    color: var(--gray-5);
+    color:var(--color-state-info);
     font-family: var(--secondary-font-family-semibold);
     font-size: .9rem;
     margin: 1.5rem 0;
     //padding: 1rem;
     padding: clamp(1.25rem, 1.5rem, 2rem);
     
-    //a {
-    //  //color: #046dc9;
-    //}
+    a {
+      color: currentColor;
+    }
 
     strong {
       font-family: var(--secondary-font-family-bold);
@@ -102,7 +113,7 @@ blockquote {
 
 aside {
   &.message.notification {
-    background: var(--color-state-warn-bright);
+    background: var(--color-state-warn-bg);
     border-left: none;
     color: var(--color-state-warn-text);
     margin: 1.5rem 0;
