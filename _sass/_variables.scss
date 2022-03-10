@@ -19,11 +19,11 @@ $large-breakpoint: 38rem;
   --font-secondary-bold: "OpenSansBold", var(--font-fallback);
   --font-secondary-semi-bold: "OpenSansSemibold", var(--font-fallback);
   --font-tertiary-regular: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  --font-size-large: 1.25rem;
-  --font-size-small: .85rem;
 
-  --root-font-size: 1.125rem;
-  --root-line-height: 1.5;
+  --font-size-large: 1.25rem;
+  --font-size-root: 1.125rem;
+  --font-size-small: .85rem;
+  --font-line-height: 1.5;
   --large-breakpoint: #{$large-breakpoint};
 
   --gray-m: #767676;
