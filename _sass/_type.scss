@@ -4,13 +4,13 @@
 
 h1, h2, h3 {
   color: var(--gray-6);
-  font-family: var(--secondary-font-family-bold);
+  font-family: var(--font-secondary-bold);
   line-height: 1.25;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: var(--large-font-size);
+  font-size: var(--font-size-large);
   margin-top: 1.5rem;
 }
 
@@ -39,7 +39,7 @@ p {
 }
 
 .emoji-sm {
-  font-size: var(--large-font-size);
+  font-size: var(--font-size-large);
 }
 
 .emoji-x-sm {
@@ -47,11 +47,11 @@ p {
 }
 
 strong {
-  font-family: var(--root-font-family-bold);
+  font-family: var(--font-root-bold);
   font-style: normal;
 
   em {
-    font-family: var(--root-font-family-bolditalic);
+    font-family: var(--font-root-bold-italic);
   }
 }
 
@@ -70,7 +70,7 @@ dd {
 
 abbr {
   color: var(--gray-5);
-  font-size: var(--small-font-size);
+  font-size: var(--font-size-small);
   font-weight: bold;
   text-transform: uppercase;
 
@@ -87,7 +87,7 @@ blockquote {
     background-color: var(--sky-blue);
     border-left: .5rem solid var(--border-color-blue);
     color:var(--color-state-info);
-    font-family: var(--secondary-font-family-semibold);
+    font-family: var(--font-secondary-semi-bold);
     font-size: .9rem;
     margin: 1.5rem 0;
     //padding: 1rem;
@@ -98,7 +98,7 @@ blockquote {
     }
 
     strong {
-      font-family: var(--secondary-font-family-bold);
+      font-family: var(--font-secondary-bold);
     }
 
     p:last-child {
@@ -122,7 +122,7 @@ aside {
 
 cite,
 em {
-  font-family: var(--root-font-family-italic);
+  font-family: var(--font-root-italic);
   font-style: normal;
 }
 
@@ -143,7 +143,7 @@ em {
 //   top: -.5rem;
   
 //   a {
-//     font-family: var(--root-font-family-bold);
+//     font-family: var(--font-root-bold);
 //   }
 // }
 

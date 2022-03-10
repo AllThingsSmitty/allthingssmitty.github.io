@@ -2,7 +2,7 @@
 $large-breakpoint: 38rem;
 
 :root {
-  --font-family-fallback: 
+  --font-fallback: 
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -12,20 +12,19 @@ $large-breakpoint: 38rem;
     Ubuntu,
     Cantarell,
     sans-serif;
+  --font-root-regular: "BitterRegular", var(--font-fallback);
+  --font-root-bold: "BitterBold", var(--font-fallback);
+  --font-root-italic: "BitterItalic", var(--font-fallback);
+  --font-root-bold-italic: "BitterBoldItalic", var(--font-fallback);
+  --font-secondary-bold: "OpenSansBold", var(--font-fallback);
+  --font-secondary-semi-bold: "OpenSansSemibold", var(--font-fallback);
+  --font-tertiary-regular: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  --font-size-large: 1.25rem;
+  --font-size-small: .85rem;
 
-  --root-font-family-regular: "BitterRegular", var(--font-family-fallback);
-  --root-font-family-bold: "BitterBold", var(--font-family-fallback);
-  --root-font-family-italic: "BitterItalic", var(--font-family-fallback);
-  --root-font-family-bolditalic: "BitterBoldItalic", var(--font-family-fallback);
-
-  --secondary-font-family-bold: "OpenSansBold", var(--font-family-fallback);
-  --secondary-font-family-semibold: "OpenSansSemibold", var(--font-family-fallback);
-  
   --root-font-size: 1.125rem;
   --root-line-height: 1.5;
-  --large-font-size: 1.25rem;
   --large-breakpoint: #{$large-breakpoint};
-  --small-font-size: .85rem;
 
   --gray-m: #767676;
   --gray-1: #f9f9f9;
@@ -35,7 +34,6 @@ $large-breakpoint: 38rem;
   --gray-5: #444;
   --gray-6: #292930;
 
-  --code-font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;  
   --blue: #0074d9;
   --flat-black: #0b0c0c;
   --sky-blue: #e7f0fd;

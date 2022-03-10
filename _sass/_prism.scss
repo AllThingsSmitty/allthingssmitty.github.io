@@ -9,7 +9,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: var(--flat-black);
-  font-family: var(--code-font-family);
+  font-family: var(--font-tertiary-regular);
   font-size: .9rem;
   hyphens: none;
   line-height: var(--root-line-height) ;
@@ -111,7 +111,7 @@ div.prism-show-language {
     box-shadow: none;
     color: var(--flat-black);
     display: inline-block;
-    font-family: var(--secondary-font-family-semibold);
+    font-family: var(--font-secondary-semi-bold);
     font-size: .725rem;
     height: auto;
     left: auto;

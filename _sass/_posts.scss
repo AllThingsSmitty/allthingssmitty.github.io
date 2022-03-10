@@ -7,7 +7,7 @@
 .post {
 
   .more {
-    font-family: var(--secondary-font-family-semibold);
+    font-family: var(--font-secondary-semi-bold);
   }
 
   ul {
@@ -52,7 +52,7 @@
   div {
     color: var(--gray-3);
     display: inline-block;
-    font-family: var(--secondary-font-family-semibold);
+    font-family: var(--font-secondary-semi-bold);
     line-height: 1;
     margin-right: 1rem;
 
@@ -116,7 +116,7 @@
 
 // Tags page
 .tags {
-  font-family: var(--secondary-font-family-semibold);
+  font-family: var(--font-secondary-semi-bold);
 
   h3 {
     margin-top: 0;
@@ -130,7 +130,7 @@
 // Related posts
 .related {
   border-top: 2px solid var(--border-color);
-  font-family: var(--secondary-font-family-semibold);
+  font-family: var(--font-secondary-semi-bold);
   margin-bottom: 2rem;
 
   ul {

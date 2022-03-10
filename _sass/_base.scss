@@ -17,13 +17,13 @@ html {
   text-size-adjust: none;
   
   @media only screen and (min-width: $large-breakpoint) {
-    font-size: var(--large-font-size);
+    font-size: var(--font-size-large);
   }
 }
 
 body {
   color: var(--body-color);
-  font-family: var(--root-font-family-regular);
+  font-family: var(--font-root-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -75,8 +75,8 @@ figure {
   }
 
   figcaption {
-    font-family: var(--root-font-family-regular);
-    font-size: var(--small-font-size);
+    font-family: var(--font-root-regular);
+    font-size: var(--font-size-small);
     color: var(--gray-3);
   }
 }
@@ -84,7 +84,7 @@ figure {
 // table {
 //   border: 1px solid var(--border-color);
 //   border-collapse: collapse;
-//   font-size: var(--small-font-size);
+//   font-size: var(--font-size-small);
 //   margin-bottom: 1rem;
 //   width: 100%;
 
@@ -95,7 +95,7 @@ figure {
 //   }
 
 //   th {
-//     font-family: var(--secondary-font-family-bold);
+//     font-family: var(--font-secondary-bold);
 //     text-align: left;
 //   }
 

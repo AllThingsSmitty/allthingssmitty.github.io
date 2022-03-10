@@ -4,7 +4,7 @@
 
 header {
   color: var(--gray-m);
-  font-family: var(--secondary-font-family-bold);    
+  font-family: var(--font-secondary-bold);    
   margin-bottom: 5rem;
   padding-bottom: .5rem;
   padding-top: 1rem;
@@ -14,7 +14,7 @@ header {
   }
 
   .tagline {
-    font-family: var(--secondary-font-family-semibold);
+    font-family: var(--font-secondary-semi-bold);
     font-size: .8rem;
     margin-top: .5rem;
     text-transform: uppercase;
@@ -27,7 +27,7 @@ nav {
 
   h1 {
     color: var(--gray-6);
-    font-size: var(--large-font-size);
+    font-size: var(--font-size-large);
     margin: 0;
   }
   
