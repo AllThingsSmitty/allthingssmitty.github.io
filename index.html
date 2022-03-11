@@ -14,7 +14,7 @@ title: Home
         </h2>
         {% include post-metadata.html %}
       </header>
-      <div>
+      <div class="flow">
         <p>{{ post.content | strip_html | truncatewords:50 }}</p>
         <p><a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a></p>
       </div>

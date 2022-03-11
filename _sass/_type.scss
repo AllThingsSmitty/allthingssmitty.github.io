@@ -14,23 +14,16 @@ h3 {
   margin-top: 1.5rem;
 }
 
-// .flow {
-//   --flow-space: 1.25rem;
-// }
-// .flow > * {
-//   margin-bottom: var(--flow-space);
+.flow {
+  --flow-space: 1.25rem;
 
-//   &:last-of-type {
-//     margin-bottom: 1.5rem;
-//   }
-// }
+  > * {
+    margin-bottom: var(--flow-space);
+    margin-top: 0;
 
-p {
-  margin-bottom: 1.25rem;
-  margin-top: 0;
-  
-  &:last-of-type {
-    margin-bottom: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
