@@ -77,10 +77,10 @@ This might look like many other HTML tables you've worked with. And probably abo
 First, we'll add a `data-label` attribute to each data cell with a value that represents that column's name. That will be used for labeling purposes in the responsive layout.
 
 ```html
-  <td data-label="Account">Visa - 3412</td>
-  <td data-label="Due Date">04/01/2016</td>
-  <td data-label="Amount">$1,190</td>
-  <td data-label="Period">03/01/2016 - 03/31/2016</td>
+<td data-label="Account">Visa - 3412</td>
+<td data-label="Due Date">04/01/2016</td>
+<td data-label="Amount">$1,190</td>
+<td data-label="Period">03/01/2016 - 03/31/2016</td>
 ```
 
 Now we can begin writing a CSS media query:
