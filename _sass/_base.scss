@@ -16,7 +16,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   
-  @media only screen and (min-width: $large-breakpoint) {
+  @media (min-width: $large-breakpoint) {
     font-size: var(--font-size-large);
   }
 }

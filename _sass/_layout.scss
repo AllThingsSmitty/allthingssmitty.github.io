@@ -11,11 +11,8 @@
   min-height: 100vh;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
-
-  @media only screen and (max-width: $large-breakpoint) {
-    padding-left:  1rem;
-    padding-right: 1rem;
-  }
+  //padding-left: clamp(1rem, 1.25rem, 4rem);
+  //padding-right: clamp(1rem, 1.25rem, 4rem);
 
   // WebKit mobile viewport bug fix
   @supports (-webkit-touch-callout: none) {

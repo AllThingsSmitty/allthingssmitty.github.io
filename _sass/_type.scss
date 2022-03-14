@@ -78,12 +78,12 @@ blockquote {
 
   &.message {
     background-color: var(--sky-blue);
-    border-left: .5rem solid var(--border-color-blue);
+    border-radius: .25rem;
     color:var(--color-state-info);
     font-family: var(--font-secondary-semi-bold);
     font-size: .9rem;
     margin: 1.5rem 0;
-    //padding: 1rem;
+    // padding: 1rem;
     padding: clamp(1.25rem, 1.5rem, 2rem);
     
     a {
@@ -94,11 +94,7 @@ blockquote {
       font-family: var(--font-secondary-bold);
     }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    @media only screen and (min-width: 53.125rem) {
+    @media (min-width: 53.125rem) {
       margin: 1.5rem -1.75rem;
     }
   }
@@ -107,7 +103,6 @@ blockquote {
 aside {
   &.message.notification {
     background: var(--color-state-warn-bg);
-    border-left: none;
     color: var(--color-state-warn-text);
     margin: 1.5rem 0;
   }
