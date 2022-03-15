@@ -41,4 +41,4 @@ github:
   repo: 'https://github.com/allthingssmitty/allthingssmitty.github.io'
 plugins:
   - jekyll-paginate
-  - jekyll-autoprefixer
+  #- jekyll-autoprefixer
