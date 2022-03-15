@@ -4,7 +4,7 @@
 // there are no more previous or next posts to show.
 
 .pagination {
-  color: var(--gray-3);
+  color: var(--color-shades-primary-glare);
   display: flex;
   justify-content: center;
   margin: 3rem 0;  
@@ -12,7 +12,7 @@
 
 // Pagination items can be `span`s or `a`s
 .pagination-item {
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--color-primary-info-bg);
   border-radius: 3rem;
   font-family: var(--font-secondary-semi-bold);
   padding: 1rem;
@@ -26,7 +26,7 @@
 
   &:focus,
   &:hover {
-    border-color: var(--border-color-blue);
+    border-color: var(--color-primary-info);
     transition: border-color ease .2s;
   }
 

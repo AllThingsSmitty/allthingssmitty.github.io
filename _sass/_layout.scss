@@ -9,8 +9,8 @@
   margin-right: auto;
   max-width: var(--large-breakpoint);
   min-height: 100vh;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
+  padding-left:  1.25rem;
+  padding-right: 1.25rem;
   //padding-left: clamp(1rem, 1.25rem, 4rem);
   //padding-right: clamp(1rem, 1.25rem, 4rem);
 
@@ -25,7 +25,7 @@ main {
 }
 
 .break {
-  border-top: 2px solid var(--border-color);
+  border-top: 2px solid var(--color-primary-info-bg);
   margin: 1.75rem 0;
 }
 
@@ -34,13 +34,18 @@ footer {
   margin-bottom: 2rem;
   text-align: center;
   
-  a {
+  // a {
     
-    &:hover {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-  }
+  //   &:hover {
+  //     color: var(--color-primary-info-text);
+
+  //     &:not(.post-footer a) {
+  //       text-decoration: none;
+
+  //     }
+  //   }
+
+  // }
 
   span {
     font-size: .8rem;

@@ -3,7 +3,7 @@
 // Super small header above the content for site name and short description.
 
 header {
-  color: var(--gray-m);
+  color: var(--color-shades-secondary-glare);
   font-family: var(--font-secondary-bold);    
   margin-bottom: 5rem;
   padding-bottom: .5rem;
@@ -26,7 +26,7 @@ nav {
   display: flex;
 
   h1 {
-    color: var(--gray-6);
+    color: var(--color-shades-primary);
     font-size: var(--font-size-large);
     margin: 0;
   }
@@ -36,7 +36,7 @@ nav {
     text-decoration: none;
   
     &:hover {
-      color: var(--link-color);
+      color: var(--color-primary-info-text);
     }
   }
 
@@ -60,8 +60,8 @@ nav {
 .skip-nav {
 
   a {
-    background-color: var(--white);
-    color: var(--gray-5);
+    background-color: var(--color-shades-tertiary-bright);
+    color: var(--color-shades-secondary);
     left: -500px;
     overflow: hidden;
     position: absolute;
@@ -69,10 +69,13 @@ nav {
     &:active,
     &:focus {
       left: 1rem;
+    outline-offset: 0;
       overflow: visible;
+      padding: 0.15rem;
       position: absolute;
       text-decoration: none;
       top: 1rem;
+
     }
   }
 

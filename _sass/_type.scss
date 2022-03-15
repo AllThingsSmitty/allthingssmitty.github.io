@@ -3,7 +3,7 @@
 // Headings, body text, lists, and other misc typographic elements.
 
 h1, h2, h3 {
-  color: var(--gray-6);
+  color: var(--color-shades-primary);
   font-family: var(--font-secondary-bold);
   line-height: 1.25;
   margin-bottom: 1rem;
@@ -62,13 +62,13 @@ dd {
 }
 
 abbr {
-  color: var(--gray-5);
+  color: var(--color-shades-secondary);
   font-size: var(--font-size-small);
   font-weight: bold;
   text-transform: uppercase;
 
   &[title] {
-    border-bottom: 1px dotted var(--border-color);
+    border-bottom: 1px dotted var(--color-primary-info-bg);
     cursor: help;
   }
 }
@@ -77,7 +77,7 @@ aside,
 blockquote {
 
   &.message {
-    background-color: var(--sky-blue);
+    background-color: var(--color-shades-primary-bright);
     border-radius: .25rem;
     color:var(--color-state-info);
     font-family: var(--font-secondary-semi-bold);

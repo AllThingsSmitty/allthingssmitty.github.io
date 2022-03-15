@@ -1,12 +1,12 @@
 .highlight .hll { background-color: #ffc; }
-.highlight .c { color: var(--gray-3); } /* Comment */
+.highlight .c { color: var(--color-shades-primary-glare); } /* Comment */
 .highlight .err { background-color: #faa; color: #a00; } /* Error */
 .highlight .k { color: #069; } /* Keyword */
-.highlight .o { color: var(--gray-5); } /* Operator */
+.highlight .o { color: var(--color-shades-secondary); } /* Operator */
 .highlight .cm { color: #09f; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #099 } /* Comment.Preproc */
-.highlight .c1 { color: var(--gray-3); } /* Comment.Single */
-.highlight .cs { color: var(--gray-3); } /* Comment.Special */
+.highlight .c1 { color: var(--color-shades-primary-glare); } /* Comment.Single */
+.highlight .cs { color: var(--color-shades-primary-glare); } /* Comment.Special */
 .highlight .gd { background-color: #fcc; border: 1px solid #c00 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gr { color: #f00 } /* Generic.Error */
@@ -14,7 +14,7 @@
 .highlight .gi { background-color: #cfc; border: 1px solid #0c0 } /* Generic.Inserted */
 .highlight .go { color: #aaa } /* Generic.Output */
 .highlight .gp { color: #009; } /* Generic.Prompt */
-.highlight .gs { color: var(--flat-black); } /* Generic.Strong */
+.highlight .gs { color: var(--color-primary); } /* Generic.Strong */
 .highlight .gu { color: #030; } /* Generic.Subheading */
 .highlight .gt { color: #9c6 } /* Generic.Traceback */
 .highlight .kc { color: #069; } /* Keyword.Constant */
@@ -30,7 +30,7 @@
 .highlight .nc { color: #0a8; } /* Name.Class */
 .highlight .no { color: #360 } /* Name.Constant */
 .highlight .nd { color: #99f } /* Name.Decorator */
-.highlight .ni { color: var(--gray-3); } /* Name.Entity */
+.highlight .ni { color: var(--color-shades-primary-glare); } /* Name.Entity */
 .highlight .ne { color: #c00; } /* Name.Exception */
 .highlight .nf { color: #c0f } /* Name.Function */
 .highlight .nl { color: #99f } /* Name.Label */
@@ -62,4 +62,4 @@
 
 .css .o,
 .css .o + .nt,
-.css .nt + .nt { color: var(--gray-3); }
+.css .nt + .nt { color: var(--color-shades-primary-glare); }

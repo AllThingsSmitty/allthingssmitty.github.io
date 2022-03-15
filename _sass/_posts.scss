@@ -49,11 +49,11 @@
   margin-bottom: 1rem;
 
   a {
-    color: var(--link-color);
+    color: var(--color-primary-info-text);
   }
 
   div {
-    color: var(--gray-3);
+    color: var(--color-shades-primary-glare);
     display: inline-block;
     font-family: var(--font-secondary-semi-bold);
     line-height: 1;
@@ -95,7 +95,7 @@
     text-decoration: none;
     
     &:hover {
-      color: var(--link-color);
+      color: var(--color-primary-info-text);
     }
   }
 }
@@ -109,7 +109,7 @@
 }
 
 .archive-date {
-  color: var(--gray-3);
+  color: var(--color-shades-primary-glare);
   font-size: .875rem;
 }
 
@@ -132,7 +132,7 @@
 
 // Related posts
 .related {
-  border-top: 2px solid var(--border-color);
+  border-top: 2px solid var(--color-primary-info-bg);
   font-family: var(--font-secondary-semi-bold);
   margin-bottom: 2rem;
 

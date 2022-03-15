@@ -10,9 +10,9 @@ pre {
 
 code {
   background-color: var(--color-mid-bg);
-  border-radius: .25rem;
+  //border-radius: .25rem;
   padding: .15rem .25rem;
-  text-shadow: 0 1px var(--white);
+  //text-shadow: 0 1px var(--white);
   
   &.highlighter-rouge {
     border: 1px solid var(--color-stroke);
@@ -21,8 +21,8 @@ code {
 }
 
 pre {
-  margin-bottom: 1rem;
-  margin-top: 0;
+  //margin-bottom: 1rem;
+  //margin-top: 0;
   
   > code {
     background-color: var(--color-mid-bg);
@@ -37,7 +37,7 @@ pre {
   // border-radius: .25rem;
   // font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 
   //pre {
   //   margin-bottom: 0;
@@ -45,7 +45,7 @@ pre {
   // }
 
   // .linenos {
-  //   color: var(--gray-3);
+  //   color: var(--color-shades-primary-glare);
   //   display: inline-block; // Ensures the null space also isn't selectable
   //   padding-left: .25rem;
   //   padding-right: .75rem;
