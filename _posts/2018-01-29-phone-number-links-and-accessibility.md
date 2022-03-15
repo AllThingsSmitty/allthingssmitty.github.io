@@ -7,11 +7,6 @@ tags: [accessibility, 'UX']
 comments: true
 ---
 
-<aside class="message notification">
-  Today I promote using the default styling of links for phone numbers. I've left this post up for historical purposes.
-</aside>
-
-<div class="break"></div>
 
 One design challenge that used to stump me was making phone numbers accessible in the browser while still being functional. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
 
@@ -25,9 +20,9 @@ Let's consider for a moment how we'd normally code a [phone number link](https:/
 
 In the past, if we didn't think it made sense to show a phone number link on a non-mobile screen, we'd style it to look like plain text, and then display it as a link for mobile screens. But that solution goes against the above guideline. Additionally, screen readers will read the phone number as a link even if it's not styled like one.
 
-Another thing to avoid is creating two separate elements for the phone number with conditional CSS to display the appropriate one for mobile or desktop. If CSS is disabled in the browser, both phone numbers will be displayed (yes, people do disable CSS).
+Another thing to avoid is creating two separate elements for the phone number and using conditional CSS to display the appropriate one for mobile or desktop. If CSS is disabled in the browser, both phone numbers will be displayed (yes, people do disable CSS).
 
-"Okay, bud, I get the problem. What can be done?"
+"Okay, dude, I get the problem. What can be done?"
 
 
 ## Swap out the element
@@ -60,7 +55,7 @@ if ($(window).width() <= 700) {
 }
 ```
 
-<aside class="message notification">I received a lot of feedback pointing out that this could reduce overall accessibility when interacting with VoIP technology, so YMMV.</aside>
+<p class="message"><strong>Note:</strong> much of the feedback I've received points out that this could reduce overall accessibility when interacting with VoIP technology. So, YMMV.</p>
 
 Here's a demo showing this technique when the phone number's container is a specific size.
 
