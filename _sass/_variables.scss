@@ -35,10 +35,6 @@ $large-breakpoint: 36rem;
   --color-shades-secondary-glare: #68778d;
   --color-shades-secondary-bright: #e5e5e5;
   --color-shades-tertiary-bright: #fff;
-  --color-primary-info-text: var(--color-primary-info);
-  --color-primary-info-bg: var(--color-shades-secondary-bright);  
-  --color-shades-primary-text: var(--color-shades-primary):
-
   --color-state-info: #174ea6;
   --color-state-warn: #c34900;
   --color-state-warn-bright: #fff5e3;
@@ -52,6 +48,10 @@ $large-breakpoint: 36rem;
   --color-code-quaternary: #385d34;
   --color-code-quaternary-glare: #52894c;
   --color-code-quaternary-bright: #9cc598;
+
+  --color-primary-info-text: var(--color-primary-info);
+  --color-primary-info-bg: var(--color-shades-secondary-bright);  
+  --color-shades-primary-text: var(--color-shades-primary):
   --color-mid-text: var(--color-shades-gray);
   --color-mid-bg: var(--color-shades-light);
   --color-state-info-text: var(--color-state-info);
