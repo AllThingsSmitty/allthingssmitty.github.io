@@ -33,19 +33,17 @@ footer {
   font-family: var(--font-secondary-semi-bold);
   margin-bottom: 2rem;
   text-align: center;
-  
-  // a {
+
+  a {
     
-  //   &:hover {
-  //     color: var(--color-primary-info-text);
+    &:hover {
+      color: var(--color-primary-info-text);
 
-  //     &:not(.post-footer a) {
-  //       text-decoration: none;
-
-  //     }
-  //   }
-
-  // }
+      &:not(.post-footer a) {
+        text-decoration: none;
+      }
+    }
+  }
 
   span {
     font-size: .8rem;

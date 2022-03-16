@@ -82,13 +82,15 @@ pre[class*="language-"] {
 }
 
 code {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   font-size: .85em;
   hyphens: none;
   padding: .125em .25em;
   tab-size: 2;
   text-align: left;
-  word-spacing: normal;
   word-break: normal;
+  word-spacing: normal;
   word-wrap: normal;
 }
 
