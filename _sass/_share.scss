@@ -1,13 +1,15 @@
 // Share
 //
 // Styles for social share buttons.
-.social {
+.social-media {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
   margin-top: 2rem;
   
-  .chan {
-    display: inline-flex;
-    margin: 0 1rem;
+  .item {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   
   a {
