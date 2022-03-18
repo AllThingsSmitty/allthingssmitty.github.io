@@ -75,7 +75,10 @@ nav {
       position: absolute;
       text-decoration: none;
       top: 1rem;
+    }
 
+    &:hover {
+      color: var(--color-primary-info-text);
     }
   }
 
