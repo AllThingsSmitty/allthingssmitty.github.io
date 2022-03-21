@@ -96,6 +96,7 @@ code {
 
 pre > code {
   display: block;
+  line-height: 1.7;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   padding: clamp(1rem, 1.0625rem, 1.125rem);
