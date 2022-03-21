@@ -7,61 +7,84 @@ tags: [accessibility, 'UX']
 comments: true
 ---
 
+<aside class="message notification">
+  I currently promote using the default styling of links for phone numbers. I've left this post up for historical purposes.
+</aside>
 
-One design challenge that used to stump me was making phone numbers accessible in the browser while still being functional. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
+<div class="break"></div>
+
+One UX challenge that used to give me pause was making phone numbers accessible in the browser while still being functional. Here's what I mean about that. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
 
 <blockquote class="message">Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).</blockquote>
 
-Let's consider for a moment how we'd normally code a [phone number link](https://css-tricks.com/the-current-state-of-telephone-links/){:rel="external"} to function when tapped in a mobile browser:
+Consider for a moment how we code a [phone number link](https://css-tricks.com/the-current-state-of-telephone-links/){:rel="external"} to function when tapped in a mobile browser:
 
 ```html
 <a href="tel:123-456-7890">123-456-7890</a>
 ```
 
-In the past, if we didn't think it made sense to show a phone number link on a non-mobile screen, we'd style it to look like plain text, and then display it as a link for mobile screens. But that solution goes against the above guideline. Additionally, screen readers will read the phone number as a link even if it's not styled like one.
+Previously, if it didn't make sense to show a phone number link on a non-mobile screen we'd style it to resemble plain text, then display the link styling for mobile screens. But that solution goes against the above WCAG guidelines. And screen readers will read the `<a>` element for the phone number as a link even if it isn't visually styled like one.
 
-Another thing to avoid is creating two separate elements for the phone number and using conditional CSS to display the appropriate one for mobile or desktop. If CSS is disabled in the browser, both phone numbers will be displayed (yes, people do disable CSS).
+You also want to avoid creating two separate HTML elements and using conditional CSS to display the appropriate one based on viewport. If CSS is disabled in the browser (a point that can be debated regarding the viability of accessibility testing semantic structure), both phone numbers will be displayed.
 
-"Okay, dude, I get the problem. What can be done?"
-
+So, what can be done?
 
 ## Swap out the element
 
-We can replace elements in the DOM with JavaScript. In this scenario, if we created a `<span>` for a phone number, we could replace it in the DOM with an `<a>` for smaller screens.
+We can replace elements in the DOM with JavaScript. In this scenario, if we've already created a `<span>` for a phone number, we can dynamically replace it with an `<a>` when we choose.
 
 So, given:
 
 ```html
-<span id="num">123-456-7890</span>
+<span class="number">123-456-7890</span>
 ```
 
-We can add a little jQuery to the mix and use the `replaceWith()` method:
+Let's set up some variables for our existing phone number element and the new element we'll use to replace it:
 
 ```javascript
-$("#num").replaceWith(function () {
-  return $("<a href='tel:" + $(this).html() + "'>" + $(this).html() + "</a>");
-});
+const num = document.querySelector('.number'),
+      newEl = document.createElement('a');
 ```
 
-(You can do the same thing with plain JavaScript using the [`replaceChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild){:rel="external"} method.)
-
-Now we need a condition to determine _when_ to replace the element. Since we're making this change based on screen size, a screen width of 700px as the trigger might give us the greatest flexibility across devices. ([It's not perfect](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/){:rel="external"}, but no one ever said building the web was easy.)
+We'll be using an event listener to check for when the page loads, and also getting the screen width from the client:
 
 ```javascript
-if ($(window).width() <= 700) {
-  $("#num").replaceWith(function () {
-    return $("<a href='tel:" + $(this).html() + "'>" + $(this).html() + "</a>");
-  });
-}
+const num = document.querySelector('.number'),
+      newEl = document.createElement('a');
+
+window.addEventListener('load', () => {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+}, false);
 ```
 
-<p class="message"><strong>Note:</strong> much of the feedback I've received points out that this could reduce overall accessibility when interacting with VoIP technology. So, YMMV.</p>
+## Using replaceChild()
 
-Here's a demo showing this technique when the phone number's container is a specific size.
+Now that we have our basic shell of a function, we can add values for our new element. After that we can call [`replaceChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild){:rel="external"} method to replace the `<span>` element with `<a>` when the viewport/screen reaches a specific width:
+
+```js
+const num = document.querySelector('.number'),
+      newEl = document.createElement('a');
+
+window.addEventListener('resize', () => {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  newEl.setAttribute('href', 'tel:' + num.innerHTML);
+  newEl.innerHTML = num.innerHTML;
+
+  if (viewportWidth < 700) {
+    num.parentNode.replaceChild(newEl, num);
+  }
+}, false);
+```
+
+<aside class="message notification">I received a lot of feedback pointing out that this pattern could reduce overall accessibility when interacting with VoIP technology.</aside>
+
+Here's our new pattern in action, with the element being replaced on load depending on whether the parent container is a specific size.
 
 <div class="embed">
   <p data-height="450" data-theme-id="0" data-slug-hash="jYgRqV" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Phone Link Accessibility Dilemma" class="codepen">See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/jYgRqV/">Phone Link Accessibility Dilemma</a> by Matt Smith (<a href="https://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="https://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-Now we have a solution that is both accessible _and_ functional when appropriate. To me this makes sense, although I've heard concerns with this disrupting VoIP features with non-mobile screens. If you'd like to improve upon this method or have another solution for this scenario, I'd love to see what you come up with. Happy coding!
+Now we have a solution that's both accessible _and_ functional when appropriate. To me this makes sense, although I've heard concerns with this disrupting VoIP features with non-mobile screens (e.g., Teams, Slack). If you'd like to improve upon this method or have another solution for this scenario, I'd love to see what you come up with. Happy coding!
