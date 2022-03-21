@@ -19,21 +19,6 @@
       margin-top: .5rem;
     }
   }
-
-  img {
-    margin-bottom: 1.5rem;
-  }
-
-  img.center {
-    border: 1px solid #d5d5d5;
-    margin: 0 auto 1.5rem;
-    width: 65%;
-  
-    @media (max-width: $large-breakpoint) {
-      width: 85%;
-    }
-  }
-
 }
 
 .post-header {
@@ -50,10 +35,6 @@
 
   > * {
     margin-bottom: var(--flow-space);
-  }
-
-  a {
-    color: var(--color-primary-info-text);
   }
 
   div {
@@ -90,6 +71,7 @@
   margin-top: 0;
 
   a {
+    color: inherit;
     text-decoration: none;
     
     &:hover {

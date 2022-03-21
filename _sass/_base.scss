@@ -58,10 +58,19 @@ a {
 }
 
 img {
-  border-radius: .3125rem;
   display: block;
-  margin-bottom: 1rem;
   max-width: 100%;
+  
+  &.center {
+    border: 1px solid var(--color-stroke);
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+
+    @media (max-width: $large-breakpoint) {
+      width: 85%;
+    }
+  }
 }
 
 figure {

@@ -10,12 +10,10 @@ pre {
 
 code {
   background-color: var(--color-mid-bg);
-  //border-radius: .25rem;
+  border: 1px solid var(--color-stroke);
   padding: .15rem .25rem;
-  //text-shadow: 0 1px var(--white);
-  
-  &.highlighter-rouge {
-    border: 1px solid var(--color-stroke);
+
+  &:not([class]) {
     white-space: nowrap;
   }
 }
