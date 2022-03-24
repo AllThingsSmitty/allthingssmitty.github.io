@@ -3,7 +3,7 @@ layout: post
 title: Using closest() to return the correct DOM element
 description: Sometimes you need JavaScript to target specific selectors in the DOM. The closest() method can help you do just that.
 image: img/posts/sunset-home-office-min.jpg
-tags: [JavaScript]
+tags: [HTML, JavaScript]
 comments: true
 ---
 
