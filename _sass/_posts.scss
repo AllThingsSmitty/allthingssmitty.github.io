@@ -137,6 +137,10 @@
     gap: var(--gutter, clamp(1.375rem, 1.75rem, 2rem));
     justify-content: flex-start;
   }
+
+  &.stretch {
+    padding-top: 1rem;
+  }
 }
 
 .pill {

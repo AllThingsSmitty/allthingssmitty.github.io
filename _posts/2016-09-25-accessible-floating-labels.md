@@ -3,7 +3,7 @@ layout: post
 title: Accessible floating labels
 description: Accessibility is a key piece to building the web, but for some reason using labels is considered unattractive. However, there's a design-friendly way to make accessible labels.
 image: img/posts/sunset-home-office-min.jpg
-tags: [accessibility, CSS]
+tags: [accessibility, CSS, HTML]
 comments: true
 ---
 
