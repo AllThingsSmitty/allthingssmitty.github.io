@@ -17,6 +17,10 @@ h3 {
 .flow {
   --flow-space: 1.25rem;
 
+  .flow-space-size-2 {
+    --flow-space: clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem)
+  }
+
   > * {
     margin-bottom: var(--flow-space);
     margin-top: 0;

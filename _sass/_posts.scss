@@ -99,6 +99,7 @@
 
 // Tags page
 .tags {
+  --flow-space: 1.25rem;
   font-family: var(--font-secondary-semi-bold);
 
   h3 {
@@ -106,13 +107,13 @@
   }
   
   .row {
-    margin-bottom: 1rem;
+    margin-bottom: var(--flow-space);
   }
 }
 
-// Related posts
 .related {
-  border-top: 2px solid var(--color-primary-info-bg);
+  --flow-space: 1.25rem;
+  border-top: 1px solid var(--color-primary-info-bg);
   font-family: var(--font-secondary-semi-bold);
   margin-bottom: 2rem;
 
@@ -121,8 +122,40 @@
     padding-left: 0;
 
     li {
-
-      margin-bottom: .5rem;
+      margin-bottom: var(--flow-space);
     }
+  }
+}
+
+.gutter-base {
+  --gutter: 1rem;
+  
+  &.cluster {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter, clamp(1.375rem, 1.75rem, 2rem));
+    justify-content: flex-start;
+  }
+}
+
+.pill {
+  appearance: none;
+    -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid var(--color-stroke);
+  border-radius: 1rem;
+  color: var(--color-shades-primary-text);
+  font-family: var(--font-secondary-semi-bold);
+  font-size: .675rem;
+  padding: .375rem .75rem;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-primary-info-text);
+    border-color: var(--color-shades-tertiary-bright);
+    color: var(--color-shades-tertiary-bright);
   }
 }

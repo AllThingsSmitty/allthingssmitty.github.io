@@ -36,6 +36,15 @@
 
 @font-face {
   font-display: swap;
+  font-family: "OpenSansRegular";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url(/css/fonts/OpenSans/OpenSans-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: swap;
   font-family: "OpenSansBold";
   font-style: normal;
   font-weight: 700;
