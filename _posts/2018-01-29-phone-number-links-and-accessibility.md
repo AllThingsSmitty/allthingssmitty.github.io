@@ -3,7 +3,7 @@ layout: post
 title: Phone number links and accessibility
 description: Phone number links are a great feature but styling them to not show on larger screens can be an accessibility concern and detected by screen readers. Here's a useful tip on making the links both functional and accessible.
 image: img/posts/sunset-home-office-min.jpg
-tags: [accessibility, JavaScript, UX]
+tags: [accessibility, JavaScript, mobile, UX]
 comments: true
 ---
 
