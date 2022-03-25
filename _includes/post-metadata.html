@@ -1,21 +1,15 @@
-<div class="post-meta">
-  <div>
-    <span class="icon icon-calendar"></span>
-    {% if page.path contains '_posts' %}
-      <span aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</span>
-    {% endif %}
-    {% if post.path contains '_posts' %}
-      <span aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</span>
-    {% endif %}
-  </div>
+<div class="post-metadata">
+  {% if page.path contains '_posts' %}
+    <div class="published" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</div>
+  {% endif %}
+  {% if post.path contains '_posts' %}
+    <div class="published" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</div>
+  {% endif %}
 
-  <div>
-    <span class="icon icon-comments"></span>
-    {% if page.path contains '_posts' %}
-      <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a>
-    {% endif %}
-    {% if post.path contains '_posts' %}
-      <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about '{{ post.title }}'">Comments</a>
-    {% endif %}
-  </div>
+  {% if page.path contains '_posts' %}
+    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a></div>
+  {% endif %}
+  {% if post.path contains '_posts' %}
+    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about '{{ post.title }}'">Comments</a></div>
+  {% endif %}
 </div>
