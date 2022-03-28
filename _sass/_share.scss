@@ -1,18 +1,15 @@
-// Share
-//
-// Styles for social share buttons.
 .social-media {
+  --gutter: 1.25rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--gutter);
   margin-top: 2rem;
   
-  .item {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  
-  a {
-    color: inherit;
+  &__item {
+    margin: 0 var(--gutter);
+
+    a {
+      color: inherit;
+    }
   }
 }

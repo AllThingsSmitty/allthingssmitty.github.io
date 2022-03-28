@@ -64,7 +64,7 @@ html {
 ```
 
 <aside class="message">
-This code was updated to include the <code class=" highlighter-rouge language-plaintext">html</code> element after I was told that <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="external">Chrome is updating the behavior</a> to match Firefox’s implementation.
+This code was updated to include the <code>html</code> selector after I was told that <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="external">Chrome is updating the behavior</a> to match Firefox’s implementation.
 </aside>
 
 And now the sticky footer is right where I want it to be in mobile Safari!
