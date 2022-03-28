@@ -1,90 +1,65 @@
-// Posts and pages
-//
-// Each post is wrapped in `.post` and is used on default and post layouts. Each
-// page is wrapped in `.page` and is only used on the page layout.
-
-.page,
-.post {
-
-  .more {
-    font-family: var(--font-secondary-semi-bold);
-  }
-
-  /*ul {
-    margin-left: 1rem;
-    padding: 0;
-
-    ul {
-      margin-bottom: .5rem;
-      margin-top: .5rem;
-    }
-  }*/
-}
-
 .post-header {
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
-}
 
-.post-metadata {  
-  --flow-space: 1.25rem;
-  align-items: center;
-  color: var(--color-shades-primary-glare);
-  display: flex;
-  font-family: var(--font-secondary-semi-bold);
-  flex-wrap: wrap;
-  margin-bottom: var(--flow-space);
+  &__title,
+  &__title {
+    font-size: 2rem;
+    margin-top: 0;
 
-  div {
-    display: inline-flex;
-    margin-right: var(--flow-space);
+    a {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--color-primary-info-text);
+      }
+    }
+  }    
 
-    &::before {
-      align-self: center;
-      background-size: 20px;
-      content: "";
+  &__metadata {  
+    --flow-space: 1.25rem;
+    align-items: center;
+    color: var(--color-shades-primary-glare);
+    display: flex;
+    font-family: var(--font-secondary-semi-bold);
+    flex-wrap: wrap;
+    margin-bottom: var(--flow-space);
+
+    div {
       display: inline-flex;
-      margin-right: calc(var(--flow-space) * .375); 
-      height: 20px;
-      width: 20px;
-    }
-
-    &.comments {
+      margin-right: var(--flow-space);
 
       &::before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' height='34' width='34'%3E%3Cpath fill='%2368778d' d='M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z' %3E%3C/path%3E%3C/svg%3E");
+        align-self: center;
+        background-size: 20px;
+        content: "";
+        display: inline-flex;
+        margin-right: calc(var(--flow-space) * .375); 
+        height: 20px;
+        width: 20px;
       }
-    }
-    
-    &.published {
 
-      &::before {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' height='34' width='34' %3E%3Cpath fill='%2368778d' d='M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z' %3E%3C/path%3E%3C/svg%3E");
+      &.comments {
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' height='34' width='34'%3E%3Cpath fill='%2368778d' d='M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z' %3E%3C/path%3E%3C/svg%3E");
+        }
+      }
+      
+      &.published {
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' height='34' width='34' %3E%3Cpath fill='%2368778d' d='M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z' %3E%3C/path%3E%3C/svg%3E");
+        }
       }
     }
   }
-
-
-
-
 }
 
-
-// Blog post or page title
-.page-title,
-.post-title {
-  font-size: 2rem;
-  margin-top: 0;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    
-    &:hover {
-      color: var(--color-primary-info-text);
-    }
-  }
+.more {
+  font-family: var(--font-secondary-semi-bold);
 }
 
 .post-footer {
