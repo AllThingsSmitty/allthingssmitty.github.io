@@ -1,10 +1,11 @@
 {% if page.path contains '_posts' or post.path contains '_posts' %}
-    {% if page.tags.size > 0 or post.tags.size > 0 %}
+  {% if page.tags.size > 0 or post.tags.size > 0 %}
 
-      <div class="cluster flow-space-size-2 gutter-base stretch" aria-label="tags" role="list">
-        {% for tag in page.tags %}
-          <a href="/tags/{{ tag | downcase | url_encode }}" class="pill">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    {% endif %}
+    <div class="cluster flow-space-size-2 gutter-base stretch" role="list" aria-label="tags">
+      {% for tag in page.tags %}
+        <a href="/tags/{{ tag | url_encode }}" class="pill">{{ tag }}</a>
+      {% endfor %}
+    </div>
+
   {% endif %}
+{% endif %}

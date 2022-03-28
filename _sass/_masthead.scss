@@ -1,55 +1,53 @@
-// Masthead
-//
-// Super small header above the content for site name and short description.
+.heading {
 
-header {
-  color: var(--color-shades-secondary-glare);
-  font-family: var(--font-secondary-bold);    
-  margin-bottom: 5rem;
-  padding-bottom: .5rem;
-  padding-top: 1rem;
+  &__brand {
+    color: var(--color-shades-secondary-glare);
+    font-family: var(--font-secondary-bold);    
+    margin-bottom: 5rem;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
 
-  .tagline {
+    nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.75;
+
+      h1 {
+        color: var(--color-shades-primary);
+        font-size: var(--font-size-large);
+        margin: 0;
+      }
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      
+        &:hover {
+          color: var(--color-primary-info-text);
+        }
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+      
+        li {
+
+          &:not(:last-child) {
+            margin-right: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__tagline {
     font-family: var(--font-secondary-semi-bold);
     font-size: .8rem;
     margin-top: .5rem;
     text-transform: uppercase;
-  }
-}
-
-nav {
-  align-items: center;
-  display: flex;
-
-  h1 {
-    color: var(--color-shades-primary);
-    font-size: var(--font-size-large);
-    margin: 0;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  
-    &:hover {
-      color: var(--color-primary-info-text);
-    }
-  }
-
-  ul {
-    list-style: none;
-    margin: 0 0 0 auto;
-    padding: 0;
-  
-    li {
-      display: inline-block;
-      line-height: 1.75;
-      margin: 0;
-      
-      &:last-child {
-        margin-left: 1rem;
-      }
-    }
   }
 }
 
