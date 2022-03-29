@@ -144,4 +144,8 @@
     border-color: var(--color-shades-tertiary-bright);
     color: var(--color-shades-tertiary-bright);
   }
+
+  &:focus {
+    outline: inherit;
+  }  
 }
