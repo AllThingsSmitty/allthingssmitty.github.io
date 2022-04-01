@@ -16,10 +16,10 @@ title: Home
       </header>
       <div class="flow">
         <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-        <p><a href="{{ post.url }}" class="more" aria-label="Continue reading '{{ post.title }}'">Continue reading</a></p>
+        <p><a href="{{ post.url }}" class="full-width" aria-label="Read more of '{{ post.title }}'">Read more</a></p>
       </div>
     </div>
-    {% if forloop.last == false %}<div class="break"></div>{% endif %}
+    {% if forloop.last == false %}<div class="border-rule"></div>{% endif %}
   </article>
 {% endfor %}
 
