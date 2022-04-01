@@ -31,24 +31,14 @@ h3 {
   }
 }
 
-.emoji {
-  
+.render {
   &__md {
   font-size: calc(var(--font-size-large) * 1.2);
-  }
-  
-  &__sm {
-    font-size: var(--font-size-large);
-  }
-
-  &__x-sm {
-    font-size: calc(var(--font-size-large) * .8);
   }
 }
 
 strong {
   font-family: var(--font-root-bold);
-  font-style: normal;
 
   em {
     font-family: var(--font-root-bold-italic);
@@ -118,7 +108,6 @@ aside {
 cite,
 em {
   font-family: var(--font-root-italic);
-  font-style: normal;
 }
 
 
