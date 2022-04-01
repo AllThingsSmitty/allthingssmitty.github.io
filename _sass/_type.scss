@@ -31,16 +31,19 @@ h3 {
   }
 }
 
-.emoji-md {
-  font-size: 1.5rem;
-}
+.emoji {
+  
+  &__md {
+  font-size: calc(var(--font-size-large) * 1.2);
+  }
+  
+  &__sm {
+    font-size: var(--font-size-large);
+  }
 
-.emoji-sm {
-  font-size: var(--font-size-large);
-}
-
-.emoji-x-sm {
-  font-size: 1rem;
+  &__x-sm {
+    font-size: calc(var(--font-size-large) * .8);
+  }
 }
 
 strong {
