@@ -7,7 +7,7 @@ tags: [accessibility, JavaScript, mobile, UX]
 comments: true
 ---
 
-<aside class="message notification">
+<aside class="message notification" role="note">
   I currently promote using the default styling of links for phone numbers. I've left this post up for historical purposes.
 </aside>
 
@@ -78,7 +78,7 @@ window.addEventListener('resize', () => {
 }, false);
 ```
 
-<aside class="message notification">I received a lot of feedback pointing out that this pattern could reduce overall accessibility when interacting with VoIP technology.</aside>
+<aside class="message notification" role="note">I received a lot of feedback pointing out that this pattern could reduce overall accessibility when interacting with VoIP technology.</aside>
 
 Here's our new pattern in action, with the element being replaced on load depending on whether the parent container is a specific size.
 
