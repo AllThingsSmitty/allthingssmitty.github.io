@@ -79,8 +79,8 @@
 }
 
 .embed {
-  display: flex;
-  justify-content: center;
+  --flow-space: 1.5rem;
+  margin: var(--flow-space) 0 2rem;
 }
 
 // Tags page
