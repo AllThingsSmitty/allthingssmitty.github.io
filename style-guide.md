@@ -91,7 +91,9 @@ test
 ```
 
 {::nomarkdown}
-<img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="Mobile screen showing sticky footer at the bottom of the viewport above Safari's menu bar" height="auto" width="auto" class="center" />
+<div class="image__center">
+  <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="Mobile screen showing sticky footer at the bottom of the viewport above Safari's menu bar" height="auto" width="auto" />
+</div>
 {:/}
 
 -----
