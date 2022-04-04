@@ -59,8 +59,7 @@
   }
 }
 
-.full-width {
-  display: flex;
+.more {
   font-family: var(--font-secondary-semi-bold);
 }
 
@@ -78,7 +77,8 @@
 }
 
 .embed {
-  margin: 1.5rem 0 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 // Tags page

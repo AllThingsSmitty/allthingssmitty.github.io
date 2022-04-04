@@ -35,7 +35,9 @@ main {
  I began running some browser tests on my iPhone, and that's when I noticed that my sticky footer wasn't looking so sticky:
 
 {::nomarkdown}
-<img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-01.png" alt="iPhone screen showing sticky footer below Safari browser's menu bar." height="auto" width="auto" class="center" />
+<div class="image__center">
+  <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-01.png" alt="iPhone screen showing sticky footer below Safari browser's menu bar." height="auto" width="auto" />
+</div>
 {:/}
 
 The footer was hiding below Safari's menu bar. This is the `100vh` bug (feature?) that Nicolas originally uncovered and reported. I did a little sleuthing -- hoping that maybe by now a non-hacky fix had been found -- and that's when I stumbled upon my own solution (btw, it's totally hacky):
@@ -70,7 +72,9 @@ This code was updated to include the <code>html</code> selector after I was told
 And now the sticky footer is right where I want it to be in mobile Safari!
 
 {::nomarkdown}
-<img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="iPhone screen showing sticky footer at the bottom of the viewport above Safari browser's menu bar" height="auto" width="auto" class="center" />
+<div class="image__center">
+  <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="iPhone screen showing sticky footer at the bottom of the viewport above Safari browser's menu bar" height="auto" width="auto" />
+</div>
 {:/}
 
 ## Does this really work?

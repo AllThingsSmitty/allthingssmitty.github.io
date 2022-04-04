@@ -57,20 +57,26 @@ a {
   outline-offset: .15rem;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+.image {
+  display: flex;
   
-  &.center {
-    border: 1px solid var(--color-stroke);
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-
-    @media (max-width: $large-breakpoint) {
-      width: 85%;
+  &__center {
+    display: flex;
+    justify-content: center;
+    
+    img {
+      border: 1px solid var(--color-stroke);
+      width: 65%;
+      
+      @media (max-width: $large-breakpoint) {
+        width: 85%;
+      }
     }
   }
+}
+
+img {
+  display: block;
 }
 
 figure {
