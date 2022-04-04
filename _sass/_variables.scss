@@ -12,13 +12,20 @@ $large-breakpoint: 36rem;
     Ubuntu,
     Cantarell,
     sans-serif;
-  --font-root-regular: "BitterRegular", var(--font-fallback);
-  --font-root-bold: "BitterBold", var(--font-fallback);
-  --font-root-italic: "BitterItalic", var(--font-fallback);
-  --font-root-bold-italic: "BitterBoldItalic", var(--font-fallback);
-  --font-secondary-regular: "OpenSansRegular", var(--font-fallback);
-  --font-secondary-bold: "OpenSansBold", var(--font-fallback);
-  --font-secondary-semi-bold: "OpenSansSemibold", var(--font-fallback);
+  --font-root-regular: var(--font-fallback);
+  --font-root-bold: var(--font-fallback);
+  --font-root-italic: var(--font-fallback);
+  --font-root-bold-italic: var(--font-fallback);
+  --font-secondary-regular: var(--font-fallback);
+  --font-secondary-bold: var(--font-fallback);
+  --font-secondary-semi-bold: var(--font-fallback);
+  //--font-root-regular: "BitterRegular", var(--font-fallback);
+  //--font-root-bold: "BitterBold", var(--font-fallback);
+  //--font-root-italic: "BitterItalic", var(--font-fallback);
+  //--font-root-bold-italic: "BitterBoldItalic", var(--font-fallback);
+  //--font-secondary-regular: "OpenSansRegular", var(--font-fallback);
+  //--font-secondary-bold: "OpenSansBold", var(--font-fallback);
+  //--font-secondary-semi-bold: "OpenSansSemibold", var(--font-fallback);
   --font-tertiary-regular: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 
   --font-size-large: 1.25rem;

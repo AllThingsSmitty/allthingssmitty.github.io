@@ -6,7 +6,9 @@
 
   &__title,
   &__title {
+    --flow-space: 1.25rem;
     font-size: 2rem;
+    margin-bottom: var(--flow-space);
     margin-top: 0;
 
     a {

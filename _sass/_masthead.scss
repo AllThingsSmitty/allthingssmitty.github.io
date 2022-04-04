@@ -34,6 +34,7 @@
         margin: 0;
       
         li {
+          font-weight: 700;
 
           &:not(:last-child) {
             margin-right: 1.25rem;
@@ -46,6 +47,7 @@
   &__tagline {
     font-family: var(--font-secondary-semi-bold);
     font-size: .8rem;
+    font-weight: 500;
     margin-top: .5rem;
     text-transform: uppercase;
   }
