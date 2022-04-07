@@ -9,15 +9,12 @@ comments: true
 
 I was recently working with a vertical navigation component and ran into a hiccup where the JavaScript code wouldn't fire depending on _where_ I clicked on the menu item link. I did some digging and thought I'd share a little about what I discovered and how I was able to resolve the problem. 
 
-For context, all menu items have two child elements: an icon embedded within the link, as well as a `<span>` element for the label.
+To start, I have a list item that when selected will expand or collapse a submenu:
 
 ```html
 <li>
-  <a href="#example" class="toggle">
-    <img src="/img/billing.svg" width="20" height="20" alt="">
-    <span>Billing</span>
-  </a>
-  <div id="example">
+  <a href="#submenu" class="toggle">Billing</a>
+  <div id="submenu">
     <ul>
       <li><a href="/statment/">My Statement</a></li>
       <li><a href="/history/">Pay History</a></li>
@@ -26,7 +23,7 @@ For context, all menu items have two child elements: an icon embedded within the
 </li>
 ```
 
-Here I also have a submenu in a `<div>` element and added a touch of JavaScript to give it an open/close toggle:
+This event listener will manage toggling the submenu's expanded/collapsed state:
 
 ```javascript
 document.addEventListener('click', function (event) {
@@ -52,7 +49,7 @@ document.addEventListener('click', function (event) {
 The `toggle()` method executes a function to check if the submenu has the `.is-visible` CSS class. If the element has that class, the submenu will be hidden; otherwise, the submenu is displayed:
 
 ```javascript
-let toggle = function (elem, timing) {
+const toggle = function (elem, timing) {
 
   // If the element is visible, hide it
   if (elem.classList.contains('is-visible')) {
@@ -72,7 +69,7 @@ I expected that clicking anywhere within the menu item would fire the JavaScript
 This was something I had to look up. I needed the target and return the parent element, not the child elements. I found the solution using the [`closest()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest){:rel="external"} method. This method travels up the DOM tree from the current element and returns the closest ancestor that matches the given parameter:
 
 ```javascript
-let closestElement = Element.closest(selector); 
+const closestElement = Element.closest(selector); 
 ```
 
 This was my "ah-ha!" moment. I could chain `closest()` to `event.target` to find and return the parent element (menu item link), regardless if I ended up clicking on the child elements (icon or label):
@@ -82,7 +79,7 @@ if (!event.target.closest('a').classList.contains('toggle')) {
   return;
 }
 
-let content = document.querySelector(event.target.closest('a').hash);
+const content = document.querySelector(event.target.closest('a').hash);
 ```
 
 Now clicking anywhere in the menu item link fires the JavaScript to toggle the submenu.
