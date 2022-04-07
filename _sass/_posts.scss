@@ -117,8 +117,10 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter, clamp(1.375rem, 1.75rem, 2rem));
+    gap: var(--gutter, clamp(1.375rem, 1.65rem, 2rem));
     justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
   }
 
   &.stretch {
@@ -135,15 +137,14 @@
   color: var(--color-shades-primary-text);
   font-family: var(--font-secondary-regular);
   font-size: .675rem;
-  padding: .375rem .675rem;
+  padding: .5rem .675rem;
   text-decoration: none;
   transition: all ease .2s;
-  vertical-align: middle;
 
   &:focus,
   &:hover {
     background-color: var(--color-primary-info-text);
-    border-color: var(--color-shades-tertiary-bright);
+    border-color: var(--color-primary-info-text);
     color: var(--color-shades-tertiary-bright);
   }
 
