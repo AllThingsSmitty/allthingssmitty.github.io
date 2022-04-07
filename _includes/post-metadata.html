@@ -7,9 +7,13 @@
   {% endif %}
 
   {% if page.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-label="Go to comments about this post">Comments</a></div>
+    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="adb-comments">Comments</a></div>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-label="Go to comments about '{{ post.title }}'">Comments</a></div>
+    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="adb-comments">Comments</a></div>
   {% endif %}
+
+  <div class="sr-hidden" id="adb-comments">
+    Go to comments about '{{ post.title }}
+  </div>
 </div>

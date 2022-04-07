@@ -35,7 +35,7 @@ main {
  I began running some browser tests on my iPhone, and that's when I noticed that my sticky footer wasn't looking so sticky:
 
 {::nomarkdown}
-<div class="image__center">
+<div class="feature__image--center">
   <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-01.png" alt="iPhone screen showing sticky footer below Safari browser's menu bar." height="auto" width="auto" />
 </div>
 {:/}
@@ -72,7 +72,7 @@ This code was updated to include the <code>html</code> selector after I was told
 And now the sticky footer is right where I want it to be in mobile Safari!
 
 {::nomarkdown}
-<div class="image__center">
+<div class="feature__image--center">
   <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="iPhone screen showing sticky footer at the bottom of the viewport above Safari browser's menu bar" height="auto" width="auto" />
 </div>
 {:/}

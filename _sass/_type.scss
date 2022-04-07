@@ -5,6 +5,7 @@
 h1, h2, h3 {
   color: var(--color-shades-primary);
   font-family: var(--font-secondary-bold);
+  font-weight: 600;
   line-height: 1.25;
 }
 
@@ -31,7 +32,7 @@ h3 {
 
 .render {
 
-  &__md {
+  &--md {
   font-size: calc(var(--font-size-large) * 1.2);
   }
 }

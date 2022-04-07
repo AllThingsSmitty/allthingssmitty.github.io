@@ -2,7 +2,7 @@
 
   &__brand {
     color: var(--color-shades-secondary-glare);
-    font-family: var(--font-secondary-bold);    
+    font-family: var(--font-secondary-bold);
     margin-bottom: 5rem;
     padding-bottom: .5rem;
     padding-top: 1rem;
@@ -10,12 +10,14 @@
     nav {
       align-items: center;
       display: flex;
+      font-weight: 700;
       justify-content: space-between;
       line-height: 1.75;
 
-      h1 {
+      .header__title {
         color: var(--color-shades-primary);
         font-size: var(--font-size-large);
+        font-weight: 700;
         margin: 0;
       }
       
@@ -34,7 +36,6 @@
         margin: 0;
       
         li {
-          font-weight: 700;
 
           &:not(:last-child) {
             margin-right: 1.25rem;

@@ -91,7 +91,7 @@ test
 ```
 
 {::nomarkdown}
-<div class="image__center">
+<div class="feature__image--center">
   <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="Mobile screen showing sticky footer at the bottom of the viewport above Safari's menu bar" height="auto" width="auto" />
 </div>
 {:/}
@@ -240,9 +240,9 @@ For accessibility purposes, emoji will be give the ARIA landmark role `img` and 
 <span role="img" aria-label="emoji grinning face">&#x1F600;</span>
 ```
 
-Optionally, the `.render` class can be added using the `__md` modifier to increase the default font size of the emoji:
+Optionally, the `.render` class can be added using the `--md` modifier to increase the default font size of the emoji:
 
-<span class="render__md" role="img" aria-label="emoji grinning face">&#x1F600;</span>
+<span class="render--md" role="img" aria-label="emoji grinning face">&#x1F600;</span>
 
 
 -----
