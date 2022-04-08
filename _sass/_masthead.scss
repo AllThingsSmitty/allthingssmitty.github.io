@@ -2,7 +2,6 @@
 
   &__brand {
     color: var(--color-shades-secondary-glare);
-    font-family: var(--font-secondary-bold);
     font-weight: 700;
     margin-bottom: 5rem;
     padding-bottom: .5rem;
@@ -46,7 +45,6 @@
   }
 
   &__tagline {
-    font-family: var(--font-secondary-semi-bold);
     font-size: .8rem;
     font-weight: 500;
     margin-top: .5rem;
