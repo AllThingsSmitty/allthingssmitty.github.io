@@ -26,7 +26,6 @@
     align-items: center;
     color: var(--color-shades-primary-glare);
     display: flex;
-    font-family: var(--font-secondary-semi-bold);
     flex-wrap: wrap;
     margin-bottom: var(--flow-space);
 
@@ -83,7 +82,6 @@
 // Tags page
 .tags {
   --flow-space: 1.25rem;
-  font-family: var(--font-secondary-semi-bold);
 
   h3 {
     margin-top: 0;
@@ -97,7 +95,6 @@
 .related {
   --flow-space: 1.25rem;
   border-top: 1px solid var(--color-primary-info-bg);
-  font-family: var(--font-secondary-semi-bold);
   margin-bottom: 2rem;
 
   ul {
@@ -135,7 +132,6 @@
   border: 1px solid var(--color-stroke);
   border-radius: 1rem;
   color: var(--color-shades-primary-text);
-  font-family: var(--font-secondary-regular);
   font-size: .675rem;
   padding: .5rem .675rem;
   text-decoration: none;
