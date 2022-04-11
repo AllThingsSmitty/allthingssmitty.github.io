@@ -29,13 +29,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// No `:visited` state is required by default (browsers will use `a`)
 a {
   color: var(--color-primary-info-text);
-  //text-decoration-thickness: .1rem;
   text-decoration-thickness: .075rem;
   text-underline-offset: 1.25px;
-  transition: color ease .2s;
+  transition: all ease .2s;
 
   :is(code,
     code[class*="language-"],
@@ -96,28 +94,6 @@ figure {
   }
 }
 
-// table {
-//   border: 1px solid var(--color-primary-info-bg);
-//   border-collapse: collapse;
-//   font-size: var(--font-size-small);
-//   margin-bottom: 1rem;
-//   width: 100%;
-
-//   td,
-//   th {
-//     border: 1px solid var(--color-primary-info-bg);
-//     padding: .25rem .5rem;
-//   }
-
-//   th {
-//     text-align: left;
-//   }
-
-//   tbody tr:nth-child(odd) td,
-//   tbody tr:nth-child(odd) th {
-//     background-color: var(--color-shades-light: #f8f9fa;);
-//   }
-// }
 
 .social__icon {
   background-position: center;

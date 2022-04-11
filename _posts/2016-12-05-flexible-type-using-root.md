@@ -46,12 +46,12 @@ body {
 
 You'll notice the `calc()` function has been passed values in viewport units. Let's quickly review those to understand how the root font size is being calculated.
 
-* 1vw = 1% of viewport width
-* 1vh = 1% of viewport height
-* 1vmin = 1vw or 1vh, whichever is smaller
-* 1vmax = 1vw or 1vh, whichever is larger
+* `1vw` = 1% of viewport width
+* `1vh` = 1% of viewport height
+* `1vmin` = `1vw` or `1vh`, whichever is smaller
+* `1vmax` = `1vw` or `1vh`, whichever is larger
 
-If we apply this to the viewport dimensions of the iPhone 7, which is 375x667, the calculated value of `:root` would be:
+If we apply this to the viewport dimensions of the iPhone 7 (current version at the time of this post), which is 375x667, the calculated value of `:root` would be:
 
 ```css
 :root {

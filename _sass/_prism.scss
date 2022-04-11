@@ -5,28 +5,12 @@
 * @author Lea Verou
 */
 
-/*
-code[class*="language-"],
-pre[class*="language-"] {
-  color: var(--color-primary);
-  font-family: var(--font-tertiary-regular);
-  font-size: .9rem;
-  hyphens: none;
-  line-height: var(--font-line-height) ;
-  tab-size: 4;
-  text-align: left;
-  text-shadow: 0 1px var(--white);
-  word-spacing: normal;
-  word-wrap: normal;
-}
-*/
-
 .token.cdata,
 .token.comment,
 .token.doctype,
 .token.prolog,
 .token.punctuation {
-	color: #747474;
+	color: var(--color-mid-text);
 }
 
 .namespace {
@@ -84,7 +68,7 @@ pre[class*="language-"] {
 code {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  font-size: .85rem;
+  font-size: var(--font-size-small);
   hyphens: none;
   padding: .125em .25em;
   tab-size: 2;
@@ -102,27 +86,3 @@ pre > code {
   padding: clamp(1rem, 1.0625rem, 1.125rem);
   -webkit-overflow-scrolling: touch;
 }
-
-// div.prism-show-language {
-//   position: relative;
- 
-//   .prism-show-language-label {
-//     background-color: var(--color-stroke);
-//     border-radius: 0 .25rem;
-//     bottom: auto;
-//     box-shadow: none;
-//     color: var(--color-primary);
-//     display: inline-block;
-//     font-size: .725rem;
-//     height: auto;
-//     left: auto;
-//     padding: 0 0.5rem;
-//     position: absolute;
-//     right: 0;
-//     text-shadow: none;
-//     top: 0;
-//     transform: none;
-//     width: auto;
-//     z-index: 1;
-//   }
-// }

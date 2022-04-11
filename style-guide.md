@@ -17,7 +17,7 @@ tags: [code, markdown, 'style guide']
 * [Emoji](#emoji)
 <!-- * [Tables](#tables) -->
 
------
+<div class="border-rule"></div>
 
 I can't get <a href="https://codepen.io/AllThingsSmitty/pen/bpmZpK" rel="external">Jurassic Park</a> back online without Dennis Nedry. Now eventually you do plan to have _dinosaurs_ on your dinosaur tour? I thought you were one of your big brothers. There's no unauthorized breeding in Jurassic Park.
 
@@ -34,7 +34,7 @@ Boy, do I **hate being right** all the time. T-Rex doesn't want to be fed. I'm g
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
------
+<div class="border-rule"></div>
 
 Most of these elements are styled by browsers with few custom modifications done here.-->
 
@@ -96,7 +96,7 @@ test
 </div>
 {:/}
 
------
+<div class="border-rule"></div>
 
 ## Headings
 
@@ -107,7 +107,7 @@ Hold onto your butts. What about the lysine contingency? Are these characters...
 ### Heading (h3)
 #### Heading (h4)
 
------
+<div class="border-rule"></div>
 
 ## Code
 
@@ -143,14 +143,14 @@ adder(2, 6);
 
 Don't get cheap on me, Dodgson. Ian, freeze! Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. 
 
------
+<div class="border-rule"></div>
 
 ## Notes
 
 {:.message}
 How do you know they're all female? Bloody move! We spared no expense.
 
------
+<div class="border-rule"></div>
 
 ## Embedding media
 
@@ -224,7 +224,7 @@ Look at all the blood. I told you, how many times, we needed locking mechanisms 
   </figcaption>
 </figure>
 
------
+<div class="border-rule"></div>
 
 ### Emoji
 
@@ -240,16 +240,11 @@ For accessibility purposes, emoji will be give the ARIA landmark role `img` and 
 <span role="img" aria-label="emoji grinning face">&#x1F600;</span>
 ```
 
-Optionally, the `.render` class can be added using the `--md` modifier to increase the default font size of the emoji:
+<div class="border-rule"></div>
 
-<span class="render--md" role="img" aria-label="emoji grinning face">&#x1F600;</span>
+<!-- ## Tables
 
-
------
-<!-- 
-## Tables
-
-You bred raptors? I told you, how many times, we needed locking mechanisms on the vehicle doors!
+<!--You bred raptors? I told you, how many times, we needed locking mechanisms on the vehicle doors!
 
 <table>
   <thead>
