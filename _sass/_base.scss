@@ -33,7 +33,7 @@ a {
   color: var(--color-primary-info-text);
   text-decoration-thickness: .075rem;
   text-underline-offset: 1.25px;
-  transition: all ease .2s;
+  transition: color ease .2s;
 
   :is(code,
     code[class*="language-"],
