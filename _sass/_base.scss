@@ -24,8 +24,6 @@ html {
 body {
   color: var(--color-shades-primary-text);
   font-family: var(--font-root-regular);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
@@ -73,27 +71,6 @@ a {
     }
   }
 }
-
-img {
-  display: block;
-}
-
-figure {
-  margin: 0;
-  padding: 1rem 0 2rem;
-
-  picture {
-    img {
-      margin-bottom: .5rem !important;
-    }
-  }
-
-  figcaption {
-    font-size: var(--font-size-small);
-    color: var(--color-shades-primary-glare);
-  }
-}
-
 
 .social__icon {
   background-position: center;

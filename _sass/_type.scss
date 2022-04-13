@@ -45,7 +45,7 @@ aside {
 
   > * {
     margin-bottom: var(--flow-space);
-    margin-top: 0;
+    //margin-top: 0;
   }
 
   .flow-space-size-2 {
@@ -64,5 +64,5 @@ aside {
         padding-inline-start: .5rem;
       }
     }
-  }
+  }  
 }
