@@ -12,28 +12,6 @@ h3 {
   font-size: var(--font-size-large);
 }
 
-.flow {
-  --flow-space: 1.5rem;
-
-  > * {
-    margin-bottom: var(--flow-space);
-    //margin-top: 0;
-  }
-
-  .flow-space-size-2 {
-    --flow-space: clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem)
-  }
-}
-
-ul, ol {
-  margin-bottom: 1rem;
-  margin-top: 0;
-
-  li {
-    margin-bottom: .5rem;
-  }
-}
-
 aside,
 blockquote {
   &.message {
@@ -59,5 +37,32 @@ aside {
     background-color: var(--color-state-warn-bg);
     color: var(--color-state-warn-text);
     margin: 1.5rem 0;
+  }
+}
+
+.flow {
+  --flow-space: 1.5rem;
+
+  > * {
+    margin-bottom: var(--flow-space);
+    margin-top: 0;
+  }
+
+  .flow-space-size-2 {
+    --flow-space: clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem)
+  }
+
+  ul, ol {
+    margin-bottom: .5rem;
+    margin-top: 0;
+    
+    &:not([class]) {
+      padding-inline-start: 2.5ch;
+      
+      > li {
+        margin-bottom: 1rem;
+        padding-inline-start: .5rem;
+      }
+    }
   }
 }
