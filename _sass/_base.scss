@@ -77,6 +77,7 @@ a {
   background-repeat: no-repeat;
   background-size: 30px;
   height: 30px;
+  transition: background-image ease .2s;
   width: 30px;
 
   &--codepen {

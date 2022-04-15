@@ -11,6 +11,7 @@
   padding: 1rem;
   text-align: center;
   text-decoration: none;
+  transition: border-color ease 2s;
   width: 50%;
 
   &:first-child:not(:last-child) {
@@ -20,7 +21,6 @@
   &:focus,
   &:hover {
     border-color: var(--color-primary-info);
-    transition: border-color ease .2s;
   }
 
   &:focus {
