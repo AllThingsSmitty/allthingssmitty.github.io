@@ -24,8 +24,10 @@
       </main>
 
       <footer class="page-footer" role="contentinfo">
-        {% include social-channels.html %}
-        <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</span>
+        <div class="page-footer__item gap-bottom-top-base">
+          {% include social-channels.html %}
+        </div>
+        <div class="page-footer__item">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</div>
       </footer>
     </div>
     

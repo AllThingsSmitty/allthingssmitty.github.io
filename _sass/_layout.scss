@@ -23,9 +23,20 @@ main {
   margin: 1.75rem 0;
 }
 
+.gap-bottom-top-base {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem; 
+}
+
 .page-footer {
   margin-bottom: 2rem;
   text-align: center;
+
+  &__item {
+    display: flex;
+    font-size: var(--font-size-small);
+    justify-content: center;
+  }
 
   a {
     &:hover {
@@ -35,9 +46,5 @@ main {
         text-decoration: none;
       }
     }
-  }
-
-  span {
-    font-size: var(--font-size-small);
   }
 }
