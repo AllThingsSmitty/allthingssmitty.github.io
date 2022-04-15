@@ -11,7 +11,7 @@
   padding: 1rem;
   text-align: center;
   text-decoration: none;
-  transition: border-color ease 2s;
+  transition: border-color ease .2s;
   width: 50%;
 
   &:first-child:not(:last-child) {
