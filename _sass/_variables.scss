@@ -19,7 +19,8 @@ $large-breakpoint: 36rem;
   --font-size-small: .85rem;
   --font-line-height: 1.5;
   --large-breakpoint: #{$large-breakpoint};
-
+  --transition-duration: .2s;
+  
   --color-primary: #0b0c0c;
   --color-primary-info: #2962ff; // #0074d9;
   --color-shades-primary: #292930;

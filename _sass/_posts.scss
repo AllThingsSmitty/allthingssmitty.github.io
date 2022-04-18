@@ -75,15 +75,32 @@
   margin: var(--flow-space) 0 2rem;
 }
 
-// Tags page
+.feature__image {
+  display: flex;
+  
+  &--center {
+    display: flex;
+    justify-content: center;
+    
+    img {
+      border: 1px solid var(--color-stroke);
+      width: 65%;
+      
+      @media (max-width: $large-breakpoint) {
+        width: 85%;
+      }
+    }
+  }
+}
+
 .tags {
   --flow-space: 1.25rem;
 
-  h3 {
+  .tags__title {
     margin-top: 0;
   }
   
-  .row {
+  .tags__item {
     margin-bottom: var(--flow-space);
   }
 }
@@ -93,11 +110,11 @@
   border-top: 1px solid var(--color-primary-info-bg);
   margin-bottom: 2rem;
 
-  ul {
+  .related__list {
     list-style: none;
     padding-left: 0;
 
-    li {
+    .related__item {
       margin-bottom: var(--flow-space);
     }
   }

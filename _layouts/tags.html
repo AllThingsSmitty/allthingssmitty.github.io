@@ -3,10 +3,10 @@ layout: default
 title: Tags
 ---
 
-<section class="tags">
-  <h3>Posts about {{ page.tag }}</h2>
+<section class="tags flow">
+  <h3 class="tags__title">Posts about {{ page.tag }}</h3>
   {% for post in site.tags[page.tag] %}
-  <div class="row">
+  <div class="tags__item">
     <a href="{{ post.url }}">{{ post.title }}</a>
     <div class="archive-date">
       {{ post.date | date: "%b %-d, %Y" }}
