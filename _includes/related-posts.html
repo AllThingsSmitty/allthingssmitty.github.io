@@ -5,9 +5,9 @@
   {% assign minCommonTags =  1 %}
   {% assign maxRelatedCounter = 0 %}
 
-  <h3>Related posts</h3>
+  <h3 class="related__title">Related posts</h3>
 
-  <ul>
+  <ul class="related__list">
 
   {% for post in site.posts %}
    
@@ -25,7 +25,7 @@
     {% endfor %}
 
     {% if sameTagCount >= minCommonTags %}
-      <li>
+      <li class="related__item">
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>

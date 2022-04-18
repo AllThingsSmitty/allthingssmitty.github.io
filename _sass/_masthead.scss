@@ -5,17 +5,29 @@
     padding-bottom: .5rem;
     padding-top: 1rem;
 
-    nav {
+    .header-nav {
       align-items: center;
       display: flex;
       font-weight: 600;
       justify-content: space-between;
       line-height: 1.75;
 
-      .header__title {
+      .header-nav__title {
         color: var(--color-shades-primary);
         font-size: var(--font-size-large);
         margin: 0;
+      }
+      
+      .header-nav__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+      
+        .header-nav__item {
+          &:not(:last-child) {
+            margin-right: 1.25rem;
+          }
+        }
       }
       
       a {
@@ -24,18 +36,6 @@
       
         &:hover {
           color: var(--color-primary-info-text);
-        }
-      }
-
-      ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-      
-        li {
-          &:not(:last-child) {
-            margin-right: 1.25rem;
-          }
         }
       }
     }
