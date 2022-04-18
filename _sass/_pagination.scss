@@ -21,7 +21,6 @@
   &:focus,
   &:hover {
     border-color: var(--color-primary-info);
-    transition: border-color ease .2s;
   }
 
   &:focus {
