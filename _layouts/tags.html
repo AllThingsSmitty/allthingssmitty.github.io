@@ -3,14 +3,18 @@ layout: default
 title: Tags
 ---
 
-<section class="tags flow">
-  <h3 class="tags__title">Posts about {{ page.tag }}</h3>
-  {% for post in site.tags[page.tag] %}
-  <div class="tags__item">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <div class="archive-date">
-      {{ post.date | date: "%b %-d, %Y" }}
+<div class="page">
+  <header class="page-header">
+    <h2 class="page-header__title page-header__title--sm">Posts about {{ page.tag }}</h2>
+  </header>
+  <section class="tags flow">
+    {% for post in site.tags[page.tag] %}
+    <div class="tags__item">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <div class="archive-date">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </div>
     </div>
-  </div>
-  {% endfor %}
-</section>
+    {% endfor %}
+  </section>
+</div>
