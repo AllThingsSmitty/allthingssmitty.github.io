@@ -18,7 +18,11 @@
         color: var(--color-primary-info-text);
       }
     }
-  }    
+  }  
+  
+  &__title--sm {
+    font-size: var(--font-size-large);
+  }
 
   &__metadata {  
     --flow-space: 1.25rem;
