@@ -81,6 +81,8 @@ And now the sticky footer is right where I want it to be in mobile Safari!
 
 The jury seems to be out on this. I've had no problems with any of the tests I've run and I'm using this method in production right now. But I did receive a number of responses to my tweet pointing to other possible problems with using this (the effects of rotating devices, Chrome not completely ignoring the property, etc.).
 
+Will `-webkit-fill-available` work in every scenario? Probably not, cuz let's be honest: this is the web, and it can be damn hard to build. But, if you're having a problem with `100vh` in WebKit and you're looking for a CSS alternative, you might want to try this.
+
 <div class="embed">
   <p class="codepen" data-height="450" data-default-tab="result" data-slug-hash="ZEbKWKa" data-user="AllThingsSmitty" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/ZEbKWKa">
@@ -89,5 +91,3 @@ The jury seems to be out on this. I've had no problems with any of the tests I'v
   </p>
   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </div>
-
-Will `-webkit-fill-available` work in every scenario? Probably not, cuz let's be honest: this is the web, and it can be damn hard to build. But, if you're having a problem with `100vh` in WebKit and you're looking for a CSS alternative, you might want to try this.
