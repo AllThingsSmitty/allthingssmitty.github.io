@@ -1,3 +1,8 @@
+{% assign min = 1 %}
+{% assign max = 1000000 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
+
 <div class="post-header__metadata">
   {% if page.path contains '_posts' %}
     <div class="published" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</div>
@@ -7,13 +12,13 @@
   {% endif %}
 
   {% if page.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="adb-comments">Comments</a></div>
+    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a></div>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="adb-comments">Comments</a></div>
+    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a></div>
   {% endif %}
 
-  <div class="sr-only" id="adb-comments">
+  <div class="sr-only" id="{{randomNumber}}">
     Go to comments about '{{ post.title }}
   </div>
 </div>
