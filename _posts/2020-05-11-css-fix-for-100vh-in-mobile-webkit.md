@@ -35,7 +35,7 @@ main {
  I began running some browser tests on my iPhone, and that's when I noticed that my sticky footer wasn't looking so sticky:
 
 {::nomarkdown}
-<div class="feature__image--center">
+<div class="page__image--center page__image--md">
   <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-01.png" alt="iPhone screen showing sticky footer below Safari browser's menu bar." height="auto" width="auto" />
 </div>
 {:/}
@@ -72,14 +72,14 @@ This code was updated to include the <code>html</code> selector after I was told
 And now the sticky footer is right where I want it to be in mobile Safari!
 
 {::nomarkdown}
-<div class="feature__image--center">
+<div class="page__image--center page__image--md">
   <img src="/img/posts/2020-05-11-css-fix-for-100vh-in-mobile-webkit-02.png" alt="iPhone screen showing sticky footer at the bottom of the viewport above Safari browser's menu bar" height="auto" width="auto" />
 </div>
 {:/}
 
 ## Does this really work?
 
-The jury seems to be out on this. I've had no problems with any of the tests I've run and I'm using this method in production right now. But I did receive a number of responses to my tweet pointing to other possible problems with using this (the effects of rotating devices, Chrome not completely ignoring the property, etc.).
+The jury seems to be out on this. I've had no problems with any of the tests I've run and I'm using this method in production right now. But I did receive a number of responses to my tweet pointing to other possible problems with using this (e.g., the effect on rotating devices, Chrome not completely ignoring the property, etc.).
 
 Will `-webkit-fill-available` work in every scenario? Probably not, cuz let's be honest: this is the web, and it can be damn hard to build. But, if you're having a problem with `100vh` in WebKit and you're looking for a CSS alternative, you might want to try this.
 
