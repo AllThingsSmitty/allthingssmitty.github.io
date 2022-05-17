@@ -3,7 +3,7 @@ layout: post
 title: CSS fix for 100vh in mobile WebKit
 description: WebKit handles 100vh in a way that differs from other browsers, which can complicate some layouts. But using -webkit-fill-available might be a good enough alternative to get by. 
 image: img/posts/sunset-home-office-min.jpg
-tags: [CSS, HTML]
+tags: [CSS, HTML, mobile]
 comments: true
 ---
 
