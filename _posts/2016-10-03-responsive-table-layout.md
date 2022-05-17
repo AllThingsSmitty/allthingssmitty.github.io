@@ -44,7 +44,7 @@ We'll create the same table above with some generic HTML:
 </table>
 ```
 
-Our table has four columns. Let's add some basic CSS to better define the table layout:
+Our table has four columns. Let's add some basic CSS selectors to better define the table layout:
 
 ```css
 table {
@@ -116,7 +116,7 @@ Now we can begin writing a CSS media query:
 }
 ```
 
-In smaller viewports the `<tr>` and `<td>` elements will display as block-level and not as table rows and cells. And the `::before` pseudo-class now serves as a label.
+In smaller viewports the `<tr>` and `<td>` elements will display as block-level and not as table rows and cells. And the `::before` pseudo-element now serves as a label.
 
 Here's our table (flip your device screen between portrait and landscape view):
 

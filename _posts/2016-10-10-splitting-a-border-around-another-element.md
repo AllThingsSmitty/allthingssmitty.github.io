@@ -92,7 +92,7 @@ The `.split-border` class also centers the `<span>` inside the parent container:
 
 Now for the fun part...
 
-The `<span>` element's pseudo-classes each have a top border and a specified width:
+The `<span>` element's pseudo-elements each have a top border and a specified width:
 
 ```css
 .split-border span::before,
@@ -104,7 +104,7 @@ The `<span>` element's pseudo-classes each have a top border and a specified wid
 }
 ```
 
-That width value corresponds to the overall width of the container element, minus the width of the logo image. When we apply a margin to each pseudo-class (either `margin-left` or `margin-right`, respectively), the "split" effect is created:
+That width value corresponds to the overall width of the container element, minus the width of the logo image. When we apply a margin to each pseudo-element (either `margin-left` or `margin-right`, respectively), the "split" effect is created:
 
 ```css
 .split-border span::before {
