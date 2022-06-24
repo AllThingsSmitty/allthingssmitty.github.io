@@ -146,8 +146,13 @@
     padding-left: 0;
   }
 
+  &.shrink {
+    padding-bottom: .25rem;
+    padding-top: .5rem;
+  }
+
   &.stretch {
-    padding-top: 1rem;
+    padding-top: var(--gutter);
   }
 }
 
