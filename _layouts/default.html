@@ -28,10 +28,12 @@
           {% include social-channels.html %}
         </div>
         <div class="page-footer__item">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</div>
+        {% include scroll-to-top.html %}
       </footer>
     </div>
     
     <script async src="{{ site.baseurl }}/js/prism.js?v={{ site.time | date: '%s' }}"></script>
+    <script async src="{{ site.baseurl }}/js/scroll.js?v={{ site.time | date: '%s' }}"></script>
     {% if jekyll.environment == "production" %}
       <script async id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js"></script>
       
