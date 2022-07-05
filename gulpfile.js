@@ -11,5 +11,3 @@ gulp.task('concat-scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('./js/'));
 });
-
-// Sass reference: https://zellwk.com/blog/dart-sass-gulp/
