@@ -1,0 +1,19 @@
+{
+  "name": "allthingssmitty.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Matt Smith",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllThingsSmitty/allthingssmitty.github.io.git"
+  }
+}
