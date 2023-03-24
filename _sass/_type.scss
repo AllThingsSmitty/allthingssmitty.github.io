@@ -64,3 +64,11 @@ aside {
     }
   }  
 }
+
+h1, h2, h3,
+aside,
+blockquote,
+caption,
+figcaption {
+  text-wrap: balance;
+}
