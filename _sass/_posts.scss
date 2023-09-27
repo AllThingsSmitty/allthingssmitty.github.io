@@ -168,14 +168,14 @@
   text-decoration: none;
   transition: all ease .2s;
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     background-color: var(--color-primary-info-text);
     border-color: var(--color-primary-info-text);
     color: var(--color-shades-tertiary-bright);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: inherit;
   }  
 }
