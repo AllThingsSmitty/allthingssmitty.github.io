@@ -43,13 +43,19 @@ a {
     transition: background-image ease var(--transition-duration);
   }
 
-  &:focus .social__icon {
+  &:focus-visible .social__icon {
     outline: inherit;
     outline-offset: inherit;
   }
 }
 
 :focus {
+  &:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+:focus-visible {
   outline: 2px solid;
   outline-offset: .15rem;
 }

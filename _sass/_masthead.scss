@@ -58,7 +58,7 @@
     position: absolute;
   
     &:active,
-    &:focus {
+    &:focus-visible {
       left: 1rem;
       outline-offset: 0;
       overflow: visible;
@@ -73,7 +73,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     visibility: visible;
   }
 }
