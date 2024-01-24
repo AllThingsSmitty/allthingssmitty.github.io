@@ -11,14 +11,19 @@
     <div class="published" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</div>
   {% endif %}
 
+  <div class="comments">
   {% if page.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a></div>
+    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a>
+    <div class="sr-only" id="{{randomNumber}}">
+      Go to comments about '{{ page.title }}
+    </div>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="comments"><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a></div>
+    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a>
+    <div class="sr-only" id="{{randomNumber}}">
+      Go to comments about '{{ post.title }}
+    </div>
   {% endif %}
-
-  <div class="sr-only" id="{{randomNumber}}">
-    Go to comments about '{{ post.title }}
   </div>
+
 </div>
