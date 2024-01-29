@@ -1,25 +1,51 @@
+{% if post.path contains '_posts' %}
+  {% assign words_total = post.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_code = post.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_math = post.content | strip_html | number_of_words %}
+  {% assign words_without_either = post.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
+{% endif %}
+
+{% if page.path contains '_posts' %}
+  {% assign words_total = page.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_code = page.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_math = page.content | strip_html | number_of_words %}
+  {% assign words_without_either = page.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
+{% endif %}
+
+{% assign words_code = words_total | minus: words_without_code | divided_by: 2.0 %}
+{% assign words_math = words_total | minus: words_without_math | times: 2.0 %}
+{% assign words = words_without_either | plus: words_code | plus: words_math | round %}
+
+{% assign ert = words | divided_by:250 | at_least: 1 %}
+
+
 {% assign min = 1 %}
 {% assign max = 1000000 %}
 {% assign diff = max | minus: min %}
 {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
 
-<div class="post-header__metadata">
+
+<div class="post-header__meta">
   {% if page.path contains '_posts' %}
-    <div class="published" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</div>
+    <time class="data published" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="published" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</div>
+    <div class="data published" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</div>
   {% endif %}
 
-  <div class="comments">
+  <div class="data reading-time">
+    {{ ert }} min read
+  </div>
+
+  <div class="data comments">
   {% if page.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a>
+    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">comments</a>
     <div class="sr-only" id="{{randomNumber}}">
       Go to comments about '{{ page.title }}
     </div>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">Comments</a>
+    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">comments</a>
     <div class="sr-only" id="{{randomNumber}}">
       Go to comments about '{{ post.title }}
     </div>
