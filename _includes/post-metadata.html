@@ -26,11 +26,12 @@
 
 
 <div class="post-header__meta">
+
   {% if page.path contains '_posts' %}
-    <time class="data published" aria-label="Published on {{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <time class="data published" aria-label="Published on {{ page.date | date: '%B %-d, %Y' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="data published" aria-label="Published on {{ post.date | date: '%b %-d, %Y' }}">{{ post.date | date: "%b %-d, %Y" }}</div>
+    <div class="data published" aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">{{ post.date | date: "%B %-d, %Y" }}</div>
   {% endif %}
 
   <div class="data reading-time">

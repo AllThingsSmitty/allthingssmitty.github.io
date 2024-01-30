@@ -41,7 +41,7 @@
       display: flex;
       
       @media (max-width: $large-breakpoint) {
-        font-size: .77rem;
+        font-size: var(--font-size-x-small);
         padding-bottom: calc(var(--flow-space) * .25);
       }
  
@@ -118,6 +118,10 @@
 .archive-date {
   color: var(--color-shades-primary-glare);
   font-size: var(--font-size-small);
+
+  @media (max-width: $large-breakpoint) {
+    font-size: var(--font-size-x-small);
+  }
 }
 
 .embed {
