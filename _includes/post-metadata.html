@@ -18,13 +18,6 @@
 
 {% assign ert = words | divided_by:250 | at_least: 1 %}
 
-
-{% assign min = 1 %}
-{% assign max = 1000000 %}
-{% assign diff = max | minus: min %}
-{% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
-
-
 <div class="post-header__meta">
 
   {% if page.path contains '_posts' %}
@@ -39,18 +32,12 @@
   </div>
 
   <div class="data comments">
-  {% if page.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread" aria-describedby="{{randomNumber}}">comments</a>
-    <div class="sr-only" id="{{randomNumber}}">
-      Go to comments about '{{ page.title }}
-    </div>
-  {% endif %}
-  {% if post.path contains '_posts' %}
-    <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread" aria-describedby="{{randomNumber}}">comments</a>
-    <div class="sr-only" id="{{randomNumber}}">
-      Go to comments about '{{ post.title }}
-    </div>
-  {% endif %}
+    {% if page.path contains '_posts' %}
+      <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ page.url }}"></span>
+    {% endif %}
+    {% if post.path contains '_posts' %}
+      <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}"></span>
+    {% endif %}
   </div>
 
 </div>

@@ -33,8 +33,8 @@
     </div>
     
     <script async src="{{ site.baseurl }}/js/main.js?v={{ site.time | date: '%s' }}"></script>
+    <script async id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js"></script>
     {% if jekyll.environment == "production" %}
-      <script async id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4Id }}"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
