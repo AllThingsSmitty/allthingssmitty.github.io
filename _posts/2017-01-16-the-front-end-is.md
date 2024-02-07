@@ -5,6 +5,9 @@ description: Front-end development has many skills associated with it, and it's 
 image: img/posts/sunset-home-office-min.jpg
 tags: [front-end]
 comments: true
+views:
+  ua: 6210
+  ga4: 27
 ---
 
 It's been my experience that most front-end developers know the feeling of being mislabeled for their skills: "The front-end? Oh, that's just wireframes and fonts and..."

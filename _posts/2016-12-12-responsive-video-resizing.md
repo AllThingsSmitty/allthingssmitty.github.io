@@ -5,6 +5,9 @@ description: There are many different solutions for responsive images, but video
 image: img/posts/sunset-home-office-min.jpg
 tags: [CSS, mobile]
 comments: true
+views:
+  ua: 56725
+  ga4: 2289
 ---
 
 There are a number of options for implementing responsive images, e.g., the `<picture>` element, client-side polyfills, [automatic cropping](http://cloudinary.com/blog/automatically_art_directed_responsive_images){:rel="external"}, <nobr>et al.</nobr> But what about _video_?

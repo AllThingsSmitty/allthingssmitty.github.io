@@ -5,6 +5,9 @@ description: Phone number links are a great feature but styling them to not show
 image: img/posts/sunset-home-office-min.jpg
 tags: [accessibility, JavaScript, mobile, UX]
 comments: true
+views:
+  ua: 13818
+  ga4: 2780
 ---
 
 <aside class="message notification" role="note">

@@ -5,6 +5,9 @@ description: It's not necessary to add line height to each separate textual elem
 image: img/posts/sunset-home-office-min.jpg
 tags: [CSS]
 comments: true
+views:
+  ua: 4681
+  ga4: 39
 ---
 
 If you've been adding line height to each textual element separately, e.g., `<h*>`, `<p>`, etc., this is a helpful tip that you'll want to try: add line height to the `body` selector instead.
