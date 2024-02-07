@@ -5,6 +5,9 @@ description: Icon fonts are a very popular visual web asset today. Unlike JavaSc
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
+views:
+  ua: 22062
+  ga4: 885
 ---
 
 Icon fonts have become a widely-adopted visual asset on the web today and continue to grow in popularity. When your web page downloads resources --- e.g., from a content delivery network (CDN) --- you need to know if the HTTP request returned the files you requested. This is important whether it's a JavaScript library, CSS framework, or in this case, icon fonts. Otherwise your icons might not load.

@@ -5,6 +5,9 @@ description: When setting line-height in CSS, a common mistake is to pass a spec
 image: img/posts/sunset-home-office-min.jpg
 tags: [CSS]
 comments: true
+views:
+  ua: 29170
+  ga4: 1922
 ---
 
 Here's a bit of CSS trivia that, at least on the surface, seems straightforward but that I see misused repeatedly. Let's start with an oldie-but-goodie CSS interview question:

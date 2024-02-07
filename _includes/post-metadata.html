@@ -31,6 +31,19 @@
     {{ ert }} min read
   </div>
 
+  <div class="data views">
+    <div class="page-views">
+      {% assign views = 0 %}
+      {% if page.path contains '_posts' %}
+        {{ views | plus: page.views.ua | plus: page.views.ga4 }}
+      {% endif %}
+      {% if post.path contains '_posts' %}
+        {{ views | plus: post.views.ua | plus: post.views.ga4 }}     
+      {% endif %}
+      views
+    </div>
+  </div>
+  
   <div class="data comments">
     {% if page.path contains '_posts' %}
       <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ page.url }}"></span>

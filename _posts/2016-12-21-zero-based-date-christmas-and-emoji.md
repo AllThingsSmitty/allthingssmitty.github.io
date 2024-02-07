@@ -5,6 +5,9 @@ description: Not every method in JavaScript's Date object returns a zero-based n
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
+views:
+  ua: 1629
+  ga4: 73
 ---
 
 Here's a quick tip if you're starting out with JavaScript: which of the following values passed to the `getMonth()` and `getDate()` methods will print December 25?

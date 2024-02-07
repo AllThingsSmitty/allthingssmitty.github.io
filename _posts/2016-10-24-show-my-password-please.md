@@ -5,6 +5,9 @@ description: Allowing users to view the password they've entered helps avoid fru
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, UX]
 comments: true
+views:
+  ua: 14012
+  ga4: 124
 ---
 
 Stop me if this sounds familiar: you're logging into a site or app on your phone, carefully entering your password, you tap the sign-in button, and... "Incorrect password, please try again."

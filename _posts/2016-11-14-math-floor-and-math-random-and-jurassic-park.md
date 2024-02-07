@@ -5,6 +5,9 @@ description: If you're new to math methods in JavaScript here are a few words ab
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
+views:
+  ua: 2512
+  ga4: 16
 ---
 
 In JavaScript, the `Math` object is something developers work with a lot. And two methods in particular, `Math.floor()` and `Math.random()`, are often utilized together. Let's take a quick look at both to see how we might use them to create a random text engine.

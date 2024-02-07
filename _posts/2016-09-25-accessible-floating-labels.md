@@ -5,6 +5,9 @@ description: Accessibility is a key piece to building the web, but for some reas
 image: img/posts/sunset-home-office-min.jpg
 tags: [accessibility, CSS, HTML, JavaScript]
 comments: true
+views:
+  ua: 11892
+  ga4: 500
 ---
 
 <!--<p class="message">This post has been updated to reflect a <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">CSS-only approach</a> without the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>-->

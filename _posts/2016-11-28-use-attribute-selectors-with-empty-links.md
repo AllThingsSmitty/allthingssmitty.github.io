@@ -5,6 +5,9 @@ description: If a hyperlink doesn't have a text value, use CSS attribute selecto
 image: img/posts/sunset-home-office-min.jpg
 tags: [CSS]
 comments: true
+views:
+  ua: 4361
+  ga4: 463
 ---
 
 Here's a quick CSS tip: if a hyperlink doesn't have a text value, _i.e._, it rendered empty, insert the `href` value in its place:
