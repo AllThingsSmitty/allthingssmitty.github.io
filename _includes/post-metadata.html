@@ -24,7 +24,7 @@
     <time class="data published" aria-label="Published on {{ page.date | date: '%B %-d, %Y' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <div class="data published" aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">{{ post.date | date: "%B %-d, %Y" }}</div>
+    <time class="data published" aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
   {% endif %}
 
   <div class="data reading-time">
