@@ -1,0 +1,25 @@
+{
+    "name": "Matt Smith",
+    "social": [
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/allthingssmitty",
+            "short": "twitter"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/allthingssmitty",
+            "short": "linkedin"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/allthingssmitty",
+            "short": "github"
+        },
+        {
+            "name": "CodePen",
+            "url": "https://codepen.io/allthingssmitty",
+            "short": "codepen"
+        }
+    ]
+}
