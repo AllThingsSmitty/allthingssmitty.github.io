@@ -87,10 +87,9 @@
   <link rel="manifest" href="{{ site.baseurl }}/img/favicon//manifest.webmanifest">
   <meta name="theme-color" content="#f8f9fa">
 
-  <link rel="me" href="{{ site.author.codepen }}">
-  <link rel="me" href="{{ site.author.github }}">
-  <link rel="me" href="{{ site.author.linkedin }}">
-  <link rel="me" href="{{ site.author.twitter }}">
+  {% for item in site.data.org.social %}
+    <link rel="me" href="{{ item.url }}">
+  {% endfor %}
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
 </head>

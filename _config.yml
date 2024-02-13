@@ -28,14 +28,6 @@ assets:
     sass_dir: _sass
     style: ":compressed"
 
-# About/contact
-author:
-  name: Matt Smith
-  codepen: ["https://codepen.io/", *brand_name]
-  github: ["https://github.com/", *brand_name]
-  linkedin: ["https://linkedin.com/in/", *brand_name]
-  twitter: ["https://twitter.com/", *brand_name]
-
 # Custom vars and plugins
 version: 2.0.0
 github:
