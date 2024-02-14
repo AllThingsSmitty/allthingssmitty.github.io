@@ -46,10 +46,10 @@
   
   <div class="data comments">
     {% if page.path contains '_posts' %}
-      <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ page.url }}"></span>
+      <span class="disqus-comment-count" data-disqus-url="{{ site.data.site.url }}{{ page.url }}"></span>
     {% endif %}
     {% if post.path contains '_posts' %}
-      <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}"></span>
+      <span class="disqus-comment-count" data-disqus-url="{{ site.data.site.url }}{{ post.url }}"></span>
     {% endif %}
   </div>
 
