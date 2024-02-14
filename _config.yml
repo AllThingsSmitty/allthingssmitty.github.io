@@ -2,16 +2,8 @@
 permalink: pretty
 
 # Setup
-title: Matt Smith
-tagline: "Web Dev | Front-End Engineer | UX Designer"
-url: "https://allthingssmitty.com"
-brand: &brand_name
-  allthingssmitty
 paginate: 3
 baseurl: ""
-description: "Matt Smith is a Maine-based application developer who builds solutions to deliver engaging user experiences."
-analytics_id: UA-55352436-3
-ga4Id: G-B17534YEJY
 timezone: America/New_York
 
 # Assets

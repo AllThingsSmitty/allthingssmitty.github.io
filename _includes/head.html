@@ -2,12 +2,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>{% if page.title == "Home" %}{{ site.title }} - {{ site.tagline }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}</title>
+  <title>{% if page.title == "Home" %}{{ site.data.site.title }} - {{ site.data.site.tagline }}{% else %}{{ page.title }} - {{ site.data.site.title }}{% endif %}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}"> 
 
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:author" content="{{ site.url }}/about/">
+    <meta property="article:author" content="{{ site.data.site.url }}/about/">
   {% endif %}
 
   {% if page.categories %}
@@ -29,56 +29,56 @@
   {% endif %}
 
   {% if page.url %}
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.data.site.url }}{{ page.url }}">
   {% else %}
-    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:url" content="{{ site.data.site.url }}">
   {% endif %}
 
   {% if page.title %}
-    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:title" content="{{ page.title }} - {{ site.data.site.title }}">
   {% else %}
-    <meta property="og:title" content="{{ site.title }} - {{ site.tagline }}">
+    <meta property="og:title" content="{{ site.data.site.title }} - {{ site.data.site.tagline }}">
   {% endif %}
 
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.site.description }}{% endif %}">
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% else %}
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.data.site.description }}">
   {% endif %}
  
   {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="og:image" content="{{ ssite.data.site.url }}/img/posts/sunset-home-office-min.jpg">
   {% else %}
-    <meta property="og:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="og:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
   {% endif %}
 
   {% if page.image %}
-    <meta property="twitter:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="twitter:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
   {% else %}
-    <meta property="twitter:image" content="{{ site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="twitter:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
   {% endif %}
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ site.brand }}">
-  <meta name="twitter:creator" content="@{{ site.brand }}">
+  <meta name="twitter:site" content="@{{ site.data.site.brand }}">
+  <meta name="twitter:creator" content="@{{ site.data.site.brand }}">
   
   {% if page.url %}
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:url" content="{{ site.data.site.url }}{{ page.url }}">
   {% else %}
-    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:url" content="{{ site.data.site.url }}">
   {% endif %}
 
   {% if page.title %}
-    <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.data.site.title }}">
   {% else %}
-    <meta name="twitter:title" content="{{ site.title }} - {{ site.tagline }}">
+    <meta name="twitter:title" content="{{ site.data.site.title }} - {{ site.data.site.tagline }}">
   {% endif %}
 
   {% if page.description %}
     <meta property="twitter:description" content="{{ page.description }}">
   {% else %}
-    <meta property="twitter:description" content="{{ site.description }}">
+    <meta property="twitter:description" content="{{ site.data.site.description }}">
   {% endif %}
 
   <link rel="icon" href="{{ site.baseurl }}/img/favicon/favicon.ico?v={{ site.time | date: '%s' }}" sizes="any">
@@ -91,5 +91,5 @@
     <link rel="me" href="{{ item.url }}">
   {% endfor %}
 
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.data.site.title }}" href="{{ site.baseurl }}/atom.xml">
 </head>

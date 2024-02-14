@@ -6,7 +6,7 @@ layout: null
 
   <!--  Homepage -->
   <url>
-    <loc>https://allthingssmitty.com/</loc>
+    <loc>{{ site.data.site.url }}</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@ layout: null
 
   {% for page in site.html_pages %}
   <url>
-    <loc>{{ site.url }}{{ page.url }}/</loc>
+    <loc>{{ site.data.site.url }}{{ page.url }}/</loc>
     {% if page.last_updated %}
     <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
     {% elsif page.date %}
