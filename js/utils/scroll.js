@@ -5,11 +5,7 @@
   
   function handleScroll() {
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    if (rootElement.scrollTop / scrollTotal > 0.3) {
-      scrollToTopBtn.classList.add('showBtn');
-    } else {
-      scrollToTopBtn.classList.remove('showBtn');
-    }
+    scrollToTopBtn.classList.toggle('showBtn', rootElement.scrollTop / scrollTotal > 0.3);
   }
   
   function scrollToTop() {
