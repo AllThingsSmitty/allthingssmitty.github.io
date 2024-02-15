@@ -26,7 +26,7 @@
 
     {% if sameTagCount >= minCommonTags %}
       <li class="related__item">
-        <a href="{{ site.baseurl }}{{ post.url }}">
+        <a href="{{ site.data.site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         <div class="archive-date">{{ post.date | date: "%B %-d, %Y" }}</div>
