@@ -3,7 +3,7 @@
   <ul class="related__list">
     {% for post in site.posts limit:3 %}
       <li class="related__item">
-        <a href="{{ site.baseurl }}{{ post.url }}">
+        <a href="{{ site.data.site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         <div class="archive-date">{{ post.date | date_to_string }}</div>

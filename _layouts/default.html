@@ -10,11 +10,11 @@
           <a href="#content">Skip to main content</a>
         </div>
         <nav class="header-nav" aria-label="Main navigation">
-          <h1 class="header-nav__title"><a href="{{ site.baseurl }}/">{{ site.data.site.title }}</a></h1>
+          <h1 class="header-nav__title"><a href="{{ site.data.site.baseurl }}/">{{ site.data.site.title }}</a></h1>
           <ul class="header-nav__list">
             {% for item in site.data.nav %}
               <li class="header-nav__item">
-                <a href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a>
+                <a href="{{ site.data.site.baseurl }}{{ item.link }}">{{ item.name }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -35,7 +35,7 @@
       </footer>
     </div>
     
-    <script async src="{{ site.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"></script>
+    <script async src="{{ site.data.site.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"></script>
     <script async id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js"></script>
     {% if jekyll.environment == "production" %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.analytics.ga4Id }}"></script>

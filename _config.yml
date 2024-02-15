@@ -3,7 +3,6 @@ permalink: pretty
 
 # Setup
 paginate: 3
-baseurl: ""
 timezone: America/New_York
 
 # Assets
