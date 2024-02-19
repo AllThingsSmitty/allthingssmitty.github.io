@@ -1,10 +1,10 @@
 <div class="pagination" role="navigation" aria-label="Go to the next or previous page">
   {% if paginator.total_pages > 1 %}
     {% if paginator.previous_page %}
-      <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.data.site.baseurl }}">Newer posts</a>
+      <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.data.org.baseurl }}">Newer posts</a>
     {% endif %}
     {% if paginator.next_page %}
-      <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.data.site.baseurl }}">Older posts</a>
+      <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.data.org.baseurl }}">Older posts</a>
     {% endif %}
   {% else %}
     {% if page.next.url %}

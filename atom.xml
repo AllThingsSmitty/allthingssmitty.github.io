@@ -5,21 +5,21 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.data.site.title }}</title>
- <link href="{{ site.data.site.url }}{{ site.data.site.baseurl }}/atom.xml" rel="self"/>
- <link href="{{ site.data.site.url }}{{ site.data.site.baseurl }}/"/>
+ <title>{{ site.data.org.title }}</title>
+ <link href="{{ site.data.org.url }}{{ site.data.org.baseurl }}/atom.xml" rel="self"/>
+ <link href="{{ site.data.org.url }}{{ site.data.org.baseurl }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.data.site.url }}</id>
+ <id>{{ site.data.org.url }}</id>
  <author>
-   <name>{{ site.data.site.title }}</name>
+   <name>{{ site.data.org.title }}</name>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="{{ site.data.site.url }}{{ site.data.site.baseurl }}{{ post.url }}"/>
+   <link href="{{ site.data.org.url }}{{ site.data.org.baseurl }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.data.site.url }}{{ post.id }}</id>
+   <id>{{ site.data.org.url }}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
