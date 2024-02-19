@@ -2,12 +2,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>{% if page.title == "Home" %}{{ site.data.site.title }} - {{ site.data.site.tagline }}{% else %}{{ page.title }} - {{ site.data.site.title }}{% endif %}</title>
-  <link rel="stylesheet" href="{{ site.data.site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}"> 
+  <title>{% if page.title == "Home" %}{{ site.data.org.title }} - {{ site.data.org.tagline }}{% else %}{{ page.title }} - {{ site.data.org.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ site.data.org.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}"> 
 
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:author" content="{{ site.data.site.url }}/about/">
+    <meta property="article:author" content="{{ site.data.org.url }}/about/">
   {% endif %}
 
   {% if page.categories %}
@@ -29,67 +29,67 @@
   {% endif %}
 
   {% if page.url %}
-    <meta property="og:url" content="{{ site.data.site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.data.org.url }}{{ page.url }}">
   {% else %}
-    <meta property="og:url" content="{{ site.data.site.url }}">
+    <meta property="og:url" content="{{ site.data.org.url }}">
   {% endif %}
 
   {% if page.title %}
-    <meta property="og:title" content="{{ page.title }} - {{ site.data.site.title }}">
+    <meta property="og:title" content="{{ page.title }} - {{ site.data.org.title }}">
   {% else %}
-    <meta property="og:title" content="{{ site.data.site.title }} - {{ site.data.site.tagline }}">
+    <meta property="og:title" content="{{ site.data.org.title }} - {{ site.data.org.tagline }}">
   {% endif %}
 
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.site.description }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.org.description }}{% endif %}">
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% else %}
-    <meta property="og:description" content="{{ site.data.site.description }}">
+    <meta property="og:description" content="{{ site.data.org.description }}">
   {% endif %}
  
   {% if page.image %}
-    <meta property="og:image" content="{{ ssite.data.site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="og:image" content="{{ ssite.data.org.url }}/img/posts/sunset-home-office-min.jpg">
   {% else %}
-    <meta property="og:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="og:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg">
   {% endif %}
 
   {% if page.image %}
-    <meta property="twitter:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg">
   {% else %}
-    <meta property="twitter:image" content="{{ site.data.site.url }}/img/posts/sunset-home-office-min.jpg">
+    <meta property="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg">
   {% endif %}
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ site.data.site.brand }}">
-  <meta name="twitter:creator" content="@{{ site.data.site.brand }}">
+  <meta name="twitter:site" content="@{{ site.data.org.brand }}">
+  <meta name="twitter:creator" content="@{{ site.data.org.brand }}">
   
   {% if page.url %}
-    <meta name="twitter:url" content="{{ site.data.site.url }}{{ page.url }}">
+    <meta name="twitter:url" content="{{ site.data.org.url }}{{ page.url }}">
   {% else %}
-    <meta name="twitter:url" content="{{ site.data.site.url }}">
+    <meta name="twitter:url" content="{{ site.data.org.url }}">
   {% endif %}
 
   {% if page.title %}
-    <meta name="twitter:title" content="{{ page.title }} - {{ site.data.site.title }}">
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.data.org.title }}">
   {% else %}
-    <meta name="twitter:title" content="{{ site.data.site.title }} - {{ site.data.site.tagline }}">
+    <meta name="twitter:title" content="{{ site.data.org.title }} - {{ site.data.org.tagline }}">
   {% endif %}
 
   {% if page.description %}
     <meta property="twitter:description" content="{{ page.description }}">
   {% else %}
-    <meta property="twitter:description" content="{{ site.data.site.description }}">
+    <meta property="twitter:description" content="{{ site.data.org.description }}">
   {% endif %}
 
-  <link rel="icon" href="{{ site.data.site.baseurl }}/img/favicon/favicon.ico?v={{ site.time | date: '%s' }}" sizes="any">
-  <link rel="icon" href="{{ site.data.site.baseurl}}/img/favicon/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ site.data.site.baseurl }}/img/favicon/apple-touch-icon.png?v={{ site.time | date: '%s' }}">
-  <link rel="manifest" href="{{ site.data.site.baseurl }}/img/favicon//manifest.webmanifest">
+  <link rel="icon" href="{{ site.data.org.baseurl }}/img/favicon/favicon.ico?v={{ site.time | date: '%s' }}" sizes="any">
+  <link rel="icon" href="{{ site.data.org.baseurl}}/img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ site.data.org.baseurl }}/img/favicon/apple-touch-icon.png?v={{ site.time | date: '%s' }}">
+  <link rel="manifest" href="{{ site.data.org.baseurl }}/img/favicon//manifest.webmanifest">
   <meta name="theme-color" content="#f8f9fa">
 
   {% for item in site.data.org.social %}
     <link rel="me" href="{{ item.url }}">
   {% endfor %}
 
-  <link rel="alternate" type="application/atom+xml" title="{{ site.data.site.title }}" href="{{ site.data.site.baseurl }}/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.data.org.title }}" href="{{ site.data.org.baseurl }}/atom.xml">
 </head>
