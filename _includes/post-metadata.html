@@ -44,13 +44,25 @@
     </div>
   </div>
   
-  <div class="data comments">
-    {% if page.path contains '_posts' %}
-      <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ page.url }}"></span>
-    {% endif %}
-    {% if post.path contains '_posts' %}
-      <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ post.url }}"></span>
-    {% endif %}
-  </div>
+  {% if page.comments == true %}
+    <div class="data comments">
+      {% if page.path contains '_posts' %}
+        <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ page.url }}"></span>
+      {% endif %}
+      {% if post.path contains '_posts' %}
+        <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ post.url }}"></span>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if post.comments == true %}
+    <div class="data comments">
+      {% if page.path contains '_posts' %}
+        <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ page.url }}"></span>
+      {% endif %}
+      {% if post.path contains '_posts' %}
+        <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ post.url }}"></span>
+      {% endif %}
+    </div>
+  {% endif %}
 
 </div>
