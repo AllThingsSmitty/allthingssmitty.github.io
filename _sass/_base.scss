@@ -38,15 +38,6 @@ a {
     strong) {
     color: inherit;
   }
-
-  &:hover .social__icon {
-    transition: background-image ease var(--transition-duration);
-  }
-
-  &:focus-visible .social__icon {
-    outline: inherit;
-    outline-offset: inherit;
-  }
 }
 
 :focus {
