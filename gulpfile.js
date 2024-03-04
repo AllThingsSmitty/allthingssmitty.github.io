@@ -1,6 +1,12 @@
 const gulp = require('gulp');
+const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+
+gulp.task('clean', function () {
+  return gulp.src('js/**/*.min.js', {read: false})
+    .pipe(clean());
+});
 
 gulp.task('scripts', function() {
   return gulp.src([
@@ -11,3 +17,5 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 });
+
+gulp.task('default', gulp.series('clean', 'scripts'));
