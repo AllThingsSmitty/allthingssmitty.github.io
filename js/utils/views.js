@@ -1,13 +1,15 @@
 // page views
 (function () {
-  const pageViews = document.querySelectorAll('.page-views');
-  pageViews.forEach((e) => {
-    const numericValue = e.textContent;
-    const formattedValue = addCommas(numericValue);
-    e.textContent = formattedValue;
-  });
-
-  function addCommas(value) {
-    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const pageViews = [...document.querySelectorAll('.page-views')];
+  const addCommas = value => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  
+  try {
+    pageViews.forEach((e) => {
+      const numericValue = e.textContent;
+      const formattedValue = addCommas(numericValue);
+      e.textContent = formattedValue;
+    });
+  } catch (error) {
+    console.error('An error occurred:', error);
   }
 })();
