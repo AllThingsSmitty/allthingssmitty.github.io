@@ -35,7 +35,7 @@ video {
 That's the bare minimum needed for responsive video.
 
 <div class="embed">
-  <p data-height="500" data-theme-id="0" data-slug-hash="KNPOjp" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Responsive 'background-size: contain' Video" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/KNPOjp/">Responsive "background-size: contain" Video</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="500" data-theme-id="light" data-slug-hash="KNPOjp" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Responsive 'background-size: contain' Video" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/KNPOjp/">Responsive "background-size: contain" Video</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
@@ -53,7 +53,7 @@ video {
 ```
 
 <div class="embed">
-  <p data-height="500" data-theme-id="0" data-slug-hash="NbLLjb" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Responsive 'background-size: cover' Video" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/NbLLjb/">Responsive "background-size: cover" Video  </a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="500" data-theme-id="light" data-slug-hash="NbLLjb" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Responsive 'background-size: cover' Video" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/NbLLjb/">Responsive "background-size: cover" Video  </a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
