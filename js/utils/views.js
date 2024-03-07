@@ -1,15 +1,27 @@
 // page views
-(function () {
-  const pageViews = [...document.querySelectorAll('.page-views')];
-  const addCommas = value => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+{
+  const pageViews = document.querySelectorAll(".page-views");
+  const addCommas = (value) => {
+    try {
+      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    } catch (error) {
+      console.error(`Error adding commas: ${error}`);
+      return value;
+    }
+  };
   
   try {
     pageViews.forEach((e) => {
-      const numericValue = e.textContent;
-      const formattedValue = addCommas(numericValue);
-      e.textContent = formattedValue;
+      try {
+        const numericValue = e.textContent;
+        const formattedValue = addCommas(numericValue);
+        e.textContent = formattedValue;
+      } catch (error) {
+        console.error(`Error formatting page view value: ${error}`);
+      }
     });
   } catch (error) {
-    console.error('An error occurred:', error);
+    console.error(`Error processing page views: ${error}`);
   }
-})();
+}
+ 
