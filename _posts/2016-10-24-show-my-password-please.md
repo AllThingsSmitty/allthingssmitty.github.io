@@ -68,7 +68,7 @@ Now we'll call the toggle function when the "show/hide" button is clicked:
 ```
 
 <div class="embed">
-  <p data-height="450" data-theme-id="0" data-slug-hash="KgxmXv" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/KgxmXv/">Show Password</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="KgxmXv" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/KgxmXv/">Show Password</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 

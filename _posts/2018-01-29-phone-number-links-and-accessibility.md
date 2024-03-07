@@ -86,7 +86,7 @@ window.addEventListener('resize', () => {
 Here's our new pattern in action, with the element being replaced on load depending on whether the parent container is a specific size.
 
 <div class="embed">
-  <p data-height="450" data-theme-id="0" data-slug-hash="jYgRqV" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Phone Link Accessibility Dilemma" class="codepen">See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/jYgRqV/">Phone Link Accessibility Dilemma</a> by Matt Smith (<a href="https://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="jYgRqV" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Phone Link Accessibility Dilemma" class="codepen">See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/jYgRqV/">Phone Link Accessibility Dilemma</a> by Matt Smith (<a href="https://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="https://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 

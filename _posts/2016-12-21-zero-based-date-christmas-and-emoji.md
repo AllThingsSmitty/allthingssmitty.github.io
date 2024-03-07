@@ -43,6 +43,6 @@ So there's a bit of nuance with counting using some of the JavaScript `Date` met
 ## Okay, is it Christmas yet?
 
 <div class="embed">
-  <p data-height="450" data-theme-id="0" data-slug-hash="MbppLg" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Is It Christmas?" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/MbppLg/">Is It Christmas?</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="MbppLg" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Is It Christmas?" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/MbppLg/">Is It Christmas?</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>

@@ -117,7 +117,7 @@ Let's run our check for Font Awesome in an `if` statement:
 If the `font-family` isn't `FontAwesome` we'll add a local copy of the library to the `<head>`. Lastly, now that we've performed the check we'll remove the `<span>` element from the `<body>` at the end of the function.
 
 <div class="embed">
-  <p data-height="400" data-theme-id="0" data-slug-hash="YqjBqW" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/YqjBqW/">Did Font Awesome Load?</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="YqjBqW" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/YqjBqW/">Did Font Awesome Load?</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
