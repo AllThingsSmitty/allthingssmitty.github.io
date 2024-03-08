@@ -9,7 +9,7 @@
       return value;
     }
   };
-  
+
   try {
     pageViews.forEach((e) => {
       try {
@@ -24,4 +24,3 @@
     console.error(`Error processing page views: ${error}`);
   }
 }
- 

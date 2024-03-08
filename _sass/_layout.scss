@@ -1,11 +1,11 @@
 .page-container {
   display: flex;
   flex-direction: column;
-  margin-left:  auto;
+  margin-left: auto;
   margin-right: auto;
   max-width: var(--large-breakpoint);
   min-height: 100vh;
-  padding-left:  1.25rem;
+  padding-left: 1.25rem;
   padding-right: 1.25rem;
 
   // WebKit mobile viewport bug fix
@@ -25,7 +25,7 @@ main {
 
 .gap-bottom-top-base {
   margin-bottom: 1.25rem;
-  margin-top: 3rem; 
+  margin-top: 3rem;
 }
 
 .page-footer {
@@ -55,13 +55,15 @@ main {
   border: none;
   border-radius: 50%;
   bottom: 1rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .6), 0 2px 24px 0 rgba(84, 19, 19, .16);
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.6),
+    0 2px 24px 0 rgba(84, 19, 19, 0.16);
   cursor: pointer;
   height: var(--d);
   opacity: 0;
-  padding: .75rem;
+  padding: 0.75rem;
   position: fixed;
-  right: 1rem;  
+  right: 1rem;
   transform: translateY(100px);
   transition: all 0.5s ease;
   width: var(--d);

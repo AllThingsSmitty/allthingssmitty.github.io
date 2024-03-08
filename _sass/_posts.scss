@@ -13,18 +13,18 @@
     a {
       color: inherit;
       text-decoration: none;
-      
+
       &:hover {
         color: var(--color-primary-info-text);
       }
     }
-  }  
-  
+  }
+
   &__title--sm {
     font-size: var(--font-size-large);
   }
 
-  &__meta {  
+  &__meta {
     --flow-space: 1.25rem;
     column-gap: 1.25rem;
     display: flex;
@@ -37,18 +37,18 @@
       color: var(--color-shades-primary-glare);
       display: flex;
       font-size: calc(var(--font-size-small) * var(--h));
-      padding-bottom: calc(var(--flow-space) * .25);
-      
+      padding-bottom: calc(var(--flow-space) * 0.25);
+
       @media (max-width: $large-breakpoint) {
         font-size: var(--font-size-x-small);
       }
- 
+
       &::before {
         align-self: center;
         background-size: var(--icon);
         content: "";
         height: var(--icon);
-        margin-right: calc(var(--flow-space) * .35);
+        margin-right: calc(var(--flow-space) * 0.35);
         width: var(--icon);
 
         @media (max-width: $large-breakpoint) {
@@ -66,7 +66,7 @@
             </svg>");
         }
       }
-      
+
       &.published {
         &::before {
           background-image: url("data:image/svg+xml,\
@@ -75,7 +75,7 @@
             </svg>");
         }
       }
-      
+
       &.reading-time {
         &::before {
           background-image: url("data:image/svg+xml,\
@@ -107,7 +107,7 @@
 
 .page__image {
   display: flex;
-  
+
   &--center {
     display: flex;
     justify-content: center;
@@ -124,7 +124,7 @@
     img {
       border: 1px solid var(--color-stroke);
       width: 65%;
-      
+
       @media (max-width: $large-breakpoint) {
         width: 85%;
       }
@@ -152,7 +152,7 @@
   .tags__title {
     margin-top: 0;
   }
-  
+
   .tags__item {
     margin-bottom: var(--flow-space);
   }
@@ -175,7 +175,7 @@
 
 .gutter-base {
   --gutter: 1rem;
-  
+
   &.cluster {
     align-items: center;
     display: flex;
@@ -187,8 +187,8 @@
   }
 
   &.shrink {
-    padding-bottom: .25rem;
-    padding-top: .5rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.5rem;
   }
 
   &.stretch {
@@ -198,15 +198,15 @@
 
 .pill {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background: transparent;
   border: 1px solid var(--color-stroke);
   border-radius: 1rem;
   color: var(--color-shades-primary-text);
-  font-size: .675rem;
-  padding: .5rem .675rem;
+  font-size: 0.675rem;
+  padding: 0.5rem 0.675rem;
   text-decoration: none;
-  transition: all ease .2s;
+  transition: all ease 0.2s;
 
   &:focus-visible,
   &:hover {
@@ -217,5 +217,5 @@
 
   &:focus-visible {
     outline: inherit;
-  }  
+  }
 }
