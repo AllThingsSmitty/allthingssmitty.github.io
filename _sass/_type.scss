@@ -1,10 +1,13 @@
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--color-shades-primary);
   font-weight: 600;
   line-height: 1.25;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin-top: 2rem;
 }
 
@@ -16,12 +19,12 @@ aside,
 blockquote {
   &.message {
     background-color: var(--color-shades-primary-bright);
-    border-radius: .25rem;
-    color:var(--color-state-info-text);
-    font-size: .9rem;
+    border-radius: 0.25rem;
+    color: var(--color-state-info-text);
+    font-size: 0.9rem;
     margin: 1.5rem 0;
     padding: clamp(1.25rem, 1.5rem, 2rem);
-    
+
     a {
       color: currentColor;
     }
@@ -48,24 +51,27 @@ aside {
   }
 
   .flow-space-size-2 {
-    --flow-space: clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem)
+    --flow-space: clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem);
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin-top: 0;
-    
+
     &:not([class]) {
       padding-inline-start: 2.5ch;
-      
+
       > li {
         margin-bottom: 1rem;
-        padding-inline-start: .5rem;
+        padding-inline-start: 0.5rem;
       }
     }
-  }  
+  }
 }
 
-h1, h2, h3,
+h1,
+h2,
+h3,
 aside,
 blockquote,
 caption,

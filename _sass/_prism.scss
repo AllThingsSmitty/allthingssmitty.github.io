@@ -10,11 +10,11 @@
 .token.doctype,
 .token.prolog,
 .token.punctuation {
-	color: var(--color-mid-text);
+  color: var(--color-mid-text);
 }
 
 .namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .token.comment,
@@ -38,7 +38,7 @@
 
 .token.boolean,
 .token.number {
-  color: var(--color-syntax-primary-glare)
+  color: var(--color-syntax-primary-glare);
 }
 
 .token.selector,
@@ -54,15 +54,15 @@
 .token.entity,
 .token.url,
 .language-css .token.string {
-  color: var(--color-syntax-secondary)
+  color: var(--color-syntax-secondary);
 }
 
 .token.entity {
-  cursor: help
+  cursor: help;
 }
 
 .namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 code {
@@ -70,7 +70,7 @@ code {
   -webkit-box-decoration-break: clone;
   font-size: var(--font-size-small);
   hyphens: none;
-  padding: .125em .25em;
+  padding: 0.125em 0.25em;
   tab-size: 2;
   text-align: left;
   word-break: normal;

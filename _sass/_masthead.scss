@@ -2,7 +2,7 @@
   &__brand {
     color: var(--color-shades-secondary-glare);
     margin-bottom: 5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     padding-top: 1rem;
 
     .header-nav {
@@ -17,23 +17,23 @@
         font-size: var(--font-size-large);
         margin: 0;
       }
-      
+
       .header-nav__list {
         display: flex;
         list-style: none;
         margin: 0;
-      
+
         .header-nav__item {
           &:not(:last-child) {
             margin-right: 1.25rem;
           }
         }
       }
-      
+
       a {
         color: inherit;
         text-decoration: none;
-      
+
         &:hover {
           color: var(--color-primary-info-text);
         }
@@ -42,9 +42,9 @@
   }
 
   &__tagline {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     text-transform: uppercase;
   }
 }
@@ -56,7 +56,7 @@
     left: -500px;
     overflow: hidden;
     position: absolute;
-  
+
     &:active,
     &:focus-visible {
       left: 1rem;
