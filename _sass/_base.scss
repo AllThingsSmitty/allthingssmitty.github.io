@@ -11,14 +11,10 @@ body {
 }
 
 html {
-  font-size: var(--font-size-root);
+  font-size: #{"clamp(var(--font-size-root), 0.964rem + 0.446vw, var(--font-size-large))"};
   line-height: var(--font-line-height);
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  
-  @media (min-width: $large-breakpoint) {
-    font-size: var(--font-size-large);
-  }
 }
 
 body {
@@ -29,13 +25,11 @@ body {
 
 a {
   color: var(--color-primary-info-text);
-  text-decoration-thickness: .075rem;
+  text-decoration-thickness: 0.075rem;
   text-underline-offset: 1.25px;
   transition: color ease var(--transition-duration);
 
-  :is(code,
-    code[class*="language-"],
-    strong) {
+  :is(code, code[class*="language-"], strong) {
     color: inherit;
   }
 }
@@ -44,11 +38,11 @@ a {
   &:not(:focus-visible) {
     outline: none;
   }
-}
 
-:focus-visible {
-  outline: 2px solid;
-  outline-offset: .15rem;
+  &-visible {
+    outline: 2px solid;
+    outline-offset: 0.15rem;
+  }
 }
 
 .sr-only {
