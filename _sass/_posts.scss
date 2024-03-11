@@ -134,11 +134,8 @@
 
 .archive-date {
   color: var(--color-shades-primary-glare);
-  font-size: var(--font-size-small);
-
-  @media (max-width: $large-breakpoint) {
-    font-size: var(--font-size-x-small);
-  }
+  display: flex;
+  font-size: #{"clamp(var(--font-size-x-small), 0.964rem + 0.446vw, var(--font-size-small))"};
 }
 
 .embed {
