@@ -4,24 +4,30 @@ title: Home
 ---
 
 {% for post in paginator.posts %}
-  <article aria-label="{{ post.title }}">
-    <div class="post">
-      <header class="post-header">
-        <h2 class="post-header__title">
-          <a href="{{ site.data.org.baseurl }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h2>
-        {% include post-metadata.html %}
-      </header>
-      <div class="flow">
-        <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-        <p><a href="{{ post.url }}" aria-label="Read more of '{{ post.title }}'">Read more</a></p>
-        {% include tags.html %}
-      </div>
+<article aria-label="{{ post.title }}">
+  <div class="post">
+    <header class="post-header">
+      <h2 class="post-header__title">
+        <a href="{{ site.data.org.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+      {% include post-metadata.html %}
+    </header>
+    <div class="flow">
+      <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+      <p>
+        <a
+          href="{{ post.url }}"
+          aria-label="Learn more about '{{ post.title }}'"
+          >Learn more</a
+        >
+      </p>
+      {% include tags.html %}
     </div>
-    {% if forloop.last == false %}<div class="border-rule"></div>{% endif %}
-  </article>
-{% endfor %}
-
-{% include pagination.html %}
+  </div>
+  {% if forloop.last == false %}
+  <div class="border-rule"></div>
+  {% endif %}
+</article>
+{% endfor %} {% include pagination.html %}
