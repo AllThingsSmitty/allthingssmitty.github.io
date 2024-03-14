@@ -26,7 +26,7 @@ body {
 a {
   color: var(--color-primary-info-text);
   text-decoration-thickness: 0.075rem;
-  text-underline-offset: 1.25px;
+  text-underline-offset: 3px;
   transition: color ease var(--transition-duration);
 
   :is(code, code[class*="language-"], strong) {

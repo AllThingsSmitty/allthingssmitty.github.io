@@ -1,12 +1,15 @@
+@mixin code-styles {
+  background-color: var(--color-mid-bg);
+  border: 1px solid var(--color-stroke);
+}
+
 code,
 pre {
   font-family: var(--font-tertiary-regular);
 }
 
 code {
-  background-color: var(--color-mid-bg);
-  border: 1px solid var(--color-stroke);
-  padding: 0.15rem 0.25rem;
+  @include code-styles;
 
   &:not([class]) {
     white-space: nowrap;
@@ -15,8 +18,7 @@ code {
 
 pre {
   > code {
-    background-color: var(--color-mid-bg);
-    border: 1px solid var(--color-stroke);
+    @include code-styles;
     color: inherit;
     padding: 0;
   }
