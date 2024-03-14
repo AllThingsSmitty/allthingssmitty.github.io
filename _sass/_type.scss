@@ -1,9 +1,13 @@
-h1,
-h2,
-h3 {
+@mixin heading-styles {
   color: var(--color-shades-primary);
   font-weight: 600;
   line-height: 1.25;
+}
+
+h1,
+h2,
+h3 {
+  @include heading-styles;
 }
 
 h2,
@@ -18,28 +22,26 @@ h3 {
 aside,
 blockquote {
   &.message {
+    --spacer: 1.5rem;
     background-color: var(--color-shades-primary-bright);
     border-radius: 0.25rem;
     color: var(--color-state-info-text);
     font-size: 0.9rem;
-    margin: 1.5rem 0;
+    margin: var(--spacer) 0;
     padding: clamp(1.25rem, 1.5rem, 2rem);
 
+    &.notification {
+      background-color: var(--color-state-warn-bg);
+      color: var(--color-state-warn-text);
+      margin: var(--spacer) 0;
+    }
     a {
       color: currentColor;
     }
 
     @media (min-width: 53.125rem) {
-      margin: 1.5rem -1.75rem;
+      margin: var(--spacer) -1.75rem;
     }
-  }
-}
-
-aside {
-  &.message.notification {
-    background-color: var(--color-state-warn-bg);
-    color: var(--color-state-warn-text);
-    margin: 1.5rem 0;
   }
 }
 

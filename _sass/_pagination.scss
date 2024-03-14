@@ -3,27 +3,24 @@
   display: flex;
   justify-content: center;
   margin: 3rem 0;
-}
 
-.pagination__item {
-  border: 2px solid var(--color-primary-info-bg);
-  border-radius: 3rem;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: border-color ease var(--transition-duration);
-  width: 50%;
+  &__item {
+    border: 2px solid var(--color-primary-info-bg);
+    border-radius: 3rem;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color ease var(--transition-duration);
+    width: 50%;
 
-  &:first-child:not(:last-child) {
-    margin-right: 0.5rem;
-  }
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
 
-  &:focus,
-  &:hover {
-    border-color: var(--color-primary-info);
-  }
-
-  &:focus {
-    outline: inherit;
+    &:focus,
+    &:hover {
+      border-color: var(--color-primary-info);
+      outline: inherit;
+    }
   }
 }

@@ -1,15 +1,21 @@
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .heading {
   &__brand {
+    --spacer-sm: 0.5rem;
+    --spacer-lg: 1rem;
     color: var(--color-shades-secondary-glare);
     margin-bottom: 5rem;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    padding-bottom: var(--spacer-sm);
+    padding-top: var(--spacer-lg);
 
     .header-nav {
-      align-items: center;
-      display: flex;
+      @include flex-center;
       font-weight: 600;
-      justify-content: space-between;
       line-height: 1.75;
 
       .header-nav__title {
@@ -19,7 +25,7 @@
       }
 
       .header-nav__list {
-        display: flex;
+        @include flex-center;
         list-style: none;
         margin: 0;
 
@@ -44,7 +50,7 @@
   &__tagline {
     font-size: 0.8rem;
     font-weight: 500;
-    margin-top: 0.5rem;
+    margin-top: var(--spacer-sm);
     text-transform: uppercase;
   }
 }
@@ -59,13 +65,13 @@
 
     &:active,
     &:focus-visible {
-      left: 1rem;
+      left: var(--spacer-lg);
       outline-offset: 0;
       overflow: visible;
       padding: 0.25rem;
       position: absolute;
       text-decoration: none;
-      top: 1rem;
+      top: var(--spacer-sm);
     }
 
     &:hover {
