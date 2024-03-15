@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-
   <body>
     <div class="page-container">
       <header class="heading__brand" role="banner">
@@ -37,34 +36,16 @@
         </div>
         <button
           class="scrollToTop"
-          aria-label="scroll to the top of the page"
-        ></button>
+          aria-label="scroll to the top of the page"></button>
       </footer>
     </div>
 
     <script
       async
-      src="{{ site.data.org.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"
-    ></script>
+      src="{{ site.data.org.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"></script>
     <script
       async
       id="dsq-count-scr"
-      src="//allthingssmitty-com.disqus.com/count.js"
-    ></script>
-    {% if jekyll.environment == "production" %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={{ site.data.analytics.ga4Id }}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "{{ site.data.analytics.ga4Id }}");
-    </script>
-    {% endif %}
+      src="//allthingssmitty-com.disqus.com/count.js"></script>
   </body>
 </html>
