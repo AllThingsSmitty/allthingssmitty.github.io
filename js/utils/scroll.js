@@ -1,14 +1,11 @@
-// scroll
-{
-  const scrollToTopBtn = document.querySelector(".scrollToTop");
-  const rootElement = document.documentElement;
+(function () {
+  const d = document;
+  const scrollToTopBtn = d.querySelector(".scrollToTop");
+  const rootElement = d.documentElement;
 
   const handleScroll = () => {
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    scrollToTopBtn.classList.toggle(
-      "showBtn",
-      rootElement.scrollTop / scrollTotal > 0.3
-    );
+    scrollToTopBtn.classList.toggle("showBtn", rootElement.scrollTop / scrollTotal > 0.3);
   };
 
   const scrollToTop = () => {
@@ -20,8 +17,8 @@
 
   try {
     scrollToTopBtn.addEventListener("click", scrollToTop);
-    document.addEventListener("scroll", handleScroll);
+    d.addEventListener("scroll", handleScroll);
   } catch (error) {
     console.error(`An error occurred: ${error}`);
   }
-}
+})();
