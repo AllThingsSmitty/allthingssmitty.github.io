@@ -6,11 +6,11 @@ const cp = require("child_process");
 const browserSync = require("browser-sync").create();
 
 function clean() {
-  return del(["_site", ".sass-cache", "js/**/*.min.js"]);
+  return del(["./_site", ".sass-cache", "./js/**/*.min.js"]);
 }
 
 function scripts() {
-  return src(["js/**/*.js"]).pipe(concat("main.min.js")).pipe(uglify()).pipe(dest("./js"));
+  return src(["./js/**/*.js"]).pipe(concat("main.min.js")).pipe(uglify()).pipe(dest("./js"));
 }
 
 function jekyll(done) {
@@ -19,7 +19,7 @@ function jekyll(done) {
 
 function serve(done) {
   browserSync.init({
-    server: "_site",
+    server: "./_site",
   });
   done();
 }
@@ -31,7 +31,7 @@ function reload(done) {
 
 const watcher = () => {
   watch(
-    ["_sass/*", "js/*/*.js", "*.html", "_includes/*html", "_layouts/*.html", "_posts/*"],
+    ["./_sass/*", "./js/*/*.js", "*.html", "./_includes/*html", "./_layouts/*.html", "./_posts/*"],
     series(scripts, jekyll, reload),
   );
 };
