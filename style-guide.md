@@ -31,7 +31,7 @@ this
 <p>this</p>
 ```
 
-<div class="border-rule"></div>
+<hr class="border-rule" />
 
 ## Headings
 
@@ -41,7 +41,7 @@ There are three primary heading styles used:
 ## Heading 2 (h2)
 ### Heading 3 (h3)
 
-<div class="border-rule"></div>
+<hr class="border-rule" />
 
 ## Code
 
@@ -75,7 +75,7 @@ adder(2, 6);
 ```
 -->
 
-<div class="border-rule"></div>
+<hr class="border-rule" />
 
 ## Media
 
@@ -117,7 +117,7 @@ Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spaci
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
-<div class="border-rule"></div>
+<hr class="border-rule" />
 
 ## Notes
 
@@ -137,7 +137,7 @@ Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spaci
 </aside>
 {:/}
 
-<div class="border-rule"></div>
+<hr class="border-rule" />
 
 ### Emoji
 
