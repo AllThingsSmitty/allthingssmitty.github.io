@@ -19,6 +19,7 @@ main {
 }
 
 .border-rule {
+  border: none;
   border-top: 1px solid var(--color-primary-info-bg);
   margin: 1.75rem 0;
 }
