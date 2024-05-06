@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 views:
   ua: 29170
-  ga4: 2076
+  ga4: 2140
 ---
 
 Here's a bit of CSS trivia that, at least on the surface, seems straightforward but that I see misused repeatedly. Let's start with an oldie-but-goodie CSS interview question:
