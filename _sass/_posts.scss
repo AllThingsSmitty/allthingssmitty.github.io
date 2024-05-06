@@ -12,17 +12,10 @@
 
     a {
       color: inherit;
-      -webkit-text-decoration: underline solid rgba(11, 12, 12, 0);
-      text-decoration: underline solid rgba(11, 12, 12, 0);
-      transition: -webkit-text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration),
-        -webkit-text-decoration-color var(--transition-duration);
+      text-decoration: none;
 
       &:hover {
-        //color: var(--color-primary-info-text);
-        -webkit-text-decoration-color: inherit;
-        text-decoration-color: inherit;
+        color: var(--color-primary-info-text);
       }
     }
   }
