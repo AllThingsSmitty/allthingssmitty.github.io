@@ -21,8 +21,9 @@
 
       &:focus-visible,
       &:hover {
-        -webkit-text-decoration-color: inherit;
+        text-decoration: underline;
         text-decoration-color: inherit;
+        text-decoration-thickness: 0.25rem;
       }
 
       &:focus-visible {
