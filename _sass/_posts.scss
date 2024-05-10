@@ -12,10 +12,21 @@
 
     a {
       color: inherit;
-      text-decoration: none;
+      -webkit-text-decoration: underline solid var(--color-primary-hexa-1);
+      text-decoration: underline solid var(--color-primary-hexa-1);
+      transition: -webkit-text-decoration-color var(--transition-duration);
+      transition: text-decoration-color var(--transition-duration);
+      transition: text-decoration-color var(--transition-duration),
+        -webkit-text-decoration-color var(--transition-duration);
 
+      &:focus-visible,
       &:hover {
-        color: var(--color-primary-info-text);
+        -webkit-text-decoration-color: inherit;
+        text-decoration-color: inherit;
+      }
+
+      &:focus-visible {
+        outline: unset;
       }
     }
   }
