@@ -14,13 +14,9 @@ title: Home
     </header>
     <div class="flow">
       <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-      <p>
-        <a href="{{ post.url }}" aria-label="Learn more about '{{ post.title }}'">Learn more</a>
-      </p>
-      {% include tags.html %}
     </div>
   </div>
-  {% if forloop.last == false %}
+  {% include tags.html %} {% if forloop.last == false %}
   <hr class="border-rule" />
   {% endif %}
 </article>
