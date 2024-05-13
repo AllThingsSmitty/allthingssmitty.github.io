@@ -6,15 +6,15 @@ title: Home
 {% for post in paginator.posts %}
 <article aria-label="{{ post.title }}">
   <div class="post">
-    <header class="post-header">
-      <h2 class="post-header__title">
-        <a href="{{ site.data.org.baseurl }}{{ post.url }}"> {{ post.title }} </a>
-      </h2>
-      {% include post-metadata.html %}
-    </header>
-    <div class="flow">
-      <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-    </div>
+    <a href="{{ site.data.org.baseurl }}{{ post.url }}" class="post-link">
+      <header class="post-header">
+        <h2 class="post-header__title">{{ post.title }}</h2>
+        {% include post-metadata.html %}
+      </header>
+      <div class="flow">
+        <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+      </div>
+    </a>
   </div>
   {% include tags.html %} {% if forloop.last == false %}
   <hr class="border-rule" />
