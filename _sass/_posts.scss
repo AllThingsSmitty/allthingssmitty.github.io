@@ -1,3 +1,37 @@
+.post-link {
+  color: inherit;
+  text-decoration: none;
+
+  .post-header {
+    &__title {
+      -webkit-text-decoration: underline solid rgba(11, 12, 12, 0);
+      text-decoration: underline solid rgba(11, 12, 12, 0);
+      transition: text-decoration-color var(--transition-duration);
+      transition: text-decoration-color var(--transition-duration),
+        -webkit-text-decoration-color var(--transition-duration);
+
+      @media (max-width: $large-breakpoint) {
+        text-decoration-color: rgba(11, 12, 12, 1);
+        text-decoration-thickness: 0.25rem;
+      }
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .post-header {
+      &__title {
+        text-decoration-color: rgba(11, 12, 12, 1);
+        text-decoration-thickness: 0.25rem;
+      }
+    }
+  }
+
+  @media (max-width: $large-breakpoint) {
+    font-size: var(--font-size-x-small);
+  }
+}
+
 .page-header,
 .post-header {
   margin-bottom: 0;
@@ -9,27 +43,6 @@
     font-size: 2rem;
     margin-bottom: var(--flow-space);
     margin-top: 0;
-
-    a {
-      color: inherit;
-      -webkit-text-decoration: underline solid var(--color-primary-hexa-1);
-      text-decoration: underline solid var(--color-primary-hexa-1);
-      transition: -webkit-text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration),
-        -webkit-text-decoration-color var(--transition-duration);
-
-      &:focus-visible,
-      &:hover {
-        text-decoration: underline;
-        text-decoration-color: inherit;
-        text-decoration-thickness: 0.25rem;
-      }
-
-      &:focus-visible {
-        outline: unset;
-      }
-    }
   }
 
   &__title--sm {
