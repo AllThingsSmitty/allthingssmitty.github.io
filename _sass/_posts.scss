@@ -1,29 +1,28 @@
+@mixin text-decoration {
+  text-decoration-color: rgba(11, 12, 12, 1);
+  text-decoration-thickness: 0.2rem;
+}
+
 .post-link {
   color: inherit;
   text-decoration: none;
 
-  .post-header {
-    &__title {
-      -webkit-text-decoration: underline solid rgba(11, 12, 12, 0);
-      text-decoration: underline solid rgba(11, 12, 12, 0);
-      transition: text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration),
-        -webkit-text-decoration-color var(--transition-duration);
+  .post-header__title {
+    -webkit-text-decoration: underline solid rgba(11, 12, 12, 0);
+    text-decoration: underline solid rgba(11, 12, 12, 0);
+    transition: text-decoration-color var(--transition-duration);
+    transition: text-decoration-color var(--transition-duration),
+      -webkit-text-decoration-color var(--transition-duration);
 
-      @media (max-width: $large-breakpoint) {
-        text-decoration-color: rgba(11, 12, 12, 1);
-        text-decoration-thickness: 0.25rem;
-      }
+    @media (max-width: $large-breakpoint) {
+      @include text-decoration;
     }
   }
 
   &:focus,
   &:hover {
-    .post-header {
-      &__title {
-        text-decoration-color: rgba(11, 12, 12, 1);
-        text-decoration-thickness: 0.25rem;
-      }
+    .post-header__title {
+      @include text-decoration;
     }
   }
 }
