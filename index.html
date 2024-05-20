@@ -15,8 +15,8 @@ title: Home
         <p>{{ post.content | strip_html | truncatewords:50 }}</p>
       </div>
     </a>
+    {% include tags.html %} {% if forloop.last == false %}
   </div>
-  {% include tags.html %} {% if forloop.last == false %}
   <hr class="border-rule" />
   {% endif %}
 </article>
