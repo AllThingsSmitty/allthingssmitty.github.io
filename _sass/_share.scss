@@ -12,6 +12,10 @@
       display: block;
       padding: 0.5rem;
 
+      &:focus-visible:not(:hover) {
+        outline-color: var(--color-mid-text);
+      }
+
       &:hover {
         .social__icon {
           background-color: var(--color-primary-info);
