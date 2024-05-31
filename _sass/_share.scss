@@ -16,6 +16,11 @@
         outline-color: var(--color-mid-text);
       }
 
+      &:focus-visible,
+      &:focus-visible:not(:hover) {
+        outline-offset: initial;
+      }
+
       &:hover {
         .social__icon {
           background-color: var(--color-primary-info);
