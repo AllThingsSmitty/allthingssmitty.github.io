@@ -6,15 +6,20 @@
   "author": "Matt Smith",
   "license": "ISC",
   "scripts": {
+    "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
     "browser-sync": "^3.0.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "node-fetch": "^2.6.1",
+    "postcss": "^8.4.38",
+    "terser": "^5.31.0"
   },
   "repository": {
     "type": "git",
