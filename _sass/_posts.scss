@@ -29,12 +29,12 @@
 
 .page-header,
 .post-header {
+  --flow-space: 1.25rem;
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
 
   &__title {
-    --flow-space: 1.25rem;
     font-size: 2rem;
     margin-bottom: var(--flow-space);
     margin-top: 0;
@@ -45,11 +45,10 @@
   }
 
   &__meta {
-    --flow-space: 1.25rem;
-    column-gap: 1.25rem;
+    column-gap: var(--flow-space);
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: calc(var(--flow-space) / 2);
+    row-gap: 0.5rem;
 
     .data {
       --h: 1.15;
@@ -57,7 +56,6 @@
       color: var(--color-shades-primary-glare);
       display: flex;
       font-size: calc(var(--font-size-small) * var(--h));
-      padding-bottom: calc(var(--flow-space) * 0.25);
 
       @media (max-width: $large-breakpoint) {
         font-size: var(--font-size-x-small);
