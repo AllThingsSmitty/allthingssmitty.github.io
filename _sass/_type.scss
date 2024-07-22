@@ -2,6 +2,7 @@
   color: var(--color-shades-primary);
   font-weight: 600;
   line-height: 1.25;
+  text-wrap: pretty;
 }
 
 h1,
@@ -71,9 +72,6 @@ blockquote {
   }
 }
 
-h1,
-h2,
-h3,
 aside,
 blockquote,
 caption,
