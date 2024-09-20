@@ -5,7 +5,7 @@
     <div class="page-container">
       <header class="heading__brand" role="banner">
         <div class="skip-nav">
-          <a href="#content">Skip to main content</a>
+          <a href="#main-content">Skip to main content</a>
         </div>
         <nav class="header-nav" aria-label="Main navigation">
           <h1 class="header-nav__title">
@@ -14,9 +14,7 @@
           <ul class="header-nav__list">
             {% for item in site.data.nav %}
             <li class="header-nav__item">
-              <a href="{{ site.data.org.baseurl }}{{ item.link }}"
-                >{{ item.name }}</a
-              >
+              <a href="{{ site.data.org.baseurl }}{{ item.link }}">{{ item.name }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -24,28 +22,18 @@
         <div class="heading__tagline">{{ site.data.org.tagline }}</div>
       </header>
 
-      <main id="content">{{ content }}</main>
+      <main id="main-content">{{ content }}</main>
 
       <footer class="page-footer" role="contentinfo">
-        <div class="page-footer__item gap-bottom-top-base">
-          {% include social-channels.html %}
-        </div>
+        <div class="page-footer__item gap-bottom-top-base">{% include social-channels.html %}</div>
         <div class="page-footer__item">
-          &copy; {{ site.time | date: '%Y' }} {{ site.data.org.title }}. All
-          rights reserved.
+          &copy; {{ site.time | date: '%Y' }} {{ site.data.org.title }}. All rights reserved.
         </div>
-        <button
-          class="scrollToTop"
-          aria-label="scroll to the top of the page"></button>
+        <button class="scrollToTop" aria-label="scroll to the top of the page"></button>
       </footer>
     </div>
 
-    <script
-      async
-      src="{{ site.data.org.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"></script>
-    <script
-      async
-      id="dsq-count-scr"
-      src="//allthingssmitty-com.disqus.com/count.js"></script>
+    <script async src="{{ site.data.org.baseurl }}/js/main.min.js?v={{ site.time | date: '%s' }}"></script>
+    <script async id="dsq-count-scr" src="//allthingssmitty-com.disqus.com/count.js"></script>
   </body>
 </html>
