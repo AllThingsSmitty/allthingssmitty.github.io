@@ -17,13 +17,11 @@
 
     &:focus,
     &:hover {
-      color: var(--color-shades-primary);
       border-color: var(--color-shades-primary);
+      color: var(--color-shades-primary);
     }
 
     &:focus {
-      border-color: var(--color-shades-primary);
-      color: var(--color-shades-primary);
       outline: unset;
     }
   }
