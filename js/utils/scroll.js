@@ -1,24 +1,21 @@
-(function () {
-  const d = document;
-  const scrollToTopBtn = d.querySelector(".scrollToTop");
-  const rootElement = d.documentElement;
+const scrollToTopBtn = document.querySelector(".scrollToTop");
+const rootElement = document.documentElement;
 
-  const handleScroll = () => {
-    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    scrollToTopBtn.classList.toggle("showBtn", rootElement.scrollTop / scrollTotal > 0.3);
-  };
+const handleScroll = () => {
+  const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  scrollToTopBtn?.classList.toggle("showBtn", rootElement.scrollTop / scrollTotal > 0.3);
+};
 
-  const scrollToTop = () => {
-    rootElement.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+const scrollToTop = () => {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
-  try {
-    scrollToTopBtn.addEventListener("click", scrollToTop);
-    d.addEventListener("scroll", handleScroll);
-  } catch (error) {
-    console.error(`An error occurred: ${error}`);
-  }
-})();
+try {
+  scrollToTopBtn?.addEventListener("click", scrollToTop);
+  document.addEventListener("scroll", handleScroll);
+} catch (error) {
+  console.error(`An error occurred: ${error}`);
+}
