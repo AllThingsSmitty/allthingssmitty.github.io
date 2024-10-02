@@ -1,6 +1,5 @@
-(function () {
-  const d = document;
-  const pageViews = d.querySelectorAll(".page-views");
+const formatPageViews = () => {
+  const pageViews = document.querySelectorAll(".page-views");
   const addCommas = (value) => {
     try {
       return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -23,4 +22,6 @@
   } catch (error) {
     console.error(`Error processing page views: ${error}`);
   }
-})();
+};
+
+formatPageViews();
