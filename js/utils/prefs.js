@@ -1,18 +1,22 @@
+const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 function switchCodepenTheme() {
   const cpEl = document.querySelector(".codepen[data-pen-title]");
-  cpEl.setAttribute("data-theme-id", prefersDarkMode ? "dark" : "light");
+  if (cpEl) {
+    cpEl.setAttribute("data-theme-id", prefersDarkMode ? "dark" : "light");
+  }
 }
 
 function switchTweetTheme() {
   const twEl = document.querySelector("[data-tweet-id]");
-  const src = twEl.getAttribute("src");
-  twEl.setAttribute(
-    "src",
-    src.replace(prefersDarkMode ? "theme=light" : "theme=dark", prefersDarkMode ? "theme=dark" : "theme=light"),
-  );
+  const src = twEl ? twEl.getAttribute("src") : null;
+  if (twEl) {
+    twEl.setAttribute(
+      "src",
+      src.replace(prefersDarkMode ? "theme=light" : "theme=dark", prefersDarkMode ? "theme=dark" : "theme=light"),
+    );
+  }
 }
-
-const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 try {
   setTimeout(() => {
