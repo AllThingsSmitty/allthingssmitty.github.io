@@ -1,13 +1,21 @@
 const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-function switchCodepenTheme() {
-  const cpEl = document.querySelector(".codepen[data-pen-title]");
-  if (cpEl) {
-    cpEl.setAttribute("data-theme-id", prefersDarkMode ? "dark" : "light");
-  }
-}
+const switchCodepenTheme = () => {
+  const cpEls = document.querySelectorAll(".cp_embed_iframe");
+  cpEls.forEach((cpEl) => {
+    const src = cpEl.getAttribute("src");
+    const updatedSrc = prefersDarkMode
+      ? src.replace("theme-id=light", "theme-id=dark")
+      : src.replace("theme-id=dark", "theme-id=light");
+    cpEl.setAttribute("src", updatedSrc);
+  });
+};
 
-function switchTweetTheme() {
+setTimeout(() => {
+  switchCodepenTheme();
+}, 1000);
+
+const switchTweetTheme = () => {
   const twEl = document.querySelector("[data-tweet-id]");
   const src = twEl ? twEl.getAttribute("src") : null;
   if (twEl) {
@@ -16,20 +24,8 @@ function switchTweetTheme() {
       src.replace(prefersDarkMode ? "theme=light" : "theme=dark", prefersDarkMode ? "theme=dark" : "theme=light"),
     );
   }
-}
+};
 
-try {
-  setTimeout(() => {
-    switchCodepenTheme();
-  }, 1000);
-} catch (error) {
-  console.error(`Error switching embedded pen theme: ${error}`);
-}
-
-try {
-  setTimeout(() => {
-    switchTweetTheme();
-  }, 1000);
-} catch (error) {
-  console.error(`Error switching embedded tweet theme: ${error}`);
-}
+setTimeout(() => {
+  switchTweetTheme();
+}, 1000);
