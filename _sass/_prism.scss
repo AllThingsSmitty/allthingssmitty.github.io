@@ -32,7 +32,8 @@
 }
 
 .token.property,
-.token.tag {
+.token.tag,
+.token.function {
   color: var(--color-syntax-quaternary);
 }
 
