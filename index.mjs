@@ -39,25 +39,16 @@ function deleteSiteDirectory() {
   });
 }
 
-function concatenateAndMinifyJsFiles() {
+async function concatenateAndMinifyJsFiles() {
   const jsDir = "./js/utils/";
 
-  // // Delete main.min.js file
-  // fs.rm(mainJsFile, { force: true }, (err) => {
-  //   if (err) {
-  //     console.error(`Error deleting file ${mainJsFile}: ${err}`);
-  //   } else {
-  //     console.log(`File ${mainJsFile} has been deleted`);
-  //   }
-  // });
+  try {
+    // Delete main.min.js file
+    await fs.promises.rm(mainJsFile, { force: true });
+    console.log(`File ${mainJsFile} has been deleted`);
 
-  // Concatenate and minify .js files
-  fs.readdir(jsDir, { withFileTypes: true }, async (err, files) => {
-    if (err) {
-      console.error(`Error reading directory ${jsDir}: ${err}`);
-      return;
-    }
-
+    // Concatenate and minify .js files
+    const files = await fs.promises.readdir(jsDir, { withFileTypes: true });
     const jsFiles = files.filter((file) => file.isFile() && file.name.endsWith(".js"));
     if (jsFiles.length === 0) {
       console.log(`No .js files found in ${jsDir}`);
@@ -71,14 +62,11 @@ function concatenateAndMinifyJsFiles() {
     const outputDir = "./js/";
     const outputFile = `${outputDir}${mainJsFile}`;
 
-    fs.writeFile(outputFile, minifiedJs, (err) => {
-      if (err) {
-        console.error(`Error writing file ${mainJsFile}: ${err}`);
-      } else {
-        console.log(`File ${mainJsFile} has been created`);
-      }
-    });
-  });
+    await fs.promises.writeFile(outputFile, minifiedJs);
+    console.log(`File ${mainJsFile} has been created`);
+  } catch (err) {
+    console.error(`Error: ${err}`);
+  }
 }
 
 function runJekyllCommand() {
