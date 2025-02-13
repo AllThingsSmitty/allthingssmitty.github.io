@@ -130,10 +130,11 @@ function autoprefixCssFiles() {
   });
 }
 
-deleteSiteDirectory();
+if (process.env.NODE_ENV !== "production") {
+  deleteSiteDirectory();
+  concatenateAndMinifyJsFiles();
+  runJekyllCommand();
+  autoprefixCssFiles();
 
-concatenateAndMinifyJsFiles();
-
-runJekyllCommand();
-
-autoprefixCssFiles();
+  console.log("Running in development mode. Development tasks have been executed");
+}
