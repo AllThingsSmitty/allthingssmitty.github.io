@@ -88,7 +88,7 @@ const content = document.querySelector(event.target.closest('a').hash);
 Now clicking anywhere in the menu item link fires the JavaScript to toggle the submenu.
 
 <div class="embed">
-  <p class="codepen" data-height="450" data-theme-id="light" data-default-tab="result" data-user="AllThingsSmitty" data-slug-hash="WPMPaV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="WPMPaV">
+  <p class="codepen" data-height="450" data-default-tab="result" data-user="AllThingsSmitty" data-slug-hash="WPMPaV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="WPMPaV">
     <span>See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/WPMPaV/">
     WPMPaV</a> by Matt Smith (<a href="https://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>

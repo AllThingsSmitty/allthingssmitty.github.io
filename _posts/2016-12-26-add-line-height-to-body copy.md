@@ -25,7 +25,7 @@ Now all textual elements will have a consistent line height that is inherited fr
 Always specify the line height as a unitless number, e.g., `line-height: 1.5;`. That way descendent elements that specify a different font size will inherit that number rather than a fixed line height.
 
 <div class="embed">
-  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="VjbdYd" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Add line-height to Body" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/VjbdYd/">Add line-height to Body</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-slug-hash="VjbdYd" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Add line-height to Body" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/VjbdYd/">Add line-height to Body</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 

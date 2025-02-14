@@ -87,7 +87,7 @@ The jury seems to be out on this. I've had no problems with any of the tests I'v
 Will `-webkit-fill-available` work in every scenario? Probably not, cuz let's be honest: this is the web, and it can be damn hard to build. But, if you're having a problem with `100vh` in WebKit and you're looking for a CSS alternative, you might want to try this.
 
 <div class="embed">
-  <p class="codepen" data-height="450" data-theme-id="light" data-default-tab="result" data-slug-hash="ZEbKWKa" data-user="AllThingsSmitty" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <p class="codepen" data-height="450" data-default-tab="result" data-slug-hash="ZEbKWKa" data-user="AllThingsSmitty" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/AllThingsSmitty/pen/ZEbKWKa">
     CSS Fix for 100vh Mobile ViewPort Bug</a> by Matt Smith (<a href="https://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
