@@ -124,7 +124,7 @@ In smaller viewports the `<tr>` and `<td>` elements will display as block-level 
 Here's our table (flip your device screen between portrait and landscape view):
 
 <div class="embed">
-  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="MyqmdM" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/MyqmdM/">Simple Responsive Table in CSS</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-slug-hash="MyqmdM" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/MyqmdM/">Simple Responsive Table in CSS</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
