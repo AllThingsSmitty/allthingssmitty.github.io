@@ -17,17 +17,19 @@ assets:
       autoprefixer: {}
   sass:
     sass_dir: _sass
-    style: ":compressed"
+    style: compressed
 
 # Custom vars and plugins
 version: 2.0.0
 github:
-  repo: 'https://github.com/allthingssmitty/allthingssmitty.github.io'
+  repo: "https://github.com/allthingssmitty/allthingssmitty.github.io"
+
+# Plugins
 plugins:
   - jekyll-paginate
-  #- jekyll-autoprefixer
 
+# Markdown settings
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
-    disable : true
+    disable: true
