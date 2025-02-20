@@ -113,7 +113,7 @@ Wrap the embedded tweet markup in `<div class="embed"></div>` for proper spacing
 Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spacing.
 
 <div class="embed">
-  <p class="codepen" data-height="450" data-theme-id="light" data-slug-hash="bpmZpK" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Jurassic Ipsum Generator in JS" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/bpmZpK/">Jurassic Ipsum Generator in JS</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p class="codepen" data-height="450" data-slug-hash="bpmZpK" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Jurassic Ipsum Generator in JS" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/bpmZpK/">Jurassic Ipsum Generator in JS</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
 
