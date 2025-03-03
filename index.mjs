@@ -77,27 +77,19 @@ function runJekyllCommand() {
     }
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
+  });
 
-    // Start BrowserSync
+  setTimeout(() => {
+    // Initialize Browsersync
     browserSync.init({
       server: {
         baseDir: "_site/",
       },
     });
 
-    // Watch for changes in the source files and reload the browser
-    browserSync.watch("./_site/*.*").on("change", browserSync.reload);
-  });
-
-  // Initialize Browsersync
-  browserSync.init({
-    server: {
-      baseDir: "./_site/",
-    },
-  });
-
-  // Use Browsersync reload function as a listener to Jekyll build events
-  browserSync.watch("**/*.*").on("change", browserSync.reload);
+    // Use Browsersync reload function as a listener to Jekyll build events
+    browserSync.watch("**/*.*").on("change", browserSync.reload);
+  }, 1000);
 }
 
 function autoprefixCssFiles() {
