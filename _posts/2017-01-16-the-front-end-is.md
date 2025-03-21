@@ -3,7 +3,7 @@ layout: post
 title: The front-end is...
 description: Front-end development has many skills associated with it, and it's been my experience that the role is often misunderstood. The front-end is tough to describe, but here's a brief nod of recognition to just some of what developers do.
 image: img/posts/sunset-home-office-min.jpg
-tags: [front-end]
+tags: [personal]
 comments: true
 views:
   ua: 6210

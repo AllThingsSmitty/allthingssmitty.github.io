@@ -3,6 +3,7 @@ layout: post
 title: Having skin in the game
 description: A few thoughts about confronting self-doubt.
 image: img/posts/sunset-home-office-min.jpg
+tags: [personal]
 comments: false
 views:
   ua: 827
