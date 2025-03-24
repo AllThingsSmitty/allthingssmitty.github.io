@@ -26,14 +26,10 @@
 
       .header-nav__list {
         @include flex-center;
+        gap: 1.25rem;
         list-style: none;
         margin: 0;
-
-        .header-nav__item {
-          &:not(:last-child) {
-            margin-right: 1.25rem;
-          }
-        }
+        padding: 0;
       }
 
       a {
