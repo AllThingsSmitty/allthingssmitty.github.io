@@ -18,6 +18,9 @@ const getColorPreference = () => {
 const setPreference = () => {
   localStorage.setItem(storageKey, theme.value);
   reflectPreference();
+
+  const event = new Event("themeChanged");
+  document.dispatchEvent(event);
 };
 
 const reflectPreference = () => {
