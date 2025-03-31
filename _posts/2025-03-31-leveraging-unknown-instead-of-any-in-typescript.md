@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Leveraging "unknown" instead of "any"
-description: Learn why using "unknown" instead of "any" in TypeScript leads to safer, more maintainable code. Discover best practices, benefits, and examples for improved type safety and error handling in TypeScript.
+description: Learn why using 'unknown' instead of 'any' in TypeScript leads to safer, more maintainable code. Discover best practices, benefits, and examples for improved type safety and error handling in TypeScript.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
