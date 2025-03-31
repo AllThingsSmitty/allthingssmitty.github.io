@@ -68,6 +68,7 @@
 }
 
 code {
+  border-radius: 0.3em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   font-size: var(--font-size-small);
@@ -75,12 +76,14 @@ code {
   padding: 0.125em 0.25em;
   tab-size: 2;
   text-align: left;
-  word-break: normal;
+  word-break: keep-all;
   word-spacing: normal;
-  word-wrap: normal;
+  word-wrap: pre-wrap;
 }
 
 pre > code {
+  @extend code;
+  border-radius: 0;
   display: block;
   line-height: 1.7;
   overflow-x: auto;
