@@ -7,7 +7,7 @@ tags: [personal]
 comments: false
 views:
   ua: 827
-  ga4: 5
+  ga4: 6
 ---
 
 Not long ago I had a private conversation with myself.
