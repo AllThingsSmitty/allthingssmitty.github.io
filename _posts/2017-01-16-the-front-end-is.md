@@ -7,7 +7,7 @@ tags: [personal]
 comments: true
 views:
   ua: 6210
-  ga4: 30
+  ga4: 39
 ---
 
 It's been my experience that most front-end developers know the feeling of being mislabeled for their skills: "The front-end? Oh, that's just wireframes and fonts and..."
