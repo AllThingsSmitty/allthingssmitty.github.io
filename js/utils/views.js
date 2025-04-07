@@ -1,5 +1,4 @@
 const formatPageViews = () => {
-  const pageViews = [...document.querySelectorAll(".page-views")];
   const addCommas = (value) => {
     try {
       return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -9,31 +8,40 @@ const formatPageViews = () => {
     }
   };
 
-  try {
-    pageViews.forEach((e) => {
-      try {
-        const numericValue = e.textContent;
-        const formattedValue = addCommas(numericValue);
-        e.textContent = formattedValue;
-      } catch (error) {
-        console.error(`Error formatting page view value: ${error}`);
-      }
-    });
-  } catch (error) {
-    console.error(`Error processing page views: ${error}`);
-  }
+  const formatElements = (selector, formatter) => {
+    try {
+      const elements = [...document.querySelectorAll(selector)];
+      elements.forEach((element) => {
+        try {
+          const formattedValue = formatter(element.textContent);
+          element.textContent = formattedValue;
+        } catch (error) {
+          console.error(`Error formatting element: ${error}`);
+        }
+      });
+    } catch (error) {
+      console.error(`Error processing elements for selector "${selector}": ${error}`);
+    }
+  };
 
-  // Hide view element if page views are set to 0
-  try {
-    const viewEls = [...document.querySelectorAll(".post-header__meta .views")];
-    viewEls.forEach((viewEl) => {
-      if (viewEl && viewEl.innerText.trim() === "0 views") {
-        viewEl.style.display = "none";
-      }
-    });
-  } catch (error) {
-    console.error(`Error hiding page views: ${error}`);
-  }
+  const hideElements = (selector, condition) => {
+    try {
+      const elements = [...document.querySelectorAll(selector)];
+      elements.forEach((element) => {
+        if (condition(element)) {
+          element.style.display = "none";
+        }
+      });
+    } catch (error) {
+      console.error(`Error hiding elements for selector "${selector}": ${error}`);
+    }
+  };
+
+  // Format page views
+  formatElements(".page-views", addCommas);
+
+  // Hide view elements if page views are set to "0 views"
+  hideElements(".post-header__meta .views", (el) => el.innerText.trim() === "0 views");
 };
 
 formatPageViews();
