@@ -50,7 +50,19 @@
   }
 
   // _posts.scss
+
+  .page-header__meta .data,
   .post-header__meta .data {
+    color: #7b92b2;
+
+    & > {
+      color: var(--color-dark-shades-primary-glare);
+    }
+  }
+
+  .post-header__meta .data {
+    color: var(--color-dark-shades-primary-glare);
+
     &.comments {
       &::before {
         background-image: url("data:image/svg+xml,\
@@ -126,6 +138,10 @@
     }
   }
 
+  .archive-date {
+    color: var(--color-dark-shades-primary-glare);
+  }
+
   // _code.scss
   pre > code,
   code {
@@ -170,7 +186,7 @@
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: var(--color-dark-mid-text);
+    color: #b9bac9; //var(--color-dark-mid-text);
   }
 
   // _pagination.scss
@@ -362,6 +378,10 @@ html[data-theme="dark"] {
   .page-header__meta .data,
   .post-header__meta .data {
     color: #7b92b2;
+
+    & > {
+      color: var(--color-dark-shades-primary-glare);
+    }
   }
 
   .post-header__meta .data {
@@ -440,6 +460,10 @@ html[data-theme="dark"] {
     }
   }
 
+  .archive-date {
+    color: var(--color-dark-shades-primary-glare);
+  }
+
   // _code.scss
   pre > code,
   code {
@@ -484,7 +508,7 @@ html[data-theme="dark"] {
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: var(--color-dark-mid-text);
+    color: #b9bac9; // var(--color-dark-mid-text);
   }
 
   // _pagination.scss
