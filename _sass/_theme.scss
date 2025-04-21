@@ -186,7 +186,7 @@
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #b9bac9; //var(--color-dark-mid-text);
+    color: var(--color-dark-token-comment);
   }
 
   // _pagination.scss
@@ -508,7 +508,7 @@ html[data-theme="dark"] {
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #b9bac9; // var(--color-dark-mid-text);
+    color: var(--color-dark-token-comment);
   }
 
   // _pagination.scss
