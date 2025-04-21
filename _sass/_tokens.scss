@@ -53,7 +53,6 @@ $large-breakpoint: 36rem;
 
   // dark theme
   --color-dark-shades-primary-text: var(--color-shades-tertiary-bright);
-  --color-dark-mid-text: var(--color-shades-gray);
   --color-dark-primary-info-bg: #3d3d3d;
   --color-dark-shades-primary-glare: #8494ab;
   --color-dark-stroke: #2d2d2f;
@@ -70,4 +69,5 @@ $large-breakpoint: 36rem;
 
   --color-dark-state-warn-bg: #272114;
   --color-dark-state-warn-text: #ee6e25;
+  --color-dark-token-comment: #b9bac9;
 }

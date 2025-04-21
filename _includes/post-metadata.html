@@ -1,15 +1,15 @@
 {% if post.path contains '_posts' %}
   {% assign words_total = post.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
-  {% assign words_without_code = post.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_code = post.content | replace: '<pre>', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
   {% assign words_without_math = post.content | strip_html | number_of_words %}
-  {% assign words_without_either = post.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
+  {% assign words_without_either = post.content | replace: '<pre>', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
 {% endif %}
 
 {% if page.path contains '_posts' %}
   {% assign words_total = page.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
-  {% assign words_without_code = page.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
+  {% assign words_without_code = page.content | replace: '<pre>', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
   {% assign words_without_math = page.content | strip_html | number_of_words %}
-  {% assign words_without_either = page.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
+  {% assign words_without_either = page.content | replace: '<pre>', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
 {% endif %}
 
 {% assign words_code = words_total | minus: words_without_code | divided_by: 2.0 %}
@@ -44,7 +44,7 @@
     </div>
   </div>
   
-  {% if page.comments == true %}
+  <!-- {% if page.comments == true %}
     <div class="data comments">
       {% if page.path contains '_posts' %}
         <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ page.url }}"></span>
@@ -53,7 +53,8 @@
         <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ post.url }}"></span>
       {% endif %}
     </div>
-  {% endif %}
+  {% endif %} -->
+<!-- 
   {% if post.comments == true %}
     <div class="data comments">
       {% if page.path contains '_posts' %}
@@ -63,6 +64,6 @@
         <span class="disqus-comment-count" data-disqus-url="{{ site.data.org.url }}{{ post.url }}"></span>
       {% endif %}
     </div>
-  {% endif %}
+  {% endif %} -->
 
 </div>
