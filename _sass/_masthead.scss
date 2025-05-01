@@ -10,8 +10,7 @@
     --spacer-lg: 1rem;
     color: var(--color-shades-secondary-glare);
     margin-bottom: 5rem;
-    padding-bottom: var(--spacer-sm);
-    padding-top: var(--spacer-lg);
+    padding-block: var(--spacer-lg) var(--spacer-sm);
 
     .header-nav {
       @include flex-center;

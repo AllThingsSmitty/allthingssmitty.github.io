@@ -78,3 +78,25 @@ caption,
 figcaption {
   text-wrap: pretty;
 }
+
+.table-container {
+  overflow-x: auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    td,
+    th {
+      border: 1px solid var(--color-stroke);
+      padding: 0.3rem 0.65rem;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      &:has(td) {
+        background-color: var(--color-shades-light);
+      }
+    }
+  }
+}

@@ -202,8 +202,7 @@
   }
 
   &.shrink {
-    padding-bottom: 0.25rem;
-    padding-top: 0.5rem;
+    padding-block: 0.5rem 0.25rem;
   }
 
   &.stretch {
