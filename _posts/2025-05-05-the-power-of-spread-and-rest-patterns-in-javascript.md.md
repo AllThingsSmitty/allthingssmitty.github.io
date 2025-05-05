@@ -3,7 +3,7 @@ layout: post
 title: The power of the spread and rest syntax in JavaScript
 description: Learn how the spread and rest syntax in JavaScript can power up the front-end, from array handling to React state updates, with tips every developer should know.
 image: img/posts/sunset-home-office-min.jpg
-tags: [JavaScript]
+tags: [JavaScript, React]
 comments: true
 views:
   ga4: 0
