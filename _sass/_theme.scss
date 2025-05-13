@@ -32,6 +32,16 @@
     }
   }
 
+  .table-container {
+    table {
+      tr:nth-child(even) {
+        &:has(td) {
+          background-color: var(--color-dark-mid-bg);
+        }
+      }
+    }
+  }
+
   // _masthead.scss
   .heading__brand {
     color: #9c9898;
@@ -352,6 +362,15 @@ html[data-theme="dark"] {
       &.notification {
         background-color: var(--color-dark-state-warn-bg);
         color: var(--color-dar-state-warn-text);
+      }
+    }
+  }
+  .table-container {
+    table {
+      tr:nth-child(even) {
+        &:has(td) {
+          background-color: var(--color-dark-mid-bg);
+        }
       }
     }
   }
