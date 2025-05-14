@@ -36,7 +36,7 @@
     table {
       tr:nth-child(even) {
         &:has(td) {
-          background-color: var(--color-dark-mid-bg);
+          background-color: var(--color-dark-shades-light);
         }
       }
     }
@@ -369,7 +369,7 @@ html[data-theme="dark"] {
     table {
       tr:nth-child(even) {
         &:has(td) {
-          background-color: var(--color-dark-mid-bg);
+          background-color: var(--color-dark-shades-light);
         }
       }
     }
