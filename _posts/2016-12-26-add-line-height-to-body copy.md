@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 views:
   ua: 4681
-  ga4: 47
+  ga4: 50
 ---
 
 If you've been adding line height to each textual element separately, e.g., `<h*>`, `<p>`, etc., this is a helpful tip that you'll want to try: add line height to the `body` selector instead.

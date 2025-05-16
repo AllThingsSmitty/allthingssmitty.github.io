@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 views:
   ua: 4361
-  ga4: 609
+  ga4: 613
 ---
 
 Here's a quick CSS tip: if a hyperlink doesn't have a text value, _i.e._, it rendered empty, insert the `href` value in its place:
