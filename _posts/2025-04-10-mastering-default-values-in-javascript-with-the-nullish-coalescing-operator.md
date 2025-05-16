@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 3902
+  ga4: 3929
 ---
 
 One important piece of JavaScript syntax that I've enjoyed using is the nullish coalescing (`??`) operator. The `??` operator handles default values more effectively compared with the traditional approach using the logical OR (`||`) operator. It's a 100% must-have tip.
