@@ -9,7 +9,7 @@ views:
   ga4: 0
 ---
 
-Working with arrays in JavaScript is everyday work for front-end developers. We reach for arrays constantly — whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index — especially the last one? Now we can...with `Array.prototype.at()`.
+Working with arrays in JavaScript is an everyday thing for front-end developers. We reach for arrays constantly — whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index — especially the last one? Now we can...with `Array.prototype.at()`.
 
 ## What's at()?
 
