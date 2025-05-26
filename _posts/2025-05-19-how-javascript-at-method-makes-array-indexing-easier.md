@@ -87,7 +87,7 @@ The `.at()` method is supported in all modern browsers (Chrome 92+, Firefox 90+,
 
 ```js
 if (!Array.prototype.at) {
-  Array.prototype.at = function(n) {
+  Array.prototype.at = function (n) {
     if (this == null) throw new TypeError("Called on null or undefined");
     const len = this.length >>> 0;
     n = Number(n);
