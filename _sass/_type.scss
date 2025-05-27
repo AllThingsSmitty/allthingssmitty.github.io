@@ -29,13 +29,22 @@ blockquote {
     color: var(--color-state-info-text);
     font-size: 0.9rem;
     margin: var(--spacer) 0;
-    padding: clamp(1.25rem, 1.5rem, 2rem);
+    padding: clamp(1.25rem, var(--spacer), 2rem);
 
     &.notification {
       background-color: var(--color-state-warn-bg);
       color: var(--color-state-warn-text);
       margin: var(--spacer) 0;
     }
+
+    p {
+      margin-block: 0;
+
+      &:not(:last-child) {
+        margin-block-end: var(--flow-space);
+      }
+    }
+
     a {
       color: currentColor;
     }
