@@ -6,8 +6,8 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [personal]
 comments: false
 views:
-  ua: 827
-  ga4: 9
+  ua: 0
+  ga4: 0
 ---
 
 Not long ago I had a private conversation with myself.
