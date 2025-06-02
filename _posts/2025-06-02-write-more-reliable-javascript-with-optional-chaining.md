@@ -79,7 +79,7 @@ Optional chaining is especially helpful in component-based libraries like React:
 const title = props?.article?.data?.attributes?.title;
 ```
 
-When `props` may be undefined during initial renders, this prevents crashes and keeps your components stable.
+When `props` may be `undefined` during initial renders, this prevents crashes and keeps your components stable.
 
 ## Optional chaining vs. logical AND (&&)
 
