@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 0
+  ga4: 2378
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:
@@ -69,7 +69,7 @@ user?.sendMessage?.("Hello!");
 
 This ensures that `user` exists *and* that `sendMessage` is a function before attempting to call it. Otherwise, it simply returns `undefined`.
 
-**Note:** `fn?.()` only short-circuits if `fn` is `null` or `undefined`. If `fn` is defined but not a function (e.g., a `string` or `object`), it will still throw a `TypeError`.
+⚠️ **Note:** `fn?.()` only short-circuits if `fn` is `null` or `undefined`. If `fn` is defined but not a function (e.g., a `string` or `object`), it will still throw a `TypeError`.
 
 ### In frameworks (React, Redux, etc.)
 
@@ -163,7 +163,7 @@ This returns `"default.png"` if `avatar` is `null` or `undefined`.
 <aside class="message" role="note">
 {:/}
 
-💡 I wrote about [mastering default values with the nullish coalescing operator](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) — it'll definitely up your game. 🚀
+🚨 I wrote about [mastering default values with the nullish coalescing operator](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) — it'll definitely up your game.
 
 {::nomarkdown}
 </aside>
