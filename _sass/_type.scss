@@ -37,6 +37,11 @@ blockquote {
       margin: var(--spacer) 0;
     }
 
+    .note--head {
+      font-weight: 600;
+      margin-block: 0 0.5rem;
+    }
+
     p {
       margin-block: 0;
 

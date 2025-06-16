@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 2378
+  ga4: 2580
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:
@@ -51,7 +51,7 @@ Here are a few examples that help demonstrate why optional chaining is so powerf
 const name = response?.data?.user?.name;
 ```
 
-No need to worry if one of the intermediate objects isn't present — you won't get a runtime error.
+No need to worry if one of the intermediate objects isn't present, you won't get a runtime error.
 
 ### Safely accessing DOM elements
 
@@ -163,7 +163,9 @@ This returns `"default.png"` if `avatar` is `null` or `undefined`.
 <aside class="message" role="note">
 {:/}
 
-🚨 I wrote about [mastering default values with the nullish coalescing operator](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) — it'll definitely up your game.
+<div class="note--head"> 💡 Ready for more?</div>
+
+I wrote about [mastering default values with the nullish coalescing operator](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) that will definitely up your game.
 
 {::nomarkdown}
 </aside>
