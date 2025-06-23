@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 2656
+  ga4: 2684
 ---
 
 I saw [this post](https://www.reddit.com/r/Frontend/comments/1jt2nmh/just_failed_an_interview_because_i_could_not/){:rel="external"} on Reddit about a JavaScript coding assessment and it got me thinking. A common task developers perform is iterating over arrays. And two of the most frequently used methods for this are `map()` and `forEach()`. Both seem similar, but the differences can significantly affect how your code behaves. Let's take a closer look at both and why I think `map()` wins out as the better choice when transforming data.
@@ -78,7 +78,7 @@ const result = numbers
 console.log(result); // 24
 ```
 
-The `map()` method fits nicely into functional programming practices because it doesn’t mutate the original array. It promotes immutability and works well with pure functions.
+The `map()` method fits nicely into functional programming practices because it doesn't mutate the original array. It promotes immutability and works well with pure functions.
 
 One common pitfall: avoid using `map()` if you're not using its return value. In those cases, `forEach()` is the more appropriate and semantically correct choice.
 
@@ -97,6 +97,6 @@ numbers.forEach(num => {
 console.log(sum); // 10
 ```
 
-Both `map()` and `forEach()` are essential tools in your JavaScript toolbox. Use `map()` when you're transforming data and returning new arrays, especially when method chaining or preserving immutability is important. Go with `forEach()` when you're working with side effects and don’t need a return value.
+Both `map()` and `forEach()` are essential tools in your JavaScript toolbox. Use `map()` when you're transforming data and returning new arrays, especially when method chaining or preserving immutability is important. Go with `forEach()` when you're working with side effects and don't need a return value.
 
 In short, use the right tool for the job. Your code (and team) will thank you.

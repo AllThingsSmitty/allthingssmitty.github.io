@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 4252
+  ga4: 4299
 ---
 
 One important piece of JavaScript syntax that I've enjoyed using is the nullish coalescing (`??`) operator. The `??` operator handles default values more effectively compared with the traditional approach using the logical OR (`||`) operator. It's a 100% must-have tip.
@@ -33,7 +33,7 @@ const _default = 5;
 console.log(value ?? _default); // Output: 0 (because 0 is not null or undefined)
 ```
 
-The `??` operator treats `0` as a valid value, so it doesn’t replace it with the default.
+The `??` operator treats `0` as a valid value, so it doesn't replace it with the default.
 
 ## Why ?? is safer for default values
 
