@@ -6,12 +6,12 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [TypeScript]
 comments: true
 views:
-  ga4: 609
+  ga4: 612
 ---
 
 In TypeScript, you may have heard that the `any` type is seen as a kind of "get out of jail free" card. It allows any value to be assigned to a variable of type `any`, which effectively disabling TypeScript's static type checking. That might be convenient in certain situations, but it undermines one of the primary benefits of TypeScript: catching errors during development. If you use `any` liberally, you might end up with a codebase that's no safer than regular JavaScript.
 
-## An "unknown" alternative
+## An `unknown` alternative
 
 The `unknown` type is a safer, more restrictive alternative to `any`. It lets you assign any value to a variable but requires type checking before use, unlike `any`, which allows operations without checks.
 
@@ -29,7 +29,7 @@ let strLength: number = value.length; // Error: Object is of type "unknown"
 
 With `unknown`, the TypeScript compiler won't allow you to perform operations that may not be valid for the assigned value unless you first check its type.
 
-### Is "unknown" really better than "any"?
+### Is `unknown` really better than `any`?
 
 A few things to consider:
 

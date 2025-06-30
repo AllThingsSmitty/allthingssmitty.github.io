@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Mastering default values in JavaScript with the nullish coalescing (??) operator
-description: The nullish coalescing operator (??) provides a simple way to handle null or undefined values in JavaScript. It's a must-have, let me show you why.
+description: The nullish coalescing operator ('??') provides a simple way to handle null or undefined values in JavaScript. It's a must-have, let me show you why.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 4303
+  ga4: 4331
 ---
 
 One important piece of JavaScript syntax that I've enjoyed using is the nullish coalescing (`??`) operator. The `??` operator handles default values more effectively compared with the traditional approach using the logical OR (`||`) operator. It's a 100% must-have tip.
@@ -35,7 +35,7 @@ console.log(value ?? _default); // Output: 0 (because 0 is not null or undefined
 
 The `??` operator treats `0` as a valid value, so it doesn't replace it with the default.
 
-## Why ?? is safer for default values
+## Why `??` is safer for default values
 
 The nullish coalescing operator is a powerful tool that shines in situations where you want to preserve falsy values like `0`, `false`, or an empty string but still provide defaults for `null` or `undefined`. This distinction helps prevent unintended consequences that can arise when using `||`, particularly when working with numbers or empty strings.
 
