@@ -1,19 +1,19 @@
 ---
 layout: post
 title: How JavaScript&rsquo;s at() method makes array indexing easier
-description: Learn how JavaScript's at() method simplifies array and string indexing with cleaner syntax, negative indexing, and broad browser support.
+description: Learn how JavaScript's 'at()' method simplifies array and string indexing with cleaner syntax, negative indexing, and broad browser support.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 2466
+  ga4: 2478
 ---
 
-Working with arrays in JavaScript is an everyday thing for front-end developers. We reach for arrays constantly — whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index — especially the last one? Now we can...with `Array.prototype.at()`.
+Working with arrays in JavaScript is an everyday thing for front-end developers. We reach for arrays constantly, whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index, especially the last one? Now we can...with `Array.prototype.at()`.
 
-## What's at()?
+## What's `at()`?
 
-The `at()` method is a relatively new addition to JavaScript (introduced in ECMAScript 2022), and it's designed to make accessing array elements more readable — particularly from **the end of an array**.
+The `at()` method is a relatively new addition to JavaScript (introduced in ECMAScript 2022), and it's designed to make accessing array elements more readable, particularly from **the end of an array**.
 
 ```js
 const fruits = ["apple", "banana", "cherry"];
@@ -30,7 +30,7 @@ console.log(fruits[fruits.length - 1]); // "cherry"
 
 Not only is `.at(-1)` cleaner, but it also reduces the chance for off-by-one errors.
 
-## Why should you use at()?
+## Why should you use `at()`?
 
 - **Negative indexing:** This is the standout feature. With `.at(-1)` you can grab the last item without manually calculating `.length - 1`.
 - **Improved readability:** The method communicates intent more clearly, especially when working with data structures like stacks, queues, or undo/redo arrays.
@@ -63,7 +63,7 @@ Both methods return the same result, and both return `undefined` for out-of-boun
 
 ## Edge cases to keep in mind
 
-Just like bracket notation, `.at()` behaves predictably in edge cases — but it helps to know the details:
+Just like bracket notation, `.at()` behaves predictably in edge cases, but it helps to know the details:
 
 ```js
 const nums = [10, 20];
@@ -75,7 +75,7 @@ console.log(nums.at(2.5));  // undefined (2.5 becomes 2, which is out of bounds)
 ```
 
 - `.at()` uses **truncation**, not rounding. Internally, it's equivalent to `Math.trunc(index)`.
-- If the resulting index is out of bounds — positive or negative — it returns `undefined`.
+- If the resulting index is out of bounds, positive or negative, it returns `undefined`.
 
 <aside class="message" role="note">
 Worried about performance? Don't be. While <code>.at()</code> can be slightly slower than bracket notation in tight loops, the difference is minimal for most use cases. It's well-optimized in modern JavaScript engines and safe to use even in performance-critical code.
@@ -131,4 +131,4 @@ If you've worked with Python or Ruby, this might feel familiar. Just like `list[
 
 ## Upgrade your indexing
 
-The `at()` method is a small but mighty addition to JavaScript. It can clean up your code, reduce off-by-one bugs, and improve readability — especially when working with dynamic data or negative indexing. It's a simple, modern tool that deserves a spot in your everyday toolkit.
+The `at()` method is a small but mighty addition to JavaScript. It can clean up your code, reduce off-by-one bugs, and improve readability, especially when working with dynamic data or negative indexing. It's a simple, modern tool that deserves a spot in your everyday toolkit.

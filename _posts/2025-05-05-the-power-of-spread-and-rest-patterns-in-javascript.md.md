@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 4849
+  ga4: 4910
 ---
 
 It's a fair bet that most web developers regularly encounter the three dots (`...`) in their code. Sometimes it magically copies arrays, sometimes it gathers up function arguments, and sometimes it shows up in object literals like it's casting a spell.
@@ -72,7 +72,7 @@ const user = { name: "Sam", age: 30 };
 const updatedUser = { ...user, age: 31 };
 ```
 
-This creates a new object where `age` is overridden — great for **immutable updates** in frameworks like React.
+This creates a new object where `age` is overridden, which is great for **immutable updates** in frameworks like React.
 
 <aside class="message" role="note">
 Object spread (<code>{...obj}</code>) was introduced in ES2018 and works <strong>only on plain objects</strong>. Unlike arrays or strings, not all objects are iterable or safely spreadable.
@@ -177,4 +177,4 @@ Properties on the right **override** those on the left. Always place updates las
 
 Spread and rest syntax may look small, but they unlock huge expressive power in JavaScript. From simplifying function arguments to immutably updating state, they help developers write cleaner, more predictable code.
 
-You'll see `...` everywhere — in React, in utility libraries, and in vanilla JS. Understanding how and *where* to use it is a must for any JavaScript developer today.
+You'll see `...` everywhere: in React, in utility libraries, and in vanilla JS. Understanding how and *where* to use it is a must for any JavaScript developer today.

@@ -7,7 +7,7 @@ tags: [HTML, JavaScript]
 comments: true
 views:
   ua: 21048
-  ga4: 4640
+  ga4: 4692
 ---
 
 I was recently working with a vertical navigation component and ran into a hiccup where the JavaScript code wouldn't fire depending on _where_ I clicked on the menu item link. I did some digging and thought I'd share a little about what I discovered and how I was able to resolve the problem. 

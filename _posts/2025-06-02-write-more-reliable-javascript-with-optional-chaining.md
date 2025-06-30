@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 3069
+  ga4: 3262
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:
@@ -29,7 +29,7 @@ if (user && user.profile && user.profile.avatar) {
 }
 ```
 
-This pattern might look familiar. We're checking each level of the object to avoid accessing a property of `undefined` or `null`. It's not only verbose, but it's also easy to make mistakes with this approach — especially in large codebases where object structures can change frequently.
+This pattern might look familiar. We're checking each level of the object to avoid accessing a property of `undefined` or `null`. It's not only verbose, but it's also easy to make mistakes with this approach, especially in large codebases where object structures can change frequently.
 
 ## Hello, optional chaining
 
@@ -81,7 +81,7 @@ const title = props?.article?.data?.attributes?.title;
 
 When `props` may be `undefined` during initial renders, this prevents crashes and keeps your components stable.
 
-## Optional chaining vs. logical AND (&&)
+## Optional chaining vs. logical AND (`&&`)
 
 Before optional chaining, a common pattern used looked like this:
 
@@ -149,7 +149,7 @@ const firstItem = myArray?.[0];
 
 This prevents an error if `myArray` is `undefined`.
 
-## Combine with nullish coalescing (??)
+## Combine with nullish coalescing (`??`)
 
 Want to provide a default value if the property is missing? Combine optional chaining with the nullish coalescing (`??`) operator:
 
