@@ -7,7 +7,7 @@ tags: [accessibility, CSS, HTML, JavaScript]
 comments: true
 views:
   ua: 11892
-  ga4: 745
+  ga4: 747
 ---
 
 <!--<p class="message">This post has been updated to reflect a <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">CSS-only approach</a> without the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>-->
