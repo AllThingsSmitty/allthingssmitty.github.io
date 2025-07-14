@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 3262
+  ga4: 3403
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:

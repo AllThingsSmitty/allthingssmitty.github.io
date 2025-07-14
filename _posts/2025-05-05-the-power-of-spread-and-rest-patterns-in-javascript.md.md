@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 4910
+  ga4: 4984
 ---
 
 It's a fair bet that most web developers regularly encounter the three dots (`...`) in their code. Sometimes it magically copies arrays, sometimes it gathers up function arguments, and sometimes it shows up in object literals like it's casting a spell.
@@ -118,7 +118,7 @@ console.log(info); // { name: "Sam", age: 30 }
 ```
 
 <aside class="message" role="note">
-Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only &#8212; not inherited ones.
+Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only, not inherited ones.
 </aside>
 
 ## Real world use cases
