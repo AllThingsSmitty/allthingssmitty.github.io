@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 2478
+  ga4: 2521
 ---
 
 Working with arrays in JavaScript is an everyday thing for front-end developers. We reach for arrays constantly, whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index, especially the last one? Now we can...with `Array.prototype.at()`.
@@ -16,16 +16,16 @@ Working with arrays in JavaScript is an everyday thing for front-end developers.
 The `at()` method is a relatively new addition to JavaScript (introduced in ECMAScript 2022), and it's designed to make accessing array elements more readable, particularly from **the end of an array**.
 
 ```js
-const fruits = ["apple", "banana", "cherry"];
+const fruits = ['apple', 'banana', 'cherry'];
 
-console.log(fruits.at(0));  // "apple"
-console.log(fruits.at(-1)); // "cherry"
+console.log(fruits.at(0));  // 'apple'
+console.log(fruits.at(-1)); // 'cherry'
 ```
 
 Compare that to the older approach we've always used:
 
 ```js
-console.log(fruits[fruits.length - 1]); // "cherry"
+console.log(fruits[fruits.length - 1]); // 'cherry'
 ```
 
 Not only is `.at(-1)` cleaner, but it also reduces the chance for off-by-one errors.
@@ -37,8 +37,8 @@ Not only is `.at(-1)` cleaner, but it also reduces the chance for off-by-one err
 - **Not just for arrays:** `at()` also works with strings and all typed arrays.
 
 ```js
-const greeting = "Hello";
-console.log(greeting.at(-1)); // "o"
+const greeting = 'Hello';
+console.log(greeting.at(-1)); // 'o'
 
 const int8 = new Int8Array([1, 2, 3]);
 console.log(int8.at(-1)); // 3
@@ -88,7 +88,7 @@ The `.at()` method is supported in all modern browsers (Chrome 92+, Firefox 90+,
 ```js
 if (!Array.prototype.at) {
   Array.prototype.at = function (n) {
-    if (this == null) throw new TypeError("Called on null or undefined");
+    if (this == null) throw new TypeError('Called on null or undefined');
     const len = this.length >>> 0;
     n = Number(n);
     if (isNaN(n)) n = 0;
@@ -109,22 +109,22 @@ Here are a few common examples where `at()` can really flex its muscle:
 ### 1. Getting the last message
 
 ```js
-const messages = ["Hi", "How are you?", "See you soon"];
-const latest = messages.at(-1); // "See you soon"
+const messages = ['Hi', 'How are you?', 'See you soon'];
+const latest = messages.at(-1); // 'See you soon'
 ```
 
 ### 2. Navigating a carousel
 
 ```js
-const images = ["img1.png", "img2.png", "img3.png"];
-const prev = images.at(-2); // "img2.png"
+const images = ['img1.png', 'img2.png', 'img3.png'];
+const prev = images.at(-2); // 'img2.png'
 ```
 
 ### 3. Peeking at the top of a stack
 
 ```js
-const historyStack = ["/home", "/about", "/contact"];
-const current = historyStack.at(-1); // "/contact"
+const historyStack = ['/home', '/about', '/contact'];
+const current = historyStack.at(-1); // '/contact'
 ```
 
 If you've worked with Python or Ruby, this might feel familiar. Just like `list[-1]` in Python or `array[-1]` in Ruby, JavaScript's `at(-1)` lets you access the end of a collection in a concise, expressive way.
