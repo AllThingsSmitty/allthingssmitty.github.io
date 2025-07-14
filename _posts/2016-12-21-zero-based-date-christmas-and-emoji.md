@@ -7,7 +7,7 @@ tags: [JavaScript]
 comments: true
 views:
   ua: 1629
-  ga4: 103
+  ga4: 104
 ---
 
 Here's a quick tip if you're starting out with JavaScript: which of the following values passed to the `getMonth()` and `getDate()` methods will print December 25?
