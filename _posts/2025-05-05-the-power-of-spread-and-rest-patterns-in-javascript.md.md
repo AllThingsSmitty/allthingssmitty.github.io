@@ -161,7 +161,7 @@ Spread copies only the top level of arrays and objects. Nested structures remain
 const nested = { a: { b: 2 } };
 const copy = { ...nested };
 copy.a.b = 99;
-console.log(nested.a.b); // 99 — still linked!
+console.log(nested.a.b); // 99 - still linked!
 ```
 
 ### Order matters in object spread
