@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 4168
+  ga4: 4240
 ---
 
 Writing asynchronous code in JavaScript used to come with a limitation: the `await` keyword could only be used inside an `async` function. That changed when ES2022 introduced **top-level `await`**, a modern ES module feature that enables new patterns for asynchronous code at the module level.

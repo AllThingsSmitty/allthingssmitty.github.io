@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [TypeScript]
 comments: true
 views:
-  ga4: 618
+  ga4: 623
 ---
 
 In TypeScript, you may have heard that the `any` type is seen as a kind of "get out of jail free" card. It allows any value to be assigned to a variable of type `any`, which effectively disabling TypeScript's static type checking. That might be convenient in certain situations, but it undermines one of the primary benefits of TypeScript: catching errors during development. If you use `any` liberally, you might end up with a codebase that's no safer than regular JavaScript.
