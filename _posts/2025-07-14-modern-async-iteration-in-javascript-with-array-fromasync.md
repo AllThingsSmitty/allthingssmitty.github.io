@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1873
+  ga4: 1997
 ---
 
 As front-end engineers, we frequently deal with asynchronous data, such as API responses, streams, lazy-loaded content, and more. JavaScript has long provided tools for managing async logic, but working with async iterables has often required verbose or manual handling.
