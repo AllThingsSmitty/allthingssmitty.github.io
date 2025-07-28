@@ -3,7 +3,7 @@ const rootElement = document.documentElement;
 
 const handleScroll = () => {
   const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-  scrollToTopBtn?.classList.toggle("showBtn", rootElement.scrollTop / scrollTotal > 0.3);
+  scrollToTopBtn?.classList.toggle("showBtn", rootElement.scrollTop / scrollTotal > 0.25);
 };
 
 const scrollToTop = () => {
