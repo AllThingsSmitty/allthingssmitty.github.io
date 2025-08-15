@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 5044
+  ga4: 5196
 ---
 
 It's a fair bet that most web developers regularly encounter the three dots (`...`) in their code. Sometimes it magically copies arrays, sometimes it gathers up function arguments, and sometimes it shows up in object literals like it's casting a spell.
