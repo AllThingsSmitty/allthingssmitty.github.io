@@ -7,7 +7,7 @@ tags: [CSS]
 comments: true
 views:
   ua: 16232
-  ga4: 283
+  ga4: 287
 ---
 
 CSS resets help enforce style consistency across different browsers by providing a clean slate for styling elements. Resources like Normalize, <nobr>et al.</nobr>, do an excellent job at managing this. For a couple of years now, I've opted to go with a minimalist approach to resets and found it to be just as useful:
