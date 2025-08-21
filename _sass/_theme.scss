@@ -116,7 +116,7 @@
   }
 
   @mixin text-decoration {
-    text-decoration-color: rgba(240, 240, 240, 0.65);
+    text-decoration-color: oklch(from currentColor l c h / 65%);
   }
 
   .post-link {
