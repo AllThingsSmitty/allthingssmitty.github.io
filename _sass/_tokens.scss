@@ -62,13 +62,14 @@ $large-breakpoint: 36rem;
   --color-dark-shades-primary-glare: #8494ab;
   --color-dark-shades-primary-bright: #202831;
 
-  --color-dark-shades-gray: #7b92b2;
   --color-dark-state-info-text: #99b5fb;
   --color-dark-state-warn-bg: #272114;
   --color-dark-state-warn-text: #ee6e25;
   --color-dark-code-tertiary: #ff89b9;
   --color-dark-syntax-quaternary: #99c192;
 
+  --color-dark-reflective-stroke: #adb5d1;
+  --color-dark-shades-gray: var(--color-dark-reflective-stroke);
   --color-dark-stroke: #555;
   --color-dark-token-comment: #b9bac9;
 }
