@@ -41,7 +41,7 @@ With top-level `await`, you can say **goodbye to boilerplate** like this. Your a
 <aside class="message" role="note">
 {:/}
 
-<div class="note--head">🚨 Important</div>
+<div class="note-heading">🚨 Important</div>
 
 Top-level `await` only works in JavaScript **modules**, not in CommonJS (`require`) or traditional `<script>` tags without `type="module"` (those run in classic script mode). Also, `.cjs` files in Node.js **don't** support top-level `await`.
 

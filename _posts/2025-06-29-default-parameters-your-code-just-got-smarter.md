@@ -118,7 +118,7 @@ This pattern is especially helpful when event handlers are triggered in tests or
 <aside class="message" role="note">
 {:/}
 
-<div class="note--head"> 🙈 Code confession</div>
+<div class="note-heading">🙈 Code confession</div>
 
 Writing all those `&&` checks? Same...until I started using [optional chaining](https://allthingssmitty.com/2025/06/02/write-more-reliable-javascript-with-optional-chaining/). Cleaner code, fewer bugs.
 
