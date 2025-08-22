@@ -102,7 +102,7 @@ Use this when you want to assign defaults **only if the value is truly missing**
 <aside class="message" role="note">
 {:/}
 
-<div class="note--head">💡 Dig deeper</div>
+<div class="note-heading">💡 Dig deeper</div>
 
 If you want to learn more about the nullish coalescing operator, I wrote about [mastering default values](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) that will definitely up your game.
 

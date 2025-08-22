@@ -36,7 +36,7 @@ Array.fromAsync(source[, mapFn[, thisArg]]) // Returns a Promise<Array>
 <aside class="message" role="note">
 {:/}
 
-<div class="note--head">✅ Helpful tip</div>
+<div class="note-heading">✅ Helpful tip</div>
 
 `Array.fromAsync()` expects an iterable. If you pass a single Promise (e.g., `Promise.resolve(1)`), it will throw a `TypeError`. The source must be iterable or async iterable.
 

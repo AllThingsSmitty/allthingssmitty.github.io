@@ -163,7 +163,7 @@ This returns `"default.png"` if `avatar` is `null` or `undefined`.
 <aside class="message" role="note">
 {:/}
 
-<div class="note--head"> 💡 Ready for more?</div>
+<div class="note-heading">💡 Ready for more?</div>
 
 I wrote about [mastering default values with the nullish coalescing operator](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) that will definitely up your game.
 
