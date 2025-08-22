@@ -30,6 +30,7 @@ const formatPageViews = () => {
       elements.forEach((element) => {
         if (condition(element)) {
           element.style.display = "none";
+          element.setAttribute("aria-hidden", "true");
         }
       });
     } catch (error) {
