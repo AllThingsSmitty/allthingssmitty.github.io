@@ -86,6 +86,18 @@
       }
 
       &.published {
+        .short {
+          @media (min-width: $large-breakpoint) {
+            display: none;
+          }
+        }
+
+        .long {
+          @media (max-width: $large-breakpoint) {
+            display: none;
+          }
+        }
+
         &::before {
           background-image: url("data:image/svg+xml,\
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>\
