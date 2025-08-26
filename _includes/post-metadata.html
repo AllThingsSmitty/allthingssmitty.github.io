@@ -22,14 +22,14 @@
 
   {% if page.path contains '_posts' %}
     <time class="data published" aria-label="Published on {{ page.date | date: '%B %-d, %Y' }}">
-      <span class="long">{{ page.date | date: "%B %-d, %Y" }}</span>
-      <span class="short">{{ page.date | date: "%b %-d, %Y" }}</span>
+      <span class="long" aria-hidden="true">{{ page.date | date: "%B %-d, %Y" }}</span>
+      <span class="short" aria-hidden="true">{{ page.date | date: "%b %-d, %Y" }}</span>
     </time>
   {% endif %}
   {% if post.path contains '_posts' %}
     <time class="data published" aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">
-      <span class="long">{{ post.date | date: "%B %-d, %Y" }}</span>
-      <span class="short">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="long" aria-hidden="true">{{ post.date | date: "%B %-d, %Y" }}</span>
+      <span class="short" aria-hidden="true">{{ post.date | date: "%b %-d, %Y" }}</span>
     </time>
   {% endif %}
 
