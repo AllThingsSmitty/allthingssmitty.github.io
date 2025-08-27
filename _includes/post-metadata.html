@@ -21,16 +21,24 @@
 <div class="post-header__meta">
 
   {% if page.path contains '_posts' %}
-    <time class="data published" aria-label="Published on {{ page.date | date: '%B %-d, %Y' }}">
-      <span class="long" aria-hidden="true">{{ page.date | date: "%B %-d, %Y" }}</span>
-      <span class="short" aria-hidden="true">{{ page.date | date: "%b %-d, %Y" }}</span>
-    </time>
+    <span aria-label="Published on {{ page.date | date: '%B %-d, %Y' }}">
+      <time class="data published" aria-hidden="true">
+        <span
+        aria-hidden="true"
+        data-long="{{ page.date | date: '%B %-d, %Y' }}"
+        data-short="{{ page.date | date: '%b %-d, %Y' }}"></span>
+      </time>
+    </span>
   {% endif %}
   {% if post.path contains '_posts' %}
-    <time class="data published" aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">
-      <span class="long" aria-hidden="true">{{ post.date | date: "%B %-d, %Y" }}</span>
-      <span class="short" aria-hidden="true">{{ post.date | date: "%b %-d, %Y" }}</span>
-    </time>
+    <span aria-label="Published on {{ post.date | date: '%B %-d, %Y' }}">
+      <time class="data published" aria-hidden="true">
+        <span
+        aria-hidden="true"
+        data-long="{{ post.date | date: '%B %-d, %Y' }}"
+        data-short="{{ post.date | date: '%b %-d, %Y' }}"></span>
+      </time>
+    </span>
   {% endif %}
 
   <div class="data reading-time">
