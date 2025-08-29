@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logical assignment operators in JavaScript: small syntax, big wins"
-description: "Logical assignment operators (||=, &&=, ??=) streamline conditional assignments in JavaScript, making your code cleaner, safer, and easier to read, especially in modern front-end workflows."
+description: "Logical assignment operators streamline conditional assignments in JavaScript, making your code cleaner, safer, and easier to read."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
