@@ -81,13 +81,21 @@ function fetchUser(id, options = { cache: true, retries: 3 }) {
 
 This makes your function resilient even if the caller forgets to pass an options object, while still enforcing sensible defaults.
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** Default parameter values are evaluated at call time. So a **new object** is created for `options` every time `fetchUser` is called without one. This means you're safe from shared state issues unless you move the object outside the function and reuse or mutate it:
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ```js
 const defaultOptions = { cache: true, retries: 3 };
 
 function fetchUser(id, options = defaultOptions) {
-  // ⚠️ defaultOptions could be mutated and shared
+  // defaultOptions could be mutated and shared
 }
 ```
 
@@ -115,7 +123,7 @@ This pattern is especially helpful when event handlers are triggered in tests or
 
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">🙈 Code confession</div>

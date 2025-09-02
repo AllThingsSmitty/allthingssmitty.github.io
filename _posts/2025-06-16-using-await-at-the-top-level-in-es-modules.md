@@ -38,7 +38,7 @@ In the past, you'd need to wrap this logic in an **async immediately invoked fun
 With top-level `await`, you can say **goodbye to boilerplate** like this. Your asynchronous code can now live directly in the module's top scope, making things simpler, cleaner, and easier to read.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">🚨 Important</div>
@@ -69,7 +69,15 @@ await dbDriver.connect();
 
 Top-level `await` pairs naturally with **dynamic `import()`** for conditionally loading code based on runtime factors.
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** Static `import` statements are resolved before module execution. If an imported module contains top-level `await`, the importing module will **wait for the awaited code to finish executing before it starts**.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ```js
 import { settings } from './config.js'; // Waits for config.js to finish evaluating
@@ -86,7 +94,15 @@ wasm.instance.exports.main();
 
 In performance-critical codebases you can now `await` WASM modules without async wrappers.
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** Make sure your server serves `.wasm` files with the correct `application/wasm` MIME type, otherwise `instantiateStreaming()` will fail. In that case, fall back to:
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ```js
 const response = await fetch('lib.wasm');

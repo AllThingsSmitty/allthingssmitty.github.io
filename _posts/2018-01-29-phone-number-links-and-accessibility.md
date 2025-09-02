@@ -18,7 +18,7 @@ views:
 
 One UX challenge that used to give me pause was making phone numbers accessible in the browser while still being functional. Here's what I mean about that. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
 
-<blockquote class="message">Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).</blockquote>
+<blockquote class="message highlight">Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).</blockquote>
 
 Consider for a moment how we code a [phone number link](https://css-tricks.com/the-current-state-of-telephone-links/){:rel="external"} to function when tapped in a mobile browser:
 

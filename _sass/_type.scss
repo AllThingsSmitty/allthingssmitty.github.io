@@ -28,9 +28,7 @@ aside,
 blockquote {
   &.message {
     --spacer: 1.5rem;
-    background-color: var(--color-shades-primary-bright);
     border-radius: 0.25rem;
-    color: var(--color-state-info-text);
     font-size: 0.9rem;
     margin: var(--spacer) 0;
     padding: clamp(1.25rem, var(--spacer), 2rem);
@@ -38,7 +36,26 @@ blockquote {
     &.notification {
       background-color: var(--color-state-warn-bg);
       color: var(--color-state-warn-text);
-      margin: var(--spacer) 0;
+      margin-inline: 0;
+    }
+
+    &.highlight {
+      background-color: var(--color-shades-primary-bright);
+      color: var(--color-state-info-text);
+
+      @media (min-width: 53.125rem) {
+        margin: var(--spacer) -1.75rem;
+      }
+    }
+
+    &.memo {
+      background-color: var(--color-mid-bg);
+      color: inherit;
+      margin-inline: 0;
+
+      code {
+        background-color: var(--color-shades-tertiary-bright);
+      }
     }
 
     .note-heading {
@@ -56,10 +73,6 @@ blockquote {
 
     a {
       color: currentColor;
-    }
-
-    @media (min-width: 53.125rem) {
-      margin: var(--spacer) -1.75rem;
     }
   }
 }
