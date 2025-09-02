@@ -24,7 +24,7 @@ Promise.any(iterable)
 An **empty iterable** rejects immediately with an `AggregateError` whose `.errors` array is empty.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">📌 Performance tip</div>
@@ -69,7 +69,15 @@ Promise.any([
   });
 ```
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** `fetch()` only rejects on network errors (such as being offline) or CORS policy violations, which appear as generic network failures.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ### Progressive enhancement with optional features
 
@@ -104,7 +112,7 @@ Promise.any([
 ```
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 The Clipboard API often requires explicit user interaction and permissions. It might also reject if called outside a user gesture context (like `click`). Using fallbacks like `prompt()` ensures your feature remains usable across a wider range of browsers and permissions scenarios.

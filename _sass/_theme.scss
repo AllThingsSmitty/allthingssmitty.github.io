@@ -29,6 +29,16 @@
         background-color: var(--color-dark-state-warn-bg);
         color: var(--color-dar-state-warn-text);
       }
+
+      &.memo {
+        background-color: var(--color-dark-mid-bg);
+        color: inherit;
+        margin-inline: 0;
+
+        code {
+          background-color: var(--color-dark-mid-bg);
+        }
+      }
     }
   }
 
@@ -234,7 +244,7 @@
   }
 }
 
-@import "https://unpkg.com/open-props/easings.min.css";
+// @import "https://unpkg.com/open-props/easings.min.css";
 
 .theme-toggle {
   // --size: 2rem;

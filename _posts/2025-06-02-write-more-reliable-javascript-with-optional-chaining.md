@@ -69,7 +69,15 @@ user?.sendMessage?.("Hello!");
 
 This ensures that `user` exists *and* that `sendMessage` is a function before attempting to call it. Otherwise, it simply returns `undefined`.
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** `fn?.()` only short-circuits if `fn` is `null` or `undefined`. If `fn` is defined but not a function (e.g., a `string` or `object`), it will still throw a `TypeError`.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ### In frameworks (React, Redux, etc.)
 
@@ -160,7 +168,7 @@ const avatar = user?.profile?.avatar ?? "default.png";
 This returns `"default.png"` if `avatar` is `null` or `undefined`.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">💡 Ready for more?</div>

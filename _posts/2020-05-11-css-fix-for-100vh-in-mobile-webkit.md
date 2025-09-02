@@ -68,7 +68,7 @@ html {
 }
 ```
 
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 This code was updated to include the <code>html</code> selector after I was told that <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="external">Chrome is updating the behavior</a> to match Firefox’s implementation.
 </aside>
 

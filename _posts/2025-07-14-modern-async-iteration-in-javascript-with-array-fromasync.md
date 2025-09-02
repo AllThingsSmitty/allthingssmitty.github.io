@@ -33,7 +33,7 @@ Array.fromAsync(source[, mapFn[, thisArg]]) // Returns a Promise<Array>
 `Array.fromAsync()` returns a **Promise** that resolves to the resulting array.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">✅ Helpful tip</div>
@@ -197,7 +197,15 @@ async function arrayFromAsync(source, mapFn, thisArg) {
 }
 ```
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** This polyfill covers most common use cases but may not match the ECMAScript spec exactly. For example, it doesn't handle iterator closing protocols or sparse arrays in the same way.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ## Quick comparison
 

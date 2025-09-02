@@ -15,7 +15,15 @@ In day-to-day JavaScript, we often write code that checks a variable before assi
 
 Logical assignment operators combine a **logical operator** (`||`, `&&`, or `??`) with **assignment** (`=`) to create a shorthand form. These operators also **short-circuit** like regular logical expressions, meaning the right-hand side is only evaluated if the left-hand side fails the logical test (i.e., is falsy, truthy, or nullish).
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** Optional chaining (`?.`) isn't allowed on the left-hand side of a logical assignment. It throws a syntax error:
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ```js
 // ❌ SyntaxError:
@@ -43,7 +51,7 @@ if (!user.theme) {
 This is useful for setting a default if a value hasn't been initialized. But it **overwrites values** like `0`, `''`, or `false`, which might be intentionally set.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 For another way to handle defaults - this time with function parameters - check out my post on [default parameters in JavaScript](https://allthingssmitty.com/2025/06/29/default-parameters-your-code-just-got-smarter/).
@@ -70,7 +78,15 @@ if (user.isLoggedIn) {
 
 This is helpful for conditionally updating a value based on an existing truthy value.
 
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
 ⚠️ **Note:** With `&&=`, the right-hand side is only evaluated if the left-hand side is truthy, and its **actual result** is assigned, even if that result is falsy.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 ```js
 let isEnabled = true;
@@ -99,7 +115,7 @@ if (settings.timeout === null || settings.timeout === undefined) {
 Use this when you want to assign defaults **only if the value is truly missing**, not just falsy. Unlike `||=`, it preserves valid values like `0`, `false`, and `''`.
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 {:/}
 
 <div class="note-heading">💡 Dig deeper</div>

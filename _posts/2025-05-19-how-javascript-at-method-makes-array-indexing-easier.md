@@ -77,7 +77,7 @@ console.log(nums.at(2.5));  // undefined (2.5 becomes 2, which is out of bounds)
 - `.at()` uses **truncation**, not rounding. Internally, it's equivalent to `Math.trunc(index)`.
 - If the resulting index is out of bounds, positive or negative, it returns `undefined`.
 
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 Worried about performance? Don't be. While <code>.at()</code> can be slightly slower than bracket notation in tight loops, the difference is minimal for most use cases. It's well-optimized in modern JavaScript engines and safe to use even in performance-critical code.
 </aside>
 

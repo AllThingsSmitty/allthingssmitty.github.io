@@ -119,7 +119,7 @@ Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spaci
 
 <hr class="border-rule" />
 
-## Notes
+## Messages/notes
 
 #### Notification
 
@@ -129,11 +129,23 @@ Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spaci
 </aside>
 {:/}
 
-#### Message
+#### Highlight
 
 {::nomarkdown}
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id turpis ut purus ultricies euismod. Fusce malesuada gravida pretium. Integer et velit in orci imperdiet dictum
+</aside>
+{:/}
+
+#### General 
+
+{::nomarkdown}
+<aside class="message memo" role="note">
+{:/}
+
+⚠️ **Note:** With `&&=`, the right-hand side is only evaluated if the left-hand side is truthy, and its **actual result** is assigned, even if that result is falsy.
+
+{::nomarkdown}
 </aside>
 {:/}
 

@@ -74,7 +74,7 @@ const updatedUser = { ...user, age: 31 };
 
 This creates a new object where `age` is overridden, which is great for **immutable updates** in frameworks like React.
 
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 Object spread (<code>{...obj}</code>) was introduced in ES2018 and works <strong>only on plain objects</strong>. Unlike arrays or strings, not all objects are iterable or safely spreadable.
 </aside>
 
@@ -117,7 +117,7 @@ console.log(id);   // 1
 console.log(info); // { name: "Sam", age: 30 }
 ```
 
-<aside class="message" role="note">
+<aside class="message highlight" role="note">
 Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only, not inherited ones.
 </aside>
 
