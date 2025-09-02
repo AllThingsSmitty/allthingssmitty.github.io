@@ -95,7 +95,7 @@ This makes your function resilient even if the caller forgets to pass an options
 const defaultOptions = { cache: true, retries: 3 };
 
 function fetchUser(id, options = defaultOptions) {
-  // defaultOptions could be mutated and shared
+  // ‼️ defaultOptions could be mutated and shared
 }
 ```
 
