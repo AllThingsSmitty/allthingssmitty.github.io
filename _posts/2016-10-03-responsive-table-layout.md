@@ -12,7 +12,7 @@ views:
 
 One of my pet peeves in web design is how tables are often not optimized for non-desktop experiences. Let's say I'm viewing Wikipedia on my iPhone, I'm looking through the episode list for _Star Trek: The Next Generation_ (I grew up in the 90's --- deal), and the table has a lot of columns and data. There ends up being a lot of back-and-forth side swiping, device flipping, and general annoyance as I muddle through that user experience.
 
-It's an issue that exists broadly across the web, even though there are several [responsive table solutions](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:rel="external"} available, including this simple, CSS-only pattern:
+It's an issue that exists broadly across the web, even though there are several [responsive table solutions](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:target="_blank"}{:rel="noopener noreferrer"} available, including this simple, CSS-only pattern:
 
 <div class="embed">
   <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">A simple <a href="https://twitter.com/hashtag/responsive?src=hash">#responsive</a> table in <a href="https://twitter.com/hashtag/CSS?src=hash">#CSS</a>, in case you forgot we can do this. <a href="https://t.co/U7QOetqzOr">https://t.co/U7QOetqzOr</a> <a href="https://twitter.com/hashtag/RWD?src=hash">#RWD</a> <a href="https://twitter.com/CodePen">@CodePen</a> <a href="https://t.co/M2gkg0Gq4k">pic.twitter.com/M2gkg0Gq4k</a></p>&mdash; Matt Smith (@AllThingsSmitty) <a href="https://twitter.com/AllThingsSmitty/status/753943893834473472">July 15, 2016</a></blockquote>
@@ -131,4 +131,4 @@ Here's our table (flip your device screen between portrait and landscape view):
 
 ## That's it? <span role="img" aria-label="emoji flushed face">&#x1F633;</span>
 
-Yep, pretty much. At least for this example. Keep in mind that this is just one responsive table layout with relatively simple data content. You may have different use cases and more complex data to manage, so YMMV. But always [consider the options](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:rel="external"} for a better user experience.
+Yep, pretty much. At least for this example. Keep in mind that this is just one responsive table layout with relatively simple data content. You may have different use cases and more complex data to manage, so YMMV. But always [consider the options](https://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions/){:target="_blank"}{:rel="noopener noreferrer"} for a better user experience.

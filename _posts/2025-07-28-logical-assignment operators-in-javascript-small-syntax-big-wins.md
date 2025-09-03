@@ -197,7 +197,7 @@ Logical assignment operators are supported in all modern environments:
 - ✅ Node.js 15+
 - ❌ Not supported in Internet Explorer
 
-If you're targeting older environments, use a transpiler like [`@babel/preset-env`](https://babeljs.io/docs/babel-preset-env){:rel="external"} with ES2021 settings.
+If you're targeting older environments, use a transpiler like [`@babel/preset-env`](https://babeljs.io/docs/babel-preset-env){:target="_blank"}{:rel="noopener noreferrer"} with ES2021 settings.
 
 ## Now you're ready!
 

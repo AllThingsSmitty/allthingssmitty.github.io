@@ -34,7 +34,7 @@ The correct answer is `2`.
 
 Okay, that may have confused you a bit, especially since browsers will accept length and percentage values. Let's break it down together.
 
-You should always specify `line-height` as a [unitless number](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values){:rel="external"} (say this into the mirror five times). That way descendent elements that specify a different font size will inherit _that_ number instead of a fixed line height.
+You should always specify `line-height` as a [unitless number](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values){:target="_blank"}{:rel="noopener noreferrer"} (say this into the mirror five times). That way descendent elements that specify a different font size will inherit _that_ number instead of a fixed line height.
 
 By making the line height unitless, the browser preserves the `font-size`/`line-height` ratio even if the font size changes. In the example above, if the line height is set on the body selector:
 

@@ -62,7 +62,7 @@ Users are our lifeblood. We do this to make things better for them.
 
 ## Debugging
 
-It works great over here, but not over here. This device is okay, but not this one. And performance throttling isn't what it should be. Could 'ya fix all that, and also [get your TPS reports in](https://www.youtube.com/watch?v=Fy3rjQGc6lA){:rel="external"}?
+It works great over here, but not over here. This device is okay, but not this one. And performance throttling isn't what it should be. Could 'ya fix all that, and also [get your TPS reports in](https://www.youtube.com/watch?v=Fy3rjQGc6lA){:target="_blank"}{:rel="noopener noreferrer"}?
 
 ## Production
 

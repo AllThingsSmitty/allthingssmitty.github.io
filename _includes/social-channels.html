@@ -1,11 +1,11 @@
 <div class="social-media">
   {% for item in site.data.org.social %}
-    <div class="social-media__item">
-      <a href="{{ item.url }}" rel="external">
-        <div class="social__icon social__icon--{{ item.short  }}">
-          <div class="sr-only">{{ item.name }}</div>
-        </div>
-      </a>
-    </div>
+  <div class="social-media__item">
+    <a href="{{ item.url }}" rel="noopener noreferrer">
+      <div class="social__icon social__icon--{{ item.short  }}">
+        <div class="sr-only">{{ item.name }}</div>
+      </div>
+    </a>
+  </div>
   {% endfor %}
 </div>

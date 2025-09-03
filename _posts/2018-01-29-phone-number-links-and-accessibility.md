@@ -16,11 +16,11 @@ views:
 
 <div class="break"></div>
 
-One UX challenge that used to give me pause was making phone numbers accessible in the browser while still being functional. Here's what I mean about that. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:rel="external"} state:
+One UX challenge that used to give me pause was making phone numbers accessible in the browser while still being functional. Here's what I mean about that. The [WCAG 2.0 guidelines](https://www.w3.org/TR/WCAG20-TECHS/F73.html#F73-description){:target="_blank"}{:rel="noopener noreferrer"} state:
 
 <blockquote class="message highlight">Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).</blockquote>
 
-Consider for a moment how we code a [phone number link](https://css-tricks.com/the-current-state-of-telephone-links/){:rel="external"} to function when tapped in a mobile browser:
+Consider for a moment how we code a [phone number link](https://css-tricks.com/the-current-state-of-telephone-links/){:target="_blank"}{:rel="noopener noreferrer"} to function when tapped in a mobile browser:
 
 ```html
 <a href="tel:123-456-7890">123-456-7890</a>
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
 
 ## Using replaceChild()
 
-Now that we have our basic shell of a function, we can add values for our new element. After that we can call [`replaceChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild){:rel="external"} method to replace the `<span>` element with `<a>` when the viewport/screen reaches a specific width:
+Now that we have our basic shell of a function, we can add values for our new element. After that we can call [`replaceChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild){:target="_blank"}{:rel="noopener noreferrer"} method to replace the `<span>` element with `<a>` when the viewport/screen reaches a specific width:
 
 ```js
 const num = document.querySelector('.number'),

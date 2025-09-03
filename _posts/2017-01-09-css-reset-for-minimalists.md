@@ -22,7 +22,7 @@ CSS resets help enforce style consistency across different browsers by providing
 }
 ```
 
-Now elements will be stripped of margins and padding, and `box-sizing` lets you manage layouts using the [CSS box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model){:rel="external"}.
+Now elements will be stripped of margins and padding, and `box-sizing` lets you manage layouts using the [CSS box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model){:target="_blank"}{:rel="noopener noreferrer"}.
 
 Another minimalist alternative is to let `box-sizing` be inherited from the `html` selector:
 
