@@ -12,13 +12,13 @@ views:
 
 In JavaScript, the `Math` object is something developers work with a lot. And two methods in particular, `Math.floor()` and `Math.random()`, are often utilized together. Let's take a quick look at both to see how we might use them to create a random text engine.
 
-The [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random){:rel="external"} method generates a number between 0 and 1 that isn't a whole number (integer) and also isn't 1. For example, to get a number between 0 and 10, we multiply our answer by 10:
+The [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random){:target="_blank"}{:rel="noopener noreferrer"} method generates a number between 0 and 1 that isn't a whole number (integer) and also isn't 1. For example, to get a number between 0 and 10, we multiply our answer by 10:
 
 ```javascript
 Math.random() * 10;
 ```
 
-To get generate a whole number, we apply the [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor){:rel="external"} method which rounds down to the nearest whole number:
+To get generate a whole number, we apply the [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor){:target="_blank"}{:rel="noopener noreferrer"} method which rounds down to the nearest whole number:
 
 ```javascript
 Math.floor(Math.random() * 10);
@@ -35,7 +35,7 @@ Now that we have a general idea about how these two methods work in producing ra
 
 ## Did someone say dinosaurs?
 
-[Lorem Ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum){:rel="external"}-style generators produce randomized blocks of text with varieties ranging from [cupcakes](http://cupcakeipsum.com){:rel="external"}, to [bacon](http://baconipsum.com){:rel="external"}, even [Hodor](hodoripsum.com){:rel="external"}. So let's create one of our own based on quotes from the movie "Jurassic Park", because who doesn't like dinosaurs?
+[Lorem Ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum){:target="_blank"}{:rel="noopener noreferrer"}-style generators produce randomized blocks of text with varieties ranging from [cupcakes](http://cupcakeipsum.com){:target="_blank"}{:rel="noopener noreferrer"}, to [bacon](http://baconipsum.com){:target="_blank"}{:rel="noopener noreferrer"}, even [Hodor](hodoripsum.com){:target="_blank"}{:rel="noopener noreferrer"}. So let's create one of our own based on quotes from the movie "Jurassic Park", because who doesn't like dinosaurs?
 
 First we need to create an array of quotes that will be randomly put together:
 

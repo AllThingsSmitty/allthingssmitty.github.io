@@ -20,7 +20,7 @@ Enter `Array.fromAsync()`, a modern addition to JavaScript that simplifies the p
 - **Async iterables**
 - **Regular (sync) iterables**
 
-...into arrays. It's similar to [`Array.from()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from){:rel="external"}, but built to handle asynchronous data sources:
+...into arrays. It's similar to [`Array.from()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from){:target="_blank"}{:rel="noopener noreferrer"}, but built to handle asynchronous data sources:
 
 ```js
 Array.fromAsync(source[, mapFn[, thisArg]]) // Returns a Promise<Array>

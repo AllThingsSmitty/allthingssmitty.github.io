@@ -181,7 +181,7 @@ I wrote about [mastering default values with the nullish coalescing operator](ht
 
 ## Browser support
 
-Optional chaining is supported in all modern browsers (Chrome 80+, Firefox 74+, Safari 13.1+, Edge 80+), but not in Internet Explorer. Use a transpiler like [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/babel-plugin-transform-optional-chaining){:rel="external"} if you need compatibility with legacy browsers.
+Optional chaining is supported in all modern browsers (Chrome 80+, Firefox 74+, Safari 13.1+, Edge 80+), but not in Internet Explorer. Use a transpiler like [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/babel-plugin-transform-optional-chaining){:target="_blank"}{:rel="noopener noreferrer"} if you need compatibility with legacy browsers.
 
 ## Try it out
 

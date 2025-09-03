@@ -19,7 +19,7 @@ Promise.any(iterable)
 
 - Takes an iterable of promises.
 - Resolves as soon as one fulfills.
-- Rejects with an [`AggregateError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError){:\rel="external"} if *all* reject.
+- Rejects with an [`AggregateError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError){:target="_blank"}{:\rel="noopener noreferrer"} if *all* reject.
 
 An **empty iterable** rejects immediately with an `AggregateError` whose `.errors` array is empty.
 
@@ -29,7 +29,7 @@ An **empty iterable** rejects immediately with an `AggregateError` whose `.error
 
 <div class="note-heading">📌 Performance tip</div>
 
-Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:\rel="external"} if cancellation is important.
+Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:\rel="noopener noreferrer"} if cancellation is important.
 
 {::nomarkdown}
 </aside>
@@ -163,7 +163,7 @@ Promise.any([
 
 ## Browser support
 
-`Promise.any()` is supported in all modern browsers (Chrome 85+, Firefox 79+, Safari 14+, Edge 85+) and Node.js 15+. For legacy support, you can use a polyfill like [`core-js`](https://www.npmjs.com/package/core-js){:rel="external"}.
+`Promise.any()` is supported in all modern browsers (Chrome 85+, Firefox 79+, Safari 14+, Edge 85+) and Node.js 15+. For legacy support, you can use a polyfill like [`core-js`](https://www.npmjs.com/package/core-js){:target="_blank"}{:rel="noopener noreferrer"}.
 
 ## When not to use `Promise.any()`
 

@@ -121,7 +121,6 @@ const handleClick = (event = {}) => {
 
 This pattern is especially helpful when event handlers are triggered in tests or wrapped in higher-order logic. Optional chaining (`?.`) combined with default parameters makes the code safer and more readable.
 
-
 {::nomarkdown}
 <aside class="message highlight" role="note">
 {:/}
