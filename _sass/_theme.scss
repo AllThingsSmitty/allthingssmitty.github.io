@@ -22,12 +22,14 @@
   aside,
   blockquote {
     &.message {
-      background-color: var(--color-dark-shades-primary-bright);
-      color: var(--color-dark-state-info-text);
-
       &.notification {
         background-color: var(--color-dark-state-warn-bg);
         color: var(--color-dar-state-warn-text);
+      }
+
+      &.highlight {
+        background-color: var(--color-dark-shades-primary-bright);
+        color: var(--color-dark-state-info-text);
       }
 
       &.memo {
@@ -372,12 +374,24 @@ html[data-theme="dark"] {
   aside,
   blockquote {
     &.message {
-      background-color: var(--color-dark-shades-primary-bright);
-      color: var(--color-dark-state-info-text);
-
       &.notification {
         background-color: var(--color-dark-state-warn-bg);
         color: var(--color-dar-state-warn-text);
+      }
+
+      &.highlight {
+        background-color: var(--color-dark-shades-primary-bright);
+        color: var(--color-dark-state-info-text);
+      }
+
+      &.memo {
+        background-color: var(--color-dark-mid-bg);
+        color: inherit;
+        margin-inline: 0;
+
+        code {
+          background-color: var(--color-dark-mid-bg);
+        }
       }
     }
   }
