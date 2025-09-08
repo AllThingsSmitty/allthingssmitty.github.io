@@ -15,7 +15,7 @@ This is one of those "Can you do that, no you can't do that, but can you really 
 First, what the heck am I talking about?
 
 <div class="embed">
-  <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">🔥 <a href="https://twitter.com/hashtag/CSS?src=hash">#CSS</a> trick: split an element’s border around another element. 😎 <a href="https://t.co/bkfBUaCtAl">https://t.co/bkfBUaCtAl</a> <a href="https://twitter.com/CodePen">@CodePen</a> <a href="https://twitter.com/hashtag/responsive?src=hash">#responsive</a> <a href="https://twitter.com/hashtag/RWD?src=hash">#RWD</a> <a href="https://t.co/waSqYi6feh">pic.twitter.com/waSqYi6feh</a></p>&mdash; Matt Smith (@AllThingsSmitty) <a href="https://twitter.com/AllThingsSmitty/status/756117334029438976">July 21, 2016</a></blockquote>
+  <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">🔥 <a href="https://twitter.com/hashtag/CSS?src=hash">#CSS</a> trick: split an element's border around another element. 😎 <a href="https://t.co/bkfBUaCtAl">https://t.co/bkfBUaCtAl</a> <a href="https://twitter.com/CodePen">@CodePen</a> <a href="https://twitter.com/hashtag/responsive?src=hash">#responsive</a> <a href="https://twitter.com/hashtag/RWD?src=hash">#RWD</a> <a href="https://t.co/waSqYi6feh">pic.twitter.com/waSqYi6feh</a></p>&mdash; Matt Smith (@AllThingsSmitty) <a href="https://twitter.com/AllThingsSmitty/status/756117334029438976">July 21, 2016</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 

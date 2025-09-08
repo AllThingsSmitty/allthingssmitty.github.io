@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 6871
+  ga4: 7035
 ---
 
 In day-to-day JavaScript, we often write code that checks a variable before assigning it a new value. These checks can get repetitive, especially when working with component props, global configs, or state objects. That's where **logical assignment operators** come in, a compact ES2021 feature that simplifies common conditional assignments without changing the underlying logic.
@@ -94,7 +94,7 @@ isEnabled &&= false;
 console.log(isEnabled); // false
 ```
 
-The original value (`true`) acts as a gate, but it's the result of `checkPermissions` (or any right-hand expression) that becomes the new value. `&&=` doesn’t preserve the old value, it replaces it.
+The original value (`true`) acts as a gate, but it's the result of `checkPermissions` (or any right-hand expression) that becomes the new value. `&&=` doesn't preserve the old value, it replaces it.
 
 ### Nullish coalescing assignment (`??=`)
 

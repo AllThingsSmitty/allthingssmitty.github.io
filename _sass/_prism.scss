@@ -1,15 +1,10 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+git&plugins=show-language */
-/**
-* prism.js default theme for JavaScript, CSS and HTML
-* Based on dabblet (http://dabblet.com)
-* @author Lea Verou
-*/
+/* PrismJS 1.30.0
+https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+git+jsx+tsx+typescript&plugins=toolbar */
 
 .token.cdata,
 .token.comment,
 .token.doctype,
-.token.prolog,
-.token.punctuation {
+.token.prolog {
   color: var(--color-mid-text);
 }
 
@@ -17,24 +12,17 @@
   opacity: 0.7;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: var(--color-mid-text);
-}
-
-.token.punctuation,
-.token.string,
+.token.attr-value,
 .token.atrule,
-.token.attr-value {
+.token.string,
+.token.punctuation {
   color: var(--color-syntax-primary);
 }
 
-.token.property,
-.token.tag,
+.token.class-name,
 .token.function,
-.token.class-name {
+.token.property,
+.token.tag {
   color: var(--color-syntax-quaternary);
 }
 
@@ -43,19 +31,19 @@
   color: var(--color-syntax-primary-glare);
 }
 
-.token.selector,
 .token.attr-name,
 .token.attr-value .punctuation:first-child,
+.token.important,
 .token.keyword,
 .token.regex,
-.token.important {
+.token.selector {
   color: var(--color-code-tertiary);
 }
 
-.token.operator,
+.language-css .token.string,
 .token.entity,
-.token.url,
-.language-css .token.string {
+.token.operator,
+.token.url {
   color: var(--color-syntax-secondary);
 }
 

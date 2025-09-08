@@ -51,6 +51,11 @@
           background-color: var(--color-dark-mid-bg);
         }
       }
+
+      td,
+      th {
+        border-color: var(--color-dark-stroke);
+      }
     }
   }
 
@@ -401,6 +406,11 @@ html[data-theme="dark"] {
         &:has(td) {
           background-color: var(--color-dark-mid-bg);
         }
+      }
+
+      td,
+      th {
+        border-color: var(--color-dark-stroke);
       }
     }
   }
