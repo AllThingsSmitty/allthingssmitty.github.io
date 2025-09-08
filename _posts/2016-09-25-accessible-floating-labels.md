@@ -7,12 +7,22 @@ tags: [accessibility, CSS, HTML, JavaScript]
 comments: true
 views:
   ua: 11892
-  ga4: 760
+  ga4: 763
 ---
 
-<!--<p class="message">This post has been updated to reflect a <a href="http://codepen.io/AllThingsSmitty/pen/VjykOz/">CSS-only approach</a> without the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.</p>-->
+{::nomarkdown}
+<aside class="message notification">
+{:/}
+
+This post has been updated to reflect a [CSS-only approach](http://codepen.io/AllThingsSmitty/pen/VjykOz/) without the use of the <code class="highlighter-rouge">placeholder</code> attribute on input elements.
+
+{::nomarkdown}
+</aside>
+{:/}
 
 There's been plenty of [discussion](https://adactio.com/journal/10910){:target="_blank"}{:rel="noopener noreferrer"} in recent months regarding accessibility as it relates to the use of labels, which I think is great. Web designers and developers should treat accessibility as a fundamental part of development and not an afterthought.
+
+
 
 Still, I see plenty of implementations where labels are ignored for more eye-catching solutions, which in turn creates [accessibility problems](https://medium.com/simple-human/always-use-a-label-a39ceab554e6){:target="_blank"}{:rel="noopener noreferrer"}. Interestingly enough, there are plenty of existing, design-friendly patterns using labels. One that's been around for a few years now is floating labels:
 

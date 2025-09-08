@@ -4,9 +4,10 @@ title: "Write more reliable JavaScript with optional chaining"
 description: Avoid runtime errors and write cleaner JavaScript with optional chaining, a powerful way for safely accessing deeply nested properties.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
+permalink: /2025/06/02/write-more-reliable-javascript-with-optional-chaining/
 comments: true
 views:
-  ga4: 3567
+  ga4: 3616
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:

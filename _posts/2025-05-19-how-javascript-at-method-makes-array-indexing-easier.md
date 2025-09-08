@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 2690
+  ga4: 2706
 ---
 
 Working with arrays in JavaScript is an everyday thing for front-end developers. We reach for arrays constantly, whether we're rendering lists, managing state, or juggling DOM elements. But what if I told you there's a more elegant way to access elements at a specific index, especially the last one? Now we can...with `Array.prototype.at()`.
@@ -106,21 +106,21 @@ This polyfill avoids using `Math.trunc()` for maximum compatibility.
 
 Here are a few common examples where `at()` can really flex its muscle:
 
-### 1. Getting the last message
+### Getting the last message
 
 ```js
 const messages = ['Hi', 'How are you?', 'See you soon'];
 const latest = messages.at(-1); // 'See you soon'
 ```
 
-### 2. Navigating a carousel
+### Navigating a carousel
 
 ```js
 const images = ['img1.png', 'img2.png', 'img3.png'];
 const prev = images.at(-2); // 'img2.png'
 ```
 
-### 3. Peeking at the top of a stack
+### Peeking at the top of a stack
 
 ```js
 const historyStack = ['/home', '/about', '/contact'];
