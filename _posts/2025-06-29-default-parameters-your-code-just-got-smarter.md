@@ -58,7 +58,7 @@ showCount(null);      // null (default not used)
 showCount(0);         // 0
 ```
 
-If you want to treat values like `null` or `0` as missing, use the [nullish coalescing operator (`??`)](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/):
+If you want to treat values like `null` or `0` as missing, use the [nullish coalescing operator (`??`)]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}):
 
 ```js
 function showCount(count) {
@@ -127,7 +127,7 @@ This pattern is especially helpful when event handlers are triggered in tests or
 
 <div class="note-heading">🙈 Code confession</div>
 
-Writing all those `&&` checks? Same...until I started using [optional chaining](https://allthingssmitty.com/2025/06/02/write-more-reliable-javascript-with-optional-chaining/). Cleaner code, fewer bugs.
+Writing all those `&&` checks? Same...until I started using [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}). Cleaner code, fewer bugs.
 
 {::nomarkdown}
 </aside>

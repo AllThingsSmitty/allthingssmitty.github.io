@@ -186,7 +186,7 @@ The optional chaining (`?.`) and nullish coalescing (`??`) also help avoid error
 
 <div class="note-heading">🙋🏻‍♂️ There's more!</div>
 
-Both [optional chaining](https://allthingssmitty.com/2025/06/02/write-more-reliable-javascript-with-optional-chaining/) and [nullish coalescing](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) are terrific syntax upgrades I've written about that help bring your code into a future-proof style that avoids common runtime pitfalls.
+Both [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}) and [nullish coalescing]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}) are terrific syntax upgrades I've written about that help bring your code into a future-proof style that avoids common runtime pitfalls.
 
 {::nomarkdown}
 </aside>
@@ -215,6 +215,6 @@ These methods don't require any new mental model, they're just **immutable-safe 
 </div>
 {:/}
 
-ES2023 didn't just give us flashy syntax like optional chaining or [top-level `await`](https://allthingssmitty.com/2025/06/16/using-await-at-the-top-level-in-es-modules/), but these subtle additions can massively improve code clarity and reduce bugs, especially in modern front-end workflows.
+ES2023 didn't just give us flashy syntax like optional chaining or [top-level `await`]({% post_url 2025-06-16-using-await-at-the-top-level-in-es-modules %}), but these subtle additions can massively improve code clarity and reduce bugs, especially in modern front-end workflows.
 
 Start using them in your projects, and you'll never look at `.sort()` with the same trust again.

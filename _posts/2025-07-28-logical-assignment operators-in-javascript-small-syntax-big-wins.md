@@ -54,7 +54,7 @@ This is useful for setting a default if a value hasn't been initialized. But it 
 <aside class="message highlight" role="note">
 {:/}
 
-For another way to handle defaults - this time with function parameters - check out my post on [default parameters in JavaScript](https://allthingssmitty.com/2025/06/29/default-parameters-your-code-just-got-smarter/).
+For another way to handle defaults - this time with function parameters - check out my post on [default parameters in JavaScript]({% post_url 2025-06-29-default-parameters-your-code-just-got-smarter %}).
 
 {::nomarkdown}
 </aside>
@@ -120,7 +120,7 @@ Use this when you want to assign defaults **only if the value is truly missing**
 
 <div class="note-heading">💡 Dig deeper</div>
 
-If you want to learn more about the nullish coalescing operator, I wrote about [mastering default values](https://allthingssmitty.com/2025/04/10/mastering-default-values-in-javascript-with-the-nullish-coalescing-operator/) that will definitely up your game.
+If you want to learn more about the nullish coalescing operator, I wrote about [mastering default values]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}) that will definitely up your game.
 
 {::nomarkdown}
 </aside>
