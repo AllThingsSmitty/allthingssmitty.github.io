@@ -11,6 +11,8 @@ Create HTML `<div>` elements by inserting `{:}` above the text block. CSS classe
 
 [Images](#images) can also be inserted without markdown.
 
+[Links to **internal pages**]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}) will used the `post_url` tag. **External links** should use the `{:target="_blank"}{:rel="noopener noreferrer"}` standard.
+
 ###  Syntax tips 
 
 Kramdown lets you avoid paragraph tags for images. Using Markdown like this...
@@ -87,7 +89,7 @@ There are two main image sizes, medium and large.
 
 {::nomarkdown}
 <div class="page__image--center page__image--md">
-  <img src="https://dummyimage.com/600x400/eee/999" alt="Large example image">
+  <img src="https://placehold.co/600x400" alt="Large example image">
 </div>
 {:/}
 
@@ -95,27 +97,27 @@ There are two main image sizes, medium and large.
 
 {::nomarkdown}
 <div class="page__image--center page__image--lg">
-  <img src="https://dummyimage.com/600x400/eee/999" alt="Large example image">
+  <img src="https://placehold.co/600x400" alt="Large example image">
 </div>
 {:/}
 
-### Tweets
+<!-- ### Tweets
 
 Wrap the embedded tweet markup in `<div class="embed"></div>` for proper spacing. Also, use  `tw-align-center` class on the blockquote provided by Twitter:
 
 <div class="embed">
   <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">I snuck this little <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> gem into a project stylesheet to help the team remember <a href="https://twitter.com/hashtag/accessibility?src=hash&amp;ref_src=twsrc%5Etfw">#accessibility</a>. 😎 <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://t.co/48kMmTaPoW">pic.twitter.com/48kMmTaPoW</a></p>&mdash; Matt Smith (@AllThingsSmitty) <a href="https://twitter.com/AllThingsSmitty/status/930617039085035520?ref_src=twsrc%5Etfw">November 15, 2017</a></blockquote>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+</div> -->
 
-### CodePen
+<!-- ### CodePen
 
 Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spacing.
 
 <div class="embed">
   <p class="codepen" data-height="450" data-slug-hash="bpmZpK" data-default-tab="result" data-user="AllThingsSmitty" data-embed-version="2" data-pen-title="Jurassic Ipsum Generator in JS" class="codepen">See the Pen <a href="http://codepen.io/AllThingsSmitty/pen/bpmZpK/">Jurassic Ipsum Generator in JS</a> by Matt Smith (<a href="http://codepen.io/AllThingsSmitty">@AllThingsSmitty</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</div>
+</div> -->
 
 <hr class="border-rule" />
 
@@ -151,7 +153,7 @@ Wrap the embedded CodePen markup in `<div class="embed"></div>` for proper spaci
 
 <hr class="border-rule" />
 
-### Emoji
+<!-- ### Emoji
 
 Emoji will be depicted using the hexadecimal representation of the [Unicode character](https://unicode.org/emoji/charts/full-emoji-list.html):
 
@@ -163,4 +165,4 @@ For accessibility purposes, emoji will be give the ARIA landmark role `img` and 
 
 ```html
 <span role="img" aria-label="emoji grinning face">&#x1F600;</span>
-```
+``` -->
