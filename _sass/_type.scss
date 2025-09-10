@@ -31,7 +31,7 @@ blockquote {
     border-radius: 0.25rem;
     font-size: 0.9rem;
     margin: var(--spacer) 0;
-    padding: clamp(1.25rem, var(--spacer), 2rem);
+    padding: clamp(1rem, var(--spacer), 2rem);
 
     &.notification {
       background-color: var(--color-state-warn-bg);
