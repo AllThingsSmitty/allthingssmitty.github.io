@@ -178,7 +178,7 @@ function TaskList({ tasks }) {
 ```
 
 This avoids mutating `tasks`, which could cause bugs if it's a prop or derived from state.
-The optional chaining (`?.`) and nullish coalescing (`??`) also help avoid errors if `tasks` is undefined.
+The optional chaining (`?.`) and nullish coalescing (`??`) operators also help avoid errors if `tasks` is undefined.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
