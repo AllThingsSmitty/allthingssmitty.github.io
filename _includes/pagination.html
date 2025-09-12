@@ -1,17 +1,11 @@
 <div class="pagination" role="navigation" aria-label="Go to the next or previous page">
-  {% if paginator.total_pages > 1 %}
-    {% if paginator.previous_page %}
-      <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.data.org.baseurl }}">Newer posts</a>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.data.org.baseurl }}">Older posts</a>
-    {% endif %}
-  {% else %}
-    {% if page.next.url %}
-      <a class="pagination__item" href="{{page.next.url}}">Next post</a>
-    {% endif %}
-    {% if page.previous.url %}
-      <a class="pagination__item" href="{{page.previous.url}}">Previous post</a>
-    {% endif %}
-  {% endif %}
+  {% if paginator.total_pages > 1 %} {% if paginator.next_page %}
+  <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.data.org.baseurl }}">Older posts</a>
+  {% endif %} {% if paginator.previous_page %}
+  <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.data.org.baseurl }}">Newer posts</a>
+  {% endif %} {% else %} {% if page.previous.url %}
+  <a class="pagination__item" href="{{page.previous.url}}">Previous post</a>
+  {% endif %} {% if page.next.url %}
+  <a class="pagination__item" href="{{page.next.url}}">Next post</a>
+  {% endif %} {% endif %}
 </div>
