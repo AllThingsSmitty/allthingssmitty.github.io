@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 7035
+  ga4: 7184
 ---
 
 In day-to-day JavaScript, we often write code that checks a variable before assigning it a new value. These checks can get repetitive, especially when working with component props, global configs, or state objects. That's where **logical assignment operators** come in, a compact ES2021 feature that simplifies common conditional assignments without changing the underlying logic.
@@ -54,7 +54,7 @@ This is useful for setting a default if a value hasn't been initialized. But it 
 <aside class="message highlight" role="note">
 {:/}
 
-For another way to handle defaults - this time with function parameters - check out my post on [default parameters in JavaScript]({% post_url 2025-06-29-default-parameters-your-code-just-got-smarter %}).
+For another way to handle defaults --- this time with function parameters --- check out my post on [default parameters in JavaScript]({% post_url 2025-06-29-default-parameters-your-code-just-got-smarter %}).
 
 {::nomarkdown}
 </aside>
