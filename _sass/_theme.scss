@@ -24,7 +24,7 @@
     &.message {
       &.notification {
         background-color: var(--color-dark-state-warn-bg);
-        color: var(--color-dar-state-warn-text);
+        color: var(--color-dark-state-warn-text);
       }
 
       &.highlight {
@@ -381,7 +381,7 @@ html[data-theme="dark"] {
     &.message {
       &.notification {
         background-color: var(--color-dark-state-warn-bg);
-        color: var(--color-dar-state-warn-text);
+        color: var(--color-dark-state-warn-text);
       }
 
       &.highlight {
@@ -400,6 +400,7 @@ html[data-theme="dark"] {
       }
     }
   }
+
   .table-container {
     table {
       tr:nth-child(even) {
