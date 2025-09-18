@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 1942
+  ga4: 2273
 ---
 
 There's a good reason that many developers pause before using `.sort()`, `.reverse()`, or `.splice()` in JavaScript: those methods *mutate* the original array. That single side effect can lead to subtle, hard-to-trace bugs, especially in apps with shared or reactive state. The good news is that in the last couple of years we've gotten new array methods that make working with arrays safer and cleaner by **avoiding mutation** altogether:
@@ -197,7 +197,7 @@ Both [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-w
 These methods don't require any new mental model, they're just **immutable-safe versions of what you already use**. If you're working in modern environments (or with a build step like Babel or SWC), you can start using them today.
 
 ## Browser support
-`toSorted()`, `toReversed()`, and `toSpliced()` are supported in all modern environments (Chrome/Edge 110+, Safari 16+, Firefox 115+, Node.js 20+). For legacy environments, you can use a polyfill like [`core-js`](https://www.npmjs.com/package/core-js){:target="_blank"}{:rel="noopener noreferrer"}.
+`toSorted()`, `toReversed()`, and `toSpliced()` are supported in all modern environments (Chrome/Edge 110+, Safari 16+, Firefox 115+, Node.js 20+). For legacy environments, you can use a polyfill like [core-js](https://www.npmjs.com/package/core-js){:target="_blank"}{:rel="noopener noreferrer"}.
 
 ## Key takeaways
 
