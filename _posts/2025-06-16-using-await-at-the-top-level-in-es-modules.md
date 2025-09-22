@@ -49,7 +49,7 @@ Top-level `await` only works in JavaScript **modules**, not in CommonJS (`requir
 </aside>
 {:/}
 
-## Real-world use cases
+## Behind the screens
 
 ### Fetching remote configuration at startup
 
