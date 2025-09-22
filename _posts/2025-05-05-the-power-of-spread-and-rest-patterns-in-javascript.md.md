@@ -121,7 +121,7 @@ console.log(info); // { name: "Sam", age: 30 }
 Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only, not inherited ones.
 </aside>
 
-## Real-world use cases
+## Code meets reality
 
 ### React: updating state immutably
 
