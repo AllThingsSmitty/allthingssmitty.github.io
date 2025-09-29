@@ -52,24 +52,24 @@ $large-breakpoint: 36rem;
   --color-syntax-quaternary: var(--color-code-quaternary);
 
   // dark theme
-  --color-dark-shades-primary-text: var(--color-shades-tertiary-bright);
   --color-dark-primary-info: #718eff;
   --color-dark-primary-info-bg: #3d3d3d;
-
-  --color-dark-mid-text: #c7caff;
-  --color-dark-syntax-primary-glare: #48a3cd;
-  --color-dark-mid-bg: #1f2021;
   --color-dark-shades-primary-glare: #8494ab;
   --color-dark-shades-primary-bright: #202831;
-
+  --color-dark-mid-text: #c7caff;
+  --color-dark-mid-bg: #1f2021;
   --color-dark-state-info-text: #99b5fb;
   --color-dark-state-warn-bg: #272114;
   --color-dark-state-warn-text: #ee6e25;
+  --color-dark-code-secondary: #e64f95;
   --color-dark-code-tertiary: #ff89b9;
+  --color-dark-syntax-primary-glare: #48a3cd;
   --color-dark-syntax-quaternary: #99c192;
-
-  --color-dark-reflective-stroke: #adb5d1;
+  --color-dark-shades-primary-text: var(--color-shades-tertiary-bright);
   --color-dark-shades-gray: var(--color-dark-reflective-stroke);
+  --color-dark-syntax-secondary: var(--color-dark-code-secondary);
+  --color-dark-reflective-stroke: #adb5d1;
   --color-dark-stroke: #555;
-  --color-dark-token-comment: #b9bac9;
+  --color-dark-token-comment: #888;
+  --color-dark-token-info: #b9bac9;
 }

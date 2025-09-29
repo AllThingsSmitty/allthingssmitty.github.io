@@ -2,10 +2,13 @@
 https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+git+jsx+tsx+typescript&plugins=toolbar */
 
 .token.cdata,
-.token.comment,
 .token.doctype,
 .token.prolog {
   color: var(--color-mid-text);
+}
+
+.token.comment {
+  color: var(--color-shades-secondary-glare);
 }
 
 .namespace {
