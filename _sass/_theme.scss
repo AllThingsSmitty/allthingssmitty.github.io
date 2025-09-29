@@ -183,31 +183,28 @@
   }
 
   // _prism.scss
-  .token.property,
-  .token.tag,
-  .token.function,
-  .token.class-name {
-    color: var(--color-dark-syntax-quaternary);
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--color-dark-token-inf0);
   }
 
-  .token.selector,
-  .token.attr-name,
-  .token.attr-value .punctuation:first-child,
-  .token.keyword,
-  .token.regex,
-  .token.important,
-  .token.operator,
-  .token.entity,
-  .token.url,
-  .language-css .token.string {
-    color: var(--color-dark-code-tertiary);
+  .token.comment {
+    color: var(--color-dark-token-comment);
   }
 
-  .token.punctuation,
-  .token.string,
   .token.atrule,
-  .token.attr-value {
+  .token.attr-value,
+  .token.punctuation,
+  .token.string {
     color: var(--color-dark-mid-text);
+  }
+
+  .token.class-name,
+  .token.function,
+  .token.property,
+  .token.tag {
+    color: var(--color-dark-syntax-quaternary);
   }
 
   .token.boolean,
@@ -215,11 +212,20 @@
     color: var(--color-dark-syntax-primary-glare);
   }
 
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: var(--color-dark-token-comment);
+  .token.attr-name,
+  .token.attr-value .punctuation:first-child,
+  .token.important,
+  .token.keyword,
+  .token.regex,
+  .token.selector {
+    color: var(--color-dark-code-tertiary);
+  }
+
+  .language-css .token.string,
+  .token.entity,
+  .token.operator,
+  .token.url {
+    color: var(--color-dark-syntax-secondary);
   }
 
   // _pagination.scss
@@ -538,31 +544,28 @@ html[data-theme="dark"] {
   }
 
   // _prism.scss
-  .token.property,
-  .token.tag,
-  .token.function,
-  .token.class-name {
-    color: var(--color-dark-syntax-quaternary);
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--color-dark-token-inf0);
   }
 
-  .token.selector,
-  .token.attr-name,
-  .token.attr-value .punctuation:first-child,
-  .token.keyword,
-  .token.regex,
-  .token.important,
-  .token.operator,
-  .token.entity,
-  .token.url,
-  .language-css .token.string {
-    color: var(--color-dark-code-tertiary);
+  .token.comment {
+    color: var(--color-dark-token-comment);
   }
 
-  .token.punctuation,
-  .token.string,
   .token.atrule,
-  .token.attr-value {
+  .token.attr-value,
+  .token.punctuation,
+  .token.string {
     color: var(--color-dark-mid-text);
+  }
+
+  .token.class-name,
+  .token.function,
+  .token.property,
+  .token.tag {
+    color: var(--color-dark-syntax-quaternary);
   }
 
   .token.boolean,
@@ -570,11 +573,20 @@ html[data-theme="dark"] {
     color: var(--color-dark-syntax-primary-glare);
   }
 
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: var(--color-dark-token-comment);
+  .token.attr-name,
+  .token.attr-value .punctuation:first-child,
+  .token.important,
+  .token.keyword,
+  .token.regex,
+  .token.selector {
+    color: var(--color-dark-code-tertiary);
+  }
+
+  .language-css .token.string,
+  .token.entity,
+  .token.operator,
+  .token.url {
+    color: var(--color-dark-syntax-secondary);
   }
 
   // _pagination.scss
