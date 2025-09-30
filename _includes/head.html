@@ -48,8 +48,10 @@
   <meta property="og:description" content="{{ page.description }}" />
   {% else %}
   <meta property="og:description" content="{{ site.data.org.description }}" />
+  {% endif %} {% if page.noindex %}
+  <meta name="robots" content="noindex" />
   {% endif %} {% if page.image %}
-  <meta property="og:image" content="{{ ssite.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
+  <meta property="og:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
   {% else %}
   <meta property="og:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
   {% endif %} {% if page.image %}

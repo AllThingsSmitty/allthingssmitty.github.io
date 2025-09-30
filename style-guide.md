@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Style guide
+noindex: true
 ---
 
 ## Markdown
