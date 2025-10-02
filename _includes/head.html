@@ -20,6 +20,10 @@
   </title>
   <link rel="stylesheet" href="{{ site.data.org.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}" />
 
+  <meta
+    name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.org.description }}{% endif %}" />
+  <meta name="robots" content="noindex" />
   {% if page.date %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
   <meta property="article:author" content="{{ site.data.org.url }}/about/" />
@@ -39,31 +43,26 @@
   <meta property="og:title" content="{{ page.title }} - {{ site.data.org.title }}" />
   {% else %}
   <meta property="og:title" content="{{ site.data.org.title }} - {{ site.data.org.tagline }}" />
-  {% endif %}
-
-  <meta
-    name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.org.description }}{% endif %}" />
-  {% if page.description %}
+  {% endif %} {% if page.description %}
   <meta property="og:description" content="{{ page.description }}" />
   {% else %}
   <meta property="og:description" content="{{ site.data.org.description }}" />
-  {% endif %} {% if page.noindex %}
-  <meta name="robots" content="noindex" />
-  {% endif %} {% if page.image %}
+  {% endif %} {% if page.noindex %} {% endif %} {% if page.image %}
   <meta property="og:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
   {% else %}
   <meta property="og:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
-  {% endif %} {% if page.image %}
-  <meta property="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
+  {% endif %}
+  <meta property="og:locale" content="en_US" />
+
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
   {% else %}
-  <meta property="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
+  <meta name="twitter:image" content="{{ site.data.org.url }}/img/posts/sunset-home-office-min.jpg" />
   {% endif %}
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.data.org.brand }}" />
   <meta name="twitter:creator" content="@{{ site.data.org.brand }}" />
-
   {% if page.url %}
   <meta name="twitter:url" content="{{ site.data.org.url }}{{ page.url }}" />
   {% else %}
@@ -73,9 +72,9 @@
   {% else %}
   <meta name="twitter:title" content="{{ site.data.org.title }} - {{ site.data.org.tagline }}" />
   {% endif %} {% if page.description %}
-  <meta property="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
   {% else %}
-  <meta property="twitter:description" content="{{ site.data.org.description }}" />
+  <meta name="twitter:description" content="{{ site.data.org.description }}" />
   {% endif %}
 
   <link
