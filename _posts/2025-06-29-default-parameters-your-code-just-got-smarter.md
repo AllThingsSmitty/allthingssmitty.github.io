@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 995
+  ga4: 1011
 ---
 
 Whether you're building UI components, calling APIs, or writing some utility functions, it's quite common to deal with optional function arguments. Traditionally, you'd fall back on `if` statements or logical ORs to assign default values. But let's be honest, that can lead to subtle bugs.
