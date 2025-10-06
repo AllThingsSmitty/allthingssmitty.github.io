@@ -196,7 +196,7 @@ JSON.stringify(Map.groupBy([1, 2, 3], x => x % 2));
 // TypeError: Converting circular structure to JSON
 ```
 
-Maps are great for runtime logic, but not suitable for API responses or localStorage. Use `Object.groupBy()` when working with JSON.
+Maps are great for runtime logic, but not suitable for API responses or `localStorage`. Use `Object.groupBy()` when working with JSON.
 
 ## Browser support
 
