@@ -7,7 +7,7 @@ tags: [CSS, HTML, mobile]
 comments: true
 views:
   ua: 84429
-  ga4: 5800
+  ga4: 5869
 ---
 
 One of my pet peeves in web design is how tables are often not optimized for non-desktop experiences. Let's say I'm viewing Wikipedia on my iPhone, I'm looking through the episode list for _Star Trek: The Next Generation_ (I grew up in the 90's --- deal), and the table has a lot of columns and data. There ends up being a lot of back-and-forth side swiping, device flipping, and general annoyance as I muddle through that user experience.

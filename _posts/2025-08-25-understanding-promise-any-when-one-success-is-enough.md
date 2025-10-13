@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1360
+  ga4: 1363
 ---
 
 Promises have long been our go-to when working with asynchronous code in JavaScript. If you've used `Promise.all()` or `Promise.race()` to coordinate async operations, you know the patterns. But what if you're only interested in the *first successful* result, ignoring failures? That's exactly what `Promise.any()` does: it **fulfills with the first resolved promise** and ignores any that reject (unless *all* reject).
@@ -173,7 +173,6 @@ Use `Promise.any()` when you're aiming for **at least one success**, and it's ok
 - You want the **first to settle**, regardless of success or failure → use `Promise.race()`.
 - You need to **handle each outcome individually** → use `Promise.allSettled()` or manual `map()` + `.catch()` handling.
 
-<!-- ## Apply it in your code -->
 ## Success-first async in action
 
 `Promise.any()` is a modern, elegant solution for scenarios where **at least one success is enough**, and **failures are expected**. Whether you're optimizing API calls or enhancing UX with optional features, it's a powerful addition to your async toolkit.
