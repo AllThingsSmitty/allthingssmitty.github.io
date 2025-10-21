@@ -23,7 +23,10 @@
   <meta
     name="description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.org.description }}{% endif %}" />
-  {% if page.noindex %}
+
+  {% if page.url contains 'page' %} {% else %}
+  <link rel="canonical" href="{{ site.data.org.url }}{{ page.url }}" />
+  {% endif %} {% if page.noindex %}
   <meta name="robots" content="noindex" />
   {% endif %} {% if page.date %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
