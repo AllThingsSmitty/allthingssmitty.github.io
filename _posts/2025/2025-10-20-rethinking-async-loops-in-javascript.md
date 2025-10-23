@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1479
+  ga4: 1584
 ---
 
 Using `await` in loops seems intuitive until your code silently stalls or runs slower than expected. If you've ever wondered why your API calls run one-by-one instead of all at once, or why `map()` and `await` don't mix the way you'd expect, grab a chair. Let's chat.
