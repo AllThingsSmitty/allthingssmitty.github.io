@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 7524
+  ga4: 7542
 ---
 
 In day-to-day JavaScript, we often write code that checks a variable before assigning it a new value. These checks can get repetitive, especially when working with component props, global configs, or state objects. That's where **logical assignment operators** come in, a compact ES2021 feature that simplifies common conditional assignments without changing the underlying logic.
