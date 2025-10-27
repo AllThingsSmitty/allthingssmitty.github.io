@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 6343
+  ga4: 6435
 ---
 
 There's a good reason that many developers pause before using `.sort()`, `.reverse()`, or `.splice()` in JavaScript: those methods *mutate* the original array. That single side effect can lead to subtle, hard-to-trace bugs, especially in apps with shared or reactive state. The good news is that in the last couple of years we've gotten new array methods that make working with arrays safer and cleaner by **avoiding mutation** altogether:
@@ -51,7 +51,7 @@ These new methods behave similarly to their mutating counterparts, but return a 
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** These are [**shallow copies**](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy?utm_source=chatgpt.com){:target="_blank"}{:rel="noopener noreferrer"}, so if your array contains objects, the objects themselves are still the same references.
+⚠️ **Note:** These are [**shallow copies**](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy){:target="_blank"}{:rel="noopener noreferrer"}, so if your array contains objects, the objects themselves are still the same references.
 
 {::nomarkdown}
 </aside>
