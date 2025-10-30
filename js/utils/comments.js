@@ -1,27 +1,21 @@
-try {
-  const initializeDisqus = () => {
-    const el = document.querySelector("#disqus_thread");
+const initializeDisqus = () => {
+  const el = document.querySelector("#disqus_thread");
+  if (!el) return;
 
-    if (el) {
-      const s = document.createElement("script");
-      s.src = "https://allthingssmitty-com.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      document.head.appendChild(s);
+  const script = document.createElement("script");
+  script.src = "https://allthingssmitty-com.disqus.com/embed.js";
+  script.dataset.timestamp = Date.now();
+  document.head.appendChild(script);
+};
+
+const setDefaultCommentCounts = () => {
+  document.querySelectorAll(".disqus-comment-count").forEach((el) => {
+    if (!el.textContent.trim()) {
+      el.textContent = "0 comments";
     }
-  };
+  });
+};
 
-  const setDefaultCommentCounts = () => {
-    const commentEls = document.querySelectorAll(".disqus-comment-count");
-    commentEls.forEach((commentEl) => {
-      if (!commentEl.textContent.trim()) {
-        commentEl.textContent = "0 comments";
-      }
-    });
-  };
-
-  // Initialize Disqus and set default comment counts
-  initializeDisqus();
-  setDefaultCommentCounts();
-} catch (error) {
-  console.error("An error occurred while initializing Disqus:", error);
-}
+// Safe initialization
+initializeDisqus();
+setDefaultCommentCounts();
