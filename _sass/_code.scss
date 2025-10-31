@@ -13,6 +13,10 @@ code {
 
   &:not([class]) {
     white-space: nowrap;
+
+    @media (max-width: $large-breakpoint) {
+      white-space: break-spaces;
+    }
   }
 }
 
