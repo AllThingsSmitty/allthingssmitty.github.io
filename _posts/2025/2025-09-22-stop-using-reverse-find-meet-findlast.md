@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 3989
+  ga4: 4011
 ---
 
 If you've ever needed to search an array from the end, you've probably reached for a combination of `.slice().reverse().find(...)`, or looped backward manually. It works, but it's not an elegant solution.
