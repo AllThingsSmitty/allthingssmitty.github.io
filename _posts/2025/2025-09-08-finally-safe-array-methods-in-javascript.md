@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 6493
+  ga4: 6520
 ---
 
 There's a good reason that many developers pause before using `.sort()`, `.reverse()`, or `.splice()` in JavaScript: those methods *mutate* the original array. That single side effect can lead to subtle, hard-to-trace bugs, especially in apps with shared or reactive state. The good news is that in the last couple of years we've gotten new array methods that make working with arrays safer and cleaner by **avoiding mutation** altogether:
