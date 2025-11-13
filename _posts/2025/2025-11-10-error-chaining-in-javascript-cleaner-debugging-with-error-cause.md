@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, TypeScript]
 comments: true
 views:
-  ga4: 837
+  ga4: 1671
 ---
 
 Error handling in JavaScript has always felt a bit chaotic. Throwing errors is easy, but tracing them back to the root cause? Not so much. That's where the `cause` property comes in.
