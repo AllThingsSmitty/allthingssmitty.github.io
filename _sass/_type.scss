@@ -74,6 +74,10 @@ blockquote {
     a {
       color: currentColor;
     }
+
+    code {
+      font-size: 0.765rem; // 0.9rem * 0.85
+    }
   }
 }
 
