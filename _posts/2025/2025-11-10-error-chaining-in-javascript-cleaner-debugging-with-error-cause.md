@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, TypeScript]
 comments: true
 views:
-  ga4: 3618
+  ga4: 3910
 ---
 
 Error handling in JavaScript has always felt a bit chaotic. Throwing errors is easy, but tracing them back to the root cause? Not so much. That's where the `cause` property comes in.
@@ -82,7 +82,7 @@ The `cause` property is **non-enumerable** by specification when passed through 
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note**: JavaScript doesn't automatically merge stack traces. The new error's stack trace stands alone. To see the full picture, inspect `err.cause.stack` manually.
+⚠️ **Note:** JavaScript doesn't automatically merge stack traces. The new error's stack trace stands alone. To see the full picture, inspect `err.cause.stack` manually.
 
 {::nomarkdown}
 </aside>
@@ -226,7 +226,7 @@ The `.cause` parameter is supported in all modern environments:
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note**: DevTools might not display `cause` automatically. Log it explicitly (`console.error('Caused by:', err.cause)`). If you transpile with Babel or TypeScript, this feature isn't polyfilled.
+⚠️ **Note:** DevTools might not display `cause` automatically. Log it explicitly (`console.error('Caused by:', err.cause)`). If you transpile with Babel or TypeScript, this feature isn't polyfilled.
 
 {::nomarkdown}
 </aside>
