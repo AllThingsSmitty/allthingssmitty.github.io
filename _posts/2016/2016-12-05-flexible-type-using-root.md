@@ -7,7 +7,7 @@ tags: [CSS, mobile]
 comments: true
 views:
   ua: 16081
-  ga4: 531
+  ga4: 543
 ---
 
 One element of responsive web design that can be tricky to solve for is typography. Ideally you want to have type that's as fluid as possible across different viewports. A conventional way of doing this might be to start with a base font size and then change it when you hit a specific breakpoint:
