@@ -12,12 +12,12 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "browser-sync": "^3.0.3",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.3.2",
     "postcss": "^8.4.38",
     "terser": "^5.31.0"
   },
