@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 3811
+  ga4: 3830
 ---
 
 Front-end developers frequently transform arrays: filtering, mapping, reducing. And sometimes grouping. Grouping used to require custom `reduce()` logic, which often felt like more boilerplate than it was worth.
