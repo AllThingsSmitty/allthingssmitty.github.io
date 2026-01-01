@@ -7,7 +7,7 @@ tags: [CSS, HTML]
 comments: true
 views:
   ua: 4736
-  ga4: 629
+  ga4: 634
 ---
 
 This is one of those "Can you do that, no you can't do that, but can you really do that?" moments. Splitting the border of an element around another element. Although, I should put quotes around "splitting". You're not actually splitting a border, but rather creating the appearance of it.

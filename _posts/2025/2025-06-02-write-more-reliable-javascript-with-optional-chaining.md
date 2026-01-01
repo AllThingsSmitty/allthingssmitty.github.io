@@ -7,7 +7,7 @@ tags: [JavaScript, React]
 permalink: /2025/06/02/write-more-reliable-javascript-with-optional-chaining/
 comments: true
 views:
-  ga4: 3826
+  ga4: 3868
 ---
 
 Let me know if this sounds familiar: you're deep into debugging or trying to access a deeply nested property in a JavaScript object. Suddenly you see this classic error:

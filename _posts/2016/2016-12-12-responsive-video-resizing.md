@@ -7,7 +7,7 @@ tags: [CSS, mobile]
 comments: true
 views:
   ua: 56725
-  ga4: 2484
+  ga4: 2491
 ---
 
 There are a number of options for implementing responsive images, e.g., the `<picture>` element, client-side polyfills, [automatic cropping](http://cloudinary.com/blog/automatically_art_directed_responsive_images){:target="_blank"}{:rel="noopener noreferrer"}, <nobr>et al.</nobr> But what about _video_?

@@ -7,7 +7,7 @@ tags: [JavaScript]
 comments: true
 views:
   ua: 2512
-  ga4: 58
+  ga4: 61
 ---
 
 In JavaScript, the `Math` object is something developers work with a lot. And two methods in particular, `Math.floor()` and `Math.random()`, are often utilized together. Let's take a quick look at both to see how we might use them to create a random text engine.
