@@ -3,10 +3,10 @@ layout: post
 title: "Logical assignment operators in JavaScript: small syntax, big wins"
 description: "Logical assignment operators streamline conditional assignments in JavaScript, making your code cleaner, safer, and easier to read."
 image: img/posts/sunset-home-office-min.jpg
-tags: [JavaScript, React]
+tags: [JavaScript]
 comments: true
 views:
-  ga4: 7827
+  ga4: 7953
 ---
 
 In day-to-day JavaScript, we often write code that checks a variable before assigning it a new value. These checks can get repetitive, especially when working with component props, global configs, or state objects. That's where **logical assignment operators** come in, a compact ES2021 feature that simplifies common conditional assignments without changing the underlying logic.
