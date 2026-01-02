@@ -105,6 +105,14 @@ blockquote {
       }
     }
   }
+
+  .multi-column {
+    ul {
+      display: grid;
+      gap: 0.5rem var(--flow-space);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
 }
 
 aside,
