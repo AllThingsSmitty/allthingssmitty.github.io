@@ -97,8 +97,6 @@ blockquote {
     margin-top: 0;
 
     &:not([class]) {
-      padding-inline-start: 2.5ch;
-
       > li {
         margin-bottom: 1rem;
         padding-inline-start: 0.25rem;
