@@ -40,19 +40,19 @@ const visibleItems = items
   .slice(0, 10);
 ```
 
-Looks harmless, right? Under the hood:
+Looks harmless, right? I've written this exact chain more times than I want to admit. Under the hood:
 
 1. `filter` creates a new array
 2. `map` creates another array
 3. `slice` creates yet another array
 
-Even if you only need 10 items, you might've processed *thousands*. That mismatch between what you describe and what actually runs is where iterator helpers pay off.
+Even if you only need 10 items, you might've processed *thousands*. That mismatch is the whole problem. And it's where iterator helpers pay off.
 
 ## So, what are iterator helpers?
 
 Iterator helpers are **chainable methods on iterator objects**, not arrays.
 
-That distinction matters: arrays don't gain these methods directly. You need an iterator from `values()`, `keys()`, `entries()`, or a generator. Then you can build a lazy pipeline on top of it.
+That distinction matters. And yeah, it's easy to miss at first: arrays don't magically gain these methods. You need an iterator from `values()`, `keys()`, `entries()`, or a generator. Then you can build a lazy pipeline on top of it.
 
 They let you do things like:
 
@@ -89,7 +89,7 @@ In general, laziness means:
 
 - No intermediate arrays
 - No unnecessary work
-- Computation stops as soon as it can
+- And most importantly, things stop as soon as they can
 
 You describe *what* you want, and the runtime pulls values only when needed.
 
@@ -106,7 +106,7 @@ const visibleItems = items
   .toArray();
 ```
 
-What changed?
+So what actually changed here?
 
 - `items.values()` gives you an **iterator**, not an array
 - Each step runs **only when the next value is requested**
@@ -218,7 +218,7 @@ Readable, native, zero dependencies.
 
 ## When *not* to use iterator helpers
 
-Iterator helpers are powerful, but they're not a replacement for arrays everywhere. They're a poor fit when:
+Iterator helpers are powerful, but they're not a replacement for arrays everywhere. If you try to force them into every situation, you'll just make your code harder to read. They're a poor fit when:
 
 - You need random access (`items[5]`)
 - You rely heavily on array mutation
@@ -255,7 +255,7 @@ Think of iterators as **work that hasn't happened yet**, not data you already ha
 
 ## Can I use this today?
 
-Iterator helpers are supported in all modern browser (Chrome 122+, Firefox 131+, Safari 18.4+, Edge 122+) and Node.js 22+.
+Iterator helpers are supported in all modern browsers and Node 22+. If you're targeting anything current, you're fine.
 
 ## Doing less work on purpose
 
