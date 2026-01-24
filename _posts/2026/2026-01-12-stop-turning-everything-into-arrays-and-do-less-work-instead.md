@@ -5,7 +5,7 @@ description: "Do less work in JavaScript: lazy data pipelines with iterator help
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 4543
+  ga4: 5271
 ---
 
 Most front-end code processes data long before it ever hits the screen. We fetch a list, tweak it, trim it down, and repeat. And usually without thinking too hard about how much work we're doing along the way.
