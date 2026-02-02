@@ -7,7 +7,7 @@ tags: [accessibility, CSS, HTML, JavaScript]
 comments: true
 views:
   ua: 11892
-  ga4: 805
+  ga4: 811
 ---
 
 {::nomarkdown}
