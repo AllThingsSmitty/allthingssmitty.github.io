@@ -7,7 +7,7 @@ tags: [CSS, HTML, mobile]
 comments: true
 views:
   ua: 161131
-  ga4: 86215
+  ga4: 86538
 ---
 
 Not long ago there was some buzz around how WebKit handles `100vh` in CSS, essentially ignoring the bottom edge of the browser viewport. Some have suggested not using `100vh`, others have come up with [different alternatives](https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d){:target="_blank"}{:rel="noopener noreferrer"} to work around the problem. In fact, this issue goes further back a few years when Nicolas Hoizey [filed a bug with WebKit](https://nicolas-hoizey.com/articles/2015/02/18/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers/){:target="_blank"}{:rel="noopener noreferrer"} on the subject (the short of it: WebKit says this is "intentional" <span role="img" aria-label="emoji face with monocle">&#x1F9D0;</span>).
