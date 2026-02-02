@@ -31,7 +31,7 @@ blockquote {
     border-radius: 0.25rem;
     font-size: 0.9rem;
     margin: var(--spacer) 0;
-    padding: clamp(1rem, var(--spacer), 2rem);
+    padding: clamp(1rem, 1.75rem, 2rem);
 
     &.notification {
       background-color: var(--color-state-warn-bg);
@@ -42,6 +42,10 @@ blockquote {
     &.highlight {
       background-color: var(--color-shades-primary-bright);
       color: var(--color-state-info-text);
+
+      @media (max-width: $large-breakpoint) {
+        padding: var(--spacer);
+      }
 
       @media (min-width: 53.125rem) {
         margin: var(--spacer) -1.75rem;
@@ -140,4 +144,19 @@ figcaption {
       }
     }
   }
+}
+
+mark {
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  border-radius: 0.8rem 0.3rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  margin: 0 -0.4rem;
+  padding: 0.1rem 0.4rem;
 }
