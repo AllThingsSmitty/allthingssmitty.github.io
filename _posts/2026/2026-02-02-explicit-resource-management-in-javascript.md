@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1227
+  ga4: 1739
 ---
 
 Writing JavaScript that opens something (a file, a stream, a lock, a database connection) also means remembering to clean it up. And if we're being honest, that cleanup doesn't always happen. I know I've missed it more than once.
