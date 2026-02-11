@@ -25,7 +25,7 @@ console.log(value || _default); // Output: 5 (because 0 is falsy)
 
 Here `||` evaluates `0` as falsy, so the default value `5` is returned.
 
-However, the nullish coalescing (`??`) operator only considers `null` and `undefined` as falsy. Any other value, even if it's falsy in a boolean context (e.g., `0`, `false`, or an empty string), will not trigger the default value:
+However, the nullish coalescing (`??`) operator only considers `null` and `undefined` as falsy. Any other value, even if it's falsy in a boolean context (e.g., `0`, `false`, or an empty string), won't trigger the default value:
 
 ```js
 const value = 0;
