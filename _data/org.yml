@@ -1,21 +1,21 @@
 ---
 title: Matt Smith
-tagline: Web Dev | Front-End Engineer | UX Designer
+tagline: Modern Web Engineering, Front-End First
 brand: allthingssmitty
 description: Matt Smith is a Maine-based application developer who builds solutions
   to deliver engaging user experiences.
 url: https://allthingssmitty.com
-baseurl: ''
+baseurl: ""
 social:
-- name: Twitter
-  url: https://twitter.com/allthingssmitty
-  short: twitter
-- name: LinkedIn
-  url: https://linkedin.com/in/allthingssmitty
-  short: linkedin
-- name: GitHub
-  url: https://github.com/allthingssmitty
-  short: github
-- name: CodePen
-  url: https://codepen.io/allthingssmitty
-  short: codepen
+  - name: Twitter
+    url: https://twitter.com/allthingssmitty
+    short: twitter
+  - name: LinkedIn
+    url: https://linkedin.com/in/allthingssmitty
+    short: linkedin
+  - name: GitHub
+    url: https://github.com/allthingssmitty
+    short: github
+  - name: CodePen
+    url: https://codepen.io/allthingssmitty
+    short: codepen
