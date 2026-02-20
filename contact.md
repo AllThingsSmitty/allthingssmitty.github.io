@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Let's talk code
+title: Elsewhere
 ---
 
-You can ~~find me on [Twitter]({{ site.data.persona.twitter }}){:target="_blank"}{:target="_blank"}{:rel="noopener noreferrer"} talking all things web,~~ head over to [GitHub]({{ site.data.persona.github }}){:target="_blank"}{:rel="noopener noreferrer"} to see some recent open-source work, or browse [CodePen]({{ site.data.persona.codepen }}){:target="_blank"}{:rel="noopener noreferrer"} for some fun demos.
+Most of my work lives on [GitHub]({{ site.data.persona.github }}){:target="_blank"}{:rel="noopener noreferrer"}. You can also find me on [LinkedIn]({{ site.data.persona.linkedin }}){:target="_blank"}{:rel="noopener noreferrer"}. Experiments and smaller ideas end up on [CodePen]({{ site.data.persona.codepen }}){:target="_blank"}{:rel="noopener noreferrer"}.
