@@ -58,7 +58,7 @@ I've seen this show up in production logs as "mysteriously empty" error objects.
 
 ## Enter `Error.isError()`
 
-JavaScript now has `Error.isError(value)`, a realm-safe way to answer, "Is this actually an error?" It's one of those APIs that feels obvious in hindsight.
+JavaScript now has `Error.isError(value)`, **a realm-safe way to answer, "Is this actually an error?"** It's one of those APIs that feels obvious in hindsight.
 
 Here is what it guarantees:
 
@@ -82,7 +82,7 @@ Error.isError({ message: 'Not really an error' }) // false
 Error.isError(Object.create(Error.prototype))     // false
 ```
 
-That last case is important. Even though the object inherits from `Error.prototype`, it was never created as an actual error. `Error.isError()` correctly rejects it.
+That last case is important. Even though the object inherits from `Error.prototype`, **it was never created as an actual error**. `Error.isError()` correctly rejects it.
 
 The cross-realm case now behaves the way most developers expect:
 
@@ -116,7 +116,7 @@ Common examples include:
 - Test frameworks
 - Web extensions
 - SSR / edge runtimes
-- Workers, iframes, basically anything crossing a boundary
+- Workers, iframes, **basically anything crossing a boundary**
 
 In these situations, `instanceof Error` can quietly miss real errors. Worse than throwing, because you don't notice until something downstream breaks.
 
