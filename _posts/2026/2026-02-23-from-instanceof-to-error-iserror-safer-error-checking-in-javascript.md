@@ -116,7 +116,7 @@ Common examples include:
 - Test frameworks
 - Web extensions
 - SSR / edge runtimes
-- Workers, iframes -- basically anything crossing a boundary
+- Workers, iframes, basically anything crossing a boundary
 
 In these situations, `instanceof Error` can quietly miss real errors. Worse than throwing, because you don't notice until something downstream breaks.
 
@@ -188,4 +188,4 @@ if (typeof Error.isError === 'function') {
 
 If your code crosses boundaries, `instanceof` is a footgun. `Error.isError()` is what we actually meant all along.
 
-It's a small change that removes a whole class of annoying bugs -- a pretty good trade. If your code touches workers, iframes, extensions, or server boundaries, switching to `Error.isError()` is an easy win and one less thing to be quietly wrong.
+It's a small change that removes a whole class of annoying bug, and it's a pretty good trade. If your code touches workers, iframes, extensions, or server boundaries, switching to `Error.isError()` is an easy win and one less thing to be quietly wrong.
