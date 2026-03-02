@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 0
+  ga4: 344
 ---
 
 For a long time, JavaScript developers have relied on `instanceof` to figure out, "Is this an error?"
