@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1562
+  ga4: 1601
 ---
 
 Promises have long been our go-to when working with asynchronous code in JavaScript. If you've used `Promise.all()` or `Promise.race()` to coordinate async operations, you know the patterns. But what if you're only interested in the *first successful* result, ignoring failures? That's exactly what `Promise.any()` does: it **fulfills with the first resolved promise** and ignores any that reject (unless *all* reject).
