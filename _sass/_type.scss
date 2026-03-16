@@ -144,6 +144,14 @@ figcaption {
       }
     }
   }
+
+  &.line-wrap {
+    code {
+      &:not([class]) {
+        white-space: break-spaces;
+      }
+    }
+  }
 }
 
 mark {
