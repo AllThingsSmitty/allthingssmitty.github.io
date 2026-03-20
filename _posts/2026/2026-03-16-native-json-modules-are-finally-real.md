@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 572
+  ga4: 841
 ---
 
 For years we've been writing this:
