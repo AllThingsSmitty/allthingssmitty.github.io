@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1276
+  ga4: 1303
 ---
 
 For a long time, JavaScript developers have relied on `instanceof` to figure out, "Is this an error?"
@@ -41,7 +41,7 @@ err instanceof Error; // false
 
 At first glance that result looks wrong: `err` *is* an error.
 
-I'll be honest: I used `instanceof Error` everywhere for years and never questioned it. It never failed on my machine, so why would it?
+I'll be honest: I used `instanceof Error` everywhere for a long time and never questioned it. It never failed on my machine, so why would it?
 
 The catch is that it wasn't created with *your* `Error` constructor. It came from the iframe's. Since `instanceof` walks the prototype chain for a specific realm, the check fails. `instanceof` isn't wrong. It's just limited to its own world.
 

@@ -6,10 +6,10 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 928
+  ga4: 1166
 ---
 
-For years we've been writing this:
+For a long time we got used to writing this:
 
 ```js
 import config from "./config.json";
