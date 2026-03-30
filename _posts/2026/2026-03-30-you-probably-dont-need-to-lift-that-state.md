@@ -17,7 +17,7 @@ This comes up a lot, and it's easy to get wrong. It's really easy to default to 
 <aside class="message notification" role="note">
 {:/}
 
-Keep state as close as possible to where it's actually used
+Keep state as close as possible to where it's actually used.
 
 {::nomarkdown}
 </aside>
