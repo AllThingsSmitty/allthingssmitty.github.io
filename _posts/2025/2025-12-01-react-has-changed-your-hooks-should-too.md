@@ -5,7 +5,7 @@ description: "Modern React has moved beyond overusing useEffect. Discover the Ho
 tags: [React]
 comments: true
 views:
-  ga4: 9683
+  ga4: 9743
 ---
 
 React Hooks have been around since 2018, but most codebases still use them the same way: a bit of `useState`, an overworked `useEffect`, and a lot of patterns that get copy-pasted without much thought. We've all been there.
