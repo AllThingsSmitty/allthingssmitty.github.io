@@ -47,6 +47,19 @@ function Modal() {
 ```
 (when it doesn't need to be controlled externally)
 
+
+{::nomarkdown}
+<aside class="message highlight" role="note">
+{:/}
+
+<div class="note-heading">Same instinct, different problem</div>
+
+The same instinct shows up elsewhere too, like [restructuring everything into arrays]({% post_url 2026-01-12-stop-turning-everything-into-arrays-and-do-less-work-instead %}) when you don't actually need to.
+
+{::nomarkdown}
+</aside>
+{:/}
+
 ## Why this helps (most of the time)
 
 - Less prop drilling
