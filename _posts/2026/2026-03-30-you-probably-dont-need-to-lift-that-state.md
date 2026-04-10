@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [React]
 comments: true
 views:
-  ga4: 589
+  ga4: 604
 ---
 
 This comes up a lot, and it's easy to get wrong. It's really easy to default to "lift state up" in React. I'm guilty. But that's not always the right move.
@@ -52,7 +52,7 @@ function Modal() {
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">Same instinct, different problem</div>
+<div class="note-heading">📌 Same instinct, different problem</div>
 
 The same instinct shows up elsewhere too, like [restructuring everything into arrays]({% post_url 2026-01-12-stop-turning-everything-into-arrays-and-do-less-work-instead %}) when you don't actually need to.
 
