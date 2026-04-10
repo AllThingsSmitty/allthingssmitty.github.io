@@ -173,7 +173,7 @@ But for the act of **importing JSON as a module**, the platform has largely caug
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">Speaking of ES modules</div>
+<div class="note-heading">💡 Speaking of ES modules</div>
 
 If you're already using [top-level `await` in ES modules]({% post_url 2025-06-16-using-await-at-the-top-level-in-es-modules %}), importing JSON dynamically becomes even cleaner.
 
