@@ -152,6 +152,17 @@ figcaption {
       }
     }
   }
+  &.line-break {
+    code {
+      &:not([class]) {
+        line-break: anywhere;
+
+        @media (max-width: $large-breakpoint) {
+          line-break: unset;
+        }
+      }
+    }
+  }
 }
 
 mark {
