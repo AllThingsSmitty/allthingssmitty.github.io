@@ -1,21 +1,16 @@
 ---
 layout: default
 ---
+
 <article>
   <div class="post">
     <header class="post-header">
-      <h2 class="post-header__title">{{ page.title }}</h2>
+      <h2 class="post-header__title">{{ page.title | smartify }}</h2>
       {% include post-metadata.html %}
     </header>
-    <div class="flow">
-      {{ content }}
-      {% include tags.html %}
-    </div>
-    <footer class="post-footer">
-    </footer>
+    <div class="flow">{{ content }} {% include tags.html %}</div>
+    <footer class="post-footer"></footer>
   </div>
 </article>
 
-{% include pagination.html %}
-
-{% include comments.html %}
+{% include pagination.html %} {% include comments.html %}
