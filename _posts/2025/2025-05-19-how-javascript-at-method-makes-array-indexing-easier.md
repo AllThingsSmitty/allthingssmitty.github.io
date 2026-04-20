@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How JavaScript&rsquo;s at() method makes array indexing easier
+title: How JavaScript's at() method makes array indexing easier
 description: Learn how JavaScript's 'at()' method simplifies array and string indexing with cleaner syntax, negative indexing, and broad browser support.
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
