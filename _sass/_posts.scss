@@ -11,7 +11,8 @@
     -webkit-text-decoration: underline solid rgba(11, 12, 12, 0);
     text-decoration: underline solid rgba(11, 12, 12, 0);
     transition: text-decoration-color var(--transition-duration);
-    transition: text-decoration-color var(--transition-duration),
+    transition:
+      text-decoration-color var(--transition-duration),
       -webkit-text-decoration-color var(--transition-duration);
 
     @media (max-width: $large-breakpoint) {
@@ -38,6 +39,10 @@
     font-size: 2rem;
     margin-bottom: var(--flow-space);
     margin-top: 0;
+  }
+
+  &__title--md {
+    font-size: var(--font-size-x-large);
   }
 
   &__title--sm {
