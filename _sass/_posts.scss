@@ -31,7 +31,7 @@
 .page-header,
 .post-header {
   --flow-space: 1.25rem;
-  margin-bottom: 0;
+  margin-bottom: var(--flow-space);
   padding-bottom: 0;
   padding-top: 0;
 
