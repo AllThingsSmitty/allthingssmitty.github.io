@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [React]
 comments: true
 views:
-  ga4: 680
+  ga4: 698
 ---
 
 This comes up a lot, and it's easy to get wrong. It's really easy to default to "lift state up" in React. I'm guilty. But that's not always the right move.
