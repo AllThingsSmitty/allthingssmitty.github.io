@@ -6,9 +6,9 @@ description: Matt Smith is a Maine-based software engineer who gives deep dives 
 url: https://allthingssmitty.com
 baseurl: ""
 social:
-  - name: Twitter
-    url: https://twitter.com/allthingssmitty
-    short: twitter
+  # - name: Twitter
+  #   url: https://twitter.com/allthingssmitty
+  #   short: twitter
   - name: LinkedIn
     url: https://linkedin.com/in/allthingssmitty
     short: linkedin
@@ -18,3 +18,6 @@ social:
   - name: CodePen
     url: https://codepen.io/allthingssmitty
     short: codepen
+  - name: RSS
+    url: /atom.xml
+    short: rss
