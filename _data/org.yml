@@ -2,13 +2,10 @@
 title: Matt Smith
 tagline: Modern Web Engineering, Front-End First
 brand: allthingssmitty
-description: Matt Smith is a Maine-based software engineer who gives deep dives into modern front-end development — CSS, JavaScript, React, TypeScript, and the evolving patterns shaping the web.
+description: Deep dives into modern front-end engineering — CSS, JavaScript, React, TypeScript, UI architecture, and building resilient web applications that last.
 url: https://allthingssmitty.com
 baseurl: ""
 social:
-  # - name: Twitter
-  #   url: https://twitter.com/allthingssmitty
-  #   short: twitter
   - name: GitHub
     url: https://github.com/allthingssmitty
     short: github
