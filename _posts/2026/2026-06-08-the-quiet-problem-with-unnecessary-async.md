@@ -5,7 +5,7 @@ description: "Not every JavaScript function needs to be async. Unnecessary async
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 0
+  ga4: 517
 ---
 
 There's a pattern in JavaScript codebases that quietly spreads complexity through entire applications. You've probably seen something like this:
