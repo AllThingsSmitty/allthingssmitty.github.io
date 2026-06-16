@@ -5,7 +5,7 @@ description: "JavaScript chaining looks clean at first, but it can hurt readabil
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 10888
+  ga4: 10932
 ---
 
 I used to write a lot of JavaScript like this:
