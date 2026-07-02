@@ -5,7 +5,7 @@ description: "createUser(user, true, false) works. It's also surprisingly hard t
 tags: [JavaScript, TypeScript]
 comments: true
 views:
-  ga4: 3224
+  ga4: 3238
 ---
 
 Every so often I open a PR and see something like this:
