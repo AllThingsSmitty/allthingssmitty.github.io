@@ -209,7 +209,7 @@ The difference is that I no longer destructure simply because an object exists.
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Does this feel familiar?</div>
+<div class="note-heading">💡 Does this seem familiar?</div>
 
 This reminds me a lot about [why I stopped chaining everything in JavaScript]({% post_url 2026-04-20-why-i-dont-chain-everything-in-javascript-anymore %}). Different feature, same lesson.
 
