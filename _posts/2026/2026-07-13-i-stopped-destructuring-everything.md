@@ -155,7 +155,7 @@ It also makes it easier to see what the component received.
 <aside class="message notification" role="note">
 {:/}
 
-**Every local variable asks the reader to remember another name.** Sometimes that's worth it, and sometimes it isn't.
+**Every local variable asks the reader to remember another name.** Sometimes that's worth it and sometimes it isn't.
 
 {::nomarkdown}
 </aside>
