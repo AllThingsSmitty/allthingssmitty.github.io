@@ -11,7 +11,7 @@ views:
 
 For a few years I destructured almost everything.
 
-Objects. Props. Parameters. Return values. If there was an object, I destructured it. It wasn't a conscious decision anymore, it was just what modern JavaScript looked like.
+Objects, props, parameters, return values. If there was an object, I destructured it. It wasn't a conscious decision anymore, it was just what modern JavaScript looked like.
 
 I still use destructuring, but it's not an automatic go-to for me now. Mainly because I'd come back to older code and spend more time than I expected figuring out where variables came from.
 
