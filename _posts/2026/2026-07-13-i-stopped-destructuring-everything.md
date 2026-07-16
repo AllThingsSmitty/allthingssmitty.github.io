@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 0
+  ga4: 1074
 ---
 
 For a few years I destructured almost everything.
