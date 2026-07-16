@@ -5,6 +5,4 @@ title: Build a better web
 
 I build front-end systems that last.
 
-My roots are in UI and web standards, so I care about how things look. But I care even more about how they hold up over time.
-
-I've modernized legacy apps, untangled complex systems, and learned that clarity beats cleverness. The web gets better when we build with intention.
+And I write about modern front-end engineering: architecture, performance, AI-assisted development, and building software that's designed to evolve.
