@@ -90,7 +90,8 @@
     rel="apple-touch-icon"
     href="{{ site.data.org.baseurl }}/img/favicon/apple-touch-icon.png?v={{ site.time | date: '%s' }}" />
   <link rel="manifest" href="{{ site.data.org.baseurl }}/img/favicon//manifest.webmanifest" />
-  <meta name="theme-color" content="#f8f9fa" />
+  <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: dark)" />
 
   {% for item in site.data.org.social %}
   <link rel="me" href="{{ item.url }}" />
