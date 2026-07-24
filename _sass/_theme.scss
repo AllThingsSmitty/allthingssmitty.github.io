@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: dark) {
   // _base.scss
   body {
-    background-color: #121212;
+    background-color: var(--color-primary);
     color: var(--color-dark-shades-primary-text);
   }
 
@@ -143,7 +143,8 @@
       -webkit-text-decoration: underline solid rgba(255, 255, 255, 0);
       text-decoration: underline solid rgba(255, 255, 255, 0);
       transition: text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration),
+      transition:
+        text-decoration-color var(--transition-duration),
         -webkit-text-decoration-color var(--transition-duration);
 
       @media (max-width: $large-breakpoint) {
@@ -324,7 +325,9 @@
   }
 
   .sun-and-moon > .sun-beams {
-    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+    transition:
+      transform 0.5s var(--ease-elastic-4),
+      opacity 0.5s var(--ease-3);
   }
 
   .sun-and-moon .moon > circle {
@@ -364,7 +367,7 @@ html[data-theme="dark"] {
 
   // _base.scss
   body {
-    background-color: #121212;
+    background-color: var(--color-primary);
     color: var(--color-dark-shades-primary-text);
   }
 
@@ -504,7 +507,8 @@ html[data-theme="dark"] {
       -webkit-text-decoration: underline solid rgba(255, 255, 255, 0);
       text-decoration: underline solid rgba(255, 255, 255, 0);
       transition: text-decoration-color var(--transition-duration);
-      transition: text-decoration-color var(--transition-duration),
+      transition:
+        text-decoration-color var(--transition-duration),
         -webkit-text-decoration-color var(--transition-duration);
 
       @media (max-width: $large-breakpoint) {
