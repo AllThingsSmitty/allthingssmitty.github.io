@@ -9,13 +9,17 @@ views:
   ga4: 5007
 ---
 
-One important piece of JavaScript syntax that I've enjoyed using is the nullish coalescing (`??`) operator. The `??` operator handles default values more effectively compared with the traditional approach using the logical OR (`||`) operator. It's a 100% must-have tip.
+One piece of JavaScript syntax I've come to appreciate is the nullish coalescing (`??`) operator. It's one of those features that's easy to overlook until it saves you from a subtle bug.
 
-Both the `??` and `||` operators return the right-hand operand if the left-hand operand is "falsy". But the key difference lies in what they consider falsy...
+If you're still using the logical OR (`||`) operator to provide default values, it's worth knowing where the two behave differently.
+
+The difference comes down to what each operator considers a value worth replacing.
 
 ## Breaking it down
 
-The logical OR (`||`) operator will treat `false`, `0`, `NaN`, `""` (empty string), `null`, and `undefined` all as falsy. So if any of these are encountered, the right-hand side of the `||` expression will be returned. This happens even when a value like `0` or `""` might be a valid and intended value:
+The logical OR (`||`) operator treats any *falsy* value as a signal to fall back to the value on the right. That includes `false`, `0`, `NaN`, `""` (an empty string), `null`, and `undefined`.
+
+This can be surprising when values like `0` or `""` are perfectly valid and should be preserved:
 
 ```js
 const value = 0;
@@ -23,9 +27,11 @@ const _default = 5;
 console.log(value || _default); // Output: 5 (because 0 is falsy)
 ```
 
-Here `||` evaluates `0` as falsy, so the default value `5` is returned.
+Here, `||` treats `0` as falsy, so the default value (`5`) is returned.
 
-However, the nullish coalescing (`??`) operator only considers `null` and `undefined` as falsy. Any other value, even if it's falsy in a boolean context (e.g., `0`, `false`, or an empty string), won't trigger the default value:
+The nullish coalescing (`??`) operator works a little differently. It only falls back when the value on the left is `null` or `undefined`.
+
+Everything else, including `0`, `false`, and an empty string, is treated as a legitimate value:
 
 ```js
 const value = 0;
@@ -33,10 +39,14 @@ const _default = 5;
 console.log(value ?? _default); // Output: 0 (because 0 is not null or undefined)
 ```
 
-The `??` operator treats `0` as a valid value, so it doesn't replace it with the default.
+Since `0` isn't `null` or `undefined`, it's preserved instead of being replaced by the default.
 
-## Why `??` is safer for default values
+## Why I usually reach for `??`
 
-The nullish coalescing operator is a powerful tool that shines in situations where you want to preserve falsy values like `0`, `false`, or an empty string but still provide defaults for `null` or `undefined`. This distinction helps prevent unintended consequences that can arise when using `||`, particularly when working with numbers or empty strings.
+When I'm providing default values, `??` is usually the operator I want.
 
-By using `??`, you can avoid unexpected results and write more predictable, reliable JavaScript code that handles default values with precision. 👍🏻
+It preserves values that happen to be falsy while still giving me a fallback when something is actually missing (`null` or `undefined`). That small distinction helps avoid bugs that can be frustrating to track down, especially when working with numbers, form inputs, or configuration values.
+
+That's not to say `||` is wrong; it still has its place when you intentionally want to treat *any* falsy value as "missing." But if your goal is simply "use a default only when no value exists," `??` is often the better fit.
+
+It's a small change, but it's one that can make your code behave more predictably and save you from a few head-scratching moments down the road. 👍🏻

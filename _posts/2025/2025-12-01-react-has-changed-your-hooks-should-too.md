@@ -58,7 +58,7 @@ const handleSave = useEffectEvent(async () => {
 });
 ```
 
-Before reaching for `useEffect`, ask yourself:
+Before choosing `useEffect`, ask yourself:
 
 - Is this driven by something external (network, DOM, subscriptions)?
 - Or can I compute this during render?

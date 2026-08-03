@@ -240,4 +240,4 @@ Here's a quick comparison of when to use each:
 </div>
 {:/}
 
-If you're still reaching for `reduce()`, give these a try. You might not look back.
+If you're still relaying on `reduce()`, give these a try. You might not look back.
