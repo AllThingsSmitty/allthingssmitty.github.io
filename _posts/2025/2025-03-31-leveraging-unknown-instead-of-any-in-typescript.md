@@ -9,45 +9,54 @@ views:
   ga4: 734
 ---
 
-In TypeScript, you may have heard that the `any` type is seen as a kind of "get out of jail free" card. It allows any value to be assigned to a variable of type `any`, which effectively disabling TypeScript's static type checking. That might be convenient in certain situations, but it undermines one of the primary benefits of TypeScript: catching errors during development. If you use `any` liberally, you might end up with a codebase that's no safer than regular JavaScript.
+One habit I've picked up over the years using `unknown` as a default before `any`. I still use `any` occasionally, but I've become much more intentional about it.
+
+The reason is pretty simple: `any` opts you out of TypeScript's type checking. That can be convenient when you're prototyping or working with legacy code, but if it starts spreading through a codebase, it's surprisingly easy to lose many of the guarantees that make TypeScript valuable in the first place.
 
 ## An `unknown` alternative
 
-The `unknown` type is a safer, more restrictive alternative to `any`. It lets you assign any value to a variable but requires type checking before use, unlike `any`, which allows operations without checks.
+The `unknown` type takes a different approach. Like `any`, it can hold any value. The difference is that TypeScript won't let you assume what that value is until you've proven it.
 
-Let's take a look:
+Here's a simple example:
 
-```js
+```ts
 let value: unknown;
 
 value = 10; // OK
 value = "hello"; // OK
 
-// The following would raise a TypeScript error
-let strLength: number = value.length; // Error: Object is of type "unknown"
+// TypeScript won't let us assume this is a string.
+let strLength: number = value.length;
+// Error: Object is of type 'unknown'
 ```
 
-With `unknown`, the TypeScript compiler won't allow you to perform operations that may not be valid for the assigned value unless you first check its type.
+That's the point. TypeScript refuses to guess.
 
-### Is `unknown` really better than `any`?
+Before you can use `value` as a string (or any other type), you need to narrow it first.
 
-A few things to consider:
+### Why I usually prefer `unknown`
 
--	**Type safety:** `unknown` requires explicit type checks before performing operations.
--	**Better tooling:** TypeScript provides improved autocompletion and error messages with `unknown`.
--	**Improved maintainability:** `unknown` encourages safer, more maintainable code.
+A few reasons I've come to prefer `unknown`:
 
-Using `unknown` with a type check:
+- **It forces me to be explicit.** Before I can use a value, I have to prove what it is.
+- **It catches bad assumptions early.** TypeScript won't let me call methods or access properties that might not exist.
+* **The intent is clearer.** Future readers (including me a few months later) can see exactly why a value is safe to use.
 
-```js
-let value: unknown = 10;
+Here's what that looks like in practice:
+
+```ts
+let value: unknown = "hello";
 
 if (typeof value === "string") {
-  // Now TypeScript knows value is a string, so we can safely call string methods
+  // TypeScript now knows value is a string.
   console.log(value.length); // OK
 } else {
   console.log("Value is not a string.");
 }
 ```
 
-With this, TypeScript requires an explicit check (`typeof value === "string"`) before you can safely use the string methods on `value`. This provides an extra layer of safety over `any`.
+Once we've narrowed the type, TypeScript is happy because we've shown that `value` is actually a string before using string-specific properties.
+
+That doesn't mean `any` is wrong. There are legitimate cases for it, like working with older libraries, gradually migrating JavaScript to TypeScript, or intentionally opting out of type checking when you understand the trade-off.
+
+For me, though, `any` has become the exception rather than the default. If I genuinely don't know the type yet, I start with `unknown` and narrow it from there. It's a small habit that's saved me from more than a few bugs.
