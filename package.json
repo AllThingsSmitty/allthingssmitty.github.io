@@ -18,7 +18,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
     "node-fetch": "^3.3.2",
-    "postcss": "^8.5.22",
+    "postcss": "^8.5.25",
     "terser": "^5.31.0"
   },
   "repository": {
