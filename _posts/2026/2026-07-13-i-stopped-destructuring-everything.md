@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 4462
+  ga4: 4555
 ---
 
 For a few years I destructured almost everything.
@@ -163,13 +163,9 @@ It also makes it easier to see what the component received.
 
 If a new variable represents an idea that's meaningful on its own, I'll happily introduce it.
 
-A name like `billingAddress` becomes part of the function's vocabulary.
+A name like `billingAddress` becomes part of the function's vocabulary. But if all I'm doing is turning `project.status` into `status`, I'm not convinced I've made the code easier to read.
 
-But if all I'm doing is turning `project.status` into `status`, I'm not convinced I've made the code easier to read.
-
-That's become a useful rule of thumb for me: **If destructuring gives the code a better vocabulary, I do it.**
-
-If it only saves a few characters, I usually don't.
+That's become a useful rule of thumb for me: **If destructuring gives the code a better vocabulary, I do it.** If it only saves a few characters, I usually don't.
 
 ## When I do destructure
 
@@ -219,6 +215,6 @@ This reminds me a lot about [why I stopped chaining everything in JavaScript]({%
 
 ## The question I ask now
 
-I still like destructuring. There are plenty of places where it makes code noticeably cleaner. I just don't automatically reach for it anymore.
+I still like destructuring. There are plenty of places where it makes code noticeably cleaner. I just don't automatically do it now.
 
 Before I remove the object, I ask myself: does removing the object actually make this easier to understand, or does it just make it shorter?
