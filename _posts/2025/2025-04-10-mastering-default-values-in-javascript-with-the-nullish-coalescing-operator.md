@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 5007
+  ga4: 5024
 ---
 
 One piece of JavaScript syntax I've come to appreciate is the nullish coalescing (`??`) operator. It's one of those features that's easy to overlook until it saves you from a subtle bug.
