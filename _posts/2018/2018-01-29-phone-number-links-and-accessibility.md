@@ -7,7 +7,7 @@ tags: [accessibility, JavaScript, mobile, UX]
 comments: true
 views:
   ua: 13818
-  ga4: 5632
+  ga4: 5681
 ---
 
 <aside class="message notification" role="note">
