@@ -5,7 +5,7 @@ description: "JavaScript chaining looks clean at first, but it can hurt readabil
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 11298
+  ga4: 11314
 ---
 
 I used to write a lot of JavaScript like this:
@@ -18,7 +18,7 @@ const result = users
   .slice(0, 5);
 ```
 
-Nothing here is wrong. I wrote code like this all the time. But this is exactly the kind of thing that feels fine at first, then slowly gets harder to work with.
+Nothing here is wrong, I wrote code like this all the time. But this is exactly the kind of thing that feels fine at first, then slowly gets harder to work with.
 
 ## Chaining is great...until it isn't
 
@@ -192,7 +192,7 @@ Interested in doing even less work with sequences of data? [Stop turning everyth
 
 ## I'm not saying never chain
 
-Short chains are fine. I still write them. Once I hit three or four steps, I pause.
+Short chains are fine, and I still write them. But once I hit three or four steps, I pause.
 
 ### How I think about this now
 
