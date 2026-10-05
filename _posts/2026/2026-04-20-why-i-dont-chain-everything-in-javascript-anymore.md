@@ -51,7 +51,7 @@ Here's the same intent written three different ways.
 users.filter(u => u.active).map(u => u.name)[0]
 ```
 
-It looks neat. I used to reach for this a lot. But it processes everything, even though I only need one result.
+It looks neat. I used this a lot. But it processes everything, even though I only need one result.
 
 **If I'm writing it in steps:**
 

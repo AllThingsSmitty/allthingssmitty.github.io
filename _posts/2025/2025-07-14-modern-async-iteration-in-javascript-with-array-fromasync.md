@@ -228,4 +228,4 @@ async function arrayFromAsync(source, mapFn, thisArg) {
 
 `Array.fromAsync()` is a fantastic addition to JavaScript that front-end engineers can start using to simplify working with asynchronous iterables. It's elegant, native, and designed with modern async patterns in mind.
 
-Next time you're fetching data, processing a stream, or working with async generators, reach for `Array.fromAsync()` and write cleaner, more expressive code.
+Next time you're fetching data, processing a stream, or working with async generators, try `Array.fromAsync()` and write cleaner, more expressive code.

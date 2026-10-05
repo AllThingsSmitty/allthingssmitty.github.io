@@ -41,7 +41,7 @@ console.log(value ?? _default); // Output: 0 (because 0 is not null or undefined
 
 Since `0` isn't `null` or `undefined`, it's preserved instead of being replaced by the default.
 
-## Why I usually reach for `??`
+## Why I usually turn to `??`
 
 When I'm providing default values, `??` is usually the operator I want.
 
