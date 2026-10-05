@@ -205,7 +205,7 @@ Instead of juggling reversed arrays or writing awkward loops, your logic stays f
 
 <div class="note-heading">✅ Array indexing made easier?</div>
 
-Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post_url 2025-05-19-how-javascript-at-method-makes-array-indexing-easier %}) in JavaScript simplifies array access. No more `length - 1` gymnastics!
+Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post_url 2025-05-19-how-javascript-at-method-makes-array-indexing-easier %}) in JavaScript simplifies array access. No more working out `length - 1` in your head!
 
 {::nomarkdown}
 </aside>

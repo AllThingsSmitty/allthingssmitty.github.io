@@ -58,7 +58,7 @@ const config = await fetch('/config.json').then(res => res.json());
 initializeApp(config);
 ```
 
-No more nesting or wrapping, just straightforward async logic.
+You don't have to worry about nesting or wrapping, just straightforward async logic.
 
 ### Dynamic imports before running code
 

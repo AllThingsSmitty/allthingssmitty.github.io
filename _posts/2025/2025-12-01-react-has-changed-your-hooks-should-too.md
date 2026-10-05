@@ -127,7 +127,7 @@ Always start with a deterministic fallback value to avoid hydration mismatches.
 
 React 18 introduced [`useSyncExternalStore`](https://react.dev/reference/react/useSyncExternalStore){:target="_blank"}{:rel="noopener noreferrer"}, and it quietly solves a huge class of bugs around subscriptions, tearing, and high-frequency updates.
 
-If you've ever fought with `matchMedia`, scroll position, or third-party stores behaving inconsistently across renders, this is the API React wants you to reach for.
+If you've ever fought with `matchMedia`, scroll position, or third-party stores behaving inconsistently across renders, this is the API React wants you to grab.
 
 Use it for:
 
