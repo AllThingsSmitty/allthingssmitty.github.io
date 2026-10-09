@@ -1,0 +1,49 @@
+# name: Jekyll build
+
+# on:
+#   pull_request:
+#   push:
+#     branches: [master]
+
+# permissions:
+#   contents: read
+
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
+
+# jobs:
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       # Same builder GitHub Pages uses, so a pass here means Pages will build.
+#       - uses: actions/jekyll-build-pages@v1
+#         with:
+#           source: ./
+#           destination: ./_site
+
+#       - uses: actions/upload-artifact@v4
+#         with:
+#           name: site
+#           path: _site
+#           retention-days: 1
+
+#   links:
+#     name: Internal links
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/download-artifact@v4
+#         with:
+#           name: site
+#           path: _site
+
+#       # Offline mode checks only internal links and local files; external URLs
+#       # are skipped to avoid flaky failures unrelated to the change.
+#       - uses: lycheeverse/lychee-action@v2
+#         with:
+#           args: --offline --no-progress --root-dir "${{ github.workspace }}/_site" "_site/**/*.html"
+#           fail: true
