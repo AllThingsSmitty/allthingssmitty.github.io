@@ -1,14 +1,17 @@
 const scrollToTopBtn = document.querySelector(".scrollToTop");
-const root = document.documentElement;
 
-const handleScroll = () => {
-  const scrollRatio = root.scrollTop / (root.scrollHeight - root.clientHeight);
-  scrollToTopBtn?.classList.toggle("showBtn", scrollRatio > 0.25);
-};
+if (scrollToTopBtn) {
+  const root = document.documentElement;
 
-const scrollToTop = () => {
-  root.scrollTo({ top: 0, behavior: "smooth" });
-};
+  const handleScroll = () => {
+    const scrollRatio = root.scrollTop / (root.scrollHeight - root.clientHeight);
+    scrollToTopBtn.classList.toggle("showBtn", scrollRatio > 0.25);
+  };
 
-scrollToTopBtn?.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);
+  const scrollToTop = () => {
+    root.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  document.addEventListener("scroll", handleScroll, { passive: true });
+}
