@@ -46,4 +46,4 @@ jobs:
       - uses: lycheeverse/lychee-action@v2
         with:
           args: --offline --no-progress --root-dir "${{ github.workspace }}/_site" "_site/**/*.html"
-          fail: false
+          fail: true
