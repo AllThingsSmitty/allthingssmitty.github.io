@@ -1,4 +1,19 @@
 <head>
+  <script>
+    // Set the theme before first paint to avoid a flash: saved choice, otherwise the system preference.
+    // Keep the storage key in sync with js/utils/theme.js.
+    (() => {
+      let theme;
+      try {
+        theme = localStorage.getItem("theme-preference");
+      } catch {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
   {% if jekyll.environment == "production" %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.analytics.ga4Id }}"></script>
   <script>
