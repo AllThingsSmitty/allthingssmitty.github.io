@@ -19,6 +19,8 @@ import fs from "fs";
 import { minify } from "terser";
 
 const mainJsFile = "main.min.js";
+// Files in js/utils/ that intentionally define globals, so they are not block-wrapped.
+const globalFiles = new Set(["prism.js"]);
 
 // Removes generated output so each run starts from a clean build.
 function deleteSiteDirectory() {
@@ -64,13 +66,24 @@ async function concatenateAndMinifyJsFiles() {
 
     // Concatenate and minify .js files
     const files = await fs.promises.readdir(jsDir, { withFileTypes: true });
-    const jsFiles = files.filter((file) => file.isFile() && file.name.endsWith(".js"));
+    const jsFiles = files
+      .filter((file) => file.isFile() && file.name.endsWith(".js"))
+      .sort((a, b) => a.name.localeCompare(b.name));
     if (jsFiles.length === 0) {
       console.log(`No .js files found in ${jsDir}`);
       return;
     }
 
-    const concatenatedJs = jsFiles.map((file) => fs.readFileSync(`${jsDir}${file.name}`, "utf8")).join("\n");
+    // Vendor files (e.g. prism.js) keep their globals; everything else is wrapped in a block so
+    // top-level const/let can't collide across files and a missing trailing semicolon in one
+    // file can't merge into the next.
+    const sources = await Promise.all(
+      jsFiles.map(async (file) => {
+        const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
+        return globalFiles.has(file.name) ? `${code}\n;` : `{\n${code}\n}`;
+      }),
+    );
+    const concatenatedJs = sources.join("\n");
     const result = await minify(concatenatedJs);
     const minifiedJs = result.code;
 
