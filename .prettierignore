@@ -1,4 +1,6 @@
 .vscode/
 node_modules/
 js/*.js
+js/lib/
+_site
 *.md
