@@ -1,6 +1,6 @@
 {
   "name": "allthingssmitty.com",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "",
   "main": "index.mjs",
   "author": "Matt Smith",
@@ -11,12 +11,6 @@
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
-    "del": "^8.0.1",
-    "gulp": "^5.0.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.2",
-    "node-fetch": "^3.3.2",
     "terser": "^5.31.0"
   },
   "repository": {
