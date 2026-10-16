@@ -3,11 +3,12 @@
   flex-direction: column;
   margin-inline: auto;
   max-width: var(--large-breakpoint);
-  min-height: 100vh;
+  min-height: 100vh; // fallback
+  min-height: 100dvh;
   padding-inline: 1.25rem;
 
-  // WebKit mobile viewport bug fix
-  @supports (-webkit-touch-callout: none) {
+  // WebKit mobile viewport bug fix for iOS versions without dvh support (<15.4)
+  @supports (-webkit-touch-callout: none) and (not (min-height: 100dvh)) {
     min-height: -webkit-fill-available;
   }
 }
