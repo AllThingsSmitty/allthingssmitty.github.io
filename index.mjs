@@ -1,12 +1,26 @@
+/**
+ * Local development runner for the blog (`npm start`).
+ *
+ * Replaces a Gemfile/Rakefile-style workflow. Requires Node plus a globally
+ * installed `jekyll`. Does nothing when NODE_ENV=production.
+ *
+ * Steps (all kicked off together at the bottom of this file):
+ *   1. Clean build output (_site, .sass-cache, main.min.js)
+ *   2. Concatenate + minify js/utils/*.js into js/main.min.js
+ *   3. Start `jekyll serve --watch` and a Browsersync server on _site/
+ *
+ * CSS vendor prefixing is intentionally absent: the few prefixes still needed
+ * are written by hand in _sass/.
+ */
+
 import { exec } from "child_process";
 import browserSync from "browser-sync";
 import fs from "fs";
-import postcss from "postcss";
-import autoprefixer from "autoprefixer";
 import { minify } from "terser";
 
 const mainJsFile = "main.min.js";
 
+// Removes generated output so each run starts from a clean build.
 function deleteSiteDirectory() {
   const siteDir = "./_site";
   const sassCacheDir = "./.sass-cache";
@@ -39,6 +53,7 @@ function deleteSiteDirectory() {
   });
 }
 
+// Bundles every .js file in js/utils/ (directory order) into js/main.min.js with Terser.
 async function concatenateAndMinifyJsFiles() {
   const jsDir = "./js/utils/";
 
@@ -69,6 +84,7 @@ async function concatenateAndMinifyJsFiles() {
   }
 }
 
+// Starts the Jekyll watcher, then Browsersync (after 1s) to live-reload on file changes.
 function runJekyllCommand() {
   exec("jekyll serve --watch", (error, stdout, stderr) => {
     if (error) {
@@ -92,41 +108,10 @@ function runJekyllCommand() {
   }, 1000);
 }
 
-function autoprefixCssFiles() {
-  const cssDir = "./_site/css/";
-  fs.readdir(cssDir, (err, files) => {
-    if (err) {
-      console.error(`Error reading directory ${cssDir}: ${err}`);
-      return;
-    }
-
-    files.forEach((file) => {
-      if (file.endsWith(".css")) {
-        const filePath = `${cssDir}${file}`;
-        fs.readFile(filePath, (err, css) => {
-          if (err) {
-            console.error(`Error reading file ${filePath}: ${err}`);
-            return;
-          }
-
-          postcss([autoprefixer({ overrideBrowserslist: [">1%"] })])
-            .process(css, { from: filePath, to: filePath })
-            .then((result) => {
-              fs.writeFile(filePath, result.css, (err) => {
-                if (err) console.error(`Error writing file ${filePath}: ${err}`);
-              });
-            });
-        });
-      }
-    });
-  });
-}
-
 if (process.env.NODE_ENV !== "production") {
   deleteSiteDirectory();
   concatenateAndMinifyJsFiles();
   runJekyllCommand();
-  autoprefixCssFiles();
 
   console.log("Running in development mode. Development tasks have been executed");
 }

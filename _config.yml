@@ -5,20 +5,6 @@ permalink: pretty
 paginate: 3
 timezone: America/New_York
 
-# Assets
-assets:
-  compress:
-    css: sass
-    js: uglifier
-  autoprefixer:
-    browsers: ["> 1%"]
-  plugins:
-    css:
-      autoprefixer: {}
-  sass:
-    sass_dir: _sass
-    style: compressed
-
 # Custom vars and plugins
 version: 2.0.0
 github:
