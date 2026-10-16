@@ -1,4 +1,4 @@
-// Underline colour for the dark theme (declared outside dark-theme: Sass can't nest mixin definitions)
+// Underline color for the dark theme (declared outside dark-theme: Sass can't nest mixin definitions)
 @mixin dark-text-decoration {
   text-decoration-color: rgba(255, 255, 255, 0.65); // fallback for iOS versions without oklch support (<16.4)
   text-decoration-color: oklch(from currentColor l c h / 65%);
@@ -221,7 +221,7 @@
   }
 }
 
-// @import "https://unpkg.com/open-props/easings.min.css";
+@import "https://unpkg.com/open-props/easings.min.css";
 
 .theme-toggle {
   // --size: 2rem;

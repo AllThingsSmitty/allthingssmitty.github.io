@@ -2,6 +2,7 @@ const storageKey = "theme-preference";
 const root = document.documentElement;
 const toggle = document.querySelector("#theme-toggle");
 const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+const themeColorMetas = document.querySelectorAll('meta[name="theme-color"][media*="prefers-color-scheme]');
 
 // localStorage can throw (e.g. blocked storage), so treat it as optional.
 const getSavedTheme = () => {
@@ -19,8 +20,18 @@ const saveTheme = (theme) => {
   } catch {}
 };
 
+// The theme-color metas are keyed to the system preference, so point the browser UI color at the
+// active theme instead: only the nta for that theme keeps matching.
+const syncThemeColor = (theme) => {
+  themeColorMetas.forEach((meta) => {
+    meta.dataset.scheme ||= meta.media.includes("dark") ? "dark" : "light";
+    meta.media = meta.dataset.scheme === theme ? "all" : "not all";
+  });
+};
+
 const applyTheme = (theme) => {
   root.dataset.theme = theme;
+  syncThemeColor(theme);
   // Label the action the button performs, not the current state
   toggle?.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
   document.dispatchEvent(new CustomEvent("themeChanged", { detail: { theme } }));
