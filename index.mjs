@@ -19,6 +19,7 @@ import fs from "fs";
 import { minify } from "terser";
 
 const mainJsFile = "main.min.js";
+const jsDir = "./js/utils/";
 // Files in js/utils/ that intentionally define globals, so they are not block-wrapped.
 const globalFiles = new Set(["prism.js"]);
 
@@ -55,46 +56,46 @@ function deleteSiteDirectory() {
   });
 }
 
-// Bundles every .js file in js/utils/ (directory order) into js/main.min.js with Terser.
+// Bundles every .js file in js/utils/ (sorted by name) into js/main.min.js with Terser.
+// Throws on failure so callers decide whether to exit (initial build) or carry on (watch rebuild).
+// The existing bundle is only overwritten once the new one is ready, so a failed rebuild keeps
+// the last good output.
 async function concatenateAndMinifyJsFiles() {
-  const jsDir = "./js/utils/";
-
-  try {
-    // Delete main.min.js file
-    await fs.promises.rm(mainJsFile, { force: true });
-    console.log(`File ${mainJsFile} has been deleted`);
-
-    // Concatenate and minify .js files
-    const files = await fs.promises.readdir(jsDir, { withFileTypes: true });
-    const jsFiles = files
-      .filter((file) => file.isFile() && file.name.endsWith(".js"))
-      .sort((a, b) => a.name.localeCompare(b.name));
-    if (jsFiles.length === 0) {
-      console.log(`No .js files found in ${jsDir}`);
-      return;
-    }
-
-    // Vendor files (e.g. prism.js) keep their globals; everything else is wrapped in a block so
-    // top-level const/let can't collide across files and a missing trailing semicolon in one
-    // file can't merge into the next.
-    const sources = await Promise.all(
-      jsFiles.map(async (file) => {
-        const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
-        return globalFiles.has(file.name) ? `${code}\n;` : `{\n${code}\n}`;
-      }),
-    );
-    const concatenatedJs = sources.join("\n");
-    const result = await minify(concatenatedJs);
-    const minifiedJs = result.code;
-
-    const outputDir = "./js/";
-    const outputFile = `${outputDir}${mainJsFile}`;
-
-    await fs.promises.writeFile(outputFile, minifiedJs);
-    console.log(`File ${mainJsFile} has been created`);
-  } catch (err) {
-    console.error(`Error: ${err}`);
+  const files = await fs.promises.readdir(jsDir, { withFileTypes: true });
+  const jsFiles = files
+    .filter((file) => file.isFile() && file.name.endsWith(".js"))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  if (jsFiles.length === 0) {
+    console.log(`No .js files found in ${jsDir}`);
+    return;
   }
+
+  // Vendor files (e.g. prism.js) keep their globals; everything else is wrapped in a block so
+  // top-level const/let can't collide across files and a missing trailing semicolon in one
+  // file can't merge into the next.
+  const sources = await Promise.all(
+    jsFiles.map(async (file) => {
+      const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
+      return globalFiles.has(file.name) ? `${code}\n;` : `{\n${code}\n}`;
+    }),
+  );
+  const result = await minify(sources.join("\n"));
+
+  await fs.promises.writeFile(`./js/${mainJsFile}`, result.code);
+  console.log(`File ${mainJsFile} has been created`);
+}
+
+// Rebuilds the bundle whenever a file in js/utils/ changes (debounced). Jekyll picks up the new
+// js/main.min.js and Browsersync reloads, so no restart is needed. Errors are logged, not fatal.
+function watchJsFiles() {
+  let timer;
+  fs.watch(jsDir, (_event, filename) => {
+    if (filename && !filename.endsWith(".js")) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      concatenateAndMinifyJsFiles().catch((err) => console.error(`JS rebuild failed: ${err}`));
+    }, 100);
+  });
 }
 
 // Starts the Jekyll watcher, then Browsersync (after 1s) to live-reload on file changes.
@@ -121,10 +122,22 @@ function runJekyllCommand() {
   }, 1000);
 }
 
-if (process.env.NODE_ENV !== "production") {
+async function main() {
   deleteSiteDirectory();
-  concatenateAndMinifyJsFiles();
+
+  try {
+    await concatenateAndMinifyJsFiles();
+  } catch (err) {
+    console.error(`JS build failed: ${err}`);
+    process.exit(1);
+  }
+
+  watchJsFiles();
   runJekyllCommand();
 
   console.log("Running in development mode. Development tasks have been executed");
+}
+
+if (process.env.NODE_ENV !== "production") {
+  main();
 }
