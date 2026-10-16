@@ -54,10 +54,6 @@ https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+
   cursor: help;
 }
 
-.namespace {
-  opacity: 0.7;
-}
-
 code {
   border-radius: 3px;
   box-decoration-break: clone;
@@ -69,7 +65,6 @@ code {
   text-align: left;
   word-break: keep-all;
   word-spacing: normal;
-  word-wrap: pre-wrap;
 }
 
 pre > code {
@@ -79,6 +74,5 @@ pre > code {
   line-height: 1.7;
   overflow-x: auto;
   overscroll-behavior-x: contain;
-  padding: clamp(1rem, 1.5rem, 2rem);
-  -webkit-overflow-scrolling: touch;
+  padding: 1.5rem;
 }
