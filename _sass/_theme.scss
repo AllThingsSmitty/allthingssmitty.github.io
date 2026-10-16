@@ -133,6 +133,7 @@
   }
 
   @mixin text-decoration {
+    text-decoration-color: rgba(43, 40, 93, 0.65); // fallback for iOS versions without oklch support (<16.4)
     text-decoration-color: oklch(from currentColor l c h / 65%);
   }
 
