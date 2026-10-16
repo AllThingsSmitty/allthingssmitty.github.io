@@ -6,7 +6,9 @@
  *
  * Steps (all kicked off together at the bottom of this file):
  *   1. Clean build output (_site, .sass-cache, main.min.js)
- *   2. Concatenate + minify js/utils/*.js into js/main.min.js
+ *   2. Concatenate + minify js/utils/*.js into js/main.min.js and record its content hash in
+ *      _data/assets.yml (the ?v= cache-buster in _layouts/default.html). Both files are committed,
+ *      so commit them together. Rebuilds automatically when js/utils/ changes.
  *   3. Start `jekyll serve --watch` and a Browsersync server on _site/
  *
  * CSS vendor prefixing is intentionally absent: the few prefixes still needed
@@ -15,13 +17,13 @@
 
 import { exec } from "child_process";
 import browserSync from "browser-sync";
+import crypto from "crypto";
 import fs from "fs";
 import { minify } from "terser";
 
 const mainJsFile = "main.min.js";
 const jsDir = "./js/utils/";
-// Files in js/utils/ that intentionally define globals, so they are not block-wrapped.
-const globalFiles = new Set(["prism.js"]);
+const assetsFile = "./_data/assets.yml";
 
 // Removes generated output so each run starts from a clean build.
 function deleteSiteDirectory() {
@@ -70,19 +72,32 @@ async function concatenateAndMinifyJsFiles() {
     return;
   }
 
-  // Vendor files (e.g. prism.js) keep their globals; everything else is wrapped in a block so
-  // top-level const/let can't collide across files and a missing trailing semicolon in one
-  // file can't merge into the next.
+  // Each file is wrapped in a block so top-level const/let can't collide across files and a missing
+  // trailing semicolon in one file can't merge into the next. Vendor scripts that need globals
+  // (e.g. Prism) live in js/lib/ and are loaded separately, not bundled.
   const sources = await Promise.all(
     jsFiles.map(async (file) => {
       const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
-      return globalFiles.has(file.name) ? `${code}\n;` : `{\n${code}\n}`;
+      return `{\n${code}\n}`;
     }),
   );
   const result = await minify(sources.join("\n"));
 
   await fs.promises.writeFile(`./js/${mainJsFile}`, result.code);
   console.log(`File ${mainJsFile} has been created`);
+
+  await writeAssetHash(result.code);
+}
+
+// Records a short content hash of the bundle for cache busting. Only writes when it changed, so
+// Jekyll isn't triggered to rebuild for nothing.
+async function writeAssetHash(code) {
+  const hash = crypto.createHash("sha256").update(code).digest("hex").slice(0, 10);
+  const yaml = `main_js: "${hash}"\n`;
+  const current = await fs.promises.readFile(assetsFile, "utf8").catch(() => "");
+  if (current.replace(/\r\n/g, "\n") === yaml) return;
+  await fs.promises.writeFile(assetsFile, yaml);
+  console.log(`File ${assetsFile} updated (main_js: ${hash})`);
 }
 
 // Rebuilds the bundle whenever a file in js/utils/ changes (debounced). Jekyll picks up the new
