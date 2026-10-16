@@ -1,6 +1,7 @@
 {
   "arrowParens": "always",
   "bracketSameLine": true,
+  "endOfLine": "auto",
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
   "printWidth": 120,
