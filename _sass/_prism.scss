@@ -4,11 +4,11 @@ https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+
 .token.cdata,
 .token.doctype,
 .token.prolog {
-  color: var(--color-mid-text);
+  color: var(--theme-token-meta);
 }
 
 .token.comment {
-  color: var(--color-shades-secondary-glare);
+  color: var(--theme-token-comment);
 }
 
 .namespace {
@@ -19,19 +19,19 @@ https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+
 .token.atrule,
 .token.string,
 .token.punctuation {
-  color: var(--color-syntax-primary);
+  color: var(--theme-token-string);
 }
 
 .token.class-name,
 .token.function,
 .token.property,
 .token.tag {
-  color: var(--color-syntax-quaternary);
+  color: var(--theme-token-function);
 }
 
 .token.boolean,
 .token.number {
-  color: var(--color-syntax-primary-glare);
+  color: var(--theme-token-number);
 }
 
 .token.attr-name,
@@ -40,14 +40,14 @@ https://prismjs.com/download#themes=prism&languages=markup+css+clike+javascript+
 .token.keyword,
 .token.regex,
 .token.selector {
-  color: var(--color-code-tertiary);
+  color: var(--theme-token-keyword);
 }
 
 .language-css .token.string,
 .token.entity,
 .token.operator,
 .token.url {
-  color: var(--color-syntax-secondary);
+  color: var(--theme-token-operator);
 }
 
 .token.entity {

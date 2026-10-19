@@ -35,14 +35,14 @@ blockquote {
     padding: 1.75rem;
 
     &.notification {
-      background-color: var(--color-state-warn-bg);
-      color: var(--color-state-warn-text);
+      background-color: var(--theme-warn-bg);
+      color: var(--theme-warn-text);
       margin-inline: 0;
     }
 
     &.highlight {
-      background-color: var(--color-shades-primary-bright);
-      color: var(--color-state-info-text);
+      background-color: var(--theme-info-bg);
+      color: var(--theme-info-text);
 
       @media (max-width: $large-breakpoint) {
         padding: var(--spacer);
@@ -54,12 +54,12 @@ blockquote {
     }
 
     &.memo {
-      background-color: var(--color-mid-bg);
+      background-color: var(--theme-subtle-bg);
       color: inherit;
       margin-inline: 0;
 
       code {
-        background-color: var(--color-shades-tertiary-bright);
+        background-color: var(--theme-memo-code-bg);
       }
     }
 
@@ -134,14 +134,14 @@ figcaption {
 
     td,
     th {
-      border: 1px solid var(--color-stroke);
+      border: 1px solid var(--theme-border);
       padding: 0.3rem 0.65rem;
       text-align: left;
     }
 
     tr:nth-child(even) {
       &:has(td) {
-        background-color: var(--color-shades-light);
+        background-color: var(--theme-subtle-bg);
       }
     }
   }

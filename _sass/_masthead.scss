@@ -8,7 +8,7 @@
   &__brand {
     --spacer-sm: 0.5rem;
     --spacer-lg: 1rem;
-    color: var(--color-shades-secondary-glare);
+    color: var(--theme-masthead-text);
     margin-bottom: 5rem;
     padding-block: var(--spacer-lg) var(--spacer-sm);
 
@@ -18,7 +18,7 @@
       line-height: 1.75;
 
       .header-nav__title {
-        color: var(--color-shades-primary-text);
+        color: var(--theme-text);
         font-size: var(--font-size-large);
         margin: 0;
       }
@@ -36,7 +36,7 @@
         text-decoration: none;
 
         &:hover {
-          color: var(--color-primary-info-text);
+          color: var(--theme-link);
         }
       }
     }
@@ -52,8 +52,8 @@
 
 .skip-nav {
   a {
-    background-color: var(--color-shades-tertiary-bright);
-    color: var(--color-shades-secondary);
+    background-color: var(--theme-skip-bg);
+    color: var(--theme-skip-text);
     left: -500px;
     overflow: hidden;
     position: absolute;
@@ -70,7 +70,7 @@
     }
 
     &:hover {
-      color: var(--color-primary-info-text);
+      color: var(--theme-link);
     }
   }
 

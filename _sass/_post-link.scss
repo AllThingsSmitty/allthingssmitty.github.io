@@ -1,0 +1,38 @@
+@mixin text-decoration {
+  text-decoration-color: var(--theme-underline-fallback); // fallback for iOS versions without oklch support (<16.4)
+
+  text-decoration-color: oklch(from currentColor l c h / 65%);
+  text-decoration-thickness: 0.2rem;
+}
+
+.post-link {
+  color: inherit;
+  text-decoration: none;
+
+  .post-header__title {
+    -webkit-text-decoration: underline solid var(--theme-underline-hidden); // fallback for iOS versions without oklch support (<16.4)
+
+    text-decoration: underline solid var(--theme-underline-hidden);
+    transition: text-decoration-color var(--transition-duration);
+    transition:
+      text-decoration-color var(--transition-duration),
+      -webkit-text-decoration-color var(--transition-duration); // fallback for iOS versions without oklch support (<16.4)
+
+    @media (max-width: $large-breakpoint) {
+      @include text-decoration;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .post-header__title {
+      @include text-decoration;
+    }
+  }
+}
+
+.archive-date {
+  color: var(--theme-archive-date-text);
+  display: flex;
+  font-size: #{"clamp(var(--font-size-x-small), 0.964rem + 0.446vw, var(--font-size-small))"};
+}

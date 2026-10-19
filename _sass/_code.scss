@@ -1,6 +1,6 @@
 @mixin code-styles {
-  background-color: var(--color-mid-bg);
-  border: 1px solid var(--color-stroke);
+  background-color: var(--theme-subtle-bg);
+  border: 1px solid var(--theme-border);
 }
 
 code,
