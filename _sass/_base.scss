@@ -18,13 +18,14 @@ html {
 }
 
 body {
-  color: var(--color-shades-primary-text);
+  background-color: var(--theme-page-bg);
+  color: var(--theme-text);
   font-family: var(--font-root-regular);
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: var(--color-primary-info-text);
+  color: var(--theme-link);
   text-decoration-thickness: 0.075rem;
   text-underline-offset: 3px;
   transition: color ease var(--transition-duration);

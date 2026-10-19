@@ -1,0 +1,97 @@
+// Semantic theme tokens.
+//
+// Components use these --theme-* tokens instead of the raw palette in _tokens.scss, so dark mode is
+// just the set of overrides below: there are no per-component dark rules. When adding a component,
+// give it a token here only if its color differs between light and dark.
+
+:root {
+  --theme-page-bg: transparent;
+  --theme-text: var(--color-shades-primary-text);
+  --theme-link: var(--color-primary-info-text);
+  --theme-masthead-text: var(--color-shades-secondary-glare);
+  --theme-meta-text: var(--color-shades-primary-glare);
+  --theme-archive-date-text: var(--color-shades-primary-glare);
+  --theme-border: var(--color-stroke);
+  --theme-rule: var(--color-primary-info-bg);
+  --theme-subtle-bg: var(--color-mid-bg);
+  --theme-memo-code-bg: var(--color-shades-tertiary-bright);
+
+  --theme-warn-bg: var(--color-state-warn-bg);
+  --theme-warn-text: var(--color-state-warn-text);
+  --theme-info-bg: var(--color-shades-primary-bright);
+  --theme-info-text: var(--color-state-info-text);
+
+  --theme-skip-bg: var(--color-shades-tertiary-bright);
+  --theme-skip-text: var(--color-shades-secondary);
+  --theme-pill-text: var(--color-shades-primary-text);
+  --theme-pill-hover-text: var(--color-shades-tertiary-bright);
+  --theme-pagination-hover-border: var(--color-shades-primary);
+  --theme-pagination-hover-text: var(--color-shades-primary);
+  --theme-social-icon: var(--color-mid-text);
+
+  // post title underline: hidden color (same hue as the text, so it fades in) and the fallback
+  // used where relative color syntax (oklch(from ...)) isn't supported
+  --theme-underline-hidden: rgba(11, 12, 12, 0);
+  --theme-underline-fallback: rgba(43, 40, 93, 0.65);
+
+  // syntax highlighting (Prism)
+  --theme-token-meta: var(--color-mid-text);
+  --theme-token-comment: var(--color-shades-secondary-glare);
+  --theme-token-string: var(--color-syntax-primary);
+  --theme-token-function: var(--color-syntax-quaternary);
+  --theme-token-number: var(--color-syntax-primary-glare);
+  --theme-token-keyword: var(--color-code-tertiary);
+  --theme-token-operator: var(--color-syntax-secondary);
+}
+
+@mixin dark-tokens {
+  color-scheme: dark;
+
+  --theme-page-bg: var(--color-primary);
+  --theme-text: var(--color-dark-shades-primary-text);
+  --theme-link: var(--color-dark-primary-info);
+  --theme-masthead-text: var(--color-dark-shades-primary-glare);
+  --theme-meta-text: var(--color-dark-shades-gray);
+  --theme-archive-date-text: var(--color-dark-shades-primary-glare);
+  --theme-border: var(--color-dark-stroke);
+  --theme-rule: var(--color-dark-stroke);
+  --theme-subtle-bg: var(--color-dark-mid-bg);
+  --theme-memo-code-bg: var(--color-dark-mid-bg);
+
+  --theme-warn-bg: var(--color-dark-state-warn-bg);
+  --theme-warn-text: var(--color-dark-state-warn-text);
+  --theme-info-bg: var(--color-dark-shades-primary-bright);
+  --theme-info-text: var(--color-dark-state-info-text);
+
+  --theme-skip-bg: var(--color-primary);
+  --theme-skip-text: var(--color-dark-shades-primary-glare);
+  --theme-pill-text: var(--color-dark-reflective-stroke);
+  --theme-pill-hover-text: var(--color-primary);
+  --theme-pagination-hover-border: var(--color-dark-shades-gray);
+  --theme-pagination-hover-text: var(--color-dark-shades-primary-text);
+  --theme-social-icon: #6f737c;
+
+  --theme-underline-hidden: rgba(255, 255, 255, 0);
+  --theme-underline-fallback: rgba(255, 255, 255, 0.65);
+
+  --theme-token-meta: var(--color-dark-token-info);
+  --theme-token-comment: var(--color-dark-token-comment);
+  --theme-token-string: var(--color-dark-mid-text);
+  --theme-token-function: var(--color-dark-syntax-quaternary);
+  --theme-token-number: var(--color-dark-syntax-primary-glare);
+  --theme-token-keyword: var(--color-dark-code-tertiary);
+  --theme-token-operator: var(--color-dark-syntax-secondary);
+}
+
+// The inline script in _includes/head.html sets data-theme on <html> before first paint (saved
+// choice, otherwise the system preference), so data-theme is the source of truth whenever JS runs.
+// The media query is only the fallback for visitors without JS (no data-theme attribute).
+html[data-theme="dark"] {
+  @include dark-tokens;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    @include dark-tokens;
+  }
+}

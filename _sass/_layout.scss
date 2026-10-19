@@ -19,7 +19,7 @@ main {
 
 .border-rule {
   border: none;
-  border-top: 1px solid var(--color-primary-info-bg);
+  border-top: 1px solid var(--theme-rule);
   margin-block: 1.75rem;
 }
 
@@ -39,7 +39,7 @@ main {
 
   a {
     &:hover {
-      color: var(--color-primary-info-text);
+      color: var(--theme-link);
 
       &:not(.post-footer a) {
         text-decoration: none;
@@ -50,7 +50,7 @@ main {
 
 .scrollToTop {
   --d: 48px;
-  background-color: var(--color-primary-info);
+  background-color: var(--theme-link);
   border: none;
   border-radius: 50%;
   bottom: 1rem;

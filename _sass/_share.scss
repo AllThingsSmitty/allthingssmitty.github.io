@@ -13,7 +13,7 @@
       padding: 0.5rem;
 
       &:focus-visible:not(:hover) {
-        outline-color: var(--color-mid-text);
+        outline-color: var(--theme-social-icon);
       }
 
       &:focus-visible,
@@ -23,13 +23,13 @@
 
       &:hover {
         .social__icon {
-          background-color: var(--color-primary-info);
+          background-color: var(--theme-link);
         }
       }
 
       .social__icon {
         --icon: 27px;
-        background-color: var(--color-mid-text);
+        background-color: var(--theme-social-icon);
         height: var(--icon);
         transition: background-color ease var(--transition-duration);
         width: var(--icon);
