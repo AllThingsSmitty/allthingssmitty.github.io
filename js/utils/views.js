@@ -8,7 +8,7 @@ const formatPageViews = () => {
 
   // Hide view elements if page views are set to "0 views"
   document.querySelectorAll(".post-header__meta .views").forEach((element) => {
-    if (element.textContent.trim() === "0 views") {
+    if (element.textContent.replace(/\s+/g, " ").trim() === "0 views") {
       element.style.display = "none";
     }
   });
