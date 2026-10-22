@@ -61,7 +61,9 @@ main {
   position: fixed;
   right: 1rem;
   transform: translateY(100px);
-  transition: all 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   width: var(--d);
   z-index: 100;
 
@@ -81,5 +83,9 @@ main {
   &.showBtn {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
