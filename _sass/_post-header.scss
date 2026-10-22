@@ -57,6 +57,7 @@ $icon-views: url("data:image/svg+xml,\
       color: var(--theme-meta-text);
       display: flex;
       font-size: calc(var(--font-size-small) * var(--h));
+      font-variant: tabular-nums;
 
       @media (max-width: $large-breakpoint) {
         font-size: var(--font-size-x-small);

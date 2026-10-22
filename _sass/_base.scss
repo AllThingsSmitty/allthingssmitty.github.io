@@ -13,8 +13,9 @@ body {
 html {
   font-size: #{"clamp(var(--font-size-root), 0.964rem + 0.446vw, var(--font-size-large))"};
   line-height: var(--font-line-height);
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {

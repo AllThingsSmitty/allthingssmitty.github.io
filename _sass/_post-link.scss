@@ -35,4 +35,5 @@
   color: var(--theme-archive-date-text);
   display: flex;
   font-size: #{"clamp(var(--font-size-x-small), 0.964rem + 0.446vw, var(--font-size-small))"};
+  font-variant: tabular-nums;
 }
