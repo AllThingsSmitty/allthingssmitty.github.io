@@ -31,14 +31,14 @@
 
   &--lg {
     img {
-      border: 1px solid var(--theme-stroke);
+      border: 1px solid var(--theme-border);
       width: 100%;
     }
   }
 
   &--md {
     img {
-      border: 1px solid var(--theme-stroke);
+      border: 1px solid var(--theme-border);
       width: 65%;
 
       @media (max-width: $large-breakpoint) {
