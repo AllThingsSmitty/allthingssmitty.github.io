@@ -6,9 +6,10 @@
  *
  * Steps (all kicked off together at the bottom of this file):
  *   1. Clean build output (_site, .sass-cache, main.min.js)
- *   2. Concatenate + minify js/utils/*.js into js/main.min.js and record its content hash in
- *      _data/assets.yml (the ?v= cache-buster in _layouts/default.html). Both files are committed,
- *      so commit them together. Rebuilds automatically when js/utils/ changes.
+ *   2. Concatenate + minify js/utils/*.js into js/main.min.js (plus its .map source map) and record
+ *      the bundle's content hash in _data/assets.yml (the ?v= cache-buster in
+ *      _layouts/default.html). These files are committed, so commit them together. Rebuilds
+ *      automatically when js/utils/ changes.
  *   3. Start `jekyll serve --watch` and a Browsersync server on _site/
  *
  * CSS vendor prefixing is intentionally absent: the few prefixes still needed
@@ -73,18 +74,23 @@ async function concatenateAndMinifyJsFiles() {
   }
 
   // Each file is wrapped in a block so top-level const/let can't collide across files and a missing
-  // trailing semicolon in one file can't merge into the next. Vendor scripts that need globals
-  // (e.g. Prism) live in js/lib/ and are loaded separately, not bundled.
-  const sources = await Promise.all(
-    jsFiles.map(async (file) => {
-      const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
-      return `{\n${code}\n}`;
-    }),
-  );
-  const result = await minify(sources.join("\n"));
+  // trailing semicolon in one file can't merge into the next. The opening brace sits on the file's
+  // first line so line numbers in the source map match the original files. Vendor scripts that need
+  // globals (e.g. Prism) live in js/lib/ and are loaded separately, not bundled.
+  const sources = {};
+  for (const file of jsFiles) {
+    const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
+    sources[`utils/${file.name}`] = `{${code}\n}`;
+  }
+  // Source paths are relative to the map's location (js/). The original code is embedded in the map
+  // so DevTools can show it without the files having to be served.
+  const result = await minify(sources, {
+    sourceMap: { filename: mainJsFile, url: `${mainJsFile}.map`, includeSources: true },
+  });
 
   await fs.promises.writeFile(`./js/${mainJsFile}`, result.code);
-  console.log(`File ${mainJsFile} has been created`);
+  await fs.promises.writeFile(`./js/${mainJsFile}.map`, result.map);
+  console.log(`Files ${mainJsFile} and ${mainJsFile}.map have been created`);
 
   await writeAssetHash(result.code);
 }
