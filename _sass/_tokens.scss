@@ -55,6 +55,8 @@ $large-breakpoint: 36rem;
   --color-syntax-primary-glare: var(--color-code-primary-glare);
   --color-syntax-secondary: var(--color-code-secondary);
   --color-syntax-quaternary: var(--color-code-quaternary);
+  --color-underline-hidden: rgba(11, 12, 12, 0);
+  --color-underline-fallback: rgba(43, 40, 93, 0.65);
 
   // dark theme
   --color-dark-primary-info: #718eff;
@@ -78,4 +80,7 @@ $large-breakpoint: 36rem;
   --color-dark-stroke: #555;
   --color-dark-token-comment: #888;
   --color-dark-token-info: #b9bac9;
+  --color-dark-social-icon: #6f737c;
+  --color-underline-hidden: rgba(255, 255, 255, 0);
+  --color-underline-fallback: rgba(255, 255, 255, 0.65);
 }
