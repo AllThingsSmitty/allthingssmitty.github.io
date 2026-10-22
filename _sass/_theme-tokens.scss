@@ -31,8 +31,8 @@
 
   // post title underline: hidden color (same hue as the text, so it fades in) and the fallback
   // used where relative color syntax (oklch(from ...)) isn't supported
-  --theme-underline-hidden: rgba(11, 12, 12, 0);
-  --theme-underline-fallback: rgba(43, 40, 93, 0.65);
+  --theme-underline-hidden: var(--color-underline-hidden);
+  --theme-underline-fallback: var(--color-underline-fallback);
 
   // syntax highlighting (Prism)
   --theme-token-meta: var(--color-mid-text);
@@ -69,10 +69,10 @@
   --theme-pill-hover-text: var(--color-primary);
   --theme-pagination-hover-border: var(--color-dark-shades-gray);
   --theme-pagination-hover-text: var(--color-dark-shades-primary-text);
-  --theme-social-icon: #6f737c;
+  --theme-social-icon: var(--color-dark-social-icon);
 
-  --theme-underline-hidden: rgba(255, 255, 255, 0);
-  --theme-underline-fallback: rgba(255, 255, 255, 0.65);
+  --theme-underline-hidden: var(--color-dark-underline-hidden);
+  --theme-underline-fallback: var(--color-dark-underline-fallback);
 
   --theme-token-meta: var(--color-dark-token-info);
   --theme-token-comment: var(--color-dark-token-comment);
