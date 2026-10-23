@@ -75,7 +75,8 @@ async function concatenateAndMinifyJsFiles() {
   // globals (e.g. Prism) live in js/lib/ and are loaded separately, not bundled.
   const sources = {};
   for (const file of jsFiles) {
-    const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
+    // Normalize line endings so the embedded sources don't depend on git's autocrlf setting
+    const code = (await fs.promises.readFile(`${jsDir}${file.name}`, "utf8")).replace(/\r\n/g, "\n");
     sources[`utils/${file.name}`] = `{${code}\n}`;
   }
   // Source paths are relative to the map's location (js/). The original code is embedded in the map
@@ -142,6 +143,12 @@ async function main() {
   console.log("Running in development mode. Development tasks have been executed");
 }
 
-if (process.env.NODE_ENV !== "production") {
+// `npm run build:js` (used by CI) only builds the bundle, without cleaning or starting any servers.
+if (process.argv.includes("--js-only")) {
+  concatenateAndMinifyJsFiles().catch((err) => {
+    console.error(`JS build failed: ${err}`);
+    process.exit(1);
+  });
+} else if (process.env.NODE_ENV !== "production") {
   main();
 }
