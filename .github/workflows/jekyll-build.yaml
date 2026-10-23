@@ -31,7 +31,7 @@ jobs:
       - name: Check committed JS bundle is up to date
         run: |
           npm run build:js
-          git diff --exit-code --js/main.min.js js/main.min.js.map
+          git diff --exit-code -- js/main.min.js js/main.min.js.map
 
   build:
     name: Build
