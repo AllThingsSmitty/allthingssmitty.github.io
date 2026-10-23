@@ -6,21 +6,6 @@
   }
 }
 
-.related {
-  --flow-space: 1.25rem;
-  border-top: 1px solid var(--theme-rule);
-  margin-bottom: 2rem;
-
-  .related__list {
-    list-style: none;
-    padding-left: 0;
-
-    .related__item {
-      margin-bottom: var(--flow-space);
-    }
-  }
-}
-
 .page__image {
   display: flex;
 
