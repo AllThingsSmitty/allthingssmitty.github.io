@@ -30,7 +30,7 @@ jobs:
       # js/main.min.js and its map are committed, so fail if they don't match js/utils/.
       - name: Check committed JS bundle is up to date
         run: |
-          npm run build.js
+          npm run build:js
           git diff --exit-code --js/main.min.js js/main.min.js.map
 
   build:
