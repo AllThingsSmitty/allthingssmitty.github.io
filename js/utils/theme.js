@@ -20,6 +20,12 @@ const saveTheme = (theme) => {
   } catch {}
 };
 
+const clearTheme = () => {
+  try {
+    localStorage.removeItem(storageKey);
+  } catch {}
+};
+
 // The theme-color metas are keyed to the system preference, so point the browser UI color at the
 // active theme instead: only the meta for that theme keeps matching.
 const syncThemeColor = (theme) => {
@@ -41,10 +47,13 @@ const applyTheme = (theme) => {
 // having run. It also syncs the button label.
 applyTheme(getSavedTheme() ?? (systemDark.matches ? "dark" : "light"));
 
-// A tap is an explicit choice: it overrides the system setting and is remembered
+// A tap is an explicit choice that overrides the system setting and is remembered, unless it lands
+// back on the system's theme, which hands control back to system
 toggle?.addEventListener("click", () => {
   const next = root.dataset.theme === "dark" ? "light" : "dark";
   saveTheme(next);
+  if (next === (systemDark.matches ? "dark" : "light")) clearTheme();
+  else saveTheme(next);
   applyTheme(next);
 });
 
