@@ -1,19 +1,11 @@
 .theme-toggle {
-  // --size: 2rem;
   --icon-fill: hsl(210 10% 30%);
   --icon-fill-hover: hsl(210 10% 15%);
   background: none;
   border: none;
-  // inline-size: var(--size);
-  // block-size: var(--size);
-  // aspect-ratio: 1;
-  // border-radius: 50%;
   cursor: pointer;
   display: flex;
   touch-action: manipulation;
-  // -webkit-tap-highlight-color: transparent;
-  // outline-offset: 5px;
-  // padding: 0.3875rem;
   padding: 0;
 }
 
