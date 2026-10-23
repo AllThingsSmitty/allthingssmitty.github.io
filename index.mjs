@@ -75,7 +75,8 @@ async function concatenateAndMinifyJsFiles() {
   // globals (e.g. Prism) live in js/lib/ and are loaded separately, not bundled.
   const sources = {};
   for (const file of jsFiles) {
-    const code = await fs.promises.readFile(`${jsDir}${file.name}`, "utf8");
+    // Normalize line endings so the embedded sources don't depend on git's autocrlf setting
+    const code = (await fs.promises.readFile(`${jsDir}${file.name}`, "utf8")).replace(/\r\n/g, "\n");
     sources[`utils/${file.name}`] = `{${code}\n}`;
   }
   // Source paths are relative to the map's location (js/). The original code is embedded in the map

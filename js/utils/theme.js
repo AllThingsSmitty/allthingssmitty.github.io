@@ -51,7 +51,6 @@ applyTheme(getSavedTheme() ?? (systemDark.matches ? "dark" : "light"));
 // back on the system's theme, which hands control back to system
 toggle?.addEventListener("click", () => {
   const next = root.dataset.theme === "dark" ? "light" : "dark";
-  saveTheme(next);
   if (next === (systemDark.matches ? "dark" : "light")) clearTheme();
   else saveTheme(next);
   applyTheme(next);
