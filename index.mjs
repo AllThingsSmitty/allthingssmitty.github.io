@@ -143,6 +143,12 @@ async function main() {
   console.log("Running in development mode. Development tasks have been executed");
 }
 
-if (process.env.NODE_ENV !== "production") {
+// `npm run build:js` (used by CI) only builds the bundle, without cleaning or starting any servers.
+if (process.argv.includes("--js-only")) {
+  concatenateAndMinifyJsFiles().catch((err) => {
+    console.error(`JS build failed: ${err}`);
+    process.exit(1);
+  });
+} else if (process.env.NODE_ENV !== "production") {
   main();
 }
