@@ -40,10 +40,7 @@ main {
   a {
     &:hover {
       color: var(--theme-link);
-
-      &:not(.post-footer a) {
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
   }
 }
