@@ -15,18 +15,17 @@
   --theme-rule: var(--color-primary-info-bg);
   --theme-subtle-bg: var(--color-mid-bg);
   --theme-memo-code-bg: var(--color-shades-tertiary-bright);
-
   --theme-warn-bg: var(--color-state-warn-bg);
   --theme-warn-text: var(--color-state-warn-text);
   --theme-info-bg: var(--color-shades-primary-bright);
   --theme-info-text: var(--color-state-info-text);
-
   --theme-skip-bg: var(--color-shades-tertiary-bright);
   --theme-skip-text: var(--color-shades-secondary);
   --theme-pill-text: var(--color-shades-primary-text);
   --theme-pill-hover-text: var(--color-shades-tertiary-bright);
-  --theme-pagination-hover-border: var(--color-shades-primary);
-  --theme-pagination-hover-text: var(--color-shades-primary);
+  --theme-pagination-hover-bg: var(--color-state-transitive-secondary);
+  --theme-pagination-hover-border: var(--color-state-transitive-primary);
+  --theme-pagination-hover-text: var(--color-state-transitive-primary);
   --theme-scroll-icon: var(--color-shades-tertiary-bright);
   --theme-social-icon: var(--color-mid-text);
 
@@ -58,18 +57,17 @@
   --theme-rule: var(--color-dark-stroke);
   --theme-subtle-bg: var(--color-dark-mid-bg);
   --theme-memo-code-bg: var(--color-dark-mid-bg);
-
   --theme-warn-bg: var(--color-dark-state-warn-bg);
   --theme-warn-text: var(--color-dark-state-warn-text);
   --theme-info-bg: var(--color-dark-shades-primary-bright);
   --theme-info-text: var(--color-dark-state-info-text);
-
   --theme-skip-bg: var(--color-primary);
   --theme-skip-text: var(--color-dark-shades-primary-glare);
   --theme-pill-text: var(--color-dark-reflective-stroke);
   --theme-pill-hover-text: var(--color-primary);
-  --theme-pagination-hover-border: var(--color-dark-shades-gray);
-  --theme-pagination-hover-text: var(--color-dark-shades-primary-text);
+  --theme-pagination-hover-bg: var(--color-dark-state-transitive-secondary);
+  --theme-pagination-hover-border: var(--theme-link);
+  --theme-pagination-hover-text: var(--theme-link);
   --theme-scroll-icon: var(--color-primary);
   --theme-social-icon: var(--color-dark-social-icon);
 

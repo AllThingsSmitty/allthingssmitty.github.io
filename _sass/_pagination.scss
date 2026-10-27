@@ -17,8 +17,9 @@
 
     &:focus,
     &:hover {
+      background-color: var(--theme-pagination-hover-bg);
       border-color: var(--theme-pagination-hover-border);
-      color: var(--theme-pagination-hover-text);
+      color: var(--theme-pagination-hover-border);
     }
 
     &:focus {
