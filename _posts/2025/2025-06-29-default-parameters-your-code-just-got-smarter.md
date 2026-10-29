@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Default parameters: your code just got smarter"
-description: Say goodbye to manual fallbacks! Explore how JavaScript default parameters make your functions more robust, readable, and bug-free.
+description: "Default parameters replace the old name = name || 'Guest' pattern, and they behave a little differently. Here's what to know."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
@@ -9,7 +9,7 @@ views:
   ga4: 1414
 ---
 
-Whether you're building UI components, calling APIs, or writing some utility functions, it's quite common to deal with optional function arguments. Traditionally, you'd fall back on `if` statements or logical ORs to assign default values. But let's be honest, that can lead to subtle bugs.
+Optional function arguments come up constantly, whether it's UI components, API calls, or utility functions. The old way was an `if` statement or a logical OR to set a default, and that can lead to subtle bugs.
 
 How often have you written code like this?
 
@@ -22,7 +22,7 @@ function greet(name) {
 
 This old shortcut is easy to write, but it comes with a catch: it treats *any falsy value* as missing, including valid ones like `0` or an empty string, leading to unexpected behavior.
 
-It's also a bit outdated. That's where **default parameters** come in, a helpful JavaScript feature that makes your functions cleaner and smarter.
+It's also a bit dated. **Default parameters** handle this better.
 
 ## What are default parameters?
 
@@ -79,7 +79,7 @@ function fetchUser(id, options = { cache: true, retries: 3 }) {
 }
 ```
 
-This makes your function resilient even if the caller forgets to pass an options object, while still enforcing sensible defaults.
+The function still works if the caller doesn't pass an options object.
 
 {::nomarkdown}
 <aside class="message memo" role="note">
@@ -135,7 +135,7 @@ Writing all those `&&` checks? Same...until I started using [optional chaining](
 
 ## Bonus: default parameters + destructuring 
 
-Combine the power of both to handle optional config objects:
+Combining the two handles optional config objects nicely:
 
 ```js
 function createUser({ name = 'Anonymous', age = 24 } = {}) {
@@ -145,7 +145,7 @@ function createUser({ name = 'Anonymous', age = 24 } = {}) {
 createUser(); // Anonymous is 24 years old.
 ```
 
-Without default parameters, you'd have to write a lot of repetitive checks and fallbacks inside the function body. This pattern is especially useful when writing libraries, handling form inputs, or managing component props.
+Without defaults, you'd write a pile of repetitive checks inside the function body. It's handy for libraries, form inputs, and component props.
 
 ## Extra tip: order matters
 
@@ -162,9 +162,9 @@ log(, 'Custom');          // ❌ SyntaxError
 
 If you want to skip a defaulted argument, pass `undefined` to trigger the fallback.
 
-## Closing the loop
+## What to remember
 
-Default parameters are one of those small syntax upgrades that make a big difference in how you write functions. Cleaner, safer, and easier to read. What's not to love? If you're not using them yet, start today.
+Default parameters are a small syntax upgrade, and I'd take them over the old `||` fallback. Just remember that only `undefined` triggers them.
 
 ### One last thing: about the `arguments` object
 

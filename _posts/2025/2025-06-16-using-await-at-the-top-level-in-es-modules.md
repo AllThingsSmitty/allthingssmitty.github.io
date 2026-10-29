@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using await at the top level in ES modules"
-description: Modern JavaScript is evolving. Learn how top-level 'await' works, where to use it, and when to avoid it in your modules.
+description: "Top-level await drops the async wrapper in ES modules, but it comes with trade-offs. Here's how it works and when I'd avoid it."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -9,7 +9,7 @@ views:
   ga4: 5922
 ---
 
-Writing asynchronous code in JavaScript used to come with a limitation: the `await` keyword could only be used inside an `async` function. That changed when ES2022 introduced **top-level `await`**, a modern ES module feature that enables new patterns for asynchronous code at the module level.
+Writing asynchronous code in JavaScript used to come with a limitation: the `await` keyword could only be used inside an `async` function. That changed when ES2022 introduced **top-level `await`**, which lets you use `await` at the top of an ES module.
 
 ## What's top-level `await`?
 
@@ -35,7 +35,7 @@ In the past, you'd need to wrap this logic in an **async immediately invoked fun
 })();
 ```
 
-With top-level `await`, you can say **goodbye to boilerplate** like this. Your asynchronous code can now live directly in the module's top scope, making things simpler, cleaner, and easier to read.
+With top-level `await`, you can drop that boilerplate. The async code lives right in the module's top scope, which is simpler and easier to read.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
@@ -49,7 +49,7 @@ Top-level `await` only works in JavaScript **modules**, not in CommonJS (`requir
 </aside>
 {:/}
 
-## Behind the screens
+## Where it comes in handy
 
 ### Fetching remote configuration at startup
 
@@ -58,7 +58,7 @@ const config = await fetch('/config.json').then(res => res.json());
 initializeApp(config);
 ```
 
-You don't have to worry about nesting or wrapping, just straightforward async logic.
+No nesting or wrapping, just straightforward async logic.
 
 ### Dynamic imports before running code
 
@@ -154,7 +154,7 @@ Babel can't transpile top-level `await` on its own because it lacks control over
 
 ## Best practices
 
-Here's how to use top-level `await` responsibly:
+A rough guide:
 
 {::nomarkdown}
 <div class="table-container">
@@ -172,7 +172,7 @@ Here's how to use top-level `await` responsibly:
 </div>
 {:/}
 
-**Pro tip:** If your module is meant to be reused (like a library or shared utility), avoid top-level `await` to prevent blocking downstream consumers. Even a small delay in a shared module can cascade and slow down multiple parts of an application.
+If your module is meant to be reused (like a library or shared utility), avoid top-level `await` to prevent blocking downstream consumers. Even a small delay in a shared module can cascade and slow down multiple parts of an application.
 
 ## Want to try it?
 
@@ -187,4 +187,4 @@ Create a `.mjs` file in Node.js or add `type="module"` to your `<script>` tag in
 
 Make sure your site is served over HTTPS (or `localhost`) for fetch and module scripts to work correctly in modern browsers.
 
-Top-level `await` gives you cleaner, more direct async code in modules. But it comes with trade-offs around blocking and module dependencies. Use it where it simplifies logic, and avoid it in libraries or shared modules that others depend on.
+I'd use it for app startup and one-off scripts, and skip it in libraries or shared modules that others depend on.
