@@ -42,9 +42,16 @@ const applyTheme = (theme) => {
   toggle?.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
 };
 
+const resolveTheme = () => getSavedTheme() ?? (systemDark.matches ? "dark" : "light");
+
 // Resolve the theme from the saved choice here too, so we don't depend on the inline script in <head>
 // having run. It also syncs the button label.
-applyTheme(getSavedTheme() ?? (systemDark.matches ? "dark" : "light"));
+applyTheme(resolveTheme());
+
+// Keep other open tabs in step when the choice is saved or cleared (key is null when storage is cleared)
+window.addEventListener("storage", ({ key }) => {
+  if (key === storageKey || key === null) applyTheme(resolveTheme());
+});
 
 // A tap is an explicit choice that overrides the system setting and is remembered, unless it lands
 // back on the system's theme, which hands control back to system

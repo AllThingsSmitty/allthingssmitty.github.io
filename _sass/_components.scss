@@ -79,7 +79,10 @@
   font-size: 0.675rem;
   padding: 0.5rem 0.675rem;
   text-decoration: none;
-  transition: all ease 0.2s;
+  transition:
+    background-color ease 0.2s,
+    border-color ease 0.2s,
+    color ease 0.2s;
 
   &:focus-visible,
   &:hover {
