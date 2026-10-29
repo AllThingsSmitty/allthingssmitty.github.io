@@ -1,6 +1,7 @@
 #disqus_thread {
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
+  overflow-anchor: none; // Disqus resizes after load; anchoring adjustments cancel smooth scroll-to-top
 }
 
 .page__image {

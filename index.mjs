@@ -5,7 +5,7 @@
  * installed `jekyll`. Does nothing when NODE_ENV=production.
  *
  * Steps (all kicked off together at the bottom of this file):
- *   1. Clean build output (_site, .sass-cache, main.min.js)
+ *   1. Clean build output (_site, .sass-cache)
  *   2. Concatenate + minify js/utils/*.js into js/main.min.js (plus its .map source map). Both
  *      files are committed, so commit them together. Rebuilds automatically when js/utils/ changes.
  *   3. Start `jekyll serve --watch` and a Browsersync server on _site/
@@ -42,15 +42,6 @@ function deleteSiteDirectory() {
       console.error(`Error deleting directory ${sassCacheDir}: ${err}`);
     } else {
       console.log(`Directory ${sassCacheDir} has been deleted`);
-    }
-  });
-
-  // Delete main.min.js file
-  fs.rm(mainJsFile, { force: true }, (err) => {
-    if (err) {
-      console.error(`Error deleting file ${mainJsFile}: ${err}`);
-    } else {
-      console.log(`File ${mainJsFile} has been deleted`);
     }
   });
 }
