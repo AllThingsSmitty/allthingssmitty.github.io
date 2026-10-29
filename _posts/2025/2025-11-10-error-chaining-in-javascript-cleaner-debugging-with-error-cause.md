@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Error chaining in JavaScript: cleaner debugging with Error.cause"
-description: "Use JavaScript's 'cause' property to chain errors, preserve context, and simplify debugging. Cleaner stack traces, better test assertions."
+description: "Error.cause lets you wrap an error without losing the original. Here's how it works, and where logging still needs a hand."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, TypeScript]
 comments: true
@@ -92,7 +92,7 @@ The `cause` property is **non-enumerable** by specification when passed through 
 
 Prior to `cause` being introduced (ES2022), developers relied on inconsistent workarounds: string concatenation, custom `.originalError` properties, or fully wrapping the error. These approaches overwrite valuable metadata, such as the original stack trace or error type.
 
-The `cause` property solves this in a clean, standardized way.
+It's built in now, so there's one standard way to do it.
 
 ## Works with custom errors, too
 
@@ -132,7 +132,7 @@ Let's say your service throws a `UserCreationError`, caused by a `ValidationErro
 expect(err.cause).toBeInstanceOf(ValidationError);
 ```
 
-It makes your tests clearer and more robust.
+It makes the test say exactly what you mean.
 
 ## Gotchas and best practices
 
@@ -174,7 +174,7 @@ function logFullErrorChain(err) {
 }
 ```
 
-Great for deep systems where multiple things can go wrong at different layers.
+Handy when things can go wrong at several layers.
 
 ## Chaining errors across layers
 
@@ -238,7 +238,7 @@ The `.cause` parameter is supported in all modern environments:
 
 <div class="note-heading">📌 More modern patterns</div>
 
-If you're all about writing cleaner async code, you'll love what [`Array.fromAsync()`]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}) brings to the table.
+I also wrote about [`Array.fromAsync()`]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}) if you want cleaner async code.
 
 {::nomarkdown}
 </aside>
@@ -252,5 +252,3 @@ If you're all about writing cleaner async code, you'll love what [`Array.fromAsy
 - ✅ Improves logs, debugging, and test assertions
 - ✅ TypeScript: set `"target": "es2022"` and `"lib": ["es2022"]`
 - ⚠️ Don't forget to log `err.cause` or walk the chain manually
-
-Cleaner stack traces. Better context. Happier debugging.

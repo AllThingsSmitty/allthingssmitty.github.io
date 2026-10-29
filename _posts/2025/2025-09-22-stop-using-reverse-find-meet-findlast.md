@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop using .reverse().find(): meet findLast()"
-description: Learn how Array.prototype.findLast() and findLastIndex() let you search JavaScript arrays from the end—no .reverse() required. Cleaner, safer, and perfect for UI logic.
+description: "findLast() and findLastIndex() search an array from the end, so you don't need .reverse() first. A quick look at how they work."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
@@ -9,9 +9,9 @@ views:
   ga4: 4379
 ---
 
-If you've ever needed to search an array from the end, you've probably reached for a combination of `.slice().reverse().find(...)`, or looped backward manually. It works, but it's not an elegant solution.
+If you've ever needed to search an array from the end, you've probably used `.slice().reverse().find(...)`, or looped backward manually. It works, but it's clunky.
 
-We now have a better way: `Array.prototype.findLast()` and `Array.prototype.findLastIndex()`. These features let you search arrays from the end **without reversing them**, which gives you cleaner and more intuitive code.
+We now have a better way: `Array.prototype.findLast()` and `Array.prototype.findLastIndex()`. They search from the end **without reversing anything**.
 
 ## The problem with reversing arrays
 
@@ -108,7 +108,7 @@ console.log(messages[lastUnreadIndex]); // { id: 2, text: 'Hi', read: false }
 
 ## Solving real problems
 
-There are a number of practical scenarios and use cases that come up frequently in UI work where `findLast()` and `findLastIndex()` stand out.
+A few places where these come in handy:
 
 ### Find the last login event
 
@@ -158,7 +158,7 @@ const versions = [
 const lastManualSave = versions.findLast(v => v.type === 'manual-save');
 ```
 
-## Perfect for React UIs
+## A React example
 
 Let's say you're managing user actions in a React component:
 
@@ -175,7 +175,7 @@ const lastButtonClick = actions.findLast(
 );
 ```
 
-Instead of juggling reversed arrays or writing awkward loops, your logic stays focused on the intent.
+Instead of juggling reversed arrays or writing awkward loops, the code just says what you're looking for.
 
 ## Common pitfalls & best practices
 
@@ -184,7 +184,7 @@ Instead of juggling reversed arrays or writing awkward loops, your logic stays f
   ```js
   const arr = [1, 2, 3];
   arr.reverse();
-  console.log(arr); // [3, 2, 1] — original is changed!
+  console.log(arr); // [3, 2, 1], the original is changed!
   ```
 
   That's why `findLast()` and `findLastIndex()` are safer alternatives.
@@ -245,8 +245,8 @@ Want to know why mutating array methods like `reverse()` can lead to bugs? Learn
 
 If you're supporting older environments, use a polyfill or transpile with [core-js](https://www.npmjs.com/package/core-js){:target="_blank"}{:rel="noopener noreferrer"}.
 
-## Let's recap
+## In short
 
-`findLast()` and `findLastIndex()` are small additions, but they solve a long-standing gap in the language. They eliminate the need for patterns like `slice().reverse()`, lead to more readable and intent-driven code, and offer a safer, more performant approach for working with large datasets.
+`findLast()` and `findLastIndex()` are small additions, but they replace the `slice().reverse()` pattern with something shorter, safer, and easier to read.
 
 Try them out, see what you think!

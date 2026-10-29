@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modern async iteration in JavaScript with Array.fromAsync()"
-description: JavaScript's 'Array.fromAsync()' offers a concise alternative to 'for await...of' when working with async iterables and streams.
+description: "Array.fromAsync() collects an async iterable into an array in one line, no for await...of loop needed."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -9,9 +9,9 @@ views:
   ga4: 4665
 ---
 
-As front-end engineers, we frequently deal with asynchronous data, such as API responses, streams, lazy-loaded content, and more. JavaScript has long provided tools for managing async logic, but working with async iterables has often required verbose or manual handling.
+Front-end work involves a lot of asynchronous data: API responses, streams, lazy-loaded content. JavaScript has long had tools for async logic, but working with async iterables has often meant verbose, manual handling.
 
-Enter `Array.fromAsync()`, a modern addition to JavaScript that simplifies the process of converting async data sources into arrays. It's intuitive, powerful, and designed to work seamlessly with `async`/`await`.
+`Array.fromAsync()` is a newer addition that turns async data sources into arrays, and it works with `async`/`await` the way you'd expect.
 
 ## What's `Array.fromAsync()`?
 
@@ -46,7 +46,7 @@ Array.fromAsync(source[, mapFn[, thisArg]]) // Returns a Promise<Array>
 
 ## Why and when to use it
 
-If you've ever needed to collect items from an async generator, fetch and transform paginated data, or convert a stream into an array, `Array.fromAsync()` is for you.
+If you've ever had to collect items from an async generator, page through an API, or turn a stream into an array, this is the method for that.
 
 ### Common use cases:
 
@@ -113,7 +113,7 @@ const promises = [fetch(url1), fetch(url2)];
 const results = await Promise.all(promises);
 ```
 
-These patterns still work and are sometimes preferable. But `Array.fromAsync()` provides **a concise and expressive alternative**, especially when working with iterators or applying mapping functions.
+These patterns still work and are sometimes preferable. But `Array.fromAsync()` is shorter, especially with iterators or mapping functions.
 
 ## Error handling
 
@@ -130,7 +130,7 @@ try {
 }
 ```
 
-## From theory to practice
+## In practice
 
 ### Loading paginated data
 
@@ -224,8 +224,6 @@ async function arrayFromAsync(source, mapFn, thisArg) {
 </div>
 {:/}
 
-## Dive in
+## When I'd use it
 
-`Array.fromAsync()` is a fantastic addition to JavaScript that front-end engineers can start using to simplify working with asynchronous iterables. It's elegant, native, and designed with modern async patterns in mind.
-
-Next time you're fetching data, processing a stream, or working with async generators, try `Array.fromAsync()` and write cleaner, more expressive code.
+I'd use `Array.fromAsync()` whenever I'm collecting async generator output or a stream into an array, instead of writing a `for await...of` loop by hand.

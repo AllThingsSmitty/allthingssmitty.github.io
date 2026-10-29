@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React has changed, your Hooks should too"
-description: "Modern React has moved beyond overusing useEffect. Discover the Hook patterns that enable cleaner logic, fewer bugs, and scalable architecture in 2026."
+description: "Most Hook code still leans too hard on useEffect. Here are the patterns I'd use instead, and where React is heading."
 tags: [React]
 comments: true
 views:
@@ -10,11 +10,11 @@ views:
 
 React Hooks have been around since 2018, but most codebases still use them the same way: a bit of `useState`, an overworked `useEffect`, and a lot of patterns that get copy-pasted without much thought. We've all been there.
 
-But Hooks were never meant to be a simple rewrite of lifecycle methods. They're a design system for building more expressive, modular architecture.
+But Hooks were never meant to be a straight rewrite of lifecycle methods. They're a way to organize logic into small, reusable pieces.
 
 And with Concurrent React (React 18/19 era), the way React handles data, especially **async data**, has changed. We now have Server Components, `use()`, server actions, framework-based data loading...and even some async capabilities inside Client Components depending on your setup.
 
-So let's walk through what modern Hook patterns look like today, where React is nudging developers, and the pitfalls the ecosystem keeps running into.
+Here's what modern Hook patterns look like, where React is nudging us, and the pitfalls that keep coming up.
 
 ## The `useEffect` trap: doing too much, too often
 
@@ -30,7 +30,7 @@ Most of this pain comes from mixing **derived state** and **side effects**, whic
 
 ### Using effects the way React intended
 
-React's rule here is surprisingly straightforward:
+React's rule here is simple:
 
 {::nomarkdown}
 <aside class="message notification" role="note">
@@ -77,9 +77,9 @@ Don't treat `useEffectEvent` as a cheat code to avoid dependency arrays. It's sp
 </aside>
 {:/}
 
-## Custom Hooks: not just reusability, but true encapsulation
+## Custom Hooks are about encapsulation
 
-Custom Hooks aren't just about reducing duplication. They're about pulling domain logic out of components so your UI stays focused on...well, UI.
+Custom Hooks do cut down on duplication, but the bigger win is pulling domain logic out of components so your UI stays focused on...well, UI.
 
 For example, instead of cluttering components with setup code like:
 
@@ -102,14 +102,14 @@ function useWindowWidth() {
   useEffect(() => {
     const listener = () => setWidth(window.innerWidth);
     window.addEventListener('resize', listener);
-    return () => window.removeEventListener('change', listener);
+    return () => window.removeEventListener('resize', listener);
   }, []);
 
   return width;
 }
 ```
 
-Much cleaner. More testable. And your components stop leaking implementation details.
+That's cleaner and easier to test, and the component no longer knows how resizing works.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
@@ -125,7 +125,7 @@ Always start with a deterministic fallback value to avoid hydration mismatches.
 
 ## Subscription-based state with `useSyncExternalStore`
 
-React 18 introduced [`useSyncExternalStore`](https://react.dev/reference/react/useSyncExternalStore){:target="_blank"}{:rel="noopener noreferrer"}, and it quietly solves a huge class of bugs around subscriptions, tearing, and high-frequency updates.
+React 18 introduced [`useSyncExternalStore`](https://react.dev/reference/react/useSyncExternalStore){:target="_blank"}{:rel="noopener noreferrer"}, and it solves a whole class of bugs around subscriptions, tearing, and high-frequency updates.
 
 If you've ever fought with `matchMedia`, scroll position, or third-party stores behaving inconsistently across renders, this is the API React wants you to grab.
 
@@ -209,7 +209,7 @@ export function useAuth() {
 }
 ```
 
-You'll thank yourself the next time you have to debug it.
+It pays off the next time you have to debug it.
 
 ## Beyond Hooks: toward data-first React apps
 
@@ -223,13 +223,13 @@ APIs worth knowing:
 - Framework-level caching and data primitives
 - Better concurrent rendering tooling and DevTools
 
-The direction is clear: React wants us to rely less on "Swiss Army knife" `useEffect` usage and more on clean render-driven data flows.
+The direction seems clear: less "Swiss Army knife" `useEffect`, more render-driven data flows.
 
-Designing your Hooks around derived state and server/client boundaries makes your app naturally future-proof.
+Designing Hooks around derived state and server/client boundaries should hold up better as React keeps moving that way.
 
 ## Hooks as architecture, not syntax
 
-Hooks aren't just a nicer API than classes, they're an architecture pattern.
+Hooks are an architecture pattern. They also happen to be a nicer API than classes.
 
 - Keep derived state in render
 - Use effects only for actual side effects
@@ -239,4 +239,4 @@ Hooks aren't just a nicer API than classes, they're an architecture pattern.
 
 React is evolving. Our Hooks should evolve with it.
 
-And if you're still writing Hooks the same way you did in 2020, that's fine. Most of us are. But React 18+ gives us a much better toolbox, and getting comfortable with these patterns pays off quickly.
+And if you're still writing Hooks the same way you did in 2020, that's fine. Most of us are. But React 18+ gives us better tools, and these patterns are worth picking up.
