@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to group arrays in JavaScript without reduce()"
-description: "Ditch the reduce() boilerplate! Learn how to use Object.groupBy() and Map.groupBy() in JavaScript to group data with cleaner, more expressive code."
+description: "Object.groupBy() and Map.groupBy() replace the usual reduce() grouping code. Here's how they work and how they differ."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -11,7 +11,7 @@ views:
 
 Front-end developers frequently transform arrays: filtering, mapping, reducing. And sometimes grouping. Grouping used to require custom `reduce()` logic, which often felt like more boilerplate than it was worth.
 
-But that's changing. JavaScript now has native support for grouping data with `Object.groupBy()` and `Map.groupBy()`. These static methods make grouping expressive, concise, and far more readable, **without the need** for external libraries or complex `reduce()` patterns.
+But that's changing. JavaScript now has native grouping with `Object.groupBy()` and `Map.groupBy()`. No external libraries or `reduce()` patterns needed.
 
 ## What are `Object.groupBy()` and `Map.groupBy()`?
 
@@ -82,7 +82,7 @@ Now, with `Object.groupBy()`:
 const grouped = Object.groupBy(items, item => item[0]);
 ```
 
-The `groupBy()` method reduces noise in your code. You write **what** you want to do, not **how** to do it. The result is more expressive and easier to reason about.
+`groupBy()` cuts the noise. You write **what** you want, not **how** to get it.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
@@ -193,10 +193,10 @@ If you try:
 
 ```js
 JSON.stringify(Map.groupBy([1, 2, 3], x => x % 2));
-// TypeError: Converting circular structure to JSON
+// '{}' (the Map's contents are lost)
 ```
 
-Maps are great for runtime logic, but not suitable for API responses or `localStorage`. Use `Object.groupBy()` when working with JSON.
+Maps are great for runtime logic, but they don't serialize to JSON, so they're a poor fit for API responses or `localStorage`. Use `Object.groupBy()` when working with JSON.
 
 ## Browser support
 
@@ -217,11 +217,9 @@ function groupByPolyfill(array, callback) {
 
 This polyfill won't cover every edge case, but works well for most typical use cases.
 
-## The next move is yours
+## Quick comparison
 
-`Object.groupBy()` and `Map.groupBy()` are elegant additions to JavaScript's standard library. They replace verbose `reduce()` patterns and make your data transformations more expressive and declarative.
-
-Here's a quick comparison of when to use each:
+`Object.groupBy()` and `Map.groupBy()` replace the verbose `reduce()` pattern with something much shorter. Here's a quick comparison of when to use each:
 
 {::nomarkdown}
 <div class="table-container">
@@ -240,4 +238,4 @@ Here's a quick comparison of when to use each:
 </div>
 {:/}
 
-If you're still relaying on `reduce()`, give these a try. You might not look back.
+If you're still relying on `reduce()`, give these a try. You might not look back.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The power of the spread and rest syntax in JavaScript
-description: Learn how the spread and rest syntax in JavaScript can power up the front-end, from array handling to React state updates, with tips every developer should know.
+description: "The three dots (...) do two different jobs in JavaScript. Here's how I think about spread and rest, with a few React examples."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
@@ -11,7 +11,7 @@ views:
 
 It's a fair bet that most web developers regularly encounter the three dots (`...`) in their code. Sometimes it magically copies arrays, sometimes it gathers up function arguments, and sometimes it shows up in object literals like it's casting a spell.
 
-Say hello to the **spread syntax** and **rest parameter**, two simple but powerful features that have helped me make JavaScript cleaner, more expressive, and less error-prone.
+These are the **spread syntax** and the **rest parameter**. I use both all the time, and they've made my code easier to read and less error-prone.
 
 ## What's the difference between the two?
 
@@ -63,7 +63,7 @@ function move(x, y) {
 move(...coords); // Same as move(10, 20)
 ```
 
-Spread syntax works beautifully with arrays and DOM methods like `querySelectorAll`.
+It also works on the NodeList that `querySelectorAll` returns.
 
 ### Copying & updating objects (React devs, take note!)
 
@@ -121,7 +121,7 @@ console.log(info); // { name: "Sam", age: 30 }
 Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only, not inherited ones.
 </aside>
 
-## Code meets reality
+## In real code
 
 ### React: updating state immutably
 
@@ -149,7 +149,7 @@ function sum(...nums) {
 }
 ```
 
-Rest parameters let you accept any number of arguments. That's a perfect use for utilities like this.
+Rest parameters let you accept any number of arguments. That's handy for utilities like this.
 
 ## Watch out for these common pitfalls
 
@@ -173,8 +173,6 @@ const updated = { ...user, name: "Alex" }; // name is "Alex"
 
 Properties on the right **override** those on the left. Always place updates last.
 
-## Putting it all together
+## The short version
 
-Spread and rest syntax may look small, but they unlock huge expressive power in JavaScript. From simplifying function arguments to immutably updating state, they help developers write cleaner, more predictable code.
-
-You'll see `...` everywhere: in React, in utility libraries, and in vanilla JS. Understanding how and *where* to use it is a must for any JavaScript developer today.
+Spread expands, rest gathers. Once that clicks, most uses of `...` are easy to read, whether it's React state, a utility function, or plain JS.

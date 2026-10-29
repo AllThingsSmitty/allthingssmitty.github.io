@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Promise.any(): when one success is enough"
-description: Learn how Promise.any() helps you handle multiple promises by resolving with the first success, perfect for fallback APIs and progressive features in JavaScript.
+description: "Promise.any() resolves with the first success and ignores failures. Here's how it works, where it fits, and where it doesn't."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -9,7 +9,7 @@ views:
   ga4: 1704
 ---
 
-Promises have long been our go-to when working with asynchronous code in JavaScript. If you've used `Promise.all()` or `Promise.race()` to coordinate async operations, you know the patterns. But what if you're only interested in the *first successful* result, ignoring failures? That's exactly what `Promise.any()` does: it **fulfills with the first resolved promise** and ignores any that reject (unless *all* reject).
+If you've used `Promise.all()` or `Promise.race()`, you know the patterns. But sometimes you only care about the *first successful* result and want failures ignored. That's what `Promise.any()` does: it **fulfills with the first resolved promise** and ignores any that reject (unless *all* reject).
 
 ## How it works
 
@@ -19,7 +19,7 @@ Promise.any(iterable)
 
 - Takes an iterable of promises.
 - Resolves as soon as one fulfills.
-- Rejects with an [`AggregateError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError){:target="_blank"}{:\rel="noopener noreferrer"} if *all* reject.
+- Rejects with an [`AggregateError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError){:target="_blank"}{:rel="noopener noreferrer"} if *all* reject.
 
 An **empty iterable** rejects immediately with an `AggregateError` whose `.errors` array is empty.
 
@@ -29,7 +29,7 @@ An **empty iterable** rejects immediately with an `AggregateError` whose `.error
 
 <div class="note-heading">📌 Performance tip</div>
 
-Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:\rel="noopener noreferrer"} if cancellation is important.
+Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:rel="noopener noreferrer"} if cancellation is important.
 
 {::nomarkdown}
 </aside>
@@ -121,7 +121,7 @@ The Clipboard API often requires explicit user interaction and permissions. It m
 </aside>
 {:/}
 
-Use this pattern to make your features flexible and user-friendly, even in older browsers that lack modern APIs.
+This keeps the feature usable in browsers that lack the newer API.
 
 ## Remember these gotchas
 
@@ -173,8 +173,6 @@ Use `Promise.any()` when you're aiming for **at least one success**, and it's ok
 - You want the **first to settle**, regardless of success or failure → use `Promise.race()`.
 - You need to **handle each outcome individually** → use `Promise.allSettled()` or manual `map()` + `.catch()` handling.
 
-## Success-first async in action
+## Where it fits
 
-`Promise.any()` is a modern, elegant solution for scenarios where **at least one success is enough**, and **failures are expected**. Whether you're optimizing API calls or enhancing UX with optional features, it's a powerful addition to your async toolkit.
-
-Drop it into your next async workflow, especially where some failure is expected, and let your success come from whichever source gets there first.
+`Promise.any()` fits when at least one success is enough and some failures are expected, like fallback APIs or optional browser features.

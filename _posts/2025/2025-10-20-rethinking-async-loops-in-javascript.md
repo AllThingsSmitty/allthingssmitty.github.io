@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rethinking async loops in JavaScript"
-description: Struggling with 'await' in loops? Explore common mistakes and modern solutions to optimize async code for performance.
+description: "await in a loop runs one call at a time, and map() with await doesn't wait at all. Here's what to do instead."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -64,7 +64,7 @@ const results = await Promise.all(
 If `fetchUser(2)` throws an error (e.g., 404 or network error), the entire `Promise.all` call will reject, and **none** of the results will be returned (including successful ones).
 
 {::nomarkdown}
-<aside class="message memo" role="note">
+<aside class="message notification" role="note">
 {:/}
 
 ⚠️ **Note:** `Promise.all()` rejects on the first error, discarding other results. Remaining promises still run, but only the first rejection is reported unless you handle each one individually.
@@ -155,7 +155,7 @@ Use `Promise.allSettled()` or inline `try/catch` for safer batch execution.
 <aside class="message notification" role="note">
 {:/}
 
-For short, CPU-bound tasks, parallelism may not make a noticeable difference. But for I/O-heavy operations like API calls, parallelism can dramatically reduce total execution time.
+For short, CPU-bound tasks, parallelism may not make a noticeable difference. But for I/O-heavy operations like API calls, parallelism can cut total time a lot.
 
 {::nomarkdown}
 </aside>
@@ -248,11 +248,9 @@ Looking for a more functional way to handle async iteration? [`Array.fromAsync()
 
 ## Quick recap
 
-JavaScript's async model is powerful, but using `await` inside loops requires intention. Here's the key: structure your async logic **based on your needs**.
+`await` inside loops needs a bit of thought. Pick the pattern based on what you need:
 
 - Order → `for...of`
 - Speed → `Promise.all()`
 - Safety → `allSettled()` / `try-catch`
 - Balance → `p-limit`, etc.
-
-With the right pattern, you can write faster, safer, more predictable asynchronous code.

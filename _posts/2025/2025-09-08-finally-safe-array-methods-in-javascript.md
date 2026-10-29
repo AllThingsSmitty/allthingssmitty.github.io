@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Finally, safe array methods in JavaScript"
-description: "Learn how to safely sort, reverse, and splice arrays in JavaScript using ES2023 methods toSorted(), toReversed(), and toSpliced(). Perfect for React and modern JS development."
+description: "toSorted(), toReversed(), and toSpliced() give you sort, reverse, and splice without mutating the original array. Handy in React."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
@@ -9,13 +9,13 @@ views:
   ga4: 7151
 ---
 
-There's a good reason that many developers pause before using `.sort()`, `.reverse()`, or `.splice()` in JavaScript: those methods *mutate* the original array. That single side effect can lead to subtle, hard-to-trace bugs, especially in apps with shared or reactive state. The good news is that in the last couple of years we've gotten new array methods that make working with arrays safer and cleaner by **avoiding mutation** altogether:
+Many developers pause before using `.sort()`, `.reverse()`, or `.splice()` for a good reason: they *mutate* the original array. That one side effect causes subtle, hard-to-trace bugs, especially with shared or reactive state. The good news is that we now have non-mutating versions:
 
 - `toSorted()`
 - `toReversed()`
 - `toSpliced()`
 
-These return *copies* instead of changing the original array. It's a small syntax upgrade with big implications, especially for React developers who rely on **immutability** to manage state.
+They return *copies* instead of changing the original array, which matters a lot if you work in React and rely on **immutability** for state.
 
 ## The problem with in-place array methods
 
@@ -107,7 +107,7 @@ names.reverse();
 console.log(names);    // ['Ben', 'David', 'Kristen'] ❌
 ```
 
-Perfect when you want to display a list in reverse order *without* modifying the source array.
+Handy when you want to display a list in reverse *without* touching the source array.
 
 ### `toSpliced()`
 
@@ -186,20 +186,20 @@ The optional chaining (`?.`) and nullish coalescing (`??`) operators also help a
 
 <div class="note-heading">🙋🏻‍♂️ There's more!</div>
 
-Both [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}) and [nullish coalescing]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}) are terrific syntax upgrades I've written about that help bring your code into a future-proof style that avoids common runtime pitfalls.
+I've also written about [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}) and [nullish coalescing]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}), which pair well with these.
 
 {::nomarkdown}
 </aside>
 {:/}
 
-## A tiny syntax change, a big win
+## Using them today
 
-These methods don't require any new mental model, they're just **immutable-safe versions of what you already use**. If you're working in modern environments (or with a build step like Babel or SWC), you can start using them today.
+These methods don't need a new mental model. They're the same methods you already use, minus the mutation. If you're in a modern environment, or have a build step like Babel or SWC, you can use them today.
 
 ## Browser support
 `toSorted()`, `toReversed()`, and `toSpliced()` are supported in all modern environments (Chrome/Edge 110+, Safari 16+, Firefox 115+, Node.js 20+). For legacy environments, you can use a polyfill like [core-js](https://www.npmjs.com/package/core-js){:target="_blank"}{:rel="noopener noreferrer"}.
 
-## Key takeaways
+## At a glance
 
 {::nomarkdown}
 <div class="table-container">
@@ -215,6 +215,4 @@ These methods don't require any new mental model, they're just **immutable-safe 
 </div>
 {:/}
 
-ES2023 didn't just give us flashy syntax like optional chaining or [top-level `await`]({% post_url 2025-06-16-using-await-at-the-top-level-in-es-modules %}), but these subtle additions can massively improve code clarity and reduce bugs, especially in modern front-end workflows.
-
-Start using them in your projects, and you'll never look at `.sort()` with the same trust again.
+These are not flashy next to something like [top-level `await`]({% post_url 2025-06-16-using-await-at-the-top-level-in-es-modules %}), but they remove a whole class of mutation bugs. Once you start using them, you'll never look at `.sort()` with the same trust again.
