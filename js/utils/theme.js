@@ -40,7 +40,6 @@ const applyTheme = (theme) => {
   syncThemeColor(theme);
   // Label the action the button performs, not the current state
   toggle?.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
-  document.dispatchEvent(new CustomEvent("themeChanged", { detail: { theme } }));
 };
 
 // Resolve the theme from the saved choice here too, so we don't depend on the inline script in <head>
