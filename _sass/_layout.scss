@@ -37,11 +37,9 @@ main {
     justify-content: center;
   }
 
-  a {
-    &:hover {
-      color: var(--theme-link);
-      text-decoration: none;
-    }
+  a:hover {
+    color: var(--theme-link);
+    text-decoration: none;
   }
 }
 

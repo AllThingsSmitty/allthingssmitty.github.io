@@ -146,22 +146,15 @@ figcaption {
     }
   }
 
-  &.line-wrap {
-    code {
-      &:not([class]) {
-        white-space: break-spaces;
-      }
-    }
+  &.line-wrap code:not([class]) {
+    white-space: break-spaces;
   }
-  &.line-break {
-    code {
-      &:not([class]) {
-        line-break: anywhere;
 
-        @media (max-width: $large-breakpoint) {
-          line-break: unset;
-        }
-      }
+  &.line-break code:not([class]) {
+    line-break: anywhere;
+
+    @media (max-width: $large-breakpoint) {
+      line-break: unset;
     }
   }
 }

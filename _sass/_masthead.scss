@@ -11,35 +11,6 @@
     color: var(--theme-masthead-text);
     margin-bottom: 5rem;
     padding-block: var(--spacer-lg) var(--spacer-sm);
-
-    .header-nav {
-      @include flex-center;
-      font-weight: 600;
-      line-height: 1.75;
-
-      .header-nav__title {
-        color: var(--theme-text);
-        font-size: var(--font-size-large);
-        margin: 0;
-      }
-
-      .header-nav__list {
-        @include flex-center;
-        gap: 1.25rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-          color: var(--theme-link);
-        }
-      }
-    }
   }
 
   &__tagline {
@@ -47,6 +18,35 @@
     font-weight: 500;
     margin-top: var(--spacer-sm);
     text-transform: uppercase;
+  }
+}
+
+.header-nav {
+  @include flex-center;
+  font-weight: 600;
+  line-height: 1.75;
+
+  &__title {
+    color: var(--theme-text);
+    font-size: var(--font-size-large);
+    margin: 0;
+  }
+
+  &__list {
+    @include flex-center;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--theme-link);
+    }
   }
 }
 

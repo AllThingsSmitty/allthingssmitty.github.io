@@ -83,38 +83,28 @@ $icon-views: url("data:image/svg+xml,\
         }
       }
 
-      &.comments {
-        &::before {
-          @include mask-icon($icon-comments);
+      &.comments::before {
+        @include mask-icon($icon-comments);
+      }
+
+      &.published::before {
+        @include mask-icon($icon-published);
+      }
+
+      &.published span::before {
+        content: attr(data-long);
+
+        @media (max-width: $large-breakpoint) {
+          content: attr(data-short);
         }
       }
 
-      &.published {
-        &::before {
-          @include mask-icon($icon-published);
-        }
-
-        span {
-          &::before {
-            content: attr(data-long);
-
-            @media (max-width: $large-breakpoint) {
-              content: attr(data-short);
-            }
-          }
-        }
+      &.reading-time::before {
+        @include mask-icon($icon-reading-time);
       }
 
-      &.reading-time {
-        &::before {
-          @include mask-icon($icon-reading-time);
-        }
-      }
-
-      &.views {
-        &::before {
-          @include mask-icon($icon-views);
-        }
+      &.views::before {
+        @include mask-icon($icon-views);
       }
     }
   }
