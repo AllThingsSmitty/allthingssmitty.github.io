@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 1414
+  ga4: 1442
 ---
 
 Optional function arguments come up constantly, whether it's UI components, API calls, or utility functions. The old way was an `if` statement or a logical OR to set a default, and that can lead to subtle bugs.

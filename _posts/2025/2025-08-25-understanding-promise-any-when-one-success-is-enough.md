@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 1704
+  ga4: 1719
 ---
 
 If you've used `Promise.all()` or `Promise.race()`, you know the patterns. But sometimes you only care about the *first successful* result and want failures ignored. That's what `Promise.any()` does: it **fulfills with the first resolved promise** and ignores any that reject (unless *all* reject).

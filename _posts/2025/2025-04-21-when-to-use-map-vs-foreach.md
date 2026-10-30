@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 3406
+  ga4: 3435
 ---
 
 I saw [this post](https://www.reddit.com/r/Frontend/comments/1jt2nmh/just_failed_an_interview_because_i_could_not/){:target="_blank"}{:rel="noopener noreferrer"} on Reddit about a JavaScript coding assessment and it got me thinking about `map()` and `forEach()`. They look similar, but they do different jobs. Here's how I think about it, and why I usually go with `map()` when I'm transforming data.
