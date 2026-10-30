@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript, React]
 comments: true
 views:
-  ga4: 7151
+  ga4: 7190
 ---
 
 Many developers pause before using `.sort()`, `.reverse()`, or `.splice()` for a good reason: they *mutate* the original array. That one side effect causes subtle, hard-to-trace bugs, especially with shared or reactive state. The good news is that we now have non-mutating versions:

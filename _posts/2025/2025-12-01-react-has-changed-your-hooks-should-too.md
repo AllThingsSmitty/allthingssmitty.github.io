@@ -5,7 +5,7 @@ description: "Most Hook code still leans too hard on useEffect. Here are the pat
 tags: [React]
 comments: true
 views:
-  ga4: 10642
+  ga4: 10724
 ---
 
 React Hooks have been around since 2018, but most codebases still use them the same way: a bit of `useState`, an overworked `useEffect`, and a lot of patterns that get copy-pasted without much thought. We've all been there.

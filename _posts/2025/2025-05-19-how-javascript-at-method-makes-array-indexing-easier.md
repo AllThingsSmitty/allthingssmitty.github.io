@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 3129
+  ga4: 3167
 ---
 
 Arrays are an everyday thing for front-end developers: rendering lists, managing state, juggling DOM elements. Getting the last item has always been clunkier than it should be. `Array.prototype.at()` makes it easy.

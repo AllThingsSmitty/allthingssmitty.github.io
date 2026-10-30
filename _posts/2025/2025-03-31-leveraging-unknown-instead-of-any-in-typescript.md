@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [TypeScript]
 comments: true
 views:
-  ga4: 739
+  ga4: 744
 ---
 
 One habit I've picked up over the years is using `unknown` as a default before `any`. I still use `any` occasionally, but I've become much more intentional about it.

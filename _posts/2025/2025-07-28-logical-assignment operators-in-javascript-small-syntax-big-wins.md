@@ -6,7 +6,7 @@ image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
 views:
-  ga4: 8661
+  ga4: 8706
 ---
 
 In day-to-day JavaScript, we often check a variable before assigning it a new value, and it gets repetitive with component props, global configs, and state objects. **Logical assignment operators** (ES2021) shorten that without changing the logic.
