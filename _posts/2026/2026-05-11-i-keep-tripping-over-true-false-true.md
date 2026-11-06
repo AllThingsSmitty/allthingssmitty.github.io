@@ -32,7 +32,7 @@ createUser(user, true, false);
 
 What does that mean? Is the user an admin? Are we sending a welcome email, or skipping validation?
 
-I don't know. And at that point I'm not really reading code anymore, **I'm decoding it.**
+I don't know. And at that point I'm not really reading code anymore, I'm decoding it.
 
 There's a name for this ("flag arguments," sometimes "boolean blindness"), but honestly I don't really need the term to feel the problem.
 
@@ -64,7 +64,7 @@ The convenience usually gets paid for later by whoever has to read it. Including
 
 ## What I use now
 
-Most of the time, **I just use an object instead**:
+Most of the time, I just use an object instead:
 
 ```js
 createUser(user, {
@@ -187,12 +187,4 @@ I've noticed the [same tradeoff with method chaining]({% post_url 2026-04-20-why
 
 Most of the time, I'm not writing code. I'm trying to understand it. And yes, sometimes that code is mine from a few weeks ago.
 
-And every time I run into something like:
-
-```js
-updateSettings(user, true, false, true, false);
-```
-
-I end up doing the same thing: stopping for a second and trying to remember what each argument was supposed to mean.
-
-It's a tiny speed bump. Just one I seem to hit over and over again.
+Every time I hit a call like that, I stop and try to remember what each argument meant. It's a tiny speed bump, just one I keep hitting.

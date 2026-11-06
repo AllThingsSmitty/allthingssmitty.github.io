@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Native JSON modules are finally real"
-description: "JSON imports finally work natively. Learn how import ... with { type: 'json' } changes runtime behavior, caching, and makes bundlers optional."
+description: "JSON imports work natively now, no bundler needed. Here's what import attributes change."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -21,7 +21,7 @@ Your bundler stepped in at build time, read the JSON file, turned it into a Java
 
 That's finally changed.
 
-With **import attributes**, the platform can handle JSON modules directly. No transforms, no custom loaders, no build-time sleight of hand. Just the runtime:
+With import attributes, the platform can handle JSON modules directly. No transforms, no custom loaders. Just the runtime:
 
 ```js
 import config from "./config.json" with { type: "json" };
@@ -37,7 +37,7 @@ const mod = await import("./config.json", {
 console.log(mod.default);
 ```
 
-That `with { type: "json" }` clause is the key. It's more explicit and a little more verbose. That can feel slightly redundant at first.
+That `with { type: "json" }` clause is the key. It's more verbose, and it can feel redundant at first.
 
 ## Why do we need `with { type: "json" }`?
 
@@ -105,7 +105,7 @@ No `fetch()` or manual `JSON.parse()`.
 
 In browsers, the server still needs to send `Content-Type: application/json`. Import attributes don't override headers, and JSON modules follow normal CORS rules. Just like JavaScript modules.
 
-The difference now is simply **that the responsibility moves to the platform**.
+The difference is that the platform handles it now.
 
 ## Bundlers vs. native JSON modules
 
@@ -131,7 +131,7 @@ Here's what we've historically relied on compared to what the platform now provi
 
 With bundlers, JSON is usually converted at build time and often inlined, so there's no runtime fetch.
 
-With native JSON modules, the runtime fetches the file on first import. Normal HTTP caching applies. That shift from build-time convenience to a runtime primitive is the interesting part.
+With native JSON modules, the runtime fetches the file on first import. Normal HTTP caching applies.
 
 ## Module caching
 
@@ -148,7 +148,7 @@ Both imports reference the same parsed object. The module is evaluated once and 
 
 That's different from calling `fetch()` multiple times, where caching is your responsibility.
 
-In larger applications, that shared module instance matters, especially when configuration or static data should stay consistent. It's one of those moments where you remember why the module system exists in the first place.
+That shared instance matters when configuration or static data needs to stay consistent.
 
 ## Do we still need bundlers for JSON?
 
@@ -167,7 +167,7 @@ That doesn't make bundlers obsolete. They still provide things the platform does
 - Code splitting
 - Build-time optimization pipelines
 
-But for the act of **importing JSON as a module**, the platform has largely caught up with what tooling used to simulate.
+But for importing JSON as a module, the platform has largely caught up with what tooling used to simulate.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
@@ -183,11 +183,9 @@ If you're already using [top-level `await` in ES modules]({% post_url 2025-06-16
 
 ## Why this matters beyond JSON
 
-This is bigger than configuration files.
-
 Import attributes establish a pattern: instead of guessing what a module is based on file extensions or loader config, the importing code declares what it expects.
 
-Today that means JSON. Tomorrow it could mean other structured module types. For example, modern browsers support CSS module scripts:
+JSON is just the first case. Modern browsers also support CSS module scripts:
 
 ```js
 import styles from "./styles.css" with { type: "css" };
@@ -195,6 +193,6 @@ import styles from "./styles.css" with { type: "css" };
 document.adoptedStyleSheets = [styles];
 ```
 
-The module system becomes more explicit and extensible, and a little less dependent on build-time magic.
+It makes the module system a little less dependent on build-time magic.
 
-For a long time, JSON imports felt native because our tools smoothed over the gap. Now they actually are. It doesn't look dramatic now, but changes like this tend to age well.
+For years, JSON imports only felt native because our tools smoothed over the gap. Now they actually are.

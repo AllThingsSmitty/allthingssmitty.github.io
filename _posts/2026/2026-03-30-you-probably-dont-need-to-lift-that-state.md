@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "You probably don't need to lift state"
-description: "A quick React tip: don't lift state by default. Keep it close to where it's used unless you actually need to share it."
+description: "I default to lifting state up in React more than I should. Keep it close to where it's used unless you need to share it."
 image: img/posts/sunset-home-office-min.jpg
 tags: [React]
 comments: true
@@ -9,7 +9,7 @@ views:
   ga4: 538
 ---
 
-This comes up a lot, and it's easy to get wrong. It's really easy to default to "lift state up" in React. I'm guilty. But that's not always the right move.
+It's really easy to default to "lift state up" in React. I'm guilty. But that's not always the right move.
 
 ## Quick rule of thumb
 
@@ -66,6 +66,6 @@ The same instinct shows up elsewhere too, like [restructuring everything into ar
 - Way easier to follow what's going on
 - Fewer accidental re-renders
 
-## If you remember one thing
+## My default now
 
-If only one component cares, keep the state there.
+If only one component cares, I keep the state there.
