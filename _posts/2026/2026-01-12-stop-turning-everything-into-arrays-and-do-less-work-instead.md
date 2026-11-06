@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Stop turning everything into arrays (and do less work instead)"
-description: "Do less work in JavaScript: lazy data pipelines with iterator helpers instead of arrays."
+description: "I kept chaining map, filter and slice on big arrays. Iterator helpers let you stop as soon as you have enough."
 tags: [JavaScript]
 comments: true
 views:
   ga4: 13492
 ---
 
-Most front-end code processes data long before it ever hits the screen. We fetch a list, tweak it, trim it down, and repeat. And usually without thinking too hard about how much work we're doing along the way.
+Most front-end code processes data long before it ever hits the screen. We fetch a list, tweak it, trim it, repeat, and rarely stop to think about how much work that is.
 
 For years, modern JavaScript has pushed us toward a familiar pattern:
 
@@ -20,9 +20,9 @@ data
   .map(...)
 ```
 
-It's readable and expressive. It's also eager, allocates multiple arrays, and often does **unnecessary work**.
+It's readable and expressive. It's also eager, allocates multiple arrays, and often does unnecessary work.
 
-**Iterator helpers** in JavaScript gives us a native, lazy alternative that's especially relevant for dealing with large datasets, streams, and UI-driven logic.
+Iterator helpers are a native, lazy alternative. They help most with big datasets, streams, and UI logic.
 
 ## Arrays everywhere (and way more work than necessary)
 
@@ -40,19 +40,19 @@ const visibleItems = items
   .slice(0, 10);
 ```
 
-Looks harmless, right? I've written this exact chain more times than I want to admit. Under the hood:
+I've written this exact chain more times than I want to admit. Under the hood:
 
 1. `filter` creates a new array
 2. `map` creates another array
 3. `slice` creates yet another array
 
-Even if you only need 10 items, you might've processed *thousands*. That mismatch is the whole problem. And it's where iterator helpers pay off.
+Even if you only need 10 items, you might have processed thousands.
 
 ## So, what are iterator helpers?
 
-Iterator helpers are **chainable methods on iterator objects**, not arrays.
+Iterator helpers are chainable methods on iterator objects, not arrays.
 
-That distinction matters. And yeah, it's easy to miss at first: arrays don't magically gain these methods. You need an iterator from `values()`, `keys()`, `entries()`, or a generator. Then you can build a lazy pipeline on top of it.
+That's easy to miss. Arrays don't magically gain these methods. You need an iterator from `values()`, `keys()`, `entries()`, or a generator first.
 
 They let you do things like:
 
@@ -73,7 +73,7 @@ They let you do things like:
 </div>
 {:/}
 
-Most of these helpers are **lazy**, meaning they only pull values as needed.
+Most of these helpers are lazy, meaning they only pull values as needed.
 
 {::nomarkdown}
 <aside class="message memo" role="note">
@@ -85,13 +85,7 @@ Most of these helpers are **lazy**, meaning they only pull values as needed.
 </aside>
 {:/}
 
-In general, laziness means:
-
-- No intermediate arrays
-- No unnecessary work
-- And most importantly, things stop as soon as they can
-
-You describe *what* you want, and the runtime pulls values only when needed.
+Laziness means no intermediate arrays, and the pipeline stops as soon as it has what it needs.
 
 ## Lazy by default
 
@@ -108,13 +102,13 @@ const visibleItems = items
 
 So what actually changed here?
 
-- `items.values()` gives you an **iterator**, not an array
-- Each step runs **only when the next value is requested**
+- `items.values()` gives you an iterator, not an array
+- Each step runs only when the next value is requested
 - Processing stops after 10 matches
 
-## What this buys you in real apps
+## Where this helps
 
-It's not always about raw speed, it's about avoiding unnecessary work. Iterator helpers unlock **better UI patterns**.
+It's not always about raw speed. It's about not doing work nobody sees.
 
 ### Rendering large lists
 
@@ -143,7 +137,7 @@ You render exactly what you need and nothing more.
 
 ### Streaming & async data
 
-**Async iterables** have their own iterator helpers, which makes them a great fit for paginated APIs and streams:
+Async iterables have their own iterator helpers, which makes them a great fit for paginated APIs and streams:
 
 ```js
 async function* fetchPages() {
@@ -161,7 +155,7 @@ const firstTen = await fetchPages()
   .toArray();
 ```
 
-No buffering entire responses, no manual counters. Just describe the pipeline and let the runtime pull what's needed.
+No buffering entire responses, no manual counters.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
@@ -177,7 +171,7 @@ See how `await` works in loops and how to [structure async logic efficiently]({%
 
 ### Cleaner data pipelines (without utility libraries)
 
-Before iterator helpers, you might've reached for libraries just to get lazy pipelines. Now it's part of the language:
+Before iterator helpers, you probably pulled in a library for lazy pipelines. Now it's part of the language:
 
 ```js
 const ids = users
@@ -187,7 +181,7 @@ const ids = users
   .toArray();
 ```
 
-Readable, native, zero dependencies.
+No dependencies, and it's all native.
 
 ## Iterator helpers vs. array methods
 
@@ -218,13 +212,13 @@ Readable, native, zero dependencies.
 
 ## When *not* to use iterator helpers
 
-Iterator helpers are powerful, but they're not a replacement for arrays everywhere. If you try to force them into every situation, you'll just make your code harder to read. They're a poor fit when:
+They're not a replacement for arrays. Forcing them everywhere just makes code harder to read. They're a poor fit when:
 
 - You need random access (`items[5]`)
 - You rely heavily on array mutation
 - Your data size is small and simplicity wins
 
-## Gotchas you should know about
+## Gotchas
 
 Iterator helpers behave differently than arrays in a few important ways.
 
@@ -259,10 +253,4 @@ Iterator helpers are supported in all modern browsers and Node 22+. If you're ta
 
 ## Doing less work on purpose
 
-For a long time JavaScript trained us to eagerly turn everything into arrays. Iterator helpers give us another option:
-
-- Do less work
-- Allocate less memory
-- Write pipelines that match how UIs actually behave
-
-And once you get used to lazy iteration, going back to eager chains feels a bit wasteful.
+I used to turn everything into an array without thinking about it. Now I check whether I need the whole array first. If I don't, I use an iterator.

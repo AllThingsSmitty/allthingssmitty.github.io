@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Explicit resource management in JavaScript"
-description: "JavaScript is getting explicit resource management. Learn how 'using', 'Symbol.dispose', and scoped lifetimes make cleanup safer and simpler."
+description: "I've forgotten to close files and release locks more than once. The new using keyword makes cleanup the runtime's job."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -9,13 +9,11 @@ views:
   ga4: 3577
 ---
 
-Writing JavaScript that opens something (a file, a stream, a lock, a database connection) also means remembering to clean it up. And if we're being honest, that cleanup doesn't always happen. I know I've missed it more than once.
+Writing JavaScript that opens something (a file, a stream, a lock, a database connection) also means remembering to clean it up. That cleanup doesn't always happen. I know I've missed it more than once.
 
-JavaScript has always made this our problem. We use `try / finally`, tell ourselves we'll be careful, and hope we didn't miss an edge case. It usually works, but it's noisy and easy to get subtly wrong. It also scales poorly once you're juggling more than one resource.
+JavaScript has always made this our problem. We use `try / finally`, tell ourselves we'll be careful, and hope we didn't miss an edge case. It usually works, but it's noisy and easy to get subtly wrong, especially with more than one resource.
 
-That's finally starting to change. **Explicit resource management** gives JavaScript a first-class, language-level way to say, "This thing needs cleanup, and the runtime will guarantee it happens."
-
-Not as a convention or a pattern, but as part of the language.
+That's finally starting to change. Explicit resource management gives JavaScript a language-level way to say, "This thing needs cleanup, and the runtime will guarantee it happens."
 
 ## We're bad at cleanup (and the language doesn't help)
 
@@ -31,11 +29,7 @@ try {
 }
 ```
 
-This is fine, but also:
-
-- Verbose
-- Repetitive
-- Easy to mess up as complexity grows, especially during refactors
+This is fine, but it's verbose and easy to mess up during refactors.
 
 Now add *another* resource:
 
@@ -51,7 +45,7 @@ try {
 }
 ```
 
-Now order matters. Error paths matter. You *can* reason through all of this, but the mental overhead keeps creeping up. And once it's there, bugs tend to follow.
+Now order matters. Error paths matter. It's a lot to keep in your head.
 
 Other languages solved this years ago. JavaScript is (slowly) catching up.
 
@@ -59,7 +53,7 @@ Other languages solved this years ago. JavaScript is (slowly) catching up.
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">📌 Dive further into async</div>
+<div class="note-heading">📌 More on async</div>
 
 `await` in loops isn't always what you think. Here's where [things start to break down]({% post_url 2025-10-20-rethinking-async-loops-in-javascript %}).
 
@@ -69,9 +63,7 @@ Other languages solved this years ago. JavaScript is (slowly) catching up.
 
 ## `using`: cleanup, but make it the runtime's job
 
-At a high level, `using` declares a resource that will be **automatically cleaned up when it goes out of scope**.
-
-Conceptually:
+`using` declares a resource that's automatically cleaned up when it goes out of scope.
 
 ```js
 using file = await openFile("data.txt");
@@ -83,7 +75,7 @@ using file = await openFile("data.txt");
 
 No `try`. No `finally`. No "did I remember to close this?"
 
-The key shift is that cleanup is tied to **lifetime**, not control flow.
+The key shift is that cleanup is tied to lifetime, not control flow.
 
 ## How cleanup actually works
 
@@ -108,7 +100,7 @@ class FileHandle {
 
 Once a value has one of these methods, it can be used with `using`.
 
-And importantly, `using` **doesn't magically close files**, it just standardizes cleanup instead of every library inventing its own.
+`using` doesn't close anything on its own. It just standardizes cleanup so every library doesn't invent its own.
 
 ## When you need `await using`
 
@@ -122,23 +114,21 @@ await using file = await openFile("data.txt");
 
 When the scope ends, JavaScript will *await* disposal before continuing.
 
-Synchronous resources (locks, in-memory structures) can use plain `using`. It may feel odd at first, but it matches how JavaScript already draws the line between sync and async elsewhere. What matters is that cleanup happens at scope exit.
+Synchronous resources (locks, in-memory structures) can use plain `using`.
 
 {::nomarkdown}
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">📌 Designing for async</div>
+<div class="note-heading">📌 Related</div>
 
-`Array.fromAsync()` is one sign JavaScript is finally treating async as a first-class concern: [modern async iteration in JavaScript]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}).
+`Array.fromAsync()` is another sign JavaScript is taking async seriously: [modern async iteration in JavaScript]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}).
 
 {::nomarkdown}
 </aside>
 {:/}
 
-## Stacking resources without the headache
-
-This is where things really improve.
+## Stacking resources
 
 Instead of:
 
@@ -163,12 +153,7 @@ using lock = await acquireLock();
 // work
 ```
 
-Cleanup happens automatically, **in reverse order**, like a stack:
-
-1. `lock` is released
-2. `file` is closed
-
-No extra syntax. Errors don't short-circuit disposal, and cleanup happens in a defined order.
+Cleanup runs in reverse order, like a stack (`lock` is released, then `file` is closed). Errors don't skip disposal.
 
 ## Scope is the point
 
@@ -183,7 +168,7 @@ A `using` declaration is scoped just like `const` or `let`:
 // file is disposed here
 ```
 
-This pushes you toward tighter scopes and makes lifetimes explicit, something JavaScript has historically been bad at expressing. Once you start seeing lifetimes in the code itself, it's hard to unsee.
+This pushes you toward tighter scopes and makes lifetimes visible, which JavaScript has never been good at.
 
 ## When `using` isn't enough
 
@@ -202,9 +187,9 @@ const lock = stack.use(await acquireLock());
 await stack.disposeAsync();
 ```
 
-You get the same safety as `using`, with more flexibility. If `using` is the clean, declarative case, stacks are the escape hatch.
+Same safety as `using`, more flexibility. Stacks are the escape hatch.
 
-## This isn't just a back-end feature
+## It's not only for back-end code
 
 At first glance this can feel like a server-side concern, but it applies just as much on the front end and in platform code:
 
@@ -213,18 +198,14 @@ At first glance this can feel like a server-side concern, but it applies just as
 - Observers and subscriptions
 - IndexedDB transactions
 
-Anyone who's written `subscribe()` / `unsubscribe()` or `open()` / `close()`, this should at least make you pause.
-
-This isn't just about correctness. It's about **making lifetimes visible in the code** instead of hiding them in conventions and comments.
+If you've written `subscribe()` / `unsubscribe()` or `open()` / `close()` pairs, this applies to you.
 
 ## What's the catch?
 
-As of early 2026, Chrome 123+ and Firefox 119+ support all of these features. Node.js 20.9+, too. **Safari support is still pending**, but it's on their radar.
+As of early 2026, Chrome 123+ and Firefox 119+ support all of these features. Node.js 20.9+, too. Safari support is still pending.
 
-For now, it's something to experiment with and maybe start designing APIs around, especially if you maintain libraries or platform-level abstractions. Even if you're not using `using` tomorrow, the model it introduces is worth paying attention to.
+For now, it's something to experiment with, especially if you maintain libraries.
 
 ## A better default for cleanup
 
-Explicit resource management doesn't replace `try / finally`. You'll still use it when you need fine-grained control.
-
-What it does give us is a better default: less boilerplate, fewer leaks, clearer intent, and code that just reads better. As JavaScript takes on more systems-like responsibilities, features like this feel less like nice-to-haves and more like table stakes.
+`using` doesn't replace `try / finally`. I'll still use that when I need finer control. But for the usual open-and-close cases, I'd rather the language handle it.

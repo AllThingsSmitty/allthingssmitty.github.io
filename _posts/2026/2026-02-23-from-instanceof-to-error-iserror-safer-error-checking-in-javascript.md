@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From instanceof to Error.isError: safer error checking in JavaScript"
-description: "Why instanceof error fails across realms in JavaScript, and how Error.isError() fixes it."
+description: "instanceof Error silently missed real errors in production. Error.isError() is the realm-safe check."
 image: img/posts/sunset-home-office-min.jpg
 tags: [JavaScript]
 comments: true
@@ -23,7 +23,7 @@ I ran into this debugging an error reporting issue that only occurred in product
 
 ## The cross-realm problem
 
-JavaScript doesn't run in just one global environment. It has **realms**, which are separate JavaScript worlds with their own globals and their own built-ins like `Object`, `Array`, and `Error`.
+JavaScript doesn't run in just one global environment. It has realms, which are separate JavaScript worlds with their own globals and their own built-ins like `Object`, `Array`, and `Error`.
 
 Two values can both be real errors, but if they were created in different realms, JavaScript treats them as different things. It's one of those "why is this even a thing?" moments the first time it bites you.
 
@@ -45,7 +45,7 @@ I'll be honest: I used `instanceof Error` everywhere for a long time and never q
 
 The catch is that it wasn't created with *your* `Error` constructor. It came from the iframe's. Since `instanceof` walks the prototype chain for a specific realm, the check fails. `instanceof` isn't wrong. It's just limited to its own world.
 
-This is one of those bugs that only appears after you ship:
+It tends to show up with:
 
 - Workers and iframes
 - Browser extensions
@@ -58,7 +58,7 @@ I've seen this show up in production logs as "mysteriously empty" error objects.
 
 ## Enter `Error.isError()`
 
-JavaScript now has `Error.isError(value)`, **a realm-safe way to answer, "Is this actually an error?"** It's one of those APIs that feels obvious in hindsight.
+JavaScript now has `Error.isError(value)`, a realm-safe way to answer, "Is this actually an error?"
 
 Here is what it guarantees:
 
@@ -82,7 +82,7 @@ Error.isError({ message: 'Not really an error' }) // false
 Error.isError(Object.create(Error.prototype))     // false
 ```
 
-That last case is important. Even though the object inherits from `Error.prototype`, **it was never created as an actual error**. `Error.isError()` correctly rejects it.
+That last case is important. Even though the object inherits from `Error.prototype`, it was never created as an actual error. `Error.isError()` correctly rejects it.
 
 The cross-realm case now behaves the way most developers expect:
 
@@ -93,7 +93,7 @@ Error.isError(err); // true
 
 Under the hood, engines check an internal "brand" real errors carry, something you can't access from userland. That's why our workarounds have always been a little...approximate.
 
-One practical detail is worth mentioning. In browsers, `Error.isError()` also returns `true` for `DOMException` objects. Even though `DOMException` isn't a subclass of `Error` in the usual prototype sense, the platform treats it as a real error. This is usually what you want in logging or error handling code.
+In browsers, `Error.isError()` also returns `true` for `DOMException` objects. Even though `DOMException` isn't a subclass of `Error` in the usual prototype sense, the platform treats it as a real error. This is usually what you want in logging or error handling code.
 
 Custom error classes work as expected:
 
@@ -116,7 +116,7 @@ Common examples include:
 - Test frameworks
 - Web extensions
 - SSR / edge runtimes
-- Workers, iframes, **basically anything crossing a boundary**
+- Workers, iframes, basically anything crossing a boundary
 
 In these situations, `instanceof Error` can quietly miss real errors. Worse than throwing, because you don't notice until something downstream breaks.
 
@@ -137,7 +137,7 @@ You don't have to ban `instanceof`. In tightly scoped code it's fine. Once bound
 
 <div class="note-heading">☝🏻 By the way...</div>
 
-Once you can reliably identify real error objects, the next challenge is preserving useful context as they move through your code. The [`Error.cause` API]({% post_url 2025-11-10-error-chaining-in-javascript-cleaner-debugging-with-error-cause %}) helps with just that.
+Once you can reliably spot real errors, you'll want to keep context as they move through your code. [`Error.cause`]({% post_url 2025-11-10-error-chaining-in-javascript-cleaner-debugging-with-error-cause %}) helps with that.
 
 {::nomarkdown}
 </aside>
@@ -157,11 +157,7 @@ function isError(value) {
 
 Use this in boundary-heavy places like logging or framework glue instead of sprinkling `instanceof Error` everywhere.
 
-This approach gives you:
-
-- Realm-safe behavior in modern runtimes
-- A decent fallback in older ones
-- A single place to update later when support is universal
+Modern runtimes get the realm-safe check, older ones fall back to `instanceof`, and there's one place to update when support is universal.
 
 Start at the edges of your app. That's where cross-realm errors sneak in.
 
@@ -186,6 +182,4 @@ if (typeof Error.isError === 'function') {
 
 ## The bug you don't see coming
 
-If your code crosses boundaries, `instanceof` is a footgun. `Error.isError()` is what we actually meant all along.
-
-It's a small change that removes a whole class of annoying bug, and it's a pretty good trade. If your code touches workers, iframes, extensions, or server boundaries, switching to `Error.isError()` is an easy win and one less thing to be quietly wrong.
+If your code crosses boundaries, `instanceof Error` will eventually miss something. If it touches workers, iframes, extensions, or server boundaries, swapping in `Error.isError()` is a small change that removes a whole class of quiet bug.

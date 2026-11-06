@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I don't chain everything in JavaScript anymore"
-description: "JavaScript chaining looks clean at first, but it can hurt readability and hide extra work. Here's when to break chains into simpler steps."
+description: "I used to chain everything in JavaScript. Past three or four steps, I break it up so it's easier to read and debug."
 tags: [JavaScript]
 comments: true
 views:
@@ -120,7 +120,7 @@ for (const user of users) {
 
 ## Where this starts to hurt
 
-This isn't just about readability. That extra work adds up with large arrays or hot paths. And long chains can be surprisingly annoying to debug in production.
+It's not only about readability. The extra work adds up with large arrays or hot paths, and long chains are annoying to debug in production.
 
 I've written some pretty gnarly chains before. Coming back to them later is...humbling.
 
@@ -217,5 +217,3 @@ Those aren't the same thing.
 {:/}
 
 This has saved me from a lot of headaches.
-
-JavaScript gives you a lot of tools, but you don't need to use all of them at once.

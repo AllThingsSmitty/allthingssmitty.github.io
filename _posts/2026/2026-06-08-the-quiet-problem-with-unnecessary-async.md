@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "The quiet problem with unnecessary async"
-description: "Not every JavaScript function needs to be async. Unnecessary async boundaries can spread Promise-based complexity through an entire application."
+description: "A function that doesn't await anything probably shouldn't be async. Here's how unnecessary async spreads through a codebase."
 tags: [JavaScript, React]
 comments: true
 views:
   ga4: 1403
 ---
 
-There's a pattern in JavaScript codebases that quietly spreads complexity through entire applications. You've probably seen something like this:
+There's a pattern in JavaScript codebases that quietly spreads complexity. You've probably seen something like this:
 
 ```js
 async function getConfig() {
@@ -20,7 +20,7 @@ At first glance, this barely feels like a decision.
 
 Maybe one day `getConfig()` will fetch something remotely. Maybe it'll hit IndexedDB later. Making it `async` now can feel harmless, even responsible.
 
-The problem is that `async` **changes the contract of the function**.
+The problem is that `async` changes the contract of the function.
 
 ## What changes when a function becomes `async`
 
@@ -38,11 +38,7 @@ becomes:
 const config = await getConfig();
 ```
 
-And once that happens, the surrounding code starts adapting, too:
-
-- Callers become async-aware
-- Tests become async-aware
-- Composition utilities start propagating Promises
+And then the surrounding code adapts too. Callers have to await, tests have to await, and anything composing them starts passing Promises around.
 
 People sometimes call this the function coloring problem:
 
@@ -90,17 +86,11 @@ Public libraries often expose async APIs early because changing them later can b
 
 Application code tends to be different. Internal helpers often become `async` speculatively even when nothing asynchronous is happening yet.
 
-Right now:
-
-- There's no suspension point
-- No I/O
-- No asynchronous dependency
-
-But every consumer still pays the async cost today.
+Right now there's no suspension point and no I/O, but every consumer still pays the async cost today.
 
 ## `async` communicates meaning
 
-When I'm skimming code I'm unfamiliar with, I use **function signatures** as shortcuts.
+When I'm skimming code I'm unfamiliar with, I use function signatures as shortcuts.
 
 If I see this:
 
@@ -108,15 +98,9 @@ If I see this:
 async function loadUser()
 ```
 
-I assume there's a real boundary there somewhere:
+I assume there's a real boundary there somewhere, like network activity, storage access, or background processing. Something that can't be produced immediately.
 
-- Network activity
-- Storage access
-- Background processing
-
-Something that can't be produced immediately.
-
-That's useful information. Function signatures help us build a mental model of a system. When a function returns synchronously available data, marking it `async` starts implying work that isn't actually happening.
+That's useful information. When a function returns data that's already available, marking it `async` implies work that isn't happening.
 
 ## The mental overhead
 
@@ -167,7 +151,7 @@ Modern front-end systems are already heavily async:
 - Async routing
 - Suspense-driven rendering
 
-Async boundaries affect rendering behavior, composition, error handling, debugging, and the shape of an application. Because of that, I try to treat them as architectural decisions rather than implementation details.
+Async boundaries affect rendering, composition, error handling, and debugging, so I try to treat them as architectural decisions, not implementation details.
 
 A rough rule I follow: `async` should represent real async boundaries, not hypothetical future requirements. If a function doesn't await anything, it's worth asking why it's async in the first place.
 
@@ -197,13 +181,6 @@ function getConfig() {
 
 keep it synchronous.
 
-If real asynchronous work arrives later, introduce async semantics deliberately. Until then, smaller async boundaries are easier to reason about, easier to trace, and make function signatures more meaningful.
+If real asynchronous work arrives later, introduce async deliberately. Until then, smaller async boundaries are easier to trace and keep signatures meaningful.
 
-Because `async` doesn't just change a function implementation. **It changes the shape of the code around it.**
-
-The biggest differences are:
-
-- Added a concrete personal anecdote early.
-- Removed some repeated "async propagates outward" explanations.
-- Replaced a few generalized statements ("people rely on function signatures") with first-person observations ("when I'm skimming unfamiliar code...").
-- Tightened the ending so it lands a little harder instead of re-explaining the thesis one more time.
+Once a function is `async`, everything that calls it feels it.

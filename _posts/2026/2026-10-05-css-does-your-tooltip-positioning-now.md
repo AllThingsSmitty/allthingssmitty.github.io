@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS does your tooltip positioning now"
-description: "CSS can now handle tooltip and dropdown positioning without JavaScript. Learn how anchor positioning, popovers, and anchor-size() simplify UI."
+description: "I used to write resize and scroll listeners to position tooltips. CSS anchor positioning, popovers, and anchor-size() handle it now."
 image: img/posts/sunset-home-office-min.jpg
 tags: [CSS]
 comments: true
@@ -17,11 +17,11 @@ tooltip.style.top = `${rect.bottom + 8}px`;
 tooltip.style.left = `${rect.left}px`;
 ```
 
-Looks fine, right? Until the window resizes. Or until the page scrolls. Or the tooltip happens to land near the bottom of the viewport and renders half off-screen because nothing told it to flip to the other side. Not too great.
+Looks fine, until the window resizes. Or the page scrolls. Or the tooltip lands near the bottom of the viewport and renders half off-screen because nothing told it to flip to the other side.
 
 So you add a resize listener, then a scroll listener. Then some manual math to detect overflow and flip the positioning, or you find a JS library to own the math.
 
-**CSS can do all of this now.** No JavaScript, no library, no listeners involved.
+CSS can do all of this now. No JavaScript needed.
 
 ## The core trick: `anchor-name` and `position-anchor`
 
@@ -45,7 +45,7 @@ Then tell the thing that should follow it to use that anchor:
 
 Anchor positioning only works on elements that are already absolutely or fixed positioned. The browser keeps recalculating that position as the page scrolls or resizes.
 
-One thing could trip you up the first time you build this into a component: `anchor-name` **doesn't need to be globally unique** across the whole page. It does need to be unique for each anchor and its matching target.
+One thing can trip you up the first time you build this into a component: each anchor and its target need their own matching name.
 
 Build a card grid where every card has its own tooltip, and if you reuse the same name across all of them, every tooltip tethers to whichever card most recently registered that name, not the one you're hovering. You'll need to generate the name per instance so each card's tooltip only ever matches its own card.
 
@@ -94,7 +94,7 @@ The other thing you'll want almost immediately once you're building real compone
 
 ## One wrinkle I hit
 
-**Anchor positioning only cares that two elements share a name.** It doesn't care where either one sits in the DOM. What if you need to toggle a note's visibility based on whether its term is active, and the two aren't siblings?
+Anchor positioning only cares that two elements share a name. It doesn't care where either one sits in the DOM. What if you need to toggle a note's visibility based on whether its term is active, and the two aren't siblings?
 
 A plain sibling selector (`~`) only works when both elements share a parent. Mine doesn't. The clickable terms live inline in a paragraph, and the notes live in a separate container at the end of the document. I added `:has()` on their nearest shared ancestor:
 
@@ -120,6 +120,6 @@ If you're positioning something relative to a specific other element, use `ancho
 
 ## Where this isn't a good fit yet
 
-- **Browser support is solid** across current versions of Chrome, Firefox, Safari, and Edge. But Safari and Chrome disagree on some fallback-position edge cases, and there's a known quirk with the `popover` attribute's default margin interfering with anchor positioning unless you explicitly reset it. Keep the `@supports not (anchor-name: --a)` fallback for older browsers.
+- Browser support is solid across current versions of Chrome, Firefox, Safari, and Edge. But Safari and Chrome disagree on some fallback-position edge cases, and there's a known quirk with the `popover` attribute's default margin interfering with anchor positioning unless you explicitly reset it. Keep the `@supports not (anchor-name: --a)` fallback for older browsers.
 
-- **Screen reader users** won't experience this the way sighted users do. The anchor relationship is purely visual. If your note lives somewhere else entirely in the DOM, a screen reader will announce it in document order, not in visual proximity to its anchor. `aria-describedby` can bridge some of the gap, but it's not a complete fix. Don't treat this as an accessibility feature. The visual relationship doesn't change the underlying document structure.
+- Screen reader users won't experience this the way sighted users do. The anchor relationship is purely visual. If your note lives somewhere else entirely in the DOM, a screen reader will announce it in document order, not in visual proximity to its anchor. `aria-describedby` can bridge some of the gap, but it's not a complete fix. Don't treat this as an accessibility feature. The visual relationship doesn't change the underlying document structure.
