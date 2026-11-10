@@ -36,10 +36,13 @@ const syncThemeColor = (theme) => {
 };
 
 const applyTheme = (theme) => {
+  const changed = root.dataset.theme !== theme;
   root.dataset.theme = theme;
   syncThemeColor(theme);
   // Label the action the button performs, not the current state
   toggle?.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
+  // Let widgets that pick their own theme (e.g. the Disqus iframe) know it changed
+  if (changed) document.dispatchEvent(new CustomEvent("themechange", { detail: { theme } }));
 };
 
 const resolveTheme = () => getSavedTheme() ?? (systemDark.matches ? "dark" : "light");
