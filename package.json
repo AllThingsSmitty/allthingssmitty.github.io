@@ -19,7 +19,7 @@
     "browser-sync": "^3.0.4",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "terser": "^5.31.0"
   },
   "repository": {
