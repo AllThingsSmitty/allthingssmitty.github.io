@@ -1,0 +1,37 @@
+// Post meta icons are masks painted with currentColor, so they follow the text color in light and dark.
+$icon-published: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <path d='M8 2v3'/>\
+    <path d='M16 2v3'/>\
+    <rect x='3' y='3' width='18' height='18' rx='2'/>\
+    <path d='M3 9h18'/>\
+  </svg>");
+
+$icon-reading-time: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <circle cx='12' cy='12' r='10'/>\
+    <path d='M12 6v6l4 2'/>\
+  </svg>");
+
+$icon-information: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <circle cx='12' cy='12' r='10'/>\
+    <path d='M12 16v-4'/>\
+    <path d='M12 8h.01'/>\
+  </svg>");
+
+$icon-pin: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <path d='M12 17v5'/>\
+    <path d='M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z'/>\
+  </svg>");
+
+$icon-bookmark: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <path d='M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z'/>\
+  </svg>");
+
+@mixin mask-icon($svg) {
+  -webkit-mask-image: $svg;
+  mask-image: $svg;
+}
