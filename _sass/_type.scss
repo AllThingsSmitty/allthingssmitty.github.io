@@ -64,8 +64,36 @@ blockquote {
     }
 
     .note-heading {
+      display: flex;
       font-weight: 600;
+      gap: 0.375rem;
       margin-block: 0 0.5rem;
+
+      &::before {
+        --h: 1.15;
+        --icon: calc(var(--font-size-small) * var(--h));
+        align-self: center;
+        background-color: currentColor;
+        content: "";
+        height: var(--icon);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: var(--icon);
+        mask-size: var(--icon);
+        width: var(--icon);
+      }
+    }
+
+    .bookmark::before {
+      @include mask-icon($icon-bookmark);
+    }
+
+    .information::before {
+      @include mask-icon($icon-information);
+    }
+
+    .pin::before {
+      @include mask-icon($icon-pin);
     }
 
     p {
