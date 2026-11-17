@@ -78,6 +78,9 @@ console.log(nums.at(2.5));  // undefined (2.5 becomes 2, which is out of bounds)
 - If the resulting index is out of bounds, positive or negative, it returns `undefined`.
 
 <aside class="message highlight" role="note">
+
+<div class="note-heading pin">Good to know</div>
+
 Performance isn't a real concern. <code>.at()</code> can be slightly slower than bracket notation in tight loops, but the difference is minimal for most use cases, and modern engines optimize it well.
 </aside>
 

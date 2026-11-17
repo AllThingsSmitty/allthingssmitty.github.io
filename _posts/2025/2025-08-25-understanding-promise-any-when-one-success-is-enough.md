@@ -27,7 +27,7 @@ An **empty iterable** rejects immediately with an `AggregateError` whose `.error
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading pin">Performance tip</div>
+<div class="note-heading pin">Pro tip</div>
 
 Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:rel="noopener noreferrer"} if cancellation is important.
 
@@ -116,6 +116,8 @@ Promise.any([
 {::nomarkdown}
 <aside class="message highlight" role="note">
 {:/}
+
+<div class="note-heading information">Good to know</div>
 
 The Clipboard API often requires explicit user interaction and permissions. It might also reject if called outside a user gesture context (like `click`). Using fallbacks like `prompt()` ensures your feature remains usable across a wider range of browsers and permissions scenarios.
 
