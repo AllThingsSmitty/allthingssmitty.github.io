@@ -79,7 +79,9 @@ Most of these helpers are lazy, meaning they only pull values as needed.
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `reduce` eagerly consumes the iterator, since it must see every value to produce a result.
+<div class="note-heading information">Note</div>
+
+`reduce` eagerly consumes the iterator, since it must see every value to produce a result.
 
 {::nomarkdown}
 </aside>
@@ -161,7 +163,7 @@ No buffering entire responses, no manual counters.
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Ready for more?</div>
+<div class="note-heading bookmark">Ready for more?</div>
 
 See how `await` works in loops and how to [structure async logic efficiently]({% post_url 2025-10-20-rethinking-async-loops-in-javascript %}).
 
