@@ -19,7 +19,9 @@ Logical assignment operators combine a **logical operator** (`||`, `&&`, or `??`
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** Optional chaining (`?.`) isn't allowed on the left-hand side of a logical assignment. It throws a syntax error:
+<div class="note-heading information">Note</div>
+
+Optional chaining (`?.`) isn't allowed on the left-hand side of a logical assignment. It throws a syntax error:
 
 {::nomarkdown}
 </aside>
@@ -82,7 +84,9 @@ This is helpful for conditionally updating a value based on an existing truthy v
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** With `&&=`, the right-hand side is only evaluated if the left-hand side is truthy, and its **actual result** is assigned, even if that result is falsy.
+<div class="note-heading information">Note</div>
+
+With `&&=`, the right-hand side is only evaluated if the left-hand side is truthy, and its **actual result** is assigned, even if that result is falsy.
 
 {::nomarkdown}
 </aside>
@@ -118,7 +122,7 @@ Use this when you want to assign defaults **only if the value is truly missing**
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Dig deeper</div>
+<div class="note-heading bookmark">Dig deeper</div>
 
 If you want to learn more about the nullish coalescing operator, I wrote about [mastering default values]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}).
 

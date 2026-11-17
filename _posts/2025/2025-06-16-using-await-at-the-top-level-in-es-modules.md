@@ -41,7 +41,7 @@ With top-level `await`, you can drop that boilerplate. The async code lives righ
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">🚨 Important</div>
+<div class="note-heading pin">Important</div>
 
 Top-level `await` only works in JavaScript **modules**, not in CommonJS (`require`) or traditional `<script>` tags without `type="module"` (those run in classic script mode). Also, `.cjs` files in Node.js **don't** support top-level `await`.
 
@@ -73,7 +73,9 @@ Top-level `await` pairs naturally with **dynamic `import()`** for conditionally 
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** Static `import` statements are resolved before module execution. If an imported module contains top-level `await`, the importing module will **wait for the awaited code to finish executing before it starts**.
+<div class="note-heading information">Note</div>
+
+Static `import` statements are resolved before module execution. If an imported module contains top-level `await`, the importing module will **wait for the awaited code to finish executing before it starts**.
 
 {::nomarkdown}
 </aside>
@@ -98,7 +100,9 @@ In performance-critical codebases you can now `await` WASM modules without async
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** Make sure your server serves `.wasm` files with the correct `application/wasm` MIME type, otherwise `instantiateStreaming()` will fail. In that case, fall back to:
+<div class="note-heading information">Note</div>
+
+ Make sure your server serves `.wasm` files with the correct `application/wasm` MIME type, otherwise `instantiateStreaming()` will fail. In that case, fall back to:
 
 {::nomarkdown}
 </aside>

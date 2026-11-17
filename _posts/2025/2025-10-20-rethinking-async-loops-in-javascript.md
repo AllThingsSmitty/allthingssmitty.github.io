@@ -64,10 +64,12 @@ const results = await Promise.all(
 If `fetchUser(2)` throws an error (e.g., 404 or network error), the entire `Promise.all` call will reject, and **none** of the results will be returned (including successful ones).
 
 {::nomarkdown}
-<aside class="message notification" role="note">
+<aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `Promise.all()` rejects on the first error, discarding other results. Remaining promises still run, but only the first rejection is reported unless you handle each one individually.
+<div class="note-heading information">Note</div>
+
+`Promise.all()` rejects on the first error, discarding other results. Remaining promises still run, but only the first rejection is reported unless you handle each one individually.
 
 {::nomarkdown}
 </aside>
@@ -182,7 +184,7 @@ const results = await Promise.all(limitedFetches);
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Dig deeper</div>
+<div class="note-heading bookmark">Dig deeper</div>
 
 If you want to see how `await` behaves outside functions altogether, check out my post about [using top-level `await`]({% post_url 2025-06-16-using-await-at-the-top-level-in-es-modules %}) in ES modules.
 
@@ -223,7 +225,9 @@ The loop doesn't wait for your `async` function. These fetches run in the backgr
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `forEach` doesn't wait for async callbacks. Your function may finish before the async work does, leading to silent bugs and missed errors.
+<div class="note-heading information">Note</div>
+
+`forEach` doesn't wait for async callbacks. Your function may finish before the async work does, leading to silent bugs and missed errors.
 
 {::nomarkdown}
 </aside>
@@ -238,7 +242,7 @@ Instead, use:
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">🙋🏻‍♂️ Ready for more?</div>
+<div class="note-heading bookmark">Ready for more?</div>
 
 Looking for a more functional way to handle async iteration? [`Array.fromAsync()`]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}) is designed for consuming async data sources like streams and generators.
 

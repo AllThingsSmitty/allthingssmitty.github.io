@@ -64,7 +64,9 @@ array.findLast((element, index, array) => {
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `findLast()` skips empty slots (a.k.a. "holes") in sparse arrays, just like `.find()`:
+<div class="note-heading information">Note</div>
+
+`findLast()` skips empty slots (a.k.a. "holes") in sparse arrays, just like `.find()`:
 
 {::nomarkdown}
 </aside>
@@ -79,7 +81,9 @@ console.log(arr.findLast(x => true)); // 5
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** A "hole" is different from an `undefined` value. For example:
+<div class="note-heading information">Note</div>
+
+A "hole" is different from an `undefined` value. For example:
 
 {::nomarkdown}
 </aside>
@@ -203,7 +207,7 @@ Instead of juggling reversed arrays or writing awkward loops, the code just says
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">✅ Array indexing made easier?</div>
+<div class="note-heading bookmark">Array indexing made easier?</div>
 
 Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post_url 2025-05-19-how-javascript-at-method-makes-array-indexing-easier %}) in JavaScript simplifies array access. No more working out `length - 1` in your head!
 
@@ -230,7 +234,7 @@ Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Level up</div>
+<div class="note-heading bookmark">Level up</div>
 
 Want to know why mutating array methods like `reverse()` can lead to bugs? Learn about [safer, non-mutating alternatives]({% post_url 2025-09-08-finally-safe-array-methods-in-javascript %}).
 

@@ -82,7 +82,9 @@ The `cause` property is **non-enumerable** by specification when passed through 
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** JavaScript doesn't automatically merge stack traces. The new error's stack trace stands alone. To see the full picture, inspect `err.cause.stack` manually.
+<div class="note-heading information">Note</div>
+
+JavaScript doesn't automatically merge stack traces. The new error's stack trace stands alone. To see the full picture, inspect `err.cause.stack` manually.
 
 {::nomarkdown}
 </aside>
@@ -226,7 +228,9 @@ The `.cause` parameter is supported in all modern environments:
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** DevTools might not display `cause` automatically. Log it explicitly (`console.error('Caused by:', err.cause)`). If you transpile with Babel or TypeScript, this feature isn't polyfilled.
+<div class="note-heading information">Note</div>
+
+DevTools might not display `cause` automatically. Log it explicitly (`console.error('Caused by:', err.cause)`). If you transpile with Babel or TypeScript, this feature isn't polyfilled.
 
 {::nomarkdown}
 </aside>
@@ -236,7 +240,7 @@ The `.cause` parameter is supported in all modern environments:
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">📌 More modern patterns</div>
+<div class="note-heading bookmark">More modern patterns</div>
 
 I also wrote about [`Array.fromAsync()`]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}) if you want cleaner async code.
 
