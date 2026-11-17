@@ -175,7 +175,7 @@ At that point I'm back to counting arguments with my finger. Same behavior. A lo
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">📣 Worth mentioning</div>
+<div class="note-heading bookmark">Worth mentioning</div>
 
 I've noticed the [same tradeoff with method chaining]({% post_url 2026-04-20-why-i-dont-chain-everything-in-javascript-anymore %}). The code gets shorter, but not always easier to follow.
 
