@@ -27,7 +27,7 @@ An **empty iterable** rejects immediately with an `AggregateError` whose `.error
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">📌 Performance tip</div>
+<div class="note-heading pin">Performance tip</div>
 
 Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:rel="noopener noreferrer"} if cancellation is important.
 
@@ -73,7 +73,9 @@ Promise.any([
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `fetch()` only rejects on network errors (such as being offline) or CORS policy violations, which appear as generic network failures.
+<div class="note-heading information">Note</div>
+
+`fetch()` only rejects on network errors (such as being offline) or CORS policy violations, which appear as generic network failures.
 
 {::nomarkdown}
 </aside>

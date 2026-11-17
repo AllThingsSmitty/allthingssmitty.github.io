@@ -74,7 +74,9 @@ This ensures that `user` exists *and* that `sendMessage` is a function before at
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `fn?.()` only short-circuits if `fn` is `null` or `undefined`. If `fn` is defined but not a function (e.g., a `string` or `object`), it will still throw a `TypeError`.
+<div class="note-heading information">Note</div>
+
+`fn?.()` only short-circuits if `fn` is `null` or `undefined`. If `fn` is defined but not a function (e.g., a `string` or `object`), it will still throw a `TypeError`.
 
 {::nomarkdown}
 </aside>
@@ -172,7 +174,7 @@ This returns `"default.png"` if `avatar` is `null` or `undefined`.
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">💡 Ready for more?</div>
+<div class="note-heading bookmark">Ready for more?</div>
 
 I wrote about [mastering default values with the nullish coalescing operator]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}) if you want to see how `??` and `?.` work together.
 

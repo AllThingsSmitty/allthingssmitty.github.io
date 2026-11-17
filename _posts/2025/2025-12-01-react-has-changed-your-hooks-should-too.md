@@ -69,7 +69,7 @@ If it's the latter, tools like `useMemo`, `useCallback`, or framework-provided p
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">🙋🏻‍♂️ Quick note</div>
+<div class="note-heading pin">Quick note</div>
 
 Don't treat `useEffectEvent` as a cheat code to avoid dependency arrays. It's specifically optimized for work *inside* effects.
 
@@ -115,7 +115,7 @@ That's cleaner and easier to test, and the component no longer knows how resizin
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">👉🏻 SSR tip</div>
+<div class="note-heading pin">SSR tip</div>
 
 Always start with a deterministic fallback value to avoid hydration mismatches.
 
@@ -153,7 +153,9 @@ function useMediaQuery(query) {
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** `useSyncExternalStore` gives you synchronous updates. It's not a drop-in replacement for `useState`.
+<div class="note-heading information">Note</div>
+
+useSyncExternalStore` gives you synchronous updates. It's not a drop-in replacement for `useState`.
 
 {::nomarkdown}
 </aside>

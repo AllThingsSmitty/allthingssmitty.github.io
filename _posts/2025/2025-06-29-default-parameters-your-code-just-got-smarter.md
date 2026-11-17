@@ -85,7 +85,9 @@ The function still works if the caller doesn't pass an options object.
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** Default parameter values are evaluated at call time. So a **new object** is created for `options` every time `fetchUser` is called without one. This means you're safe from shared state issues unless you move the object outside the function and reuse or mutate it:
+<div class="note-heading information">Note</div>
+
+Default parameter values are evaluated at call time. So a **new object** is created for `options` every time `fetchUser` is called without one. This means you're safe from shared state issues unless you move the object outside the function and reuse or mutate it:
 
 {::nomarkdown}
 </aside>
@@ -125,7 +127,7 @@ This pattern is especially helpful when event handlers are triggered in tests or
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">🙈 Code confession</div>
+<div class="note-heading bookmark">Code confession</div>
 
 Writing all those `&&` checks? Same...until I started using [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}). Cleaner code, fewer bugs.
 

@@ -36,7 +36,7 @@ Array.fromAsync(source[, mapFn[, thisArg]]) // Returns a Promise<Array>
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading">✅ Helpful tip</div>
+<div class="note-heading pin">Helpful tip</div>
 
 `Array.fromAsync()` expects an iterable. If you pass a single Promise (e.g., `Promise.resolve(1)`), it will throw a `TypeError`. The source must be iterable or async iterable.
 
@@ -201,7 +201,9 @@ async function arrayFromAsync(source, mapFn, thisArg) {
 <aside class="message memo" role="note">
 {:/}
 
-⚠️ **Note:** This polyfill covers most common use cases but may not match the ECMAScript spec exactly. For example, it doesn't handle iterator closing protocols or sparse arrays in the same way.
+<div class="note-heading information">Note</div>
+
+This polyfill covers most common use cases but may not match the ECMAScript spec exactly. For example, it doesn't handle iterator closing protocols or sparse arrays in the same way.
 
 {::nomarkdown}
 </aside>
