@@ -120,7 +120,7 @@ Synchronous resources (locks, in-memory structures) can use plain `using`.
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading bookmark">Related</div>
+<div class="note-heading bookmark">Good to know</div>
 
 `Array.fromAsync()` is another sign JavaScript is taking async seriously: [modern async iteration in JavaScript]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}).
 

@@ -155,7 +155,7 @@ function useMediaQuery(query) {
 
 <div class="note-heading information">Note</div>
 
-useSyncExternalStore` gives you synchronous updates. It's not a drop-in replacement for `useState`.
+`useSyncExternalStore` gives you synchronous updates. It's not a drop-in replacement for `useState`.
 
 {::nomarkdown}
 </aside>

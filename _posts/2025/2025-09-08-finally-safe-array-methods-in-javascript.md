@@ -139,7 +139,7 @@ console.log(items2);   // ['a', 'c', 'd'] ❌
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading pin">Reminder</div>
+<div class="note-heading pin">Good to know</div>
 
 `.splice()` returns the removed items, while `.toSpliced()` returns the updated array.
 
@@ -188,7 +188,7 @@ The optional chaining (`?.`) and nullish coalescing (`??`) operators also help a
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading bookmark">There's more!</div>
+<div class="note-heading bookmark">There's more</div>
 
 I've also written about [optional chaining]({% post_url 2025-06-02-write-more-reliable-javascript-with-optional-chaining %}) and [nullish coalescing]({% post_url 2025-04-10-mastering-default-values-in-javascript-with-the-nullish-coalescing-operator %}), which pair well with these.
 

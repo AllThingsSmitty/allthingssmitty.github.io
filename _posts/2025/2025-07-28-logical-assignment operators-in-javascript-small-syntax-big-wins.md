@@ -56,6 +56,8 @@ This is useful for setting a default if a value hasn't been initialized. But it 
 <aside class="message highlight" role="note">
 {:/}
 
+<div class="note-heading bookmark">There's more</div>
+
 For another way to handle defaults, this time with function parameters, check out my post on [default parameters in JavaScript]({% post_url 2025-06-29-default-parameters-your-code-just-got-smarter %}).
 
 {::nomarkdown}
@@ -84,8 +86,7 @@ This is helpful for conditionally updating a value based on an existing truthy v
 <aside class="message memo" role="note">
 {:/}
 
-<div class="note-heading information">Note</div>
-
+f
 With `&&=`, the right-hand side is only evaluated if the left-hand side is truthy, and its **actual result** is assigned, even if that result is falsy.
 
 {::nomarkdown}

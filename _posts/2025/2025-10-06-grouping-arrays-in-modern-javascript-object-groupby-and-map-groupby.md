@@ -88,6 +88,8 @@ const grouped = Object.groupBy(items, item => item[0]);
 <aside class="message highlight" role="note">
 {:/}
 
+<div class="note-heading bookmark">Ready for more?</div>
+
 This kind of workaround is similar to using `.reverse().find()` before `findLast()` became available. If you're still doing that, [here's why you should consider switching]({% post_url 2025-09-22-stop-using-reverse-find-meet-findlast %}).
 
 {::nomarkdown}
