@@ -32,8 +32,22 @@
 }
 
 .archive-date {
-  color: var(--theme-archive-date-text);
+  --h: 1.15;
+  --icon: calc(var(--font-size-small) * var(--h));
+  color: var(--theme-meta-text);
   display: flex;
-  font-size: #{"clamp(var(--font-size-x-small), 0.964rem + 0.446vw, var(--font-size-small))"};
+  font-size: calc(var(--font-size-small) * var(--h));
   font-variant: tabular-nums;
+
+  @media (max-width: $large-breakpoint) {
+    font-size: var(--font-size-x-small);
+  }
+
+  & span::before {
+    content: attr(data-long);
+
+    @media (max-width: $large-breakpoint) {
+      content: attr(data-short);
+    }
+  }
 }
