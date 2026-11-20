@@ -72,10 +72,10 @@ blockquote {
       &::before {
         --h: 1.15;
         --icon: calc(var(--font-size-small) * var(--h));
-        align-self: center;
         background-color: currentColor;
         content: "";
         height: var(--icon);
+        margin-top: 3px;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: var(--icon);

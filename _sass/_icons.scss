@@ -1,4 +1,5 @@
-// Post meta icons are masks painted with currentColor, so they follow the text color in light and dark.
+// Icons are used as CSS masks: only the alpha of the SVG matters, and the color
+// comes from the element's background-color (currentColor in the mixins below).
 $icon-published: url("data:image/svg+xml,\
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
     <path d='M8 2v3'/>\
@@ -30,6 +31,8 @@ $icon-bookmark: url("data:image/svg+xml,\
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
     <path d='M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z'/>\
   </svg>");
+
+$icon-chevron-up: url("data:image/svg+xml,  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>    <path d='m18 15-6-6-6 6'/>  </svg>");
 
 @mixin mask-icon($svg) {
   -webkit-mask-image: $svg;
