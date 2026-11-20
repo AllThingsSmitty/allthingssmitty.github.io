@@ -186,7 +186,7 @@ const activeNames = users.filter(u => u.active).map(u => u.name);
 <div class="note-heading bookmark">
 {:/}
 
-Clean code that's secretly doing too much Clean code that's secretly doing too much
+Clean code that's secretly doing too much
 
 {::nomarkdown}
 </div>
