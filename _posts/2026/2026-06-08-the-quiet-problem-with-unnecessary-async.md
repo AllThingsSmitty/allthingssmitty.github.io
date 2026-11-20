@@ -159,7 +159,15 @@ A rough rule I follow: `async` should represent real async boundaries, not hypot
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading bookmark">On a related note</div>
+{::nomarkdown}
+<div class="note-heading bookmark">
+{:/}
+
+On a related note
+
+{::nomarkdown}
+</div>
+{:/}
 
 I've touched on this idea before. [Async loops and iteration patterns in JavaScript]({% post_url 2025-10-20-rethinking-async-loops-in-javascript %}) expose many of the same tradeoffs around async boundaries and control flow.
 

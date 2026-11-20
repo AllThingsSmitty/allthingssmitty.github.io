@@ -135,7 +135,15 @@ You don't have to ban `instanceof`. In tightly scoped code it's fine. Once bound
 <aside class="message highlight" role="note">
 {:/}
 
-<div class="note-heading bookmark">Pro tip</div>
+{::nomarkdown}
+<div class="note-heading bookmark">
+{:/}
+
+Pro tip
+
+{::nomarkdown}
+</div>
+{:/}
 
 Once you can reliably spot real errors, you'll want to keep context as they move through your code. [`Error.cause`]({% post_url 2025-11-10-error-chaining-in-javascript-cleaner-debugging-with-error-cause %}) helps with that.
 
