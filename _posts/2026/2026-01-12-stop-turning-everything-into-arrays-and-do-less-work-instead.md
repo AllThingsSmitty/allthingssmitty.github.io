@@ -171,15 +171,7 @@ No buffering entire responses, no manual counters.
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-Ready for more?
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">Ready for more?</div>
 
 See how `await` works in loops and how to [structure async logic efficiently]({% post_url 2025-10-20-rethinking-async-loops-in-javascript %}).
 
