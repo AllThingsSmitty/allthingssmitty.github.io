@@ -53,15 +53,7 @@ Other languages solved this years ago. JavaScript is (slowly) catching up.
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-More on async
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">More on async</div>
 
 `await` in loops isn't always what you think. Here's where [things start to break down]({% post_url 2025-10-20-rethinking-async-loops-in-javascript %}).
 
@@ -128,15 +120,7 @@ Synchronous resources (locks, in-memory structures) can use plain `using`.
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-Good to know
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">Good to know</div>
 
 `Array.fromAsync()` is another sign JavaScript is taking async seriously: [modern async iteration in JavaScript]({% post_url 2025-07-14-modern-async-iteration-in-javascript-with-array-fromasync %}).
 

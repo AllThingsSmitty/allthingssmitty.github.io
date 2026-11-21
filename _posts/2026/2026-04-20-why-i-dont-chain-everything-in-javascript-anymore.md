@@ -182,15 +182,7 @@ const activeNames = users.filter(u => u.active).map(u => u.name);
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-Clean code that's secretly doing too much
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">Clean code that's secretly doing too much</div>
 
 Interested in doing even less work with sequences of data? [Stop turning everything into arrays]({% post_url 2026-01-12-stop-turning-everything-into-arrays-and-do-less-work-instead %}).
 

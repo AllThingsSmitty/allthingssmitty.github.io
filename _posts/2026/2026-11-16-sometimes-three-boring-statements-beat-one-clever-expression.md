@@ -77,15 +77,7 @@ The diffs are nicer, as well. Adding a fallback means adding a block, not editin
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-Same problem, different syntax
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">Same problem, different syntax</div>
 
 I made the same argument about method chains: [why I don't chain everything in JavaScript anymore]({% post_url 2026-04-20-why-i-dont-chain-everything-in-javascript-anymore %}).
 

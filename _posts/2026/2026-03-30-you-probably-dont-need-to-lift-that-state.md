@@ -52,15 +52,7 @@ function Modal() {
 <aside class="message highlight" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading bookmark">
-{:/}
-
-Same instinct, different problem
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading bookmark">Same instinct, different problem</div>
 
 The same instinct shows up elsewhere too, like [restructuring everything into arrays]({% post_url 2026-01-12-stop-turning-everything-into-arrays-and-do-less-work-instead %}) when you don't actually need to.
 
