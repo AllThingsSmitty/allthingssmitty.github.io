@@ -79,15 +79,7 @@ Most of these helpers are lazy, meaning they only pull values as needed.
 <aside class="message memo" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading information">
-{:/}
-
-Note
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading information">Note</div>
 
 `reduce` eagerly consumes the iterator, since it must see every value to produce a result.
 
@@ -214,15 +206,7 @@ No dependencies, and it's all native.
 <aside class="message notification" role="note">
 {:/}
 
-{::nomarkdown}
-<div class="note-heading pin">
-{:/}
-
-Rule of thumb
-
-{::nomarkdown}
-</div>
-{:/}
+<div class="note-heading pin">Rule of thumb</div>
 
 If you don't need the whole array, don't create one.
 
