@@ -12,6 +12,19 @@ layout: null
     <priority>1.0</priority>
   </url>
 
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.data.org.url }}{{ post.url }}</loc>
+    <lastmod>
+        {% if post.last_updated %}
+      {{ post.last_updated | date: "%Y-%m-%d" }}
+    {% else %}
+      {{ post.date|date: "%Y-%m-%d" }}
+    {% endif %}
+    </lastmod>
+  </url>
+  {% endfor %}
+
   {% for page in site.html_pages %}
   <url>
     <loc>{{ site.data.org.url }}{{ page.url }}</loc>
@@ -26,5 +39,4 @@ layout: null
     {% if page.priority %}<priority>{{ page.priority }}</priority>{% endif %}
   </url>
   {% endfor %}
-
 </urlset>
