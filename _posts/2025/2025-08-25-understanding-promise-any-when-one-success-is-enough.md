@@ -29,7 +29,7 @@ An **empty iterable** rejects immediately with an `AggregateError` whose `.error
 
 <div class="note-heading pin">Pro tip</div>
 
-Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:rel="noopener noreferrer"} if cancellation is important.
+Promises passed to `Promise.any()` are already running. It doesn't cancel the rest when one succeeds. Use [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController){:target="_blank"}{:rel="noopener noreferrer"} if cancellation is important.
 
 {::nomarkdown}
 </aside>
