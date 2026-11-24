@@ -74,12 +74,17 @@ const updatedUser = { ...user, age: 31 };
 
 This creates a new object where `age` is overridden, which is great for **immutable updates** in frameworks like React.
 
+{::nomarkdown}
 <aside class="message highlight" role="note">
+{:/}
 
 <div class="note-heading pin">Good to know</div>
 
 Object spread (<code>{...obj}</code>) was introduced in ES2018 and works <strong>only on plain objects</strong>. Unlike arrays or strings, not all objects are iterable or safely spreadable.
+
+{::nomarkdown}
 </aside>
+{:/}
 
 ### Strings are iterable, too!
 
@@ -120,12 +125,17 @@ console.log(id);   // 1
 console.log(info); // { name: "Sam", age: 30 }
 ```
 
+{::nomarkdown}
 <aside class="message highlight" role="note">
+{:/}
 
 <div class="note-heading pin">Pro tip</div>
 
 Rest in object destructuring collects <strong>remaining enumerable own properties</strong> only, not inherited ones.
+
+{::nomarkdown}
 </aside>
+{:/}
 
 ## In real code
 
