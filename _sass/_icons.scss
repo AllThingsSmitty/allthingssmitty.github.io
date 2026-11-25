@@ -48,3 +48,16 @@ $icon-external-link: url("data:image/svg+xml,\
   -webkit-mask-image: $svg;
   mask-image: $svg;
 }
+
+// Shared box for pseudo-element icons. Set --icon to the size, then add the
+// glyph with mask-icon(); layout (display, margins, alignment) stays local.
+@mixin icon-box {
+  background-color: currentColor;
+  content: "";
+  height: var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: var(--icon);
+  mask-size: var(--icon);
+  width: var(--icon);
+}
