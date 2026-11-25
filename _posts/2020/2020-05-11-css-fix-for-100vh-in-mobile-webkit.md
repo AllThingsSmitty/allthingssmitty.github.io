@@ -68,9 +68,15 @@ html {
 }
 ```
 
+{::nomarkdown}
 <aside class="message highlight" role="note">
-This code was updated to include the <code>html</code> selector after I was told that <a href="https://twitter.com/bfgeek/status/1262459015155441664" rel="noopener noreferrer">Chrome is updating the behavior</a> to match Firefox's implementation.
+{:/}
+
+This code was updated to include the `html` selector after I was told that [Chrome is updating the behavior](https://twitter.com/bfgeek/status/1262459015155441664){:target="_blank"}{:rel="noopener noreferrer"} to match Firefox's implementation.
+
+{::nomarkdown}
 </aside>
+{:/}
 
 And now the sticky footer is right where I want it to be in mobile Safari!
 
