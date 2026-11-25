@@ -39,15 +39,9 @@
 
       &::before {
         align-self: center;
-        background-color: currentColor;
-        content: "";
-        height: var(--icon);
         margin-right: calc(var(--flow-space) * 0.35);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: var(--icon);
-        mask-size: var(--icon);
-        width: var(--icon);
+
+        @include icon-box;
 
         @media (max-width: $large-breakpoint) {
           height: 15px;

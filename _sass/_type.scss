@@ -71,18 +71,12 @@ blockquote {
       &::before {
         --h: 1.15;
         --icon: calc(var(--font-size-small) * var(--h));
-        background-color: currentColor;
-        content: "";
         display: inline-block;
-        height: var(--icon);
         margin-right: 0.375rem;
         margin-top: 1px;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: var(--icon);
-        mask-size: var(--icon);
         vertical-align: text-top;
-        width: var(--icon);
+
+        @include icon-box;
       }
     }
 
@@ -120,18 +114,11 @@ blockquote {
   a[rel~="noopener"][rel~="noreferrer"] {
     &::after {
       --icon: 0.75rem;
-      background-color: currentColor;
-      content: "";
       display: inline-block;
-      height: var(--icon);
       margin-left: 3px;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: var(--icon);
-      mask-size: var(--icon);
       vertical-align: text-top;
-      width: var(--icon);
 
+      @include icon-box;
       @include mask-icon($icon-external-link);
     }
   }
