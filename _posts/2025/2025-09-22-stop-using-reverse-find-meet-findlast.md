@@ -209,7 +209,7 @@ Instead of juggling reversed arrays or writing awkward loops, the code just says
 
 <div class="note-heading bookmark">Array indexing made easier</div>
 
-Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post_url 2025-05-19-how-javascript-at-method-makes-array-indexing-easier %}) in JavaScript simplifies array access. No more working out `length - 1` in your head!
+Looking for cleaner ways to index arrays? Learn how the [`.at()` method]({% post_url 2025-05-19-how-javascript-at-method-makes-array-indexing-easier %}) in JavaScript simplifies array access.
 
 {::nomarkdown}
 </aside>
