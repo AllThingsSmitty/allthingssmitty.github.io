@@ -116,6 +116,27 @@ blockquote {
   }
 }
 
+.post {
+  a[rel~="noopener"][rel~="noreferrer"] {
+    &::after {
+      --icon: 0.75rem;
+      background-color: currentColor;
+      content: "";
+      display: inline-block;
+      height: var(--icon);
+      margin-left: 3px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: var(--icon);
+      mask-size: var(--icon);
+      vertical-align: text-top;
+      width: var(--icon);
+
+      @include mask-icon($icon-external-link);
+    }
+  }
+}
+
 .flow {
   --flow-space: 1.5rem;
 
