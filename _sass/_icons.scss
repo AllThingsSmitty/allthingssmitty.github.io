@@ -32,7 +32,17 @@ $icon-bookmark: url("data:image/svg+xml,\
     <path d='M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z'/>\
   </svg>");
 
-$icon-chevron-up: url("data:image/svg+xml,  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>    <path d='m18 15-6-6-6 6'/>  </svg>");
+$icon-chevron-up: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <path d='m18 15-6-6-6 6'/>\
+  </svg>");
+
+$icon-external-link: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+    <path d='M15 3h6v6'/>\
+    <path d='M10 14 21 3'/>\
+    <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>\
+  </svg>");
 
 @mixin mask-icon($svg) {
   -webkit-mask-image: $svg;
